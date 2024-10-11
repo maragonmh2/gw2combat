@@ -1,0 +1,5192 @@
+{
+	"NOTES": "MAKE SURE TO USE THE 'golem-ele (Maragon.5298)' WHEN USING THIS FOR WORKING BTTH",
+	"attributes": [
+	  [
+		"power",
+		2325
+	  ],
+	  [
+		"precision",
+		2017
+	  ],
+	  [
+		"ferocity",
+		960
+	  ]
+	],
+	"author": "Maragon.5298",
+	"base_class": "elementalist",
+	"profession": "catalyst",
+	"public": true,
+	"weapons": [
+	  {
+		"position": "two_handed",
+		"set": "set_1",
+		"type": "spear"
+	  }
+	],
+	"name": "pqCataSpear",
+	"permanent_effects": [
+	  "QUICKNESS",
+	  "ALACRITY",
+	  "FURY",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT",
+	  "MIGHT"
+	],
+	"counters": [
+		{
+			"counter_key": "Catalyst Energy",
+			"counter_modifiers": [
+				{
+					"counter_key": "Catalyst Energy",
+					"operation": "subtract",
+					"value": 100000,
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Jade Sphere"
+					}
+				},
+				{
+					"counter_key": "Catalyst Energy",
+					"operation": "subtract",
+					"value": 10000,
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "No Strike",
+						"not": [
+							{
+								"unique_effect_on_source": "Jade Sphere Effect"
+							}
+						]
+					}
+				},
+				{
+					"counter_key": "Catalyst Energy",
+					"operation": "add",
+					"value": 10000,
+					"condition": {
+						"only_applies_on_strikes": true,
+						"threshold": {
+							"counter_value_subject_to_threshold": "Catalyst Energy",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 300000
+						}
+					}
+			  	}
+			],
+			"initial_value": 300000,
+			"max_value": 300000
+		},
+
+		{
+			"counter_key": "Persisting Flames Counter",
+			"initial_value": 0,
+			"icon": "https://render.guildwars2.com/file/38496307B7C27BCB08D6800F2A699B4998DD1935/1012312.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Persisting Flames Counter",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Apply Persisting Flames"
+					}
+				},
+				{
+					"counter_key": "Persisting Flames Counter",
+					"operation": "subtract",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Apply Persisting Flames"
+					}
+				}
+			]
+		},
+		{
+			"counter_key": "Elemental Empowerment Counter",
+			"initial_value": 3,
+			"icon": "https://render.guildwars2.com/file/C3B3C99943ECABFAA936573030C599EE2A974420/2491529.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Elemental Empowerment Counter",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Apply Elemental Empowerment"
+					}
+				},
+				{
+					"counter_key": "Elemental Empowerment Counter",
+					"operation": "subtract",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Apply Elemental Empowerment"
+					}
+				}
+			]
+		},
+
+		{
+			"counter_key": "Volcano Charges",
+			"icon": "https://render.guildwars2.com/file/334EA928E56F38C176A22415DE3ECE144C5FD5BB/3379101.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Volcano Charges",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Volcano Charges",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 3
+						},
+						"unique_effect_on_source": "Etching Volcano Duration Effect"
+					}
+				},
+				{
+					"counter_key": "Volcano Charges",
+					"operation": "reset",
+					"value": 0,
+					"condition": {
+						"not": [
+							{
+								"unique_effect_on_source": "Etching Volcano Effect"
+							}
+						]
+					}
+				}
+			],
+			"initial_value": 0,
+			"max_value": 3
+		},
+		{
+			"counter_key": "Jökulhlaup Charges",
+			"icon": "https://render.guildwars2.com/file/48EB1A03297EE4DFA0FE2CA41F0B02B77302060B/3379104.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Jökulhlaup Charges",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Jökulhlaup Charges",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 3
+						},
+						"unique_effect_on_source": "Etching Jökulhlaup Duration Effect"
+					}
+				},
+				{
+					"counter_key": "Jökulhlaup Charges",
+					"operation": "reset",
+					"value": 0,
+					"condition": {
+						"not": [
+							{
+								"unique_effect_on_source": "Etching Jökulhlaup Effect"
+							}
+						]
+					}
+				}
+			],
+			"initial_value": 0,
+			"max_value": 3
+		},
+		{
+			"counter_key": "Derecho Charges",
+			"icon": "https://render.guildwars2.com/file/94F1A894667CA4F3407C57B055F8236804264B1F/3379095.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Derecho Charges",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Derecho Charges",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 3
+						},
+						"unique_effect_on_source": "Etching Derecho Duration Effect"
+					}
+				},
+				{
+					"counter_key": "Derecho Charges",
+					"operation": "reset",
+					"value": 0,
+					"condition": {
+						"not": [
+							{
+								"unique_effect_on_source": "Etching Derecho Effect"
+							}
+						]
+					}
+				}
+			],
+			"initial_value": 0,
+			"max_value": 3
+		},
+		{
+			"counter_key": "Haboob Charges",
+			"icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png",
+			"counter_modifiers": [
+				{
+					"counter_key": "Haboob Charges",
+					"operation": "add",
+					"value": 1,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Haboob Charges",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 3
+						},
+						"unique_effect_on_source": "Etching Haboob Duration Effect"
+					}
+				},
+				{
+					"counter_key": "Haboob Charges",
+					"operation": "reset",
+					"value": 0,
+					"condition": {
+						"not": [
+							{
+								"unique_effect_on_source": "Etching Haboob Effect"
+							}
+						]
+					}
+				}
+			],
+			"initial_value": 0,
+			"max_value": 3
+		}
+		
+	],
+	"permanent_unique_effects": [
+		{
+			"unique_effect_key": "Force Sigil",
+		  	"attribute_modifiers": [
+				{
+					"addend": 0.05,
+					"attribute": "outgoing_strike_damage_multiplier_add_group"
+				}
+		  	]
+		},
+		{
+			"unique_effect_key": "Accuracy Sigil",
+			"attribute_modifiers": [
+				{
+					"addend": 0.07,
+					"attribute": "critical_chance_multiplier"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Mighty Infusions",
+		  	"attribute_modifiers": [
+			  	{
+					"addend": 90,
+					"attribute": "power"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Dragonhunter Rune",
+			"attribute_modifiers": [
+				{
+					"addend": 100,
+					"attribute": "power"
+				},
+				{
+					"addend": 300,
+					"attribute": "ferocity"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Cilantro Lime Sous-Vide Steak Perk",
+		  	"attribute_modifiers": [
+				{
+					"addend": 100,
+					"attribute": "power"
+				},
+				{
+					"addend": 70,
+					"attribute": "ferocity"
+				}
+		  	],
+			"skill_triggers": [
+				{
+					"condition": {
+						"depends_on_skill_off_cooldown": "Cilantro Lime Sous-Vide Steak",
+						"only_applies_on_strikes": true,
+						"only_applies_on_critical_strikes": true,
+						"threshold": {
+							"generate_random_number_subject_to_threshold": true,
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 66
+						}
+					},
+					"skill_key": "Cilantro Lime Sous-Vide Steak"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Superior Sharpening Stone",
+			"NOTE": "Convert from base stats | 2017 Prec, 1330 Fero",
+			"attribute_modifiers": [
+				{
+					"addend": 60.5,
+					"attribute": "power"
+				},
+				{
+					"addend": 79.8,
+					"attribute": "power"
+				}
+			]
+		},
+
+		{
+			"unique_effect_key": "Empowering Flame Perk",
+			"attribute_modifiers": [
+				{
+					"addend": 150,
+					"attribute": "power",
+					"condition": {
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Burning Precision Perk",
+			"attribute_modifiers": [
+				{
+					"addend": 0.20,
+					"attribute": "burning_duration_multiplier"
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Burning Precision",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Burning Precision",
+						"only_applies_on_strikes": true,
+						"only_applies_on_critical_strikes": true,
+						"threshold": {
+							"generate_random_number_subject_to_threshold": true,
+							"threshold_value": 33,
+							"threshold_type": "upper_bound_exclusive"
+						}
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Power Overwhelming",
+			"attribute_modifiers": [
+				{
+					"addend": 150,
+					"attribute": "power",
+					"condition": {
+						"effect_on_source": "MIGHT",
+						"stacks_of_effect_on_target": 10
+					}
+				},
+				{
+					"addend": 150,
+					"attribute": "power",
+					"condition": {
+						"effect_on_source": "MIGHT",
+						"stacks_of_effect_on_target": 10,
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Pyromancers Training",
+			"attribute_modifiers": [
+				{
+					"multiplier": 1.1,
+					"attribute": "outgoing_strike_damage_multiplier",
+					"condition": {
+						"effect_on_target": "BURNING"
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Zephrys Speed",
+			"attribute_modifiers": [
+				{
+					"addend": 0.05,
+					"attribute": "critical_chance_multiplier"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Ferocious Winds",
+			"attribute_modifiers": [
+				{
+					"NOTE": "Convert from base precision | 2017 Prec",
+					"addend": 141.19,
+					"attribute": "ferocity"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Stormsoul",
+			"attribute_modifiers": [
+				{
+					"multiplier": 1.1,
+					"attribute": "outgoing_strike_damage_multiplier"
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Aeromancers Training",
+			"attribute_modifiers": [
+				{
+					"addend": 150,
+					"attribute": "ferocity"
+				},
+				{
+					"addend": 150,
+					"attribute": "ferocity",
+					"condition": {
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Bolt to the Heart Perk",
+			"attribute_modifiers": [
+				{
+					"multiplier": 1.2,
+					"attribute": "outgoing_strike_damage_multiplier",
+					"condition": {
+						"and": [
+							{ "unique_effect_on_source": "Bolt to the Heart Effect" },
+							{ 
+								"not": [
+									{ "unique_effect_on_source": "Swap to Fresh Air Effect" }
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"unique_effect_key": "Fresh Air Perk",
+			"attribute_modifiers": [
+				{
+					"addend": 250,
+					"attribute": "ferocity",
+					"condition": {
+						"unique_effect_on_source": "Fresh Air Effect"
+					}
+				}
+			]
+		}
+	],
+	"unique_effects": {
+		"Relic of Fireworks Effect": {
+			"icon": "https://wiki.guildwars2.com/images/6/6c/Relic_of_Fireworks.png"
+		},
+
+		"Fire Attunement Effect": {
+			"icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png"
+		},
+		"Water Attunement Effect": {
+			"icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png"
+		},
+		"Air Attunement Effect": {
+			"icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png"
+		},
+		"Earth Attunement Effect": {
+			"icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png"
+		},
+
+		"Fresh Air Effect": {
+			"icon": "https://render.guildwars2.com/file/FA64C9F2750F986E52E8376F22EDBA3844A8C603/1012277.png"
+		},
+		"Persisting Flames Effect": {
+			"icon": "https://render.guildwars2.com/file/38496307B7C27BCB08D6800F2A699B4998DD1935/1012312.png"
+		},
+		"Elemental Empowerment Effect": {
+			"icon": "https://render.guildwars2.com/file/C3B3C99943ECABFAA936573030C599EE2A974420/2491529.png"
+		},
+		"Empowering Auras Effect": {
+			"icon": "https://render.guildwars2.com/file/C52EDB20EC120936089EC83C54A55A610A075652/2491522.png"
+		},
+
+		"Relentless Fire Effect": {
+			"icon": "https://render.guildwars2.com/file/31372EE16EAB80BDB213EB99D1BF4C6C3B67B6AF/2491601.png"
+		},
+		"Shattering Ice Effect": {
+			"icon": "https://render.guildwars2.com/file/A1C20E2CE05D80B5A9DDF47ED0780301FC2C7477/2491603.png"
+		},
+		"Conjure Fire Attributes Effect": {
+			"icon": "https://render.guildwars2.com/file/EEDA0B1847077DE93DBB0575D44BE0615FBCE728/103328.png"
+		},
+
+		"Seethe Effect": {
+			"icon": "https://render.guildwars2.com/file/409EE1CC3F41C1FC20B71D0944063179BB94C471/3379087.png"
+		},
+		"Ripple Effect": {
+			"icon": "https://render.guildwars2.com/file/D246C6CE0468F2484643935675010B0A963EC9D8/3379088.png"
+		},
+		"Energize Effect": {
+			"icon": "https://render.guildwars2.com/file/0BA3490023A82B4B5FCA597C3CB965E21D3CE504/3379085.png"
+		},
+		"Harden Effect": {
+			"icon": "https://render.guildwars2.com/file/08F199900A0613B465DF63D1DA4D6647A954DE0B/3379086.png"
+		},
+
+		"Etching Volcano Broken Effect": {
+			"icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png"
+		},
+		"Etching Jökulhlaup Broken Effect": {
+			"icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png"
+		},
+		"Etching Derecho Broken Effect": {
+			"icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png"
+		},
+		"Etching Haboob Broken Effect": {
+			"icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png"
+		},
+
+		"Etching Volcano Duration Effect": {
+			"icon": "https://render.guildwars2.com/file/037DCBFCCD3BA4C3ACC7B73DF4965D3A170F0F3E/3379099.png"
+		},
+		"Etching Jökulhlaup Duration Effect": {
+			"icon": "https://render.guildwars2.com/file/7B61A40CFC6F2A9DE5A5414C50E87BD9D9711E43/3379102.png"
+		},
+		"Etching Derecho Duration Effect": {
+			"icon": "https://render.guildwars2.com/file/F1B3331AB23F37964BE8D6A91F43FF066BE970AA/3379093.png"
+		},
+		"Etching Haboob Duration Effect": {
+			"icon": "https://render.guildwars2.com/file/7C7339E9EA33F7CD05806CE20066DF0EC4673767/3379096.png"
+		},
+
+		"Jade Sphere Effect": {
+			"icon": "https://render.guildwars2.com/file/22CA7C0F420C7F61CEBFA323DF3AADC5EF237475/2491598.png"
+		},
+
+		"Relic of Fireworks Dropped Effect": {
+			"icon": "https://i.imgur.com/UZ0WeT1.png"
+		},
+		"Persisting Flames Dropped Effect": {
+			"icon": "https://i.imgur.com/mJokwy6.png"
+		},
+		"Elemental Empowerment Dropped Effect": {
+			"icon": "https://i.imgur.com/kgeEovU.png"
+		},
+		"Empowering Auras Dropped Effect": {
+			"icon": "https://i.imgur.com/m7u3Yvi.png"
+		}
+	},
+	"skills": [
+		{
+			"skill_key": "Engaged",
+			"cooldown": [999999, 999999],
+			"cast_duration": [0, 0],
+			"pulse_on_tick_list": [[0], [0]],
+			"skill_triggers": [
+				{
+					"skill_key": "Engaged",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Engaged",
+						"only_applies_on_strikes": true,
+						"not": [{
+							"unique_effect_on_source": "Engaged Effect"
+						}]
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Engaged Effect"
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Persisting Flames Remove Effect",
+						"stacking_type": "replace"
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Elemental Empowerment Remove Effect",
+						"stacking_type": "replace"
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"num_stacks": 3,
+					"unique_effect": {
+						"NOTE": "All values are from their respective bases | 2615 Pow, 2017 Prec, 1330 Fero",
+						"unique_effect_key": "Elemental Empowerment Effect",
+						"max_duration": 999999,
+						"max_considered_stacks": 10,
+						"stacking_type": "intensity",
+						"attribute_modifiers": [
+							{
+								"addend": 26.15,
+								"attribute": "power"
+							},
+							{
+								"addend": 20.17,
+								"attribute": "precision"
+							},
+							{
+								"addend": 13.30,
+								"attribute": "ferocity"
+							}
+						]
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+			"weapon_type": "empty_handed"
+		},
+
+		{
+			"skill_key": "Relic of Fireworks",
+			"icon": "https://i.imgur.com/qFmcbT0.png",
+			"executable": false
+		},
+		{
+			"skill_key": "Relic of Fireworks (Buff Loss)",
+			"icon": "https://i.imgur.com/qFmcbT0.png",
+			"executable": false
+		},
+		{
+			"skill_key": "Execute Relic of Fireworks",
+			"skill_triggers": [
+				{
+					"skill_key": "Apply Relic of Fireworks",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Relic of Fireworks"
+					}
+				},
+				{
+					"skill_key": "Relic of Fireworks Remove",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Relic of Fireworks Remove",
+						"unique_effect_on_source": "Relic of Fireworks Active Effect",
+						"not": [
+							{ "unique_effect_on_source": "Relic of Fireworks Effect" }
+						]
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Apply Relic of Fireworks",
+			"cast_duration": [6000, 6000],
+			"cooldown": [0, 0],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 6000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Relic of Fireworks Effect",
+						"max_duration": 6000,
+						"stacking_type": "replace",
+						"attribute_modifiers": [
+							{
+								"multiplier": 1.07,
+								"attribute": "outgoing_strike_damage_multiplier"
+							}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Relic of Fireworks Active Effect"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Relic of Fireworks Active Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Relic of Fireworks Remove"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Relic of Fireworks Remove",
+			"cooldown": [2, 2],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Relic of Fireworks Dropped Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Execute Persisting Flames",
+			"skill_triggers": [
+				{
+					"skill_key": "Apply Persisting Flames",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Persisting Flames"
+					}
+				},
+				{
+					"skill_key": "Persisting Flames Active",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Persisting Flames Active",
+						"unique_effect_on_source": "Persisting Flames Remove Effect",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Persisting Flames Counter",
+							"threshold_type": "lower_bound_inclusive",
+							"threshold_value": 10
+						}
+					}
+				},
+				{
+					"skill_key": "Persisting Flames Remove",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Persisting Flames Remove",
+						"unique_effect_on_source": "Persisting Flames Active Effect",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Persisting Flames Counter",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 10
+						}
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Apply Persisting Flames",
+			"cast_duration": [15000, 15000],
+			"cooldown": [0, 0],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 15000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Persisting Flames Effect",
+						"max_duration": 15000,
+						"max_considered_stacks": 10,
+						"stacking_type": "intensity",
+						"attribute_modifiers": [
+							{
+								"addend": 0.01,
+								"attribute": "outgoing_strike_damage_multiplier_add_group"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Persisting Flames Active",
+			"cooldown": [2, 2],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Persisting Flames Active Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Persisting Flames Active Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Persisting Flames Remove"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Persisting Flames Remove",
+			"cooldown": [2, 2],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Persisting Flames Remove Effect",
+						"stacking_type": "replace"
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Persisting Flames Dropped Effect"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Persisting Flames Remove Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Persisting Flames Active"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Execute Elemental Empowerment",
+			"skill_triggers": [
+				{
+					"skill_key": "Apply Elemental Empowerment",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Elemental Empowerment 2"
+					}
+				},
+				{
+					"skill_key": "Apply Elemental Empowerment",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Elemental Empowerment 2"
+					}
+				},
+				{
+					"skill_key": "Elemental Empowerment Active",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Elemental Empowerment Active",
+						"unique_effect_on_source": "Elemental Empowerment Remove Effect",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+							"threshold_type": "lower_bound_inclusive",
+							"threshold_value": 10
+						}
+					}
+				},
+				{
+					"skill_key": "Elemental Empowerment Remove",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Elemental Empowerment Remove",
+						"unique_effect_on_source": "Elemental Empowerment Active Effect",
+						"threshold": {
+							"counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+							"threshold_type": "upper_bound_exclusive",
+							"threshold_value": 10
+						}
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Apply Elemental Empowerment",
+			"cast_duration": [15000, 15000],
+			"cooldown": [0, 0],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 15000,
+					"direction": "SELF",
+					"unique_effect": {
+						"NOTE": "All values are from their respective bases | 2615 Pow, 2017 Prec, 1330 Fero",
+						"unique_effect_key": "Elemental Empowerment Effect",
+						"max_duration": 999999,
+						"max_considered_stacks": 10,
+						"stacking_type": "intensity",
+						"attribute_modifiers": [
+							{
+								"addend": 26.15,
+								"attribute": "power"
+							},
+							{
+								"addend": 20.17,
+								"attribute": "precision"
+							},
+							{
+								"addend": 13.30,
+								"attribute": "ferocity"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Elemental Empowerment Active",
+			"cooldown": [2, 2],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Elemental Empowerment Active Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Elemental Empowerment Active Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Elemental Empowerment Remove"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Elemental Empowerment Remove",
+			"cooldown": [2, 2],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Elemental Empowerment Remove Effect",
+						"stacking_type": "replace"
+					}
+				},
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Elemental Empowerment Dropped Effect"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Elemental Empowerment Remove Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Elemental Empowerment Active"
+					}
+				}
+			]
+		},
+
+		{
+			"skill_key": "Fire Attunement Reset",
+			"cast_duration": [20, 20],
+			"effect_removals": [
+				{
+					"unique_effect": "Fire Attunement Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fire Attunement Reset"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Water Attunement Reset",
+			"cast_duration": [20, 20],
+			"effect_removals": [
+				{
+					"unique_effect": "Water Attunement Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Water Attunement Reset"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Air Attunement Reset",
+			"cast_duration": [20, 20],
+			"effect_removals": [
+				{
+					"unique_effect": "Air Attunement Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Air Attunement Reset"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Earth Attunement Reset",
+			"cast_duration": [20, 20],
+			"effect_removals": [
+				{
+					"unique_effect": "Earth Attunement Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Earth Attunement Reset"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Fire Attunement",
+			"cast_duration": [0, 0],
+			"cooldown": [1500, 1200],
+			"pulse_on_tick_list": [[0],[0]],
+			"executable": true,
+			"tags": ["Attunement Swap from Water", "Attunement Swap from Air", "Attunement Swap from Earth"],
+			"skills_to_put_on_cooldown": ["Water Attunement", "Air Attunement", "Earth Attunement"],
+			"cooldown_modifiers": [
+				{
+					"operation": "set",
+					"skill_key": "Fire Attunement",
+					"condition": {
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Fire Attunement",
+					"operation": "add",
+					"value": 8500,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Fire Attunement Reset"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Sunspot!",
+					"condition": {
+						"unique_effect_on_source": "Engaged Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Fire Attunement",
+						"depends_on_skill_off_cooldown": "Sunspot!"
+					}
+				},
+				{
+					"skill_key": "Fire Attunement Reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Fire",
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fire Attunement Effect"
+					}
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Water Attunement",
+			"cast_duration": [0, 0],
+			"cooldown": [1500, 1200],
+			"executable": true,
+			"pulse_on_tick_list": [[0],[0]],
+			"tags": ["Attunement Swap from Fire", "Attunement Swap from Air", "Attunement Swap from Earth"],
+			"skills_to_put_on_cooldown": ["Fire Attunement", "Air Attunement", "Earth Attunement"],
+			"cooldown_modifiers": [
+				{
+					"operation": "set",
+					"skill_key": "Water Attunement",
+					"condition": {
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Water Attunement",
+					"operation": "add",
+					"value": 8500,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Water Attunement Reset"
+					}
+				}
+			],
+			"skill_triggers":[
+				{
+					"skill_key": "Water Attunement Reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Water",
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Water Attunement Effect"
+					}
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Air Attunement",
+			"cast_duration": [0, 0],
+			"cooldown": [1500, 1200],
+			"executable": true,
+			"pulse_on_tick_list": [[0],[0]],
+			"tags": ["Attunement Swap from Fire", "Attunement Swap from Water", "Attunement Swap from Earth"],
+			"skills_to_put_on_cooldown": ["Fire Attunement", "Water Attunement", "Earth Attunement"],
+			"cooldown_modifiers": [
+				{
+					"operation": "set",
+					"skill_key": "Air Attunement",
+					"condition": {
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Air Attunement",
+					"operation": "add",
+					"value": 8500,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Air Attunement Reset"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Electric Discharge",
+					"condition": {
+						"unique_effect_on_source": "Engaged Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Air Attunement",
+						"depends_on_skill_off_cooldown": "Electric Discharge"
+					}
+				},
+				{
+					"skill_key": "Air Attunement Reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Air",
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Air Attunement Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fresh Air Effect"
+					},
+					"condition": {
+						"unique_effect_on_source": "Swap to Fresh Air Effect"
+					}
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Earth Attunement",
+			"cast_duration": [0, 0],
+			"cooldown": [1500, 1200],
+			"executable": true,
+			"pulse_on_tick_list": [[0],[0]],
+			"tags": ["Attunement Swap from Fire", "Attunement Swap from Water", "Attunement Swap from Air"],
+			"skills_to_put_on_cooldown": ["Fire Attunement", "Water Attunement", "Air Attunement"],
+			"cooldown_modifiers": [
+				{
+					"operation": "set",
+					"skill_key": "Earth Attunement",
+					"condition": {
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Earth Attunement",
+					"operation": "add",
+					"value": 8500,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Earth Attunement Reset"
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Earth Attunement Effect"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Earth Attunement Reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Earth",
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+
+		{
+			"NOTE": "This is a hardcoded skill name. Change only flat_damage and nothing else based on traits",
+			"can_critical_strike": false,
+			"cast_duration": [0,0],
+			"cooldown": [2000,2000],
+			"flat_damage": 325,
+			"skill_key": "Cilantro Lime Sous-Vide Steak",
+			"strike_on_tick_list": [[0],[0]],
+			"tags": ["No Strike"],
+			"weapon_type": "empty_handed",
+			"icon": "https://render.guildwars2.com/file/D2C00407A3FFE06251BDE9DC13525FE167ABA3E6/2191069.png"
+		},
+		{
+			"skill_key": "Burning Precision",
+			"cast_duration": [0, 0],
+			"cooldown": [5000, 5000],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"effect": "BURNING",
+					"direction": "OUTGOING",
+					"num_stacks": 1
+				}
+			],
+			"weapon_type": "empty_handed",
+			"icon": "https://render.guildwars2.com/file/774471FA3841BB90EB6F935A76D8017A0C4B005E/1012306.png"
+		},
+		{
+			"skill_key": "Sunspot",
+			"icon": "https://i.imgur.com/qFmcbT0.png",
+			"executable": false
+		},
+		{
+			"skill_key": "Sunspot!",
+			"executable": false,
+			"damage_coefficient": 0.6,
+			"cast_duration": [0, 0],
+			"cooldown": [2000, 2000],
+			"strike_on_tick_list": [[0], [0]],
+			"can_critical_strike": false,
+			"tags": ["Elemental Empowerment 1", "Empowering Auras"],
+			"weapon_type": "empty_handed",
+			"icon": "https://render.guildwars2.com/file/1405047ED70DE30F80B1F6304A787B215BB50878/1012316.png"
+		},
+		{
+			"skill_key": "Electric Discharge",
+			"damage_coefficient": 0.35,
+			"cast_duration": [0, 0],
+			"cooldown": [2000, 2000],
+			"strike_on_tick_list": [[2], [2]],
+			"pulse_on_tick_list": [[1], [1]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Electric Discharge Effect",
+						"attribute_modifiers": [
+							{
+								"multiplier": 2,
+								"attribute": "outgoing_strike_damage_multiplier"
+							}
+						]
+					}
+				}
+			],
+			"weapon_type": "empty_handed",
+			"icon": "https://render.guildwars2.com/file/F4622EE8300028599369D4084EA7A2774D250DEA/1012280.png"
+		},
+
+		{
+			"skill_key": "Relentless Fire",
+			"cast_duration": [240, 240],
+			"pulse_on_tick_list": [[200], [200]],
+			"cooldown": [20000, 16000],
+			"executable": true,
+			"weapon_type": "empty_handed",
+			"tags": ["Etching Charges"],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Relentless Fire Effect",
+						"max_duration": 8000,
+						"stacking_type": "duration",
+						"attribute_modifiers": [
+							{
+								"multiplier": 1.10,
+								"attribute": "outgoing_strike_damage_multiplier"
+							},
+							{
+								"multiplier": 1.10,
+								"attribute": "condition_damage_multiplier"
+							}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 3000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Relentless Fire Effect",
+						"max_duration": 8000,
+						"stacking_type": "duration",
+						"attribute_modifiers": [
+							{
+								"multiplier": 1.10,
+								"attribute": "outgoing_strike_damage_multiplier"
+							},
+							{
+								"multiplier": 1.10,
+								"attribute": "condition_damage_multiplier"
+							}
+						]		
+					},
+					"condition": {
+						"unique_effect_on_source": "Fire Jade Sphere Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Shattering Ice",
+			"cast_duration": [240, 240],
+			"pulse_on_tick_list": [[240], [240]],
+			"cooldown": [20000, 16000],
+			"executable": true,
+			"weapon_type": "empty_handed",
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Shattering Ice Effect",
+						"max_duration": 8000,
+						"stacking_type": "duration"
+					}
+				},
+				{
+					"base_duration_ms": 3000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Shattering Ice Effect",
+						"max_duration": 8000,
+						"stacking_type": "duration"
+					},
+					"condition": {
+						"unique_effect_on_source": "Water Jade Sphere Effect"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Shattering Ice (Hit)",
+					"condition": {
+						"unique_effect_on_source": "Shattering Ice Effect",
+						"depends_on_skill_off_cooldown": "Shattering Ice (Hit)",
+						"only_applies_on_strikes": true,
+						"only_applies_on_critical_strikes": true
+					}
+				}
+			],
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Shattering Ice (Hit)",
+			"cast_duration": [0, 0],
+			"cooldown": [1000, 1000],
+			"strike_on_tick_list": [[0],[0]],
+			"damage_coefficient": 0.6,
+			"icon": "https://render.guildwars2.com/file/A1C20E2CE05D80B5A9DDF47ED0780301FC2C7477/2491603.png",
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Firestorm Strike",
+			"attribute_damage_to_skill": "Firestorm",
+			"cast_duration": [10880, 10880],
+			"strike_on_tick_list": [
+				[880, 1880, 2880, 3880, 4880, 5880, 6880, 7880, 8880, 9880, 10880],
+				[880, 1880, 2880, 3880, 4880, 5880, 6880, 7880, 8880, 9880, 10880]
+			],
+			"damage_coefficient": 0.5,
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 2000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Firestorm",
+			"cast_duration": [1120, 1120],
+			"cooldown": [25000, 20000],
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Firestorm Strike",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Firestorm"
+					}
+				}
+			],
+			"skills_to_put_on_cooldown": ["Ice Storm", "Lightning Storm", "Sandstorm"],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Firestorm",
+					"operation": "add",
+					"value": 5000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Firestorm",
+					"operation": "add",
+					"value": 35000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Firestorm",
+					"operation": "add",
+					"value": 15000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Sandstorm"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			},
+			"icon": "https://render.guildwars2.com/file/72030C6DDD3A36ACEC0A39FF03299271CB2FE433/1424240.png",
+			"weapon_type": "empty_handed",
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Ice Storm Strike",
+			"NOTE": "Hits only about 10 times on golem but 18 in total | 4920, 5240, 5560, 5920, 6240, 6560, 6880, 7240",
+			"cast_duration": [4600, 4600],
+			"strike_on_tick_list": [
+				[1600, 2000, 2280, 2600, 2920, 3280, 3600, 3920, 4240, 4600], 
+				[1600, 2000, 2280, 2600, 2920, 3280, 3600, 3920, 4240, 4600]
+			],
+			"damage_coefficient": 0.8,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 1",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[1600], 
+				[1600]
+			],
+			"damage_coefficient": 0.8,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 2",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2000], 
+				[2000]
+			],
+			"damage_coefficient": 0.72,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 3",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2280], 
+				[2280]
+			],
+			"damage_coefficient": 0.64,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 4",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2600], 
+				[2600]
+			],
+			"damage_coefficient": 0.56,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 5",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2920], 
+				[2920]
+			],
+			"damage_coefficient": 0.48,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 6",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3280], 
+				[3280]
+			],
+			"damage_coefficient": 0.40,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 7",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3600], 
+				[3600]
+			],
+			"damage_coefficient": 0.32,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm Strike 8",
+			"attribute_damage_to_skill": "Ice Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3920, 4240, 4600], 
+				[3920, 4240, 4600]
+			],
+			"damage_coefficient": 0.24,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Ice Storm",
+			"cast_duration": [1120, 1120],
+			"cooldown": [30000, 24000],
+			"executable": true,
+			"skills_to_put_on_cooldown": ["Firestorm", "Lightning Storm", "Sandstorm"],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Ice Storm",
+					"operation": "subtract",
+					"value": 5000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Firestorm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm",
+					"operation": "add",
+					"value": 30000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm",
+					"operation": "add",
+					"value": 10000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Sandstorm"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Ice Storm Strike 1",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 2",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 3",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 4",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 5",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 6",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 7",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Ice Storm Strike 8",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Ice Storm"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			},
+			"weapon_type": "empty_handed",
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Lightning Storm Strike",
+			"NOTE": "Hits only about 22 times on golem but 36 in total | To simulate that every 3rd hit misses | 5440, 5680, 5880, 6080, 6400, 6480, 6760, 7280, 7400, 8040, 8080, 8880, 9680",
+			"cast_duration": [5400, 5400],
+			"strike_on_tick_list": [
+				[880, 880, 880, 1400, 1560, 1680, 1880, 2200, 2400, 2480, 2880, 3280, 3400, 3480, 3880, 4080, 4160, 4400, 4800, 4880, 4880, 5400],
+				[880, 880, 880, 1400, 1560, 1680, 1880, 2200, 2400, 2480, 2880, 3280, 3400, 3480, 3880, 4080, 4160, 4400, 4800, 4880, 4880, 5400]
+			],
+			"damage_coefficient": 0.825,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 1",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[880],
+				[880]
+			],
+			"damage_coefficient": 0.825,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 2",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[881],
+				[881]
+			],
+			"damage_coefficient": 0.78375,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 3",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[1400],
+				[1400]
+			],
+			"damage_coefficient": 0.7425,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 4",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[1560],
+				[1560]
+			],
+			"damage_coefficient": 0.70125,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 5",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[1880],
+				[1880]
+			],
+			"damage_coefficient": 0.660,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 6",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2200],
+				[2200]
+			],
+			"damage_coefficient": 0.61875,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 7",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2480],
+				[2480]
+			],
+			"damage_coefficient": 0.5775,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 8",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2880],
+				[2880]
+			],
+			"damage_coefficient": 0.53625,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 9",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3400],
+				[3400]
+			],
+			"damage_coefficient": 0.495,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 10",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3480],
+				[3480]
+			],
+			"damage_coefficient": 0.45375,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 11",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4080],
+				[4080]
+			],
+			"damage_coefficient": 0.4125,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 12",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4160],
+				[4160]
+			],
+			"damage_coefficient": 0.37125,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 13",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4800],
+				[4800]
+			],
+			"damage_coefficient": 0.330,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 14",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4880],
+				[4880]
+			],
+			"damage_coefficient": 0.28875,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm Strike 15",
+			"attribute_damage_to_skill": "Lightning Storm",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[5400, 5440, 5880, 6080, 6480, 6760, 7400, 8040],
+				[5400, 5440, 5880, 6080, 6480, 6760, 7400, 8040]
+			],
+			"damage_coefficient": 0.2475,
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Lightning Storm",
+			"cast_duration": [1120, 1120],
+			"cooldown": [60000, 48000],
+			"executable": true,
+			"skills_to_put_on_cooldown": ["Firestorm", "Ice Storm", "Sandstorm"],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Lightning Storm",
+					"operation": "subtract",
+					"value": 35000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Firestorm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm",
+					"operation": "subtract",
+					"value": 30000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm",
+					"operation": "subtract",
+					"value": 20000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Sandstorm"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Lightning Storm Strike 1",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 2",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 3",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 4",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 5",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 6",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 7",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 8",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 9",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 10",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 11",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 12",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 13",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 14",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				},
+				{
+					"skill_key": "Lightning Storm Strike 15",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lightning Storm"
+					}
+				}
+			],
+			"weapon_type": "empty_handed",
+			"tags": ["Etching Charges"],
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Sandstorm Strike",
+			"attribute_damage_to_skill": "Sandstorm",
+			"cast_duration": [10880, 10880],
+			"strike_on_tick_list": [
+				[880, 1880, 2880, 3880, 4880, 5880, 6880, 7880, 8880, 9880, 10880],
+				[880, 1880, 2880, 3880, 4880, 5880, 6880, 7880, 8880, 9880, 10880]
+			],
+			"damage_coefficient": 0.5,
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BLEEDING"
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Sandstorm",
+			"cast_duration": [1120, 1120],
+			"cooldown": [40000, 32000],
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Sandstorm Strike",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Sandstorm"
+					}
+				}
+			],
+			"skills_to_put_on_cooldown": ["Firestorm", "Ice Storm", "Lightning Storm"],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Sandstorm",
+					"operation": "subtract",
+					"value": 15000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Firestorm"
+					}
+				},
+				{
+					"skill_key": "Sandstorm",
+					"operation": "subtract",
+					"value": 10000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Ice Storm"
+					}
+				},
+				{
+					"skill_key": "Sandstorm",
+					"operation": "add",
+					"value": 20000,
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Lightning Storm"
+					}
+				}
+			],
+			"tags": ["Etching Charges"],
+			"weapon_type": "empty_handed",
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			}
+		},
+
+		{
+			"skill_key": "Glyph of Fire Elemental",
+			"executable": true,
+			"cast_duration": [1400, 1120],
+			"cooldown": [40000, 32000],
+			"cooldown_modifiers": [
+				{
+					"operation": "set",
+					"skill_key": "Glyph of Fire Elemental",
+					"condition": {
+						"unique_effect_on_source": "Elemental Effect"
+					}
+				}
+			],
+			"pulse_on_tick_list": [[1400], [1120]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 120000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Elemental Effect"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			},
+			"icon": "https://render.guildwars2.com/file/0D342F3FD05405DF451B1EF1731C7B9CE8F1BD07/867437.png"
+		},
+		{
+			"skill_key": "Execute Elemental",
+			"skill_triggers": [
+				{
+					"skill_key": "Fireball",
+					"condition": {
+						"unique_effect_on_source": "Elemental Effect",
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Elemental",
+						"not": [
+							{
+								"depends_on_skill_off_cooldown": "Flame Burst"
+							}
+						]
+					}
+				},
+				{
+					"skill_key": "Flame Burst",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Flame Burst",
+						"unique_effect_on_source": "Elemental Effect",
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Elemental"
+					}
+				},
+				{
+					"skill_key": "Flame Barrage Projectile",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+					}
+				},
+				{
+					"skill_key": "Flame Barrage Projectile",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+					}
+				},
+				{
+					"skill_key": "Flame Barrage Projectile",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+					}
+				},
+				{
+					"skill_key": "Flame Barrage",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Flame Barrage",
+						"and": [
+							{
+								"unique_effect_on_source": "Elemental Effect"
+							},{
+								"unique_effect_on_source": "Engaged Effect"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Fireball",
+			"executable": false,
+			"cast_duration": [1700, 1360],
+			"cooldown": [0, 0],
+			"strike_on_tick_list": [[1700],[1360]],
+			"flat_damage": 1630,
+			"tags": ["No Strike", "Elemental"],
+			"icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png",
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Flame Burst",
+			"executable": false,
+			"cast_duration": [3050, 2440],
+			"cooldown": [15000, 15000],
+			"flat_damage": 2475,
+			"strike_on_tick_list": [[3050], [2440]],
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"tags": ["No Strike", "Elemental"],
+			"icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png",
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Flame Barrage Projectile",
+			"attribute_damage_to_skill": "Flame Barrage",
+			"cast_duration": [0, 0],
+			"flat_damage": 650,
+			"strike_on_tick_list": [[0], [0]],
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"tags": ["No Strike"],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Flame Barrage Attack",
+			"attribute_damage_to_skill": "Flame Barrage",
+			"cast_duration": [2600, 2080],
+			"strike_on_tick_list": [[2600],[2080]],
+			"flat_damage": 7880,
+			"skills_to_cancel": ["Flame Burst", "Fireball"],
+			"tags": ["No Strike", "Elemental"],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Flame Barrage",
+			"cast_duration": [0, 0],
+			"cooldown": [15000, 12000],
+			"child_skill_keys": ["Flame Barrage Attack"],
+			"icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+		},
+		
+		{
+			"skill_key": "Conjure Fiery Greatsword",
+			"cast_duration": [1160, 1160],
+			"cooldown": [180000, 144000],
+			"strike_on_tick_list": [[1160], [1160]],
+			"damage_coefficient": 1.0,
+			"executable": true,
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				},
+				{
+					"base_duration_ms": 30000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fiery Greatsword on Ground Effect"
+					}
+				},
+				{
+					"base_duration_ms": 30000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Conjure Fire Attributes Effect",
+						"max_duration": 30000,
+						"stacking_type": "replace",
+						"attribute_modifiers": [
+							{
+								"addend": 260,
+								"attribute": "power"
+							},
+							{
+								"addend": 180,
+								"attribute": "condition_damage"
+							}
+						]
+					}
+				}
+			],
+			"equip_bundle": "Fiery Greatsword",
+			"weapon_type": "empty_handed",
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Weapon Swap",
+			"cast_duration": [0, 0],
+			"cooldown": [0, 0],
+			"executable": true,
+			"cast_condition": {
+				"bundle": "Fiery Greatsword"
+			},
+			"weapon_type": "empty_handed",
+			"effect_removals": [
+				{
+					"unique_effect": "Conjure Fire Attributes Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Weapon Swap"
+					}
+				}
+			],
+			"drop_bundle": "Fiery Greatsword"
+		},
+		{
+			"skill_key": "Fiery Greatsword Pickup",
+			"cast_duration": [540,540],
+			"cooldown": [0,0],
+			"executable": true,
+			"cast_condition": {
+				"unique_effect_on_source": "Fiery Greatsword on Ground Effect"
+			},
+			"pulse_on_tick_list": [[520], [520]],
+			"icon": "https://render.guildwars2.com/file/EEDA0B1847077DE93DBB0575D44BE0615FBCE728/103328.png",
+			"weapon_type": "empty_handed",
+			"effect_removals": [
+				{
+					"unique_effect": "Fiery Greatsword on Ground Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fiery Greatsword Pickup"
+					}
+				}
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 30000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Conjure Fire Attributes Effect"
+					}
+				}
+			],
+			"equip_bundle": "Fiery Greatsword"
+		},
+		{
+			"skill_key": "Lesser Fiery Eruption Strike",
+			"attribute_damage_to_skill": "Lesser Fiery Eruption",
+			"cast_duration": [6000, 6000],
+			"damage_coefficient": 0.1,
+			"strike_on_tick_list": [
+				[0, 1000, 2000, 3000, 4000, 5000],
+				[0, 1000, 2000, 3000, 4000, 5000]
+			],
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"weapon_type": "kit_conjure"
+		},
+		{
+			"skill_key": "Lesser Fiery Eruption",
+			"cast_duration": [0, 0],
+			"cooldown": [6000, 6000],
+			"child_skill_keys": ["Lesser Fiery Eruption Strike"],
+			"icon": "https://render.guildwars2.com/file/CC31AFD564F8090A34500C052A66634016F129F0/103335.png",
+			"skill_triggers": [
+				{
+					"skill_key": "Lesser Fiery Eruption",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Lesser Fiery Eruption",
+						"unique_effect_on_source": "Conjure Fire Attributes Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Flame Wave",
+			"cast_duration": [2160, 2160],
+			"cooldown": [0,0],
+			"executable": true,
+			"damage_coefficient": 0.65,
+			"strike_on_tick_list": [
+				[360, 800, 1240, 1680],
+				[360, 800, 1240, 1680]
+			],
+			"weapon_type": "kit_conjure",
+			"cast_condition": {
+				"bundle": "Fiery Greatsword"
+			},
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Fiery Eruption Strike",
+			"attribute_damage_to_skill": "Fiery Eruption",
+			"cast_duration": [5720, 5720],
+			"strike_on_tick_list": [
+				[720, 1720, 2720, 3720, 4720, 5720],
+				[720, 1720, 2720, 3720, 4720, 5720]
+			],
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 3000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Fiery Eruption",
+			"cast_duration": [720, 720],
+			"cooldown": [5000,4000],
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Fiery Eruption Strike",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fiery Eruption"
+					}
+				}
+			],
+			"weapon_type": "kit_conjure",
+			"cast_condition": {
+				"bundle": "Fiery Greatsword"
+			},
+			"tags": ["Etching Charges"]
+		},
+		{
+			"skill_key": "Fiery Whirl Full",
+			"cast_duration": [1140, 1140],
+			"cooldown": [5000, 4000],
+			"damage_coefficient": 0.65,
+			"strike_on_tick_list": [
+				[280, 400, 520, 640, 760, 880, 1000, 1120],
+				[280, 400, 520, 640, 760, 880, 1000, 1120]
+			],
+			"on_strike_effect_applications": [
+				{
+					"NOTE": "From Whirl Finisher",
+					"base_duration_ms": 1000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"weapon_type": "kit_conjure",
+			"tags": ["Etching Charges"],
+			"required_bundle": "Fiery Greatsword"
+		},
+		{
+			"skill_key": "Fiery Whirl",
+			"cast_duration": [660, 660],
+			"cooldown": [5000, 4000],
+			"executable": true,
+			"damage_coefficient": 0.65,
+			"strike_on_tick_list": [
+				[280, 400, 520, 640],
+				[280, 400, 520, 640]
+			],
+			"on_strike_effect_applications": [
+				{
+					"NOTE": "From Whirl Finisher",
+					"base_duration_ms": 1000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"weapon_type": "kit_conjure",
+			"tags": ["Etching Charges"],
+			"required_bundle": "Fiery Greatsword"
+		},
+		{
+			"skill_key": "Fiery Rush Firewall",
+			"attribute_damage_to_skill": "Fiery Rush",
+			"cast_duration": [3420, 3420],
+			"damage_coefficient": 0.2,
+			"strike_on_tick_list": [
+				[420, 1420, 2420, 3420],
+				[420, 1420, 2420, 3420]
+			],
+			"weapon_type": "kit_conjure"
+		},
+		{
+			"skill_key": "Fiery Rush",
+			"cast_duration": [1360, 1360],
+			"cooldown": [10000, 8000],
+			"executable": true,
+			"strike_on_tick_list": [
+				[1260],
+				[1260]
+			],
+			"damage_coefficient": 2.0,
+			"skill_triggers": [
+				{
+					"skill_key": "Fiery Rush Firewall",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fiery Rush"
+					}
+				}
+			],
+			"tags": ["Etching Charges"],
+			"weapon_type": "kit_conjure",
+			"cast_condition": {
+				"bundle": "Fiery Greatsword"
+			}
+		},
+		{
+			"skill_key": "Fire Storm Strike",
+			"attribute_damage_to_skill": "Fire Storm",
+			"cast_duration": [8520, 8520],
+			"strike_on_tick_list": [
+				[520, 1520, 2520, 3520, 4520, 5520, 6520, 7520, 8520],
+				[520, 1520, 2520, 3520, 4520, 5520, 6520, 7520, 8520]
+			],
+			"damage_coefficient": 0.65,
+			"weapon_type": "kit_conjure"
+		},
+		{
+			"skill_key": "Fire Storm",
+			"cast_duration": [680, 680],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Fire Storm Strike",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fire Storm"
+					}
+				}
+			],
+			"cast_condition": {
+				"bundle": "Fiery Greatsword"
+			},
+			"icon": "https://render.guildwars2.com/file/50A93174F3F9A1042654A7B00F146F31B2FABC09/103333.png",
+			"tags": ["Etching Charges"]
+		},
+
+		{
+			"skill_key": "Elemental Celerity",
+			"cast_duration": [240, 240],
+			"cooldown": [90000, 72000],
+			"executable": true,
+			"tags": ["Etching Charges"],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Blazing Barrage",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Seethe",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Meteor",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Etching: Volcano",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Fire Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Ice Beam",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Ripple",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Undertow",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Etching: Jökulhlaup",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Water Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Fulgor",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Energize",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Twister",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Etching: Derecho",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Air Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Earthen Spear",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Harden",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Fissure",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				},
+				{
+					"skill_key": "Etching: Haboob",
+					"operation": "reset",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Elemental Celerity",
+						"unique_effect_on_source": "Earth Attunement Effect"
+					}
+				}
+			]
+		},
+
+		{
+			"skill_key": "Jade Sphere",
+			"cast_duration": [0, 0],
+			"pulse_on_tick_list": [[0],[0]],
+			"tags": ["Etching Charges"],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Jade Sphere Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Deploy Jade Sphere",
+			"executable": false,
+			"cast_duration": [4, 4],
+			"cooldown": [999999,999999],
+			"skill_triggers": [
+				{
+					"skill_key": "Deploy Fire Jade Sphere",
+					"condition": {
+						"unique_effect_on_source": "Fire Attunement Effect",
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Deploy Jade Sphere"
+					}
+				},
+				{
+					"skill_key": "Deploy Water Jade Sphere",
+					"condition": {
+						"unique_effect_on_source": "Water Attunement Effect",
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Deploy Jade Sphere"
+					}
+				},
+				{
+					"skill_key": "Deploy Air Jade Sphere",
+					"condition": {
+						"unique_effect_on_source": "Air Attunement Effect",
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Deploy Jade Sphere"
+					}
+				},
+				{
+					"skill_key": "Deploy Earth Jade Sphere",
+					"condition": {
+						"unique_effect_on_source": "Earth Attunement Effect",
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Deploy Jade Sphere"
+					}
+				}
+			],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Deploy Jade Sphere",
+					"operation": "reset",
+					"condition": {
+						"or": [
+							{
+								"unique_effect_on_source": "Fire Attunement Effect",
+								"not": [{ "unique_effect_on_source": "Fire Jade Sphere Cooldown Effect"}]
+							},
+							{
+								"unique_effect_on_source": "Water Attunement Effect",
+								"not": [{ "unique_effect_on_source": "Water Jade Sphere Cooldown Effect"}]
+							},
+							{
+								"unique_effect_on_source": "Air Attunement Effect",
+								"not": [{ "unique_effect_on_source": "Air Jade Sphere Cooldown Effect"}]
+							},
+							{
+								"unique_effect_on_source": "Earth Attunement Effect",
+								"not": [{ "unique_effect_on_source": "Earth Jade Sphere Cooldown Effect"}]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Fire Jade Sphere Strike",
+			"attribute_damage_to_skill": "Deploy Fire Jade Sphere",
+			"cast_duration": [5000, 5000],
+			"strike_on_tick_list": [
+				[2, 1000, 2000, 3000, 4000, 5000],
+				[2, 1000, 2000, 3000, 4000, 5000]
+			],
+			"damage_coefficient": 0.35,
+			"combo_field": "fire",
+			"tags": ["Persisting Flames"],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fire Jade Sphere Effect"
+					}
+				}
+			],
+			"weapon_type": "hammer"
+		},
+		{
+			"skill_key": "Deploy Fire Jade Sphere",
+			"cast_duration": [0,0],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/22CA7C0F420C7F61CEBFA323DF3AADC5EF237475/2491598.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect",
+				"threshold": {
+					"counter_value_subject_to_threshold": "Catalyst Energy",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 100000
+				}
+			},
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 12000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fire Jade Sphere Cooldown Effect"
+					}
+				}
+			],
+			"child_skill_keys": ["Jade Sphere", "Fire Jade Sphere Strike"]
+		},
+		{
+			"skill_key": "Water Jade Sphere Strike",
+			"attribute_damage_to_skill": "Deploy Water Jade Sphere",
+			"cast_duration": [5000, 5000],
+			"strike_on_tick_list": [
+				[2, 1000, 2000, 3000, 4000, 5000],
+				[2, 1000, 2000, 3000, 4000, 5000]
+			],
+			"damage_coefficient": 0.35,
+			"combo_field": "water",
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Water Jade Sphere Effect"
+					}
+				}
+			],
+			"weapon_type": "hammer"
+		},
+		{
+			"skill_key": "Deploy Water Jade Sphere",
+			"cast_duration": [0,0],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"combo_field": "water",
+			"icon": "https://render.guildwars2.com/file/6016319AAF18417F0401800EF36C0F18E207FFD5/2491600.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect",
+				"threshold": {
+					"counter_value_subject_to_threshold": "Catalyst Energy",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 100000
+				}
+			},
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 12000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Water Jade Sphere Cooldown Effect"
+					}
+				}
+			],
+			"child_skill_keys": ["Jade Sphere", "Water Jade Sphere Strike"]
+		},
+		{
+			"skill_key": "Air Jade Sphere Strike",
+			"attribute_damage_to_skill": "Deploy Air Jade Sphere",
+			"cast_duration": [5000, 5000],
+			"strike_on_tick_list": [
+				[2, 1000, 2000, 3000, 4000, 5000],
+				[2, 1000, 2000, 3000, 4000, 5000]
+			],
+			"damage_coefficient": 0.35,
+			"combo_field": "lightning",
+			"weapon_type": "hammer"
+		},
+		{
+			"skill_key": "Deploy Air Jade Sphere",
+			"cast_duration": [0,0],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/07D9C76FEB07BB04B9D07A05D87C09A0A0AE0319/2491594.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect",
+				"threshold": {
+					"counter_value_subject_to_threshold": "Catalyst Energy",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 100000
+				}
+			},
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 12000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Air Jade Sphere Cooldown Effect"
+					}
+				}
+			],
+			"child_skill_keys": ["Jade Sphere", "Air Jade Sphere Strike"]
+		},
+		{
+			"skill_key": "Earth Jade Sphere Strike",
+			"attribute_damage_to_skill": "Deploy Earth Jade Sphere",
+			"cast_duration": [5000, 5000],
+			"strike_on_tick_list": [
+				[2, 1000, 2000, 3000, 4000, 5000],
+				[2, 1000, 2000, 3000, 4000, 5000]
+			],
+			"damage_coefficient": 0.35,
+			"combo_field": "poison",
+			"weapon_type": "hammer"
+		},
+		{
+			"skill_key": "Deploy Earth Jade Sphere",
+			"cast_duration": [0,0],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/97BEF22148DDA3159B4CF6DB18ECFEDE7107710B/2491596.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect",
+				"threshold": {
+					"counter_value_subject_to_threshold": "Catalyst Energy",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 100000
+				}
+			},
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 12000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Earth Jade Sphere Cooldown Effect"
+					}
+				}
+			],
+			"child_skill_keys": ["Jade Sphere", "Earth Jade Sphere Strike"]
+		},
+
+
+		{
+			"skill_key": "Combo Fire",
+			"cast_duration": [0, 0],
+			"cooldown": [10000, 8000],
+			"tags": ["Elemental Empowerment 1", "Empowering Auras"],
+			"skill_triggers": [
+				{
+					"skill_key": "Combo Fire",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Combo Fire",
+						"unique_effect_on_source": "Fire Attunement Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Combo"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Combo Water",
+			"cast_duration": [0, 0],
+			"cooldown": [10000, 8000],
+			"tags": ["Elemental Empowerment 1", "Empowering Auras"],
+			"skill_triggers": [
+				{
+					"skill_key": "Combo Water",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Combo Water",
+						"unique_effect_on_source": "Water Attunement Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Combo"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Combo Air",
+			"cast_duration": [0, 0],
+			"cooldown": [10000, 8000],
+			"tags": ["Elemental Empowerment 1", "Empowering Auras"],
+			"skill_triggers": [
+				{
+					"skill_key": "Combo Air",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Combo Air",
+						"unique_effect_on_source": "Air Attunement Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Combo"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Combo Earth",
+			"cast_duration": [0, 0],
+			"cooldown": [10000, 8000],
+			"tags": ["Elemental Empowerment 1", "Empowering Auras"],
+			"skill_triggers": [
+				{
+					"skill_key": "Combo Earth",
+					"condition": {
+						"depends_on_skill_off_cooldown": "Combo Earth",
+						"unique_effect_on_source": "Earth Attunement Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Combo"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Execute Combo",
+			"skill_triggers": [
+				{
+					"skill_key": "Apply Elemental Empowerment",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Elemental Empowerment 1"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Combo",
+			"cast_duration": [0, 0],
+			"skill_triggers": [
+				{
+					"skill_key": "Combo",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Combo",
+						"or": [
+							{ "unique_effect_on_source": "Jade Sphere Effect" },
+							{ "unique_effect_on_source": "Etching Combo Field Effect" }
+						]
+					}
+				},
+				{
+					"skill_key": "Combo",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Ripple",
+						"or": [
+							{ "unique_effect_on_source": "Jade Sphere Effect" },
+							{ "unique_effect_on_source": "Etching Combo Field Effect" }
+						]
+					}
+				}
+			]
+		},
+
+
+		{
+			"skill_key": "Flame Spear",
+			"cast_duration": [640, 640],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [[520], [520]],
+			"damage_coefficient": 1.25,
+			"weapon_type": "spear",
+			"tags": ["Etching Charges", "Harden"],
+			"icon": "https://render.guildwars2.com/file/74B333AD21E95C9D63AE0128F2DDA7CBEE75A841/3379079.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Blazing Barrage",
+			"cast_duration": [560, 560],
+			"cooldown": [4800, 3840],
+			"executable": true,
+			"strike_on_tick_list": [[559], [559]],
+			"damage_coefficient": 2.5,
+			"weapon_type": "spear",
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "OUTGOING",
+					"effect": "BURNING"
+				}
+			],
+			"pulse_on_tick_list": [
+				[558], 
+				[558] 
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden",
+				"Etching Charges", 
+				"Combo"
+			],
+			"icon": "https://render.guildwars2.com/file/FA97DE180DF595E721D064D7472DC7694D6F78B1/3379083.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Seethe",
+			"cast_duration": [360, 360],
+			"cooldown": [12000, 9600],
+			"executable": true,
+			"weapon_type": "spear",
+			"pulse_on_tick_list": [[340], [340]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Seethe Effect",
+						"max_duration": 5000
+					}
+				}
+			],
+			"attribute_modifiers": [
+				{
+					"multiplier": 1.2,
+					"attribute": "outgoing_strike_damage_multiplier",
+					"condition": {
+						"unique_effect_on_source": "Seethe Damage Effect"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Seethe Effect",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Seethe"
+					}
+				}
+			],
+			"tags": [
+				"Ripple",
+				"Etching Charges"
+			],
+			"icon": "https://render.guildwars2.com/file/409EE1CC3F41C1FC20B71D0944063179BB94C471/3379087.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Meteor",
+			"cast_duration": [680, 680],
+			"cooldown": [16000, 12800],
+			"damage_coefficient": 2.3,
+			"executable": true,
+			"strike_on_tick_list": [[560], [560]],
+			"pulse_on_tick_list": [[559], [559]],
+			"icon": "https://render.guildwars2.com/file/FAE0AFE5623F58965BFC327F99105ED605E6B2F5/3379091.png",
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden", 
+				"Etching Charges", 
+				"Relic of Fireworks"
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Meteor Effect",
+						"attribute_modifiers": [
+							{
+								"multiplier": 1.25,
+								"attribute": "outgoing_strike_damage_multiplier"
+							}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Etching: Volcano",
+			"cast_duration": [240, 240],
+			"cooldown": [20000, 16000],
+			"pulse_on_tick_list": [[240], [240]],
+			"executable": true,
+			"weapon_type": "spear",
+			"combo_field": "fire",
+			"icon": "https://render.guildwars2.com/file/037DCBFCCD3BA4C3ACC7B73DF4965D3A170F0F3E/3379099.png",
+			"tags": [
+				"Ripple"
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Fire Attunement Effect"
+			},
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Volcano Broken Effect"
+					},
+					"condition": {
+						"unique_effect_on_source": "Etching Volcano Duration Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Volcano Duration Effect"
+					},
+					"condition": {
+						"not": [
+							{ "unique_effect_on_source": "Etching Volcano Duration Effect"}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Volcano Effect"
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Combo Field Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Etching Volcano Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill_with_tag": "Volcano"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Lesser Volcano Reset",
+			"cast_duration": [3500, 3500],
+			"pulse_on_tick_list": [
+				[2079, 2359, 2639, 2919, 3199, 3479],
+				[2079, 2359, 2639, 2919, 3199, 3479]
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Volcano Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Volcano Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike",
+			"cast_duration": [3480, 3480],
+			"strike_on_tick_list": [
+				[2080, 2360, 2640, 2920, 3200, 3480],
+				[2080, 2360, 2640, 2920, 3200, 3480]
+			],
+			"weapon_type": "spear",
+			"NOTE": "Coef are wrong on wiki, patch notes, api, tooltip",
+			"damage_coefficient": 0.397,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 1",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2080],
+				[2080]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.397,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 2",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2360],
+				[2360]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.3573,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 3",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2640],
+				[2640]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.3176,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 4",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2920],
+				[2920]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.2779,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 5",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3200],
+				[3200]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.2382,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano Strike 6",
+			"attribute_damage_to_skill": "Lesser Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3480],
+				[3480]
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.1985,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Lesser Volcano",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"weapon_type": "spear",
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Lesser Volcano Reset",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 1",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 2",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 3",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 4",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 5",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				},
+				{
+					"skill_key": "Lesser Volcano Strike 6",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Lesser Volcano"
+					}
+				}
+			],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Volcano Seethe Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Volcano Energize Effect"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/F17A92D0331607C7C59D0213ECE1C5F1C3770680/3379100.png",
+			"tags": [
+				"Volcano",
+				"Seethe",
+				"Ripple",
+				"Energize",
+				"Harden"
+			],
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Fire Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Volcano Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Volcano Charges",
+					"threshold_type": "upper_bound_exclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+		{
+			"skill_key": "Volcano Reset",
+			"cast_duration": [5200, 5200],
+			"pulse_on_tick_list": [
+				[2079, 2359, 2639, 2919, 3199, 3479, 3759, 4039, 4319, 4599, 4879, 5159],
+				[2079, 2359, 2639, 2919, 3199, 3479, 3759, 4039, 4319, 4599, 4879, 5159]
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Volcano Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Volcano Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Volcano Strike",
+			"cast_duration": [5160, 5160],
+			"strike_on_tick_list": [
+				[2080, 2360, 2640, 2920, 3200, 3480, 3760, 4040, 4320, 4600, 4880, 5160], 
+				[2080, 2360, 2640, 2920, 3200, 3480, 3760, 4040, 4320, 4600, 4880, 5160] 
+			],
+			"weapon_type": "spear",
+			"NOTE": "Coef are wrong on wiki, patch notes, api, tooltip",
+			"damage_coefficient": 1.586,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 1",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2080], 
+				[2080] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 1.586,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 2",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2360], 
+				[2360] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 1.4274,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 3",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2640], 
+				[2640] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 1.2688,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 4",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[2920], 
+				[2920] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 1.1102,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 5",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3200], 
+				[3200] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.9516,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 6",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3480], 
+				[3480] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.793,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 7",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[3760], 
+				[3760] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.6344,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 8",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4040], 
+				[4040] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.4758,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 9",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4320], 
+				[4320] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.3172,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 10",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4600], 
+				[4600] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.1586,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano Strike 11",
+			"attribute_damage_to_skill": "Volcano",
+			"cast_duration": [0, 0],
+			"strike_on_tick_list": [
+				[4880, 5160], 
+				[4880, 5160] 
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 0.0793,
+			"tags": ["Persisting Flames"]
+		},
+		{
+			"skill_key": "Volcano",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"weapon_type": "spear",
+			"executable": true,
+			"skill_triggers": [
+				{
+					"skill_key": "Volcano Reset",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 1",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 2",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 3",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 4",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 5",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 6",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 7",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 8",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 9",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 10",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				},
+				{
+					"skill_key": "Volcano Strike 11",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Volcano"
+					}
+				}
+			],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5300,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Volcano Seethe Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5300,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Volcano Energize Effect"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/334EA928E56F38C176A22415DE3ECE144C5FD5BB/3379101.png",
+			"tags": [
+				"Volcano",
+				"Seethe",
+				"Ripple",
+				"Energize",
+				"Harden"
+			],
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Fire Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Volcano Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Volcano Charges",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+
+		{
+			"skill_key": "Restorative Spear",
+			"cast_duration": [640, 640],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [[520], [520]],
+			"damage_coefficient": 1.0,
+			"weapon_type": "spear",
+			"tags": ["Etching Charges", "Harden"],
+			"icon": "https://render.guildwars2.com/file/B756C80D01D7EAB61B7EBA231B029C7E9DBCAF54/3379080.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Ice Beam",
+			"cast_duration": [840, 840],
+			"cooldown": [6000, 4800],
+			"executable": true,
+			"strike_on_tick_list": [
+				[360, 520, 720], 
+				[360, 520, 720] 
+			],
+			"pulse_on_tick_list": [
+				[359, 519, 719], 
+				[359, 519, 719]
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"damage_coefficient": 0.7,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden",
+				"Etching Charges"
+			],
+			"icon": "https://render.guildwars2.com/file/076572AF05EF210B9CCA6422641A0AA52A6B9156/3379084.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Ripple",
+			"cast_duration": [800, 800],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"weapon_type": "spear",
+			"pulse_on_tick_list": [[760], [760]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Ripple Effect"
+					}
+				}
+			],
+			"tags": [
+				"Etching Charges",
+				"Combo"
+			],
+			"icon": "https://render.guildwars2.com/file/D246C6CE0468F2484643935675010B0A963EC9D8/3379088.png",
+			"effect_removals": [
+				{
+					"unique_effect": "Ripple Effect",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Ripple"
+					}
+				}
+			],
+			"cooldown_modifiers": [
+				{
+					"skill_key": "Blazing Barrage",
+					"operation": "subtract",
+					"value": 1584,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Blazing Barrage"
+					}
+				},
+				{
+					"skill_key": "Seethe",
+					"operation": "subtract",
+					"value": 3960,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Seethe"
+					}
+				},
+				{
+					"skill_key": "Meteor",
+					"operation": "subtract",
+					"value": 5280,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Meteor"
+					}
+				},
+				{
+					"skill_key": "Etching: Volcano",
+					"operation": "subtract",
+					"value": 6600,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Etching: Volcano"
+					}
+				},
+				{
+					"skill_key": "Ice Beam",
+					"operation": "subtract",
+					"value": 1980,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Ice Beam"
+					}
+				},
+				{
+					"skill_key": "Undertow",
+					"operation": "subtract",
+					"value": 6600,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Undertow"
+					}
+				},
+				{
+					"skill_key": "Etching: Jökulhlaup",
+					"operation": "subtract",
+					"value": 8250,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Etching: Jökulhlaup"
+					}
+				},
+				{
+					"skill_key": "Fulgor",
+					"operation": "subtract",
+					"value": 1584,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Fulgor"
+					}
+				},
+				{
+					"skill_key": "Energize",
+					"operation": "subtract",
+					"value": 3960,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Energize"
+					}
+				},
+				{
+					"skill_key": "Twister",
+					"operation": "subtract",
+					"value": 5280,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Twister"
+					}
+				},
+				{
+					"skill_key": "Etching: Derecho",
+					"operation": "subtract",
+					"value": 6600,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Etching: Derecho"
+					}
+				},
+				{
+					"skill_key": "Earthen Spear",
+					"operation": "subtract",
+					"value": 1980,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Earthen Spear"
+					}
+				},
+				{
+					"skill_key": "Harden",
+					"operation": "subtract",
+					"value": 4950,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Harden"
+					}
+				},
+				{
+					"skill_key": "Fissure",
+					"operation": "subtract",
+					"value": 6600,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Fissure"
+					}
+				},
+				{
+					"skill_key": "Etching: Haboob",
+					"operation": "subtract",
+					"value": 8250,
+					"condition": {
+						"unique_effect_on_source": "Ripple Effect",
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Etching: Haboob"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Undertow",
+			"cast_duration": [600, 600],
+			"cooldown": [20000, 16000],
+			"executable": true,
+			"strike_on_tick_list": [
+				[480], 
+				[480] 
+			],
+			"pulse_on_tick_list": [[479], [479]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"damage_coefficient": 1.7,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Etching Charges",
+				"Elemental Empowerment 2",
+				"Relic of Fireworks"
+			],
+			"icon": "https://render.guildwars2.com/file/01E36A1DDA2D1709E109210A71041812F65C496B/3379092.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Etching: Jökulhlaup",
+			"cast_duration": [240, 240],
+			"cooldown": [25000, 20000],
+			"pulse_on_tick_list": [[240], [240]],
+			"executable": true,
+			"weapon_type": "spear",
+			"combo_field": "water",
+			"icon": "https://render.guildwars2.com/file/7B61A40CFC6F2A9DE5A5414C50E87BD9D9711E43/3379102.png",
+			"tags": [
+				"Ripple"
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Water Attunement Effect"
+			},
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Jökulhlaup Broken Effect"
+					},
+					"condition": {
+						"unique_effect_on_source": "Etching Jökulhlaup Duration Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Jökulhlaup Duration Effect"
+					},
+					"condition": {
+						"not": [
+							{ "unique_effect_on_source": "Etching Jökulhlaup Duration Effect"}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Jökulhlaup Effect"
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Combo Field Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Etching Jökulhlaup Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill_with_tag": "Jökulhlaup"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Lesser Jökulhlaup",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560],
+				[560]
+			],
+			"pulse_on_tick_list": [[559], [559]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Jökulhlaup"
+			],
+			"damage_coefficient": 1.5,
+			"icon": "https://render.guildwars2.com/file/3333FBE3CB1331A40AC51903580FCFB09BC80335/3379103.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Water Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Jökulhlaup Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Jökulhlaup Charges",
+					"threshold_type": "upper_bound_exclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+		{
+			"skill_key": "Jökulhlaup",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560], 
+				[560] 
+			],
+			"pulse_on_tick_list": [[559], [559]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Jökulhlaup"
+			],
+			"damage_coefficient": 3.0,
+			"icon": "https://render.guildwars2.com/file/48EB1A03297EE4DFA0FE2CA41F0B02B77302060B/3379104.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Water Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Jökulhlaup Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Jökulhlaup Charges",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+
+		{
+			"skill_key": "Lightning Javelin",
+			"cast_duration": [640, 640],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [[520], [520]],
+			"damage_coefficient": 1.1,
+			"weapon_type": "spear",
+			"tags": ["Etching Charges", "Harden"],
+			"icon": "https://render.guildwars2.com/file/0F2F5806E0C2424234562CF27B06606031B32DFE/3379077.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Fulgor Strike",
+			"attribute_damage_to_skill": "Fulgor",
+			"cast_duration": [4480, 4480],
+			"strike_on_tick_list": [
+				[480, 1480, 2480, 3480, 4480], 
+				[480, 1480, 2480, 3480, 4480]
+			],
+			"damage_coefficient": 0.4,
+			"weapon_type": "spear"
+		},
+		{
+			"skill_key": "Fulgor Condi",
+			"cast_duration": [0, 0],
+			"cooldown": [0, 0],
+			"strike_on_tick_list": [
+				[1480, 2480, 3480, 4480, 5480], 
+				[1480, 2480, 3480, 4480, 5480]
+			],
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fulgor Condi Effect",
+						"NOTE": "Boni are unfortunately only additive and not multiplicative",
+						"skill_triggers": [
+							{
+								"skill_key": "Fulgor Condi Fire Bonus",
+								"condition": {
+									"unique_effect_on_source": "Fire Attunement Effect"
+								}
+							},
+							{
+								"skill_key": "Fulgor Condi Relentless Fire Bonus",
+								"condition": {
+									"unique_effect_on_source": "Relentless Fire Effect"
+								}
+							},
+							{
+								"skill_key": "Fulgor Condi Seethe Bonus",
+								"condition": {
+									"unique_effect_on_source": "Fulgor Seethe Effect"
+								}
+							}
+						]
+					}
+				}
+			],
+			"tags": ["No Strike"],
+			"can_critical_strike": false,
+			"NOTE": "Only roughly the value because its only 200 + power * 0.4 and not whole damage | Fire Power 4218 | Power 3918",
+			"flat_damage": 1767,
+			"icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png",
+			"weapon_type": "spear"
+		},
+		{
+			"skill_key": "Fulgor Condi Fire Bonus",
+			"cast_duration": [0, 0],
+			"cooldown": [0, 0],
+			"strike_on_tick_list": [[0], [0]],
+			"tags": ["No Strike"],
+			"can_critical_strike": false,
+			"flat_damage": 120,
+			"icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png",
+			"weapon_type": "spear"
+		},
+		{
+			"skill_key": "Fulgor Condi Relentless Fire Bonus",
+			"cast_duration": [0, 0],
+			"cooldown": [0, 0],
+			"strike_on_tick_list": [[0], [0]],
+			"tags": ["No Strike"],
+			"can_critical_strike": false,
+			"flat_damage": 177,
+			"icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png",
+			"weapon_type": "spear"
+		},
+		{
+			"skill_key": "Fulgor Condi Seethe Bonus",
+			"cast_duration": [0, 0],
+			"cooldown": [0, 0],
+			"strike_on_tick_list": [[0], [0]],
+			"tags": ["No Strike"],
+			"can_critical_strike": false,
+			"flat_damage": 353,
+			"icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png",
+			"weapon_type": "spear"
+		},
+		{
+			"skill_key": "Fulgor Reset",
+			"cast_duration": [5480, 5480],
+			"pulse_on_tick_list": [
+				[479, 1479, 2479, 3479, 4479, 5479], 
+				[479, 1479, 2479, 3479, 4479, 5479]
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Fulgor Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Fulgor Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Fulgor",
+			"cast_duration": [560, 560],
+			"cooldown": [4800, 3840],
+			"executable": true,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple",
+				"Energize",
+				"Harden",
+				"Etching Charges"
+			],
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 6000,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Fulgor Seethe Effect"
+					}
+				},
+				{
+					"base_duration_ms": 6000,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Fulgor Energize Effect"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			},
+			"skill_triggers": [
+				{
+					"skill_key": "Fulgor Strike",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fulgor"
+					}
+				},
+				{
+					"skill_key": "Fulgor Reset",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fulgor"
+					}
+				},
+				{
+					"skill_key": "Fulgor Condi",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill": "Fulgor"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Energize",
+			"cast_duration": [0, 0],
+			"cooldown": [12000, 9600],
+			"executable": true,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Etching Charges"
+			],
+			"pulse_on_tick_list": [[0], [0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Energize Effect"
+					}
+				}
+			],
+			"attribute_modifiers": [
+				{
+					"addend": 1,
+					"attribute": "critical_chance_multiplier",
+					"condition": {
+						"unique_effect_on_source": "Energize Crit Effect"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Energize Effect",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill_with_tag": "Energize"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/0BA3490023A82B4B5FCA597C3CB965E21D3CE504/3379085.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Twister",
+			"cast_duration": [560, 560],
+			"cooldown": [16000, 12800],
+			"damage_coefficient": 1.84,
+			"executable": true,
+			"strike_on_tick_list": [[520], [520]],
+			"pulse_on_tick_list": [[519], [519]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/BAD1E32FA0F93A560B60DB703D716B70C6ED0F63/3379089.png",
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden",
+				"Etching Charges", 
+				"Elemental Empowerment 2", 
+				"Combo", 
+				"Relic of Fireworks"
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Etching: Derecho",
+			"cast_duration": [240, 240],
+			"cooldown": [20000, 16000],
+			"pulse_on_tick_list": [[240], [240]],
+			"executable": true,
+			"weapon_type": "spear",
+			"combo_field": "lightning",
+			"icon": "https://render.guildwars2.com/file/F1B3331AB23F37964BE8D6A91F43FF066BE970AA/3379093.png",
+			"tags": [
+				"Ripple"
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Air Attunement Effect"
+			},
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Derecho Broken Effect"
+					},
+					"condition": {
+						"unique_effect_on_source": "Etching Derecho Duration Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Derecho Duration Effect"
+					},
+					"condition": {
+						"not": [
+							{ "unique_effect_on_source": "Etching Derecho Duration Effect"}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Derecho Effect"
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Combo Field Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Etching Derecho Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill_with_tag": "Derecho"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Lesser Derecho",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560],
+				[560]
+			],
+			"pulse_on_tick_list": [[559], [559]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Derecho", 
+				"Elemental Empowerment 2"
+			],
+			"damage_coefficient": 2.0,
+			"icon": "https://render.guildwars2.com/file/93950D05BFE50508031DA59BA0381252F60FEDBC/3379094.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Air Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Derecho Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Derecho Charges",
+					"threshold_type": "upper_bound_exclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+		{
+			"skill_key": "Derecho",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560], 
+				[560] 
+			],
+			"pulse_on_tick_list": [[559], [559]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"weapon_type": "spear",
+			"damage_coefficient": 5.0,
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Derecho", 
+				"Elemental Empowerment 2"
+			],
+			"icon": "https://render.guildwars2.com/file/94F1A894667CA4F3407C57B055F8236804264B1F/3379095.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Air Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Derecho Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Derecho Charges",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+
+		{
+			"skill_key": "Stone Strike",
+			"cast_duration": [640, 640],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [[520], [520]],
+			"damage_coefficient": 1.2,
+			"weapon_type": "spear",
+			"tags": ["Etching Charges", "Harden"],
+			"icon": "https://render.guildwars2.com/file/19C7C57CCB3B22A11D29684F35C967A5A66D5BE0/3379078.png",
+			"on_strike_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "OUTGOING",
+					"effect": "BLEEDING"
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Earthen Spear",
+			"cast_duration": [680, 680],
+			"cooldown": [6000, 4800],
+			"executable": true,
+			"strike_on_tick_list": [[600], [600]],
+			"pulse_on_tick_list": [[599], [599]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"damage_coefficient": 2.6,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize", 
+				"Harden",
+				"Etching Charges", 
+				"Combo"
+			],
+			"icon": "https://render.guildwars2.com/file/98B2192A9DB346C7E2C90F0071A880737416F32E/3379082.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Harden Strike",
+			"cast_duration": [0, 0],
+			"effect_removals": [
+				{
+					"unique_effect": "Harden Effect",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Harden Strike"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Harden",
+			"cast_duration": [200, 200],
+			"cooldown": [15000, 12000],
+			"executable": true,
+			"weapon_type": "spear",
+			"tags": [
+				"Ripple", 
+				"Etching Charges"
+			],
+			"pulse_on_tick_list": [[199],[199]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Harden Effect"
+					}
+				}
+			],
+			"skill_triggers": [
+				{
+					"skill_key": "Harden Strike",
+					"condition": {
+						"only_applies_on_strikes": true,
+						"only_applies_on_strikes_by_skill_with_tag": "Harden",
+						"unique_effect_on_source": "Harden Effect"
+					}
+				},
+				{
+					"skill_key": "Apply Elemental Empowerment",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Harden Strike"
+					}
+				},
+				{
+					"skill_key": "Apply Elemental Empowerment",
+					"condition": {
+						"only_applies_on_finished_casting": true,
+						"only_applies_on_finished_casting_skill": "Harden Strike"
+					}
+				}
+			],
+			"icon": "https://render.guildwars2.com/file/08F199900A0613B465DF63D1DA4D6647A954DE0B/3379086.png",
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Fissure",
+			"cast_duration": [680, 680],
+			"cooldown": [20000, 16000],
+			"executable": true,
+			"strike_on_tick_list": [[560], [560]],
+			"pulse_on_tick_list": [[559], [559]],
+			"damage_coefficient": 2.1,
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",  
+				"Harden",
+				"Etching Charges", 
+				"Relic of Fireworks"
+			],
+			"icon": "https://render.guildwars2.com/file/51A85B4EC564F24A10EF7D982DDA73BF1940CA01/3379090.png",
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Fissure Effect",
+						"attribute_modifiers": [
+							{
+								"multiplier": 1.25,
+								"attribute": "outgoing_strike_damage_multiplier"
+							}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			}
+		},
+		{
+			"skill_key": "Etching: Haboob",
+			"cast_duration": [240, 240],
+			"cooldown": [25000, 20000],
+			"pulse_on_tick_list": [[240], [240]],
+			"executable": true,
+			"weapon_type": "spear",
+			"combo_field": "dark",
+			"icon": "https://render.guildwars2.com/file/7C7339E9EA33F7CD05806CE20066DF0EC4673767/3379096.png",
+			"tags": [
+				"Ripple"
+			],
+			"cast_condition": {
+				"unique_effect_on_source": "Earth Attunement Effect"
+			},
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Haboob Broken Effect"
+					},
+					"condition": {
+						"unique_effect_on_source": "Etching Haboob Duration Effect"
+					}
+				},
+				{
+					"base_duration_ms": 5000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Haboob Duration Effect",
+						"stacking_type": "replace"
+					},
+					"condition": {
+						"not": [
+							{ "unique_effect_on_source": "Etching Haboob Duration Effect"}
+						]
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Haboob Effect"
+					}
+				},
+				{
+					"base_duration_ms": 7000,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Etching Combo Field Effect",
+						"stacking_type": "replace"
+					}
+				}
+			],
+			"effect_removals": [
+				{
+					"unique_effect": "Etching Haboob Effect",
+					"condition": {
+						"only_applies_on_begun_casting": true,
+						"only_applies_on_begun_casting_skill_with_tag": "Haboob"
+					}
+				}
+			]
+		},
+		{
+			"skill_key": "Lesser Haboob",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560],
+				[560]
+			],
+			"pulse_on_tick_list": [
+				[599], 
+				[599] 
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden",
+				"Haboob"
+			],
+			"damage_coefficient": 1.75,
+			"icon": "https://render.guildwars2.com/file/E5FDD5E622E3DF73496BB35C0E33B429B8C5EB52/3379097.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Earth Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Haboob Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Haboob Charges",
+					"threshold_type": "upper_bound_exclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+		{
+			"skill_key": "Haboob",
+			"cast_duration": [600, 600],
+			"cooldown": [0, 0],
+			"executable": true,
+			"strike_on_tick_list": [
+				[560], 
+				[560] 
+			],
+			"pulse_on_tick_list": [
+				[599], 
+				[599] 
+			],
+			"weapon_type": "spear",
+			"tags": [
+				"Seethe",
+				"Ripple", 
+				"Energize",
+				"Harden",
+				"Haboob"
+			],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Seethe Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Seethe Damage Effect"
+					}
+				},
+				{
+					"base_duration_ms": 0,
+					"direction": "SELF",
+					"condition": {
+						"unique_effect_on_source": "Energize Effect"
+					},
+					"unique_effect": {
+						"unique_effect_key": "Energize Crit Effect"
+					}
+				}
+			],
+			"damage_coefficient": 4.25,
+			"icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png",
+			"cast_condition": {
+				"and": [
+					{ "unique_effect_on_source": "Earth Attunement Effect" },
+					{ "unique_effect_on_source": "Etching Haboob Effect" }
+				],
+				"threshold": {
+					"counter_value_subject_to_threshold": "Haboob Charges",
+					"threshold_type": "lower_bound_inclusive",
+					"threshold_value": 3
+				}
+			}
+		},
+
+		{
+			"skill_key": "Break",
+			"cast_duration": [5, 5],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png",
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Idle",
+			"cast_duration": [1000, 1000],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+			"weapon_type": "empty_handed"
+		},
+		{
+			"skill_key": "Swap to Fresh Air",
+			"cast_duration": [0, 0],
+			"executable": true,
+			"icon": "https://render.guildwars2.com/file/FA64C9F2750F986E52E8376F22EDBA3844A8C603/1012277.png",
+			"weapon_type": "empty_handed",
+			"pulse_on_tick_list": [[0],[0]],
+			"on_pulse_effect_applications": [
+				{
+					"base_duration_ms": 999999,
+					"direction": "SELF",
+					"unique_effect": {
+						"unique_effect_key": "Swap to Fresh Air Effect"
+					}
+				}
+			],
+			"cast_condition": {
+				"not": [
+					{
+						"unique_effect_on_source": "Engaged Effect"
+					}
+				]
+			}
+		}
+	]
+  }
