@@ -1,0 +1,1364 @@
+{
+  "skill_casts": [
+    {
+      "cast_time_ms": 0,
+      "skill": "Glyph of Fire Elemental",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Firestorm",
+      "skillID": "5531"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Arcane Brilliance",
+      "skillID": "21656"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Arcane Brilliance",
+      "skillID": "21656"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Firestorm",
+      "skillID": "5531"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Arcane Brilliance",
+      "skillID": "21656"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Firestorm",
+      "skillID": "5531"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Arcane Brilliance",
+      "skillID": "21656"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Firestorm",
+      "skillID": "5531"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Earth",
+      "skillID": "5571"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Signet of Fire",
+      "skillID": "5542"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Searing Salvo",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Water Attunement",
+      "skillID": "5493"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Frigid Flurry",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Arcane Brilliance",
+      "skillID": "21656"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Air Attunement",
+      "skillID": "5494"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ride the Lightning",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Aerial Agility Dash",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earth Attunement",
+      "skillID": "5495"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Earthquake",
+      "skillID": "5690"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Churning Earth",
+      "skillID": "5522"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Steamshrieker Relic",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Elemental Explosion",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Boulder Blast",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Piercing Pebble",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Shattering Stone",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Attunement",
+      "skillID": "5492"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Deploy Jade Sphere",
+      "skillID": "62940"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Raging Ricochet",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Ring of Fire",
+      "skillID": "5691"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Scorching Shot",
+      "skillID": "-1"
+    },
+    {
+      "cast_time_ms": 0,
+      "skill": "Fire Grab",
+      "skillID": "5557"
+    }
+  ]
+}

@@ -1,0 +1,1349 @@
+{
+    "name": "cqCata",
+    "author": "Maragon.5298",
+    "base_class": "elementalist",
+    "profession": "catalyst",
+    "public": true,
+    "weapons": [
+        {
+            "position": "main_hand",
+            "set": "set_1",
+            "type": "pistol"
+        },
+        {
+            "position": "off_hand",
+            "set": "set_1",
+            "type": "dagger"
+        }
+    ],
+    "attributes": [
+        ["power", 3140],
+        ["precision", 1976],
+        ["condition_damage", 2942],
+        ["expertise", 823]
+    ],
+    "permanent_effects": [
+        "QUICKNESS",
+        "ALACRITY",
+        "FURY"
+    ],
+    "unique_effects": {
+        "Fire Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png"
+        },
+        "Water Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png"
+        },
+        "Air Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png"
+        },
+        "Earth Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png"
+        },
+
+        "Raging Ricochet Effect": {
+            "icon": "https://render.guildwars2.com/file/7ED653511F5A3F3E6D705FF706265D3370647644/3256329.png"
+        },
+        "Shattering Stone Effect": {
+            "icon": "https://render.guildwars2.com/file/387446B9ED09274D20200C2F066BF4311E6D0C93/3256328.png"
+        },
+
+        "Fire Bullet Effect": {
+            "icon": "https://render.guildwars2.com/file/DA6E9962EC9966CDBBC776F23347D16298AF4ADE/3256325.png"
+        },
+        "Ice Bullet Effect": {
+            "icon": "https://render.guildwars2.com/file/D2092BE1DA1F2D1D93F67E07EE010BB113794C44/3256326.png"
+        },
+        "Air Bullet Effect": {
+            "icon": "https://render.guildwars2.com/file/575D6048F7B2660A3BC0D3A93CECFD49EEB1C0D1/3256323.png"
+        },
+        "Earth Bullet Effect": {
+            "icon": "https://render.guildwars2.com/file/4F217D25EBBFC017B4621C966BD26A7C4C6CD81C/3256324.png"
+        }
+    },
+    "counters": [],
+    "permanent_unique_effects": [
+        {
+            "unique_effect_key": "Food Perk",
+            "skill_triggers": [
+              {
+                "skill_key": "Lifesteal Food",
+                "condition": {
+                  "depends_on_skill_off_cooldown": "Lifesteal Food",
+                  "only_applies_on_critical_strikes": true,
+                  "only_applies_on_strikes": true,
+                  "threshold": {
+                    "generate_random_number_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 66
+                  }
+                }
+              }
+            ]
+        },
+        {
+            "unique_effect_key": "Malice Sigil",
+            "attribute_modifiers": [
+                {
+                    "addend": 0.1,
+                    "attribute": "condition_duration_multiplier"
+                },
+                {
+                    "addend": 0.1,
+                    "attribute": "bleeding_duration_multiplier"
+                },
+                {
+                    "addend": 0.1,
+                    "attribute": "burning_duration_multiplier"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Bursting Sigil",
+            "attribute_modifiers": [
+                {
+                    "addend": 0.05,
+                    "attribute": "outgoing_condition_damage_multiplier_add_group"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Trapper Runes",
+            "attribute_modifiers": [
+                {
+                    "addend": 0.15,
+                    "attribute": "condition_duration_multiplier"
+                },
+                {
+                    "addend": 0.15,
+                    "attribute": "bleeding_duration_multiplier"
+                },
+                {
+                    "addend": 0.15,
+                    "attribute": "burning_duration_multiplier"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Relic of the Fractal",
+            "skill_triggers": [
+                {
+                    "condition": {
+                        "depends_on_skill_off_cooldown": "Relic of the Fractal Proc",
+                        "only_applies_on_effect_application": true,
+                        "only_applies_on_effect_application_of_type": "BLEEDING",
+                        "effect_on_target": "BLEEDING",
+                        "stacks_of_effect_on_target": 6,
+                        "unique_effect_on_source": "Fractal Relic Effect"
+                    },
+                    "skill_key": "Relic of the Fractal Proc"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Empowering Flame Perk",
+            "attribute_modifiers": [
+              {
+                "addend": 150,
+                "attribute": "power",
+                "condition": {
+                  "unique_effect_on_source": "Fire Attunement Effect"
+                }
+              }
+            ]
+        },
+        {
+            "unique_effect_key": "Burning Precision Perk",
+            "attribute_modifiers": [
+              {
+                "addend": 0.2,
+                "attribute": "burning_duration_multiplier"
+              }
+            ],
+            "skill_triggers": [
+              {
+                "condition": {
+                  "depends_on_skill_off_cooldown": "Burning Precision",
+                  "only_applies_on_strikes": true,
+                  "only_applies_on_critical_strikes": true,
+                  "threshold": {
+                    "generate_random_number_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 33
+                  }
+                },
+                "skill_key": "Burning Precision"
+              }
+            ]
+        },
+        {
+            "unique_effect_key": "Sunspot Perk",
+            "skill_triggers": [
+                {
+                    "skill_key": "Sunspot",
+                    "condition": {
+                        "depends_on_skill_off_cooldown": "Sunspot",
+                        "unique_effect_on_source": "Engaged Effect",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Fire Attunement"
+                    }
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Pyromancers Training Perk",
+            "attribute_modifiers": [
+              {
+                "attribute": "outgoing_strike_damage_multiplier",
+                "condition": {
+                  "effect_on_target": "BURNING"
+                },
+                "multiplier": 1.1
+              }
+            ]
+        },
+        {
+            "unique_effect_key": "Persisting Flames Perk",
+            "attribute_modifiers": [
+                {
+                    "addend": 0.1,
+                    "attribute": "outgoing_strike_damage_multiplier_add_group"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Serrated Stones Perk",
+            "attribute_modifiers": [
+                {
+                    "addend": 0.2,
+                    "attribute": "bleeding_duration_multiplier"
+                },
+                {
+                    "multiplier": 1.05,
+                    "attribute": "outgoing_strike_damage_multiplier"
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Earthen Blast Perk",
+            "skill_triggers": [
+                {
+                    "skill_key": "Earthen Blast",
+                    "condition": {
+                        "depends_on_skill_off_cooldown": "Earthen Blast",
+                        "unique_effect_on_source": "Engaged Effect",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Earth Attunement"
+                    }
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Strength of Stone Perk",
+            "skill_triggers": [
+                {
+                    "skill_key": "Strength of Stone",
+                    "condition": {
+                        "depends_on_skill_off_cooldown": "Strength of Stone",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill_with_tag": "Strength of Stone Tag"
+                    }
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Bullet Mechanic",
+            "skill_triggers": [
+                {
+                    "skill_key": "Raging Ricochet Bonus",
+                    "condition": {
+                        "unique_effect_on_source": "Fire Bullet Effect",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Raging Ricochet"
+                    }
+                },
+                {
+                    "skill_key": "Searing Salvo Bonus",
+                    "condition": {
+                        "unique_effect_on_source": "Fire Bullet Effect",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Searing Salvo"
+                    }
+                },
+                {
+                    "skill_key": "Shattering Stone Bonus",
+                    "condition": {
+                        "unique_effect_on_source": "Earth Bullet Effect",
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Shattering Stone"
+                    }
+                },
+                {
+                    "skill_key": "Create Fire Bullet",
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill_with_tag": "Fire Bullet Gen",
+                        "not": [{
+                            "unique_effect_on_source": "Fire Bullet Effect"
+                        }]
+                    }
+                },
+                {
+                    "skill_key": "Create Earth Bullet",
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill_with_tag": "Earth Bullet Gen",
+                        "not": [{
+                            "unique_effect_on_source": "Earth Bullet Effect"
+                        }]
+                    }
+                }
+            ],
+            "effect_removals": [
+                {
+                    "unique_effect": "Fire Bullet Effect",
+                    "condition": {
+                        "only_applies_on_begun_casting": true,
+                        "only_applies_on_begun_casting_skill_with_tag": "Fire Bullet Consume"
+                    }
+                },
+                {
+                    "unique_effect": "Earth Bullet Effect",
+                    "condition": {
+                        "only_applies_on_begun_casting": true,
+                        "only_applies_on_begun_casting_skill_with_tag": "Earth Bullet Consume"
+                    }
+                }
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "cast_duration": [20,20],
+            "effect_removals": [
+                {
+                    "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Fire Attunement Reset"
+                    },
+                    "unique_effect": "Fire Attunement Effect"
+                }
+            ],
+            "skill_key": "Fire Attunement Reset"
+        },
+        {
+            "cast_duration": [20,20],
+            "effect_removals": [
+                {
+                    "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Water Attunement Reset"
+                    },
+                    "unique_effect": "Water Attunement Effect"
+                }
+            ],
+            "skill_key": "Water Attunement Reset"
+        },
+        {
+            "cast_duration": [20,20],
+            "effect_removals": [
+            {
+                "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Air Attunement Reset"
+                },
+                "unique_effect": "Air Attunement Effect"
+            }
+            ],
+            "skill_key": "Air Attunement Reset"
+        },
+        {
+            "cast_duration": [20,20],
+            "effect_removals": [
+            {
+                "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Earth Attunement Reset"
+                },
+                "unique_effect": "Earth Attunement Effect"
+            }
+            ],
+            "skill_key": "Earth Attunement Reset"
+        },
+        {
+            "cast_duration": [0,0],
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [
+            {
+                "condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+                },
+                "operation": "set",
+                "skill_key": "Fire Attunement"
+            },
+            {
+                "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fire Attunement Reset"
+                },
+                "operation": "add",
+                "skill_key": "Fire Attunement",
+                "value": 8500
+            }
+            ],
+            "executable": true,
+            "on_pulse_effect_applications": [
+            {
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "unique_effect": {
+                "unique_effect_key": "Fire Attunement Effect"
+                }
+            }
+            ],
+            "pulse_on_tick_list": [[0],[0]],
+            "skill_key": "Fire Attunement",
+            "skill_triggers": [
+                {
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Fire",
+                        "unique_effect_on_source": "Fire Attunement Effect"
+                    },
+                    "skill_key": "Fire Attunement Reset"
+                }
+            ],
+            "skills_to_put_on_cooldown": [
+                "Water Attunement",
+                "Air Attunement",
+                "Earth Attunement"
+            ],
+            "tags": [
+                "Attunement Swap from Water",
+                "Attunement Swap from Air",
+                "Attunement Swap from Earth"
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "cast_duration": [0,0],
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [
+            {
+                "condition": {
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },
+                "operation": "set",
+                "skill_key": "Water Attunement"
+            },
+            {
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Water Attunement Reset"
+                },
+                "operation": "add",
+                "skill_key": "Water Attunement",
+                "value": 8500
+            }
+            ],
+            "executable": true,
+            "on_pulse_effect_applications": [
+            {
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "unique_effect": {
+                "unique_effect_key": "Water Attunement Effect"
+                }
+            }
+            ],
+            "pulse_on_tick_list": [[0],[0]],
+            "skill_key": "Water Attunement",
+            "skill_triggers": [
+            {
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Water",
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },
+                "skill_key": "Water Attunement Reset"
+            }
+            ],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Air Attunement",
+                "Earth Attunement"
+            ],
+            "tags": [
+                "Attunement Swap from Fire",
+                "Attunement Swap from Air",
+                "Attunement Swap from Earth"
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "cast_duration": [0,0],
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [
+                {
+                    "condition": {
+                    "unique_effect_on_source": "Air Attunement Effect"
+                    },
+                    "operation": "set",
+                    "skill_key": "Air Attunement"
+                },
+                {
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Air Attunement Reset"
+                    },
+                    "operation": "add",
+                    "skill_key": "Air Attunement",
+                    "value": 8500
+                }
+            ],
+            "executable": true,
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Air Attunement Effect"
+                    }
+                }
+            ],
+            "pulse_on_tick_list": [[0],[0]],
+            "skill_key": "Air Attunement",
+            "skill_triggers": [
+                {
+                    "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Air",
+                    "unique_effect_on_source": "Air Attunement Effect"
+                    },
+                    "skill_key": "Air Attunement Reset"
+                }
+            ],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Water Attunement",
+                "Earth Attunement"
+            ],
+            "tags": [
+                "Attunement Swap from Fire",
+                "Attunement Swap from Water",
+                "Attunement Swap from Earth"
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "cast_duration": [0,0],
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [
+                {
+                    "condition": {
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                    },
+                    "operation": "set",
+                    "skill_key": "Earth Attunement"
+                },
+                {
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill": "Earth Attunement Reset"
+                    },
+                    "operation": "add",
+                    "skill_key": "Earth Attunement",
+                    "value": 8500
+                }
+            ],
+            "executable": true,
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Earth Attunement Effect"
+                    }
+                }
+            ],
+            "pulse_on_tick_list": [[0],[0]],
+            "skill_key": "Earth Attunement",
+            "skill_triggers": [
+                {
+                    "condition": {
+                        "only_applies_on_finished_casting": true,
+                        "only_applies_on_finished_casting_skill_with_tag": "Attunement Swap from Earth",
+                        "unique_effect_on_source": "Earth Attunement Effect"
+                    },
+                    "skill_key": "Earth Attunement Reset"
+                }
+            ],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Water Attunement",
+                "Air Attunement"
+            ],
+            "tags": [
+                "Attunement Swap from Fire",
+                "Attunement Swap from Water",
+                "Attunement Swap from Air"
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Engaged",
+            "cooldown": [999999,999999],
+            "pulse_on_tick_list": [[0],[0]],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Engaged Effect"
+                    }
+                }
+            ],
+            "skill_triggers": [
+                {
+                    "skill_key": "Engaged",
+                    "condition": {
+                        "only_applies_on_strikes": true,
+                        "depends_on_skill_off_cooldown": "Engaged"
+                    }
+                }
+            ]
+        },
+        {
+            "skill_key": "Scorching Shot",
+            "damage_coefficient": 0.3,
+            "cast_duration": [520,520],
+            "cooldown": [0,0],
+            "strike_on_tick_list": [[520],[520]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 1500,
+                    "direction": "OUTGOING",
+                    "num_stacks": 1,
+                    "effect": "BURNING"
+                }
+            ],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/DA6E9962EC9966CDBBC776F23347D16298AF4ADE/3256325.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Raging Ricochet",
+            "damage_coefficient": 0.8,
+            "cast_duration": [520,520],
+            "cooldown": [3840,3840],
+            "strike_on_tick_list": [[520],[520]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 8000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "tags": ["Fire Bullet Gen"],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/7ED653511F5A3F3E6D705FF706265D3370647644/3256329.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Raging Ricochet Bonus",
+            "cast_duration": [0,0],
+            "pulse_on_tick_list": [[0], [0]],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 10000,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Raging Ricochet Effect",
+                        "attribute_modifiers": [
+                            {
+                                "addend": 0.05,
+                                "attribute": "outgoing_condition_damage_multiplier_add_group"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "tags": ["Fire Bullet Consume"]
+        },
+        {
+            "skill_key": "Searing Salvo",
+            "damage_coefficient": 1,
+            "cast_duration": [680,680],
+            "cooldown": [7680,7680],
+            "strike_on_tick_list": [[680],[680]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 7000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "skill_triggers": [
+                {
+                    "skill_key": "Searing Salvo Secondary",
+                    "condition": {
+                        "only_applies_on_strikes": true,
+                        "only_applies_on_strikes_by_skill": "Searing Salvo"
+                    }
+                }
+            ],
+            "tags": ["Fire Bullet Gen"],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/7546C0CAE32CD437249FC903BF1AC84122B0EAC4/3256335.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Searing Salvo Secondary",
+            "attribute_damage_to_skill": "Searing Salvo",
+            "damage_coefficient": 0.25,
+            "cast_duration": [500,500],
+            "strike_on_tick_list": [
+                [500,500,500,500],
+                [500,500,500,500]
+            ],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 2000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Searing Salvo Bonus",
+            "cast_duration": [0,0],
+            "tags": ["Fire Bullet Consume"]
+        },
+        {
+            "skill_key": "Frigid Flurry",
+            "damage_coefficient": 0.2,
+            "cast_duration": [1000,1000],
+            "cooldown": [4000,4000],
+            "strike_on_tick_list": [
+                [200,400,600,800,1000],
+                [200,400,600,800,1000]
+            ],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 7000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/11DB6D78E16F6ACDE1000BF4AEF69ED5A9410BA9/3256330.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Dazing Discharge",
+            "damage_coefficient": 0.75,
+            "cast_duration": [440,440],
+            "cooldown": [6400,6400],
+            "strike_on_tick_list": [[440],[440]],
+            "icon": "https://render.guildwars2.com/file/43FE5D1C5B3D70422F324071037AC844CE9C01F3/3256327.png",
+            "executable": true,
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Aerial Agility",
+            "cast_duration": [520,520],
+            "cooldown": [9600, 9600],
+            "icon": "https://render.guildwars2.com/file/ADD2E4D6D49F22AF2C033058A6FF02BD316BFBC9/3256331.png",
+            "executable": true
+        },
+        {
+            "skill_key": "Aerial Agility Shot",
+            "damage_coefficient": 0.8,
+            "cast_duration": [720,720],
+            "cooldown": [9600,9600],
+            "strike_on_tick_list": [[720],[720]],
+            "icon": "https://render.guildwars2.com/file/C42D0718C2AB217B05E8414D514EAEFCC7407EF1/3256332.png",
+            "executable": true,
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Aerial Agility Dash",
+            "cast_duration": [520,520],
+            "cooldown": [9600, 9600],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/B10398A8E33A70A9101F294993673004017916C1/3256333.png"
+        },
+        {
+            "skill_key": "Piercing Pebble",
+            "damage_coefficient": 0.35,
+            "cast_duration": [520, 520],
+            "cooldown": [0,0],
+            "strike_on_tick_list": [[520],[520]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 5000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/4F217D25EBBFC017B4621C966BD26A7C4C6CD81C/3256324.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Shattering Stone",
+            "damage_coefficient": 0.8,
+            "cast_duration": [440,440],
+            "cooldown": [3840, 3840],
+            "strike_on_tick_list": [[440],[440]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 10000,
+                    "num_stacks": 3,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "tags": ["Earth Bullet Gen"],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/387446B9ED09274D20200C2F066BF4311E6D0C93/3256328.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Shattering Stone Bonus",
+            "cast_duration": [1500, 1500],
+            "pulse_on_tick_list": [
+                [500, 1000, 1500],
+                [500, 1000, 1500]
+            ],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 5000,
+                    "num_stacks": 1,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "tags": ["Earth Bullet Consume"]
+        },
+        {
+            "skill_key": "Boulder Blast",
+            "damage_coefficient": 0.44,
+            "cast_duration": [440,440],
+            "cooldown": [7680, 7680],
+            "strike_on_tick_list": [[440],[440]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 8000,
+                    "num_stacks": 5,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "tags": ["Strength of Stone Tag", "Earth Bullet Gen"],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/C0122C48115C5E59D499E101764C94CA6047062F/3256334.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Ring of Fire",
+            "icon": "https://render.guildwars2.com/file/CD08FDC23B56EBB19C90B909C65D9EE4D9FFF8C8/103183.png",
+            "damage_coefficient": 2,
+            "cast_duration": [480,480],
+            "cooldown": [9600,9600],
+            "strike_on_tick_list": [[480],[480]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 4000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "executable": true,
+            "weapon_type": "dagger"
+        },
+        {
+            "skill_key": "Fire Grab",
+            "damage_coefficient": 3.5,
+            "cast_duration": [560,560],
+            "cooldown": [12800,12800],
+            "strike_on_tick_list": [[560],[560]],
+            "executable": true,
+            "weapon_type": "dagger"
+        },
+        {
+            "skill_key": "Ride the Lightning",
+            "damage_coefficient": 1.5,
+            "cast_duration": [120,120],
+            "cooldown": [8000,8000],
+            "strike_on_tick_list": [[120],[120]],
+            "executable": true,
+            "weapon_type": "dagger",
+            "icon": "https://render.guildwars2.com/file/23066340DF3C6E4F06A1B105479809E1647FF5D6/103332.png"
+        },
+        {
+            "skill_key": "Earthquake",
+            "damage_coefficient": 3,
+            "cast_duration": [680, 680],
+            "cooldown": [10240, 10240],
+            "strike_on_tick_list": [[680],[680]],
+            "executable": true,
+            "weapon_type": "dagger"
+        },
+        {
+            "skill_key": "Churning Earth",
+            "damage_coefficient": 3,
+            "cast_duration": [960, 960],
+            "cooldown": [12800, 12800],
+            "strike_on_tick_list": [[960],[960]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 8000,
+                    "num_stacks": 10,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "executable": true,
+            "weapon_type": "dagger"
+        },
+        {
+            "skill_key": "Elemental Explosion",
+            "damage_coefficient": 3.2,
+            "cooldown": [0,0],
+            "cast_duration": [640,640],
+            "strike_on_tick_list": [[640],[640]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 6000,
+                    "num_stacks": 4,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                },
+                {
+                    "base_duration_ms": 6000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "tags": ["Fire Bullet Consume", "Earth Bullet Consume"],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/95DA48632542F0073A9022C4165E570EDBD72474/3256337.png",
+            "weapon_type": "pistol"
+        },
+        {
+            "skill_key": "Arcane Brilliance",
+            "cast_duration": [640, 640],
+            "damage_coefficient": 0.5,
+            "cooldown": [16000, 16000],
+            "strike_on_tick_list": [[640],[640]],
+            "executable": true,
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Firestorm",
+            "cast_duration": [1120,1120],
+            "cooldown": [25000,20000],
+            "skill_triggers": [
+                {
+                    "skill_key": "Firestorm Strike",
+                    "condition": {
+                        "only_applies_on_begun_casting": true,
+                        "only_applies_on_begun_casting_skill": "Firestorm"
+                    }
+                }
+            ],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/72030C6DDD3A36ACEC0A39FF03299271CB2FE433/1424240.png"
+        },
+        {
+            "skill_key": "Firestorm Strike",
+            "attribute_damage_to_skill": "Firestorm",
+            "damage_coefficient": 0.5,
+            "cast_duration": [10880,10880],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 2000,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "strike_on_tick_list": [
+                [880,1880,2880,3880,4880,5880,6880,7880,8880,9880,10880],
+                [880,1880,2880,3880,4880,5880,6880,7880,8880,9880,10880]
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Signet of Earth",
+            "cast_duration": [520, 520],
+            "cooldown": [12000, 12000],
+            "damage_coefficient": 0.5,
+            "strike_on_tick_list": [[520],[520]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 10000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "tags": ["Strength of Stone Tag"],
+            "executable": true,
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Signet of Fire",
+            "cast_duration": [520, 520],
+            "cooldown": [9600, 9600],
+            "damage_coefficient": 0.5,
+            "strike_on_tick_list": [[520],[520]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 10000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "executable": true,
+            "weapon_type": "empty_handed"
+        },
+        {
+            "cast_duration": [1400,1120],
+            "cooldown": [40000,32000],
+            "cooldown_modifiers": [
+              {
+                "condition": {
+                  "unique_effect_on_source": "Elemental Effect"
+                },
+                "operation": "set",
+                "skill_key": "Glyph of Fire Elemental"
+              }
+            ],
+            "executable": true,
+            "icon": "https://render.guildwars2.com/file/0D342F3FD05405DF451B1EF1731C7B9CE8F1BD07/867437.png",
+            "on_pulse_effect_applications": [
+              {
+                "base_duration_ms": 120000,
+                "direction": "SELF",
+                "unique_effect": {
+                  "unique_effect_key": "Elemental Effect"
+                }
+              }
+            ],
+            "pulse_on_tick_list": [[1400],[1120]],
+            "skill_key": "Glyph of Fire Elemental"
+          },
+          {
+            "skill_key": "Execute Elemental",
+            "skill_triggers": [
+                {
+                    "condition": {
+                        "not": [
+                            {
+                                "depends_on_skill_off_cooldown": "Flame Burst"
+                            }
+                        ],
+                        "only_applies_on_strikes": true,
+                        "only_applies_on_strikes_by_skill_with_tag": "Elemental",
+                        "unique_effect_on_source": "Elemental Effect"
+                    },
+                    "skill_key": "Fireball"
+                },
+                {
+                    "condition": {
+                    "depends_on_skill_off_cooldown": "Flame Burst",
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_strikes_by_skill_with_tag": "Elemental",
+                    "unique_effect_on_source": "Elemental Effect"
+                    },
+                    "skill_key": "Flame Burst"
+                },
+                {
+                    "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+                    },
+                    "skill_key": "Flame Barrage Projectile"
+                },
+                {
+                    "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+                    },
+                    "skill_key": "Flame Barrage Projectile"
+                },
+                {
+                    "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_strikes_by_skill": "Flame Barrage Attack"
+                    },
+                    "skill_key": "Flame Barrage Projectile"
+                },
+                {
+                    "condition": {
+                        "and": [
+                            {
+                                "unique_effect_on_source": "Elemental Effect"
+                            }
+                        ],
+                        "depends_on_skill_off_cooldown": "Flame Barrage"
+                    },
+                    "skill_key": "Flame Barrage"
+                }
+            ]
+          },
+          {
+            "cast_duration": [1360,1700],
+            "cooldown": [0,0],
+            "executable": false,
+            "flat_damage": 950,
+            "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png",
+            "skill_key": "Fireball",
+            "strike_on_tick_list": [[1360],[1700]],
+            "tags": ["Elemental"],
+            "weapon_type": "empty_handed"
+          },
+          {
+            "skill_key": "Flame Burst",
+            "cast_duration": [2440,3050],
+            "cooldown": [15000,15000],
+            "executable": false,
+            "flat_damage": 1450,
+            "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png",
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 3000,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "strike_on_tick_list": [[2440],[3050]],
+            "tags": ["Elemental"],
+            "weapon_type": "empty_handed"
+          },
+          {
+            "skill_key": "Flame Barrage Projectile",
+            "attribute_damage_to_skill": "Flame Barrage",
+            "cast_duration": [0,0],
+            "flat_damage": 380,
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 3000,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "strike_on_tick_list": [[0],[0]],
+            "weapon_type": "empty_handed"
+          },
+          {
+            "skill_key": "Flame Barrage Attack",
+            "attribute_damage_to_skill": "Flame Barrage",
+            "cast_duration": [2080,2600],
+            "flat_damage": 4500,
+            "skills_to_cancel": ["Flame Burst","Fireball"],
+            "strike_on_tick_list": [[2080],[2600]],
+            "tags": ["Elemental"],
+            "weapon_type": "empty_handed"
+          },
+          {
+            "skill_key": "Flame Barrage",
+            "cast_duration": [0,0],
+            "child_skill_keys": ["Flame Barrage Attack"],
+            "cooldown": [15000,12000],
+            "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+        },
+        {
+            "skill_key": "Deploy Jade Sphere",
+            "cast_duration": [0, 0],
+            "cooldown": [0,0],
+            "skill_triggers": [
+                {
+                    "skill_key": "Jade Sphere Strike",
+                    "condition": {
+                        "only_applies_on_begun_casting": true,
+                        "only_applies_on_begun_casting_skill": "Deploy Jade Sphere"
+                    }
+                }
+            ]
+        },
+        {
+            "skill_key": "Jade Sphere Strike",
+            "attribute_damage_to_skill": "Deploy Jade Sphere",
+            "damage_coefficient": 0.25,
+            "cast_duration": [5000,5000],
+            "strike_on_tick_list": [
+                [2,1000,2000,3000,4000,5000],
+                [2,1000,2000,3000,4000,5000]
+            ],
+            "weapon_type": "hammer"
+        },
+        {
+            "skill_key": "Burning Precision",
+            "cast_duration": [0,0],
+            "cooldown": [5000,5000],
+            "icon": "https://render.guildwars2.com/file/774471FA3841BB90EB6F935A76D8017A0C4B005E/1012306.png",
+            "on_pulse_effect_applications": [
+            {
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING",
+                "effect": "BURNING",
+                "num_stacks": 1
+            }
+            ],
+            "pulse_on_tick_list": [[0],[0]],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Sunspot",
+            "damage_coefficient": 0.6,
+            "cast_duration": [0,0],
+            "cooldown": [2000,2000],
+            "executable": false,
+            "can_critical_strike": false,
+            "icon": "https://render.guildwars2.com/file/1405047ED70DE30F80B1F6304A787B215BB50878/1012316.png",
+            "strike_on_tick_list": [[0],[0]],
+            "on_strike_effect_applications": [
+                {
+                    "base_duration_ms": 4000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Earthen Blast",
+            "damage_coefficient": 0.36,
+            "cast_duration": [0,0],
+            "cooldown": [2000, 2000],
+            "executable": false,
+            "can_critical_strike": false,
+            "icon": "https://render.guildwars2.com/file/2531DCAFAEAB452C90C4572E1ADCE8236DCF5636/1012304.png",
+            "strike_on_tick_list": [[0],[0]],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Strength of Stone",
+            "cast_duration": [0, 0],
+            "cooldown": [3000, 3000],
+            "pulse_on_tick_list": [[0],[0]],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 10000,
+                    "num_stacks": 3,
+                    "direction": "OUTGOING",
+                    "effect": "BLEEDING"
+                }
+            ],
+            "icon": "https://render.guildwars2.com/file/567BA00AEB795B5021E5924CC3511DE3AAC26438/1012297.png"
+        },
+        {
+            "skill_key": "Steamshrieker Relic",
+            "cast_duration": [0,0],
+            "cooldown": [0,0],
+            "executable": true,
+            "pulse_on_tick_list": [[0],[0]],
+            "icon": "https://render.guildwars2.com/file/23B0F0A5BF05E05C9F527BF7EB4962C9F49C6F42/3441975.png",
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 5000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING",
+                    "effect": "BURNING"
+                }
+            ]
+        },
+        {
+            "skill_key": "Activate Fractal Relic",
+            "cast_duration": [0,0],
+            "cooldown": [0,0],
+            "executable": true,
+            "pulse_on_tick_list": [[0],[0]],
+            "icon": "https://render.guildwars2.com/file/B2D409644147BF18935A95A52505ABCB9EECE142/3122351.png",
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "num_stacks": 1,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Fractal Relic Effect"
+                    }
+                }
+            ]
+        },
+        {
+            "skill_key": "Create Fire Bullet",
+            "cast_duration": [0, 0],
+            "pulse_on_tick_list": [[0],[0]],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Fire Bullet Effect"
+                    }
+                }
+            ],
+            "icon": "https://render.guildwars2.com/file/DA6E9962EC9966CDBBC776F23347D16298AF4ADE/3256325.png",
+            "executable": true
+        },
+        {
+            "skill_key": "Create Earth Bullet",
+            "cast_duration": [0, 0],
+            "pulse_on_tick_list": [[0],[0]],
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 999999,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Earth Bullet Effect"
+                    }
+                }
+            ],
+            "icon": "https://render.guildwars2.com/file/4F217D25EBBFC017B4621C966BD26A7C4C6CD81C/3256324.png",
+            "executable": true
+        },
+        {
+            "skill_key": "Lifesteal Food",
+            "cast_duration": [0,0],
+            "cooldown": [2000,2000],
+            "flat_damage": 325,
+            "can_critical_strike": false,
+            "strike_on_tick_list": [[0],[0]],
+            "icon": "https://render.guildwars2.com/file/D2C00407A3FFE06251BDE9DC13525FE167ABA3E6/2191069.png",
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Relic of the Fractal Proc",
+            "cast_duration": [0, 0],
+            "cooldown": [20000, 20000],
+            "pulse_on_tick_list": [[0], [0]],
+            "on_pulse_effect_applications": [
+                {
+                    "effect": "BURNING",
+                    "base_duration_ms": 8000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING"
+                },
+                {
+                    "effect": "TORMENT",
+                    "base_duration_ms": 8000,
+                    "num_stacks": 3,
+                    "direction": "OUTGOING"
+                }
+            ]
+        }
+    ]
+}
