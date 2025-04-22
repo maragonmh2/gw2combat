@@ -1,0 +1,14 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Soothing Power",
+        "attribute_conversions": [{
+            "from": "vitality",
+            "to": "vitality",
+            "multiplier": 0,
+            "addend": 300
+        }]
+    }],
+    "skills": []
+}

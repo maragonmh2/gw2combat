@@ -1,0 +1,66 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Written in Stone"
+    }],
+    "skills": [{
+        "skill_key": "Signet of Fire Aura",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "attribute_modifiers": [{
+            "attribute": "precision",
+            "addend": 180,
+            "condition": {
+                "not": [{
+                    "depends_on_skill_off_cooldown": "Signet of Fire"
+                }]
+            }
+        }],
+        "skill_triggers": [{
+            "skill_key": "Signet of Fire Aura",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Signet of Fire"
+            }
+        }]
+    },{
+        "skill_key": "Signet of Earth Aura",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Magnetic Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "attribute_modifiers": [{
+            "attribute": "toughness",
+            "addend": 180,
+            "condition": {
+                "not": [{
+                    "depends_on_skill_off_cooldown": "Signet of Earth"
+                }]
+            }
+        }],
+        "skill_triggers": [{
+            "skill_key": "Signet of Earth Aura",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Signet of Earth"
+            }
+        }]
+    }]
+}

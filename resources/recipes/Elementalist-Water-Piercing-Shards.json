@@ -1,0 +1,24 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Piercing Shards",
+        "TODO": "Vulnerability Duration increase",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.1,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }]
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.2,
+            "condition": {
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        }]
+    }],
+    "skills": []
+}

@@ -1,0 +1,39 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Fresh Air",
+        "cooldown_modifiers": [{
+            "skill_key": "Air Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_critical_strikes": true
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fresh Air Effect",
+                    "stacking_type": "duration",
+                    "attribute_conversions": [{
+                        "from": "ferocity",
+                        "to": "ferocity",
+                        "multiplier": 0,
+                        "addend": 250
+                    }]
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Fresh Air",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Air Attunement"
+            }
+        }]
+    }]
+}

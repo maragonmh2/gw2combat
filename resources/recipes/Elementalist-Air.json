@@ -1,0 +1,68 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Zephyrs Speed",
+        "attribute_modifiers": [{
+            "attribute": "critical_chance_multiplier",
+            "addend": 0.05
+        }]
+    },{
+        "unique_effect_key": "Aeromancers Training",
+        "attribute_conversions": [{
+            "from": "ferocity",
+            "to": "ferocity",
+            "multiplier": 0,
+            "addend": 150
+        },{
+            "from": "ferocity",
+            "to": "ferocity",
+            "multiplier": 0,
+            "addend": 150,
+            "condition": {
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        }],
+        "cooldown_modifiers": [{
+            "TODO": "This needs a proper way to use it",
+            "skill_key": "Air Attunement TAG",
+            "operation": "set",
+            "multiplier": 0.8
+        }]
+    }],
+    "skills": [{
+        "skill_key": "Electric Discharge",
+        "skill_ticks": [{
+            "strike": true,
+            "damage_coefficient": 0.35,
+            "on_strike_effect_applications": [{
+                "effect": "VULNERABILITY",
+                "base_duration_ms": 8000,
+                "direction": "OUTGOING"
+            }],
+            "attribute_modifiers": [{
+                "attribute": "critical_damage_multiplier",
+                "addend": 1,
+                "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_strikes_by_skill": "Electric Discharge"
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Electric Discharge",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Air"
+            }
+        },{
+            "skill_key": "Electric Discharge",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Air Attunement"
+            }
+        }],
+        "weapon_type": "empty_handed",
+        "icon": "https://render.guildwars2.com/file/F4622EE8300028599369D4084EA7A2774D250DEA/1012280.png"
+    }]
+}

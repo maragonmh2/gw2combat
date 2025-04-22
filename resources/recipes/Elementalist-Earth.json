@@ -1,0 +1,58 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Stone Flesh",
+        "attribute_modifiers": [{
+            "attribute": "incoming_strike_damage_multiplier",
+            "multiplier": 0.93,
+            "condition": {
+                "unique_effect_on_source": "Earth Attunement"
+            }
+        }]
+    },{
+        "unique_effect_key": "Geomancers Training",
+        "attribute_modifiers": [{
+            "attribute": "incoming_strike_damage_multiplier",
+            "multiplier": 0.9
+        }],
+        "cooldown_modifiers": [{
+            "TODO": "This needs a proper way to use it",
+            "skill_key": "Earth Attunement TAG",
+            "operation": "set",
+            "multiplier": 0.8
+        }]
+    }],
+    "skills": [{
+        "skill_key": "Earthen Blast!",
+        "skill_ticks": [{
+            "strike": true,
+            "damage_coefficient": 0.36,
+            "can_critical_strike": false,
+            "on_strike_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Earthen Blast",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Earth"
+            }
+        },{
+            "skill_key": "Earthen Blast",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earth Attunement"
+            }
+        }],
+        "weapon_type": "empty_handed",
+        "icon": "https://render.guildwars2.com/file/2531DCAFAEAB452C90C4572E1ADCE8236DCF5636/1012304.png"
+    },{
+        "skill_key": "Earthen Blast",
+        "icon": "https://i.imgur.com/qFmcbT0.png",
+        "executable": false
+    }]
+}

@@ -1,0 +1,29 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Flow like Water",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.05,
+            "condition": {
+                "threshold": {
+                    "health_pct_subject_to_threshold": true,
+                    "threshold_value": 0.5,
+                    "threshold_type": "upper_bound_inclusive"
+                }
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.1,
+            "condition": {
+                "threshold": {
+                    "health_pct_subject_to_threshold": true,
+                    "threshold_value": 0.5,
+                    "threshold_type": "lower_bound_exclusive"
+                }
+            }
+        }]
+    }],
+    "skills": []
+}

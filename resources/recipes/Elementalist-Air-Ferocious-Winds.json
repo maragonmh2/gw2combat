@@ -1,0 +1,13 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Ferocious Winds",
+        "attribute_conversions": [{
+            "from": "precision",
+            "to": "ferocity",
+            "multiplier": 0.07
+        }]
+    }],
+    "skills": []
+}
