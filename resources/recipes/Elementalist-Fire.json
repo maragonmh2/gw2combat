@@ -1,0 +1,66 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Empowering Flames",
+        "attribute_conversions": [{
+            "from": "power",
+            "to": "power",
+            "multiplier": 0,
+            "addend": 150,
+            "condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        }]
+    },{
+        "unique_effect_key": "Pyromancers Training",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.1,
+            "condition": {
+                "effect_on_target": "BURNING",
+                "stacks_of_effect_on_target": 1
+            }
+        }],
+        "cooldown_modifiers": [{
+            "TODO": "This needs a proper way to use it",
+            "skill_key": "Fire Attunement TAG",
+            "operation": "set",
+            "multiplier": 0.8
+        }]
+    }],
+    "skills": [{
+        "skill_key": "Sunspot!",
+        "skill_ticks": [{
+            "strike": true,
+            "can_critical_strike": false,
+            "damage_coefficient": 0.6,
+            "on_strike_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Sunspot!",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Fire"
+            }
+        },{
+            "skill_key": "Sunspot!",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fire Attunement"
+            }
+        }],
+        "weapon_type": "empty_handed"
+    },{
+        "skill_key": "Sunspot",
+        "icon": "https://i.imgur.com/qFmcbT0.png",
+        "executable": false
+    }]
+}

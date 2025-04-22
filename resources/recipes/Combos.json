@@ -1,0 +1,409 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {},
+    "skills": [
+        {
+            "skill_key": "Whirl Finisher",
+            "skill_ticks": [{
+                "child_skill_keys": ["Leeching Bolts"],
+                "tick_condition": {
+                    "unique_effect_on_source": "Dark Field Effect"
+                }
+            }]
+        },
+        {
+            "skill_key": "Projectile Finisher"
+        },
+        {
+            "skill_key": "Leap Finisher"
+        },
+        {
+            "skill_key": "Blast Finisher"
+        },
+
+        {
+            "skill_key": "Leeching Bolts",
+            "TODO": "Damage: 202 + 3% power",
+            "flat_damage": 290
+        },
+        {
+            "skill_key": "Confounding Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "CONFUSION",
+                    "base_duration_ms": 5000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Burning Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "BURNING",
+                    "base_duration_ms": 1000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Chilling Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "CHILLED",
+                    "base_duration_ms": 1000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Cleansing Bolts",
+            "tags": ["Cleanse"]
+        },
+        {
+            "skill_key": "Brutal Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 5000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Poison Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "POISON",
+                    "base_duration_ms": 2000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Blinding Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "BLINDED",
+                    "base_duration_ms": 3000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Healing Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "REGENERATION",
+                    "base_duration_ms": 2000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+
+        {
+            "skill_key": "Leeching Projectile",
+            "TODO": "Damage: 170 + 3% power",
+            "flat_damage": 260
+        },
+        {
+            "skill_key": "Confounding Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "CONFUSION",
+                    "base_duration_ms": 5000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Burning Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "BURNING",
+                    "base_duration_ms": 1000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Chilling Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "CHILLED",
+                    "base_duration_ms": 1000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Cleansing Projectile",
+            "tags": ["Heal"]
+        },
+        {
+            "skill_key": "Brutal Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 5000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Poison Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "POISON",
+                    "base_duration_ms": 2000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Blinding Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "BLINDED",
+                    "base_duration_ms": 3000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Healing Projectile",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "REGENERATION",
+                    "base_duration_ms": 2000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+
+        {
+            "skill_key": "Dark Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Dark Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Chaos Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Chaos Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Fire Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Fire Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Frost Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Frost Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Light Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Light Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Dazing Strike",
+            "tags": ["CC"]
+        },
+        {
+            "skill_key": "Weakening Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 8000,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Stealth Leap",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Stealth Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 3000,
+                    "direction": "SELF"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Healing Leap",
+            "tags": ["Heal"]
+        },
+
+        {
+            "skill_key": "Blinding Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "BLINDED",
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Chaos Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Chaos Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Mighty Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "MIGHT",
+                    "base_duration_ms": 20000,
+                    "num_stacks": 3,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Frost Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Frost Aura Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Cleansing Blast",
+            "tags": ["Cleanse"]
+        },
+        {
+            "skill_key": "Swift Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "SWIFTNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Weakening Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "OUTGOING"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Stealth Blast",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Stealth Effect",
+                        "stacking_type": "duration"
+                    },
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Healing Blast",
+            "tags": ["Heal"]
+        }
+    ]
+}

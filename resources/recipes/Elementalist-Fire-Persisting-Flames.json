@@ -1,0 +1,38 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Persisting Flames Trait",
+        "INFO": "Fire Field Duration inrease is done in weapon skills"
+    }],
+    "unique_effects": {
+        "Persisting Flames Effect": {
+			"icon": "https://render.guildwars2.com/file/38496307B7C27BCB08D6800F2A699B4998DD1935/1012312.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Apply Persisting Flames",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Persisting Flames Effect",
+                    "max_considered_stacks": 5,
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier_add_group",
+                        "addend": 0.02
+                    }]
+                },
+                "base_duration_ms": 15000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Persisting Flames",
+            "condition": {
+                "only_applies_on_effect_application": true,
+                "only_applies_on_effect_application_of_type": "BURNING"
+            }
+        }]
+    }]
+}

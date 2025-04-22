@@ -1,0 +1,213 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Fire Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png"
+        },
+        "Water Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png"
+        },
+        "Air Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png"
+        },
+        "Earth Attunement Effect": {
+            "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png"
+        }
+    },
+    "skills": [
+        {
+            "skill_key": "Attunement Timer",
+            "cooldown": [10000, 8000],
+            "cooldown_modifiers": [{
+                "skill_key": "Attunement Timer",
+                "operation": "reset",
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill_with_tag": "Attunement"
+                }
+            }]
+        },
+        {
+            "skill_key": "Fire Attunement",
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [{
+                "skill_key": "Fire Attunement",
+                "operation": "set",
+                "value": -8500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Fire Attunement Effect",
+                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                }
+            }],
+            "skills_to_put_on_cooldown": [
+                "Water Attunement",
+                "Air Attunement",
+                "Earth Attunement"
+            ],
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Fire Attunement Effect"
+                    },
+                    "base_duration_ms": 999999,
+                    "direction": "SELF"
+                }]
+            }],
+            "effect_removals": [{
+                "unique_effect": "Fire Attunement Effect",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                }
+            }],
+            "tags": ["Attunement"],
+            "executable": true,
+            "cast_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                }]
+            }
+        },
+        {
+            "skill_key": "Water Attunement",
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [{
+                "skill_key": "Water Attunement",
+                "operation": "set",
+                "value": -8500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Water Attunement Effect",
+                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                }
+            }],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Air Attunement",
+                "Earth Attunement"
+            ],
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Water Attunement Effect"
+                    },
+                    "base_duration_ms": 999999,
+                    "direction": "SELF"
+                }]
+            }],
+            "effect_removals": [{
+                "unique_effect": "Water Attunement Effect",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }
+            }],
+            "tags": ["Attunement"],
+            "executable": true,
+            "cast_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }]
+            }
+        },
+        {
+            "skill_key": "Air Attunement",
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [{
+                "skill_key": "Air Attunement",
+                "operation": "set",
+                "value": -8500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Air Attunement Effect",
+                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                }
+            }],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Water Attunement",
+                "Earth Attunement"
+            ],
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Air Attunement Effect"
+                    },
+                    "base_duration_ms": 999999,
+                    "direction": "SELF"
+                }]
+            }],
+            "effect_removals": [{
+                "unique_effect": "Air Attunement Effect",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Air Attunement Effect"
+                }
+            }],
+            "tags": ["Attunement"],
+            "executable": true,
+            "cast_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                }]
+            }
+        },
+        {
+            "skill_key": "Earth Attunement",
+            "cooldown": [1500,1200],
+            "cooldown_modifiers": [{
+                "skill_key": "Earth Attunement",
+                "operation": "set",
+                "value": -8500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Earth Attunement Effect",
+                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                }
+            }],
+            "skills_to_put_on_cooldown": [
+                "Fire Attunement",
+                "Water Attunement",
+                "Air Attunement"
+            ],
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Earth Attunement Effect"
+                    },
+                    "base_duration_ms": 999999,
+                    "direction": "SELF"
+                }]
+            }],
+            "effect_removals": [{
+                "unique_effect": "Earth Attunement Effect",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }
+            }],
+            "tags": ["Attunement"],
+            "executable": true,
+            "cast_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }]
+            }
+        }
+    ]
+}

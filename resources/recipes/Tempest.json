@@ -1,0 +1,640 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [
+        {
+            "unique_effect_key": "Gathered Focus",
+            "attribute_conversions": [
+                {
+                    "from": "concentration",
+                    "to": "concentration",
+                    "multiplier": 0,
+                    "addend": 240
+                }
+            ]
+        },
+        {
+            "unique_effect_key": "Hardy Conduit Trait",
+            "skill_triggers": [{
+                "skill_key": "Hardy Conduit",
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill_with_tag": "Overload"
+                }
+            }]
+        },{
+            "unique_effect_key": "Attunement Mechanic",
+            "skill_triggers": [{
+                "skill_key": "Attunement Timer",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Overload"
+                }
+            }]
+        }
+    ],
+    "unique_effects": {},
+    "skills": [
+        {
+            "skill_key": "Hardy Conduit",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "PROTECTION",
+                    "base_duration_ms": 3000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }]
+        },
+        {
+            "skill_key": "Overload Fire",
+            "cast_duration": [4150, 3320],
+            "cooldown": [4000, 3200],
+            "cooldown_modifiers": [{
+                "skill_key": "Fire Attunement",
+                "operation": "set",
+                "value": -18500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Fire"
+                }
+            },{
+                "skill_key": "Overload Fire",
+                "operation": "set",
+                "value": -16000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Fire"
+                }
+            },{
+                "skill_key": "Water Attunement",
+                "operation": "set",
+                "value": -2650,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Fire"
+                }
+            },{
+                "skill_key": "Air Attunement",
+                "operation": "set",
+                "value": -2650,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Fire"
+                }
+            },{
+                "skill_key": "Earth Attunement",
+                "operation": "set",
+                "value": -2650,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Fire"
+                }
+            }],
+            "skills_to_put_on_cooldown": ["Fire Attunement"],
+            "damage_coefficient": 0.9,
+            "strike_on_tick_list": [
+                [350, 950, 1550, 2150, 4000, 5000, 6000, 7000, 8000, 9000],
+                [280, 760, 1240, 1720, 3200, 4200, 5200, 6200, 7200, 8200]
+            ],
+            "on_strike_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 3000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "MIGHT",
+                "base_duration_ms": 16000,
+                "num_stacks": 2,
+                "num_targets": 5,
+                "direction": "TEAM"
+            }],
+            "skill_ticks": [{
+                "pulse": true,
+                "skills_to_put_on_cooldown": [
+                    "Water Attunement",
+                    "Air Attunement",
+                    "Earth Attunement"
+                ]
+            },{
+                "on_tick": 800,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 800,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 1280,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 1760,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 2240,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 2720,
+                "child_skill_keys": ["Whirl Finisher"]
+            }],
+            "skill_triggers": [{
+                "skill_key": "Overload Fire Reset",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Fire Attunement"
+                }
+            }],
+            "tags": [
+                "Overload",
+                "Relic of Fireworks"
+            ],
+            "executable": true,
+            "cast_condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },
+            "weapon_type": "main_hand"
+        },
+        {
+            "skill_key": "Overload Water",
+            "cast_duration": [3650, 2920],
+            "cooldown": [4000, 3200],
+            "cooldown_modifiers": [{
+                "skill_key": "Water Attunement",
+                "operation": "set",
+                "value": -18500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Water"
+                }
+            },{
+                "skill_key": "Overload Water",
+                "operation": "set",
+                "value": -16000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Water"
+                }
+            },{
+                "skill_key": "Fire Attunement",
+                "operation": "set",
+                "value": -2150,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Water"
+                }
+            },{
+                "skill_key": "Air Attunement",
+                "operation": "set",
+                "value": -2150,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Water"
+                }
+            },{
+                "skill_key": "Earth Attunement",
+                "operation": "set",
+                "value": -2150,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Water"
+                }
+            }],
+            "skills_to_put_on_cooldown": ["Water Attunement"],
+            "skill_ticks": [{
+                "pulse": true,
+                "skills_to_put_on_cooldown": [
+                    "Fire Attunement",
+                    "Air Attunement",
+                    "Earth Attunement"
+                ]
+            },{
+                "on_tick": 2920,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "VIGOR",
+                    "base_duration_ms": 5000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "REGENERATION",
+                    "base_duration_ms": 8000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
+            }],
+            "skill_triggers": [{
+                "skill_key": "Overload Water Reset",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Water Attunement"
+                }
+            }],
+            "tags": ["Overload"],
+            "executable": true,
+            "cast_condition": {
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        },
+        {
+            "skill_key": "Overload Air",
+            "cast_duration": [4000, 3200],
+            "cooldown": [4000, 3200],
+            "cooldown_modifiers": [{
+                "skill_key": "Air Attunement",
+                "operation": "set",
+                "value": -18500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Air"
+                }
+            },{
+                "skill_key": "Overload Air",
+                "operation": "set",
+                "value": -16000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Air"
+                }
+            },{
+                "skill_key": "Fire Attunement",
+                "operation": "set",
+                "value": -2500,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Air"
+                }
+            },{
+                "skill_key": "Water Attunement",
+                "operation": "set",
+                "value": -2500,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Air"
+                }
+            },{
+                "skill_key": "Earth Attunement",
+                "operation": "set",
+                "value": -2500,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Air"
+                }
+            }],
+            "skills_to_put_on_cooldown": ["Air Attunement"],
+            "skill_ticks": [
+            {
+                "pulse": true,
+                "skills_to_put_on_cooldown": [
+                    "Fire Attunement",
+                    "Water Attunement",
+                    "Earth Attunement"
+                ]
+            },{
+                "on_tick": 720,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 1120,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 1550,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 1920,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 2320,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 2720,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 3120,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "child_skill_keys": ["Lightning Jolt"],
+                "tags": ["Lightning Jolt Source"],
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                },{
+                    "unique_effect": {
+                        "unique_effect_key": "Lightning Field"
+                    },
+                    "base_duration_ms": 7480,
+                    "direction": "SELF"
+                }]
+            },{
+                "on_tick": 3640,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 4160,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 4680,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 5200,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 5720,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 6240,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            },{
+                "on_tick": 6760,
+                "damage_coefficient": 0.85,
+                "strike": true,
+                "num_targets": 3,
+                "on_strike_effect_applications": [{
+                    "effect": "FURY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                },{
+                    "effect": "WEAKNESS",
+                    "base_duration_ms": 10000,
+                    "num_targets": 3,
+                    "direction": "OUTGOING"
+                }]
+            }],
+            "skill_triggers": [{
+                "skill_key": "Overload Air Reset",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Air Attunement"
+                }
+            }],
+            "tags": [
+                "Overload",
+                "Relic of Fireworks"
+            ],
+            "executable": true,
+            "cast_condition": {
+                "unique_effect_on_source": "Air Attunement Effect"
+            },
+            "weapon_type": "main_hand"
+        },
+        {
+            "skill_key": "Lightning Jolt",
+            "skill_ticks": [{
+                "strike": true,
+                "can_critical_strike": false,
+                "damage_coefficient": 1.32
+            }],
+            "weapon_type": "empty_handed"
+        },
+        {
+            "skill_key": "Overload Earth",
+            "cast_duration": [3450, 2760],
+            "cooldown": [4000, 3200],
+            "cooldown_modifiers": [{
+                "skill_key": "Earth Attunement",
+                "operation": "set",
+                "value": -18500,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Earth"
+                }
+            },{
+                "skill_key": "Overload Earth",
+                "operation": "set",
+                "value": -16000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Overload Earth"
+                }
+            },{
+                "skill_key": "Fire Attunement",
+                "operation": "set",
+                "value": -1950,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Earth"
+                }
+            },{
+                "skill_key": "Water Attunement",
+                "operation": "set",
+                "value": -1950,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Earth"
+                }
+            },{
+                "skill_key": "Air Attunement",
+                "operation": "set",
+                "value": -1950,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Overload Earth"
+                }
+            }],
+            "skills_to_put_on_cooldown": ["Earth Attunement"],
+            "damage_coefficient": 0.75,
+            "num_targets": 5,
+            "strike_on_tick_list": [
+                [100, 1000, 1900, 2800, 3450, 4700, 5700, 6700, 7700],
+                [80, 800, 1520, 2240, 2760, 3760, 4760, 5760, 6760]  
+            ],
+            "on_strike_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 3000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "BLEEDING",
+                "base_duration_ms": 9000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "PROTECTION",
+                "base_duration_ms": 1000,
+                "num_targets": 5,
+                "direction": "TEAM"
+            }],
+            "skill_ticks": [{
+                "pulse": true,
+                "skills_to_put_on_cooldown": [
+                    "Fire Attunement",
+                    "Water Attunement",
+                    "Air Attunement"
+                ]
+            },{
+                "on_tick": 2760,
+                "pulse": true,
+                "child_skill_keys": ["Blast Finisher"],
+                "on_pulse_effect_applications": [{
+                    "effect": "IMMOBILIZED",
+                    "base_duration_ms": 4000,
+                    "num_targets": 5,
+                    "direction": "OUTGOING"
+                }]
+            }],
+            "skill_triggers": [{
+                "skill_key": "Overload Earth Reset",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Earth Attunement"
+                }
+            }],
+            "tags": [
+                "Overload",
+                "Relic of Fireworks"
+            ],
+            "executable": true,
+            "cast_condition": {
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },
+            "weapon_type": "main_hand"
+        },
+        {
+            "skill_key": "Overload Fire Reset",
+            "skills_to_put_on_cooldown": ["Overload Fire"]
+        },
+        {
+            "skill_key": "Overload Water Reset",
+            "skills_to_put_on_cooldown": ["Overload Water"]
+        },
+        {
+            "skill_key": "Overload Air Reset",
+            "skills_to_put_on_cooldown": ["Overload Air"]
+        },
+        {
+            "skill_key": "Overload Earth Reset",
+            "skills_to_put_on_cooldown": ["Overload Earth"]
+        }
+    ]
+}

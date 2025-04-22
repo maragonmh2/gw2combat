@@ -1,0 +1,25 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Lesser Cleansing Fire",
+        "cooldown": [40000, 40000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 6000,
+                "num_stacks": 2,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "MIGHT",
+                "base_duration_ms": 9000,
+                "num_stacks": 3,
+                "direction": "TEAM"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/2FBB046640434531443F7920CFF205A2787932E3/103336.png"
+    }]
+}

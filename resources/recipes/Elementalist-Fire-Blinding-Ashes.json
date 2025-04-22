@@ -1,0 +1,26 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Blinding Ashes",
+        "cooldown": [8000, 8000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BLINDED",
+                "base_duration_ms": 4000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Blinding Ashes",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Blinding Ashes",
+                "only_applies_on_effect_application": true,
+                "only_applies_on_effect_application_of_type": "BURNING"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/150B4E2CB4039B33152D496FF04E9B1644E22E0A/1012314.png"
+    }]
+}
