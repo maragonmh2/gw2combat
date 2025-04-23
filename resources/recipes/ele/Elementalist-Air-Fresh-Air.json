@@ -2,6 +2,11 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [],
+    "unique_effects": {
+        "Persisting Flames Effect": {
+			"icon": "https://render.guildwars2.com/file/FA64C9F2750F986E52E8376F22EDBA3844A8C603/1012277.png"
+		}
+    },
     "skills": [{
         "skill_key": "Fresh Air",
         "cooldown_modifiers": [{

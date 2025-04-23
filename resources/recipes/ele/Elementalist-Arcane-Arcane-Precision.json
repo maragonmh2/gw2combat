@@ -1,0 +1,61 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Arcane Precision",
+        "cooldown": [3000, 3000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 1500,
+                "num_stacks": 1,
+                "direction": "OUTGOING",
+                "condition": {
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                }
+            },{
+                "effect": "VULNERABILITY",
+                "base_duration_ms": 10000,
+                "num_stacks": 1,
+                "direction": "OUTGOING",
+                "condition": {
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }
+            },{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 3000,
+                "num_stacks": 1,
+                "direction": "OUTGOING",
+                "condition": {
+                    "unique_effect_on_source": "Air Attunement Effect"
+                }
+            },{
+                "effect": "BLEEDING",
+                "base_duration_ms": 3000,
+                "num_stacks": 1,
+                "direction": "OUTGOING",
+                "condition": {
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }
+            }]
+        }],
+        "skill_triggers": [
+            {
+                "skill_key": "Arcane Precision",
+                "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_critical_strikes": true,
+                    "depends_on_skill_off_cooldown": "Arcane Precision",
+                    "threshold": {
+                        "generate_random_number_subject_to_threshold": true,
+                        "threshold_value": 33,
+                        "threshold_type": "upper_bound_exclusive"
+                    }
+                }
+            }
+        ],
+        "icon": "https://render.guildwars2.com/file/1CB6B7903F10246E9405DD625380161FCD4E6C23/1012282.png"
+    }]
+}

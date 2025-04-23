@@ -1,18 +1,7 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [{
-        "unique_effect_key": "Raging Storm Trait",
-        "attribute_conversions": [{
-            "from": "ferocity",
-            "to": "ferocity",
-            "multiplier": 0,
-            "addend": 180,
-            "condition": {
-                "effect_on_source": "FURY"
-            }
-        }]
-    }],
+    "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Raging Storm",
         "cooldown": [8000,8000],
@@ -30,6 +19,15 @@
             "condition": {
                 "only_applies_on_critical_strikes": true,
                 "depends_on_skill_off_cooldown": "Raging Storm"
+            }
+        }],
+        "attribute_conversions": [{
+            "from": "ferocity",
+            "to": "ferocity",
+            "multiplier": 0,
+            "addend": 180,
+            "condition": {
+                "effect_on_source": "FURY"
             }
         }],
         "icon": "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"

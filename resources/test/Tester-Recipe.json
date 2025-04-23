@@ -20,14 +20,14 @@
                     "unique_effect": {
                         "unique_effect_key": "Reset CD Trigger"
                     },
-                    "direction": "OUTGOING"
+                    "direction": "SELF"
                 }]
             }],
             "cooldown_modifiers": [{
                 "skill_key": "CD",
                 "operation": "reset",
                 "condition": {
-                    "unique_effect_on_target_by_source": "Reset CD Trigger"
+                    "unique_effect_on_source": "Reset CD Trigger"
                 }
             }],
             "weapon_type": "empty_handed",

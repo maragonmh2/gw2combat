@@ -1,0 +1,9 @@
+"attribute_modifiers": [{
+    "attribute": "precision",
+    "addend": 180,
+    "condition": {
+        "not": [{
+            "depends_on_skill_off_cooldown": "Signet of Fire"
+        }]
+    }
+}],

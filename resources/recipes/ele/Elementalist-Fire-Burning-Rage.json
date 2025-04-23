@@ -1,15 +1,7 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [{
-        "unique_effect_key": "Burning Rage Trait",
-        "attribute_conversions": [{
-            "from": "condition_damage",
-            "to": "condition_damage",
-            "multiplier": 0,
-            "addend": 180
-        }]
-    }],
+    "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Burning Rage",
         "skill_ticks": [{
@@ -30,6 +22,12 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Sunspot!"
             }
+        }],
+        "attribute_conversions": [{
+            "from": "condition_damage",
+            "to": "condition_damage",
+            "multiplier": 0,
+            "addend": 180
         }],
         "icon": "https://render.guildwars2.com/file/AB4E6CB3066DFF2D3C179B026C9BC371799E5D67/2175045.png"
     }]

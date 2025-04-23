@@ -12,15 +12,10 @@
         }]
     },{
         "unique_effect_key": "Geomancers Training",
+        "INFO": "Weapon skills cd reduction is done there",
         "attribute_modifiers": [{
             "attribute": "incoming_strike_damage_multiplier",
             "multiplier": 0.9
-        }],
-        "cooldown_modifiers": [{
-            "TODO": "This needs a proper way to use it",
-            "skill_key": "Earth Attunement TAG",
-            "operation": "set",
-            "multiplier": 0.8
         }]
     }],
     "skills": [{

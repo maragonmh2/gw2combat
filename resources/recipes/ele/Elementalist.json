@@ -39,8 +39,14 @@
                 "condition": {
                     "only_applies_on_finished_casting": true,
                     "only_applies_on_finished_casting_skill_with_tag": "Attunement",
-                    "unique_effect_on_source": "Fire Attunement Effect",
-                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                    "depends_on_skill_off_cooldown": "Attunement Timer",
+                    "and": [{
+                        "unique_effect_on_source": "Fire Attunement Effect"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    }]
                 }
             }],
             "skills_to_put_on_cooldown": [
@@ -84,8 +90,14 @@
                 "condition": {
                     "only_applies_on_finished_casting": true,
                     "only_applies_on_finished_casting_skill_with_tag": "Attunement",
-                    "unique_effect_on_source": "Water Attunement Effect",
-                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                    "depends_on_skill_off_cooldown": "Attunement Timer",
+                    "and": [{
+                        "unique_effect_on_source": "Water Attunement Effect"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    }]
                 }
             }],
             "skills_to_put_on_cooldown": [
@@ -129,8 +141,14 @@
                 "condition": {
                     "only_applies_on_finished_casting": true,
                     "only_applies_on_finished_casting_skill_with_tag": "Attunement",
-                    "unique_effect_on_source": "Air Attunement Effect",
-                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                    "depends_on_skill_off_cooldown": "Attunement Timer",
+                    "and": [{
+                        "unique_effect_on_source": "Air Attunement Effect"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    }]
                 }
             }],
             "skills_to_put_on_cooldown": [
@@ -174,8 +192,14 @@
                 "condition": {
                     "only_applies_on_finished_casting": true,
                     "only_applies_on_finished_casting_skill_with_tag": "Attunement",
-                    "unique_effect_on_source": "Earth Attunement Effect",
-                    "depends_on_skill_off_cooldown": "Attunement Timer"
+                    "depends_on_skill_off_cooldown": "Attunement Timer",
+                    "and": [{
+                        "unique_effect_on_source": "Earth Attunement Effect"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    }]
                 }
             }],
             "skills_to_put_on_cooldown": [

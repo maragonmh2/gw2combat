@@ -1,0 +1,81 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Bountiful Power",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "AEGIS"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "ALACRITY"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "FURY"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "MIGHT"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "PROTECTION"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "QUICKNESS"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "REGENERATION"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "RESISTANCE"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "RESOLUTION"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "STABILITY"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "SWIFTNESS"
+            }
+        },{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.02,
+            "condition": {
+                "effect_on_source": "VIGOR"
+            }
+        }]
+    }],
+    "skills": []
+}

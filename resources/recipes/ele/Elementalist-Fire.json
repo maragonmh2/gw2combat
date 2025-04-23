@@ -14,6 +14,7 @@
         }]
     },{
         "unique_effect_key": "Pyromancers Training",
+        "INFO": "Weapon skills cd reduction is done there",
         "attribute_modifiers": [{
             "attribute": "outgoing_strike_damage_multiplier",
             "multiplier": 1.1,
@@ -21,12 +22,6 @@
                 "effect_on_target": "BURNING",
                 "stacks_of_effect_on_target": 1
             }
-        }],
-        "cooldown_modifiers": [{
-            "TODO": "This needs a proper way to use it",
-            "skill_key": "Fire Attunement TAG",
-            "operation": "set",
-            "multiplier": 0.8
         }]
     }],
     "skills": [{
@@ -58,6 +53,7 @@
                 "only_applies_on_finished_casting_skill": "Fire Attunement"
             }
         }],
+        "tags": ["Pyromancers Puissance"],
         "weapon_type": "empty_handed"
     },{
         "skill_key": "Sunspot",

@@ -9,6 +9,7 @@
         }]
     },{
         "unique_effect_key": "Aeromancers Training",
+        "INFO": "Weapon skills cd reduction is done there",
         "attribute_conversions": [{
             "from": "ferocity",
             "to": "ferocity",
@@ -22,12 +23,6 @@
             "condition": {
                 "unique_effect_on_source": "Air Attunement Effect"
             }
-        }],
-        "cooldown_modifiers": [{
-            "TODO": "This needs a proper way to use it",
-            "skill_key": "Air Attunement TAG",
-            "operation": "set",
-            "multiplier": 0.8
         }]
     }],
     "skills": [{

@@ -1,14 +1,7 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [{
-        "unique_effect_key": "Strength of Stone Trait",
-        "attribute_conversions": [{
-            "from": "toughness",
-            "to": "condition_damage",
-            "multiplier": 0.1
-        }]
-    }],
+    "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Strength of Stone",
         "cooldown": [3000, 3000],
@@ -28,6 +21,12 @@
                 "only_applies_on_effect_application_of_type": "IMMOBILIZED",
                 "depends_on_skill_off_cooldown": "Strength of Stone"
             }
-        }]
+        }],
+        "attribute_conversions": [{
+            "from": "toughness",
+            "to": "condition_damage",
+            "multiplier": 0.1
+        }],
+        "icon": "https://render.guildwars2.com/file/567BA00AEB795B5021E5924CC3511DE3AAC26438/1012297.png"
     }]
 }

@@ -4,6 +4,7 @@
     "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Pyromancers Puissance",
+        "INFO": "Weapon/profession skills, conjures and utility tagging is done there",
         "skill_ticks": [{
             "pulse": true,
             "on_pulse_effect_applications": [{
@@ -16,12 +17,14 @@
             "skill_key": "Pyromancers Puissance",
             "condition": {
                 "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Pyromancers Puissance",
                 "unique_effect_on_source": "Fire Attunement"
             }
         }],
         "icon": "https://render.guildwars2.com/file/998095CB1FD2CF0164B8A36BABFDB911DF08DB02/1012313.png"
     },{
         "skill_key": "Flame Expulsion",
+        "cast_duration": [680, 680],
         "skill_ticks": [{
             "on_tick": 680,
             "strike": true,
@@ -39,7 +42,7 @@
             }],
             "effect_removals": [{
                 "effect": "MIGHT",
-                "num_stacks": 10,
+                "num_stacks": 20,
                 "condition": {
                     "only_applies_on_finished_casting": true,
                     "only_applies_on_finished_casting_skill": "Flame Expulsion"
@@ -52,6 +55,12 @@
                 "unique_effect_on_source": "Fire Attunement Effect",
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Attunement"
+            }
+        },{
+            "skill_key": "Flame Expulsion",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Overload Fire"
             }
         }],
         "weapon_type": "empty_handed",

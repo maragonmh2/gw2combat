@@ -2,10 +2,12 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [{
-        "unique_effect_key": "Written in Stone"
+        "unique_effect_key": "Written in Stone",
+        "INFO": "Passive Effect is done in Signet"
     }],
     "skills": [{
         "skill_key": "Signet of Fire Aura",
+        
         "skill_ticks": [{
             "pulse": true,
             "on_pulse_effect_applications": [{
@@ -16,15 +18,6 @@
                 "base_duration_ms": 4000,
                 "direction": "SELF"
             }]
-        }],
-        "attribute_modifiers": [{
-            "attribute": "precision",
-            "addend": 180,
-            "condition": {
-                "not": [{
-                    "depends_on_skill_off_cooldown": "Signet of Fire"
-                }]
-            }
         }],
         "skill_triggers": [{
             "skill_key": "Signet of Fire Aura",
@@ -45,15 +38,6 @@
                 "base_duration_ms": 3000,
                 "direction": "SELF"
             }]
-        }],
-        "attribute_modifiers": [{
-            "attribute": "toughness",
-            "addend": 180,
-            "condition": {
-                "not": [{
-                    "depends_on_skill_off_cooldown": "Signet of Earth"
-                }]
-            }
         }],
         "skill_triggers": [{
             "skill_key": "Signet of Earth Aura",

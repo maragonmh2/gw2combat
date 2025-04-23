@@ -1,0 +1,115 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Elemental Enchantment",
+        "attribute_conversions": [{
+            "from": "concentration",
+            "to": "concentration",
+            "multiplier": 0,
+            "addend": 180
+        }],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": -6000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "depends_on_skill_off_cooldown": "Attunement Timer",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": -6000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "depends_on_skill_off_cooldown": "Attunement Timer",
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": -6000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "depends_on_skill_off_cooldown": "Attunement Timer",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": -6000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "depends_on_skill_off_cooldown": "Attunement Timer",
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
+        }]
+    }],
+    "skills": [{
+        "skill_key": "Arcane Prowess",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "MIGHT",
+                "base_duration_ms": 8000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Arcane Prowess",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/2FFB0E34C00BE2EE1E65FA0336F304199E156D0E/1012291.png"
+    },{
+        "skill_key": "Elemental Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "MIGHT",
+                "base_duration_ms": 15000,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                }
+            },{
+                "effect": "REGENERATION",
+                "base_duration_ms": 5000,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }
+            },{
+                "effect": "SWIFTNESS",
+                "base_duration_ms": 8000,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Air Attunement Effect"
+                }
+            },{
+                "effect": "PROTECTION",
+                "base_duration_ms": 5000,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Elemental Attunement",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/EB242E0D58000DD8DCB80B0F7B049F03C62299B6/1012292.png"
+    }]
+}
