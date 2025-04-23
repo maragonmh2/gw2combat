@@ -1,0 +1,9 @@
+{
+    "skill_casts": [
+        { "skill": "Wait" },
+        { "skill": "CD" },
+        { "skill": "Reset CD" },
+        { "skill": "Reset CD" },
+        { "skill": "Wait" }
+    ]
+}

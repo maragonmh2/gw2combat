@@ -1,0 +1,17 @@
+{
+    "weapons": [
+        {
+            "position": "main_hand",
+            "set": "set_1",
+            "type": "pistol"
+        },
+        {
+            "position": "off_hand",
+            "set": "set_1",
+            "type": "dagger"
+        }
+    ],
+    "recipe_paths": [
+        "resources/test/Tester-Recipe.json"
+    ]
+}
