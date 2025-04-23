@@ -36,13 +36,13 @@
             }]
         }],
         "skill_triggers": [{
-            "skill_key": "Earthen Blast",
+            "skill_key": "Earthen Blast!",
             "condition": {
                 "only_applies_on_begun_casting": true,
                 "only_applies_on_begun_casting_skill_with_tag": "Overload Earth"
             }
         },{
-            "skill_key": "Earthen Blast",
+            "skill_key": "Earthen Blast!",
             "condition": {
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Earth Attunement"
