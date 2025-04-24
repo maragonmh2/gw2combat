@@ -1,9 +1,42 @@
-"attribute_modifiers": [{
-    "attribute": "precision",
-    "addend": 180,
-    "condition": {
-        "not": [{
-            "depends_on_skill_off_cooldown": "Signet of Fire"
-        }]
-    }
-}],
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Signet of Fire",
+        "cast_duration": [520, 520],
+        "cooldown": [15000, 12000],
+        "skill_ticks": [{
+            "on_tick": 420,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "num_targets": 5,
+            "on_strike_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 10000,
+                "num_stacks": 2,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "attribute_modifiers": [{
+            "attribute": "precision",
+            "addend": 180,
+            "condition": {
+                "unique_effect_on_source": "Written in Stone",
+                "not": [{
+                    "depends_on_skill_off_cooldown": "Signet of Fire"
+                }]
+            }
+        },{
+            "attribute": "precision",
+            "addend": 180,
+            "condition": {
+                "depends_on_skill_off_cooldown": "Signet of Fire"
+            }
+        }],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}
+

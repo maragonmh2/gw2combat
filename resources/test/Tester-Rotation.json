@@ -1,9 +1,11 @@
 {
     "skill_casts": [
         { "skill": "Wait" },
-        { "skill": "CD" },
-        { "skill": "Reset CD" },
-        { "skill": "Reset CD" },
+        { "skill": "Arcane Blast" },
+        { "skill": "Arcane Blast" },
+        { "skill": "Arcane Blast" },
+        { "skill": "Arcane Blast" },
+        { "skill": "Arcane Blast" },
         { "skill": "Wait" }
     ]
 }

@@ -1,0 +1,194 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Firestorm",
+        "cast_duration": [1120,1120],
+        "cooldown": [25000,20000],
+        "skills_to_put_on_cooldown": ["Lightning Storm"],
+        "cooldown_modifiers": [
+            {
+                "skill_key": "Firestorm",
+                "operation": "set",
+                "value": -35000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Lightning Storm"
+                }
+            }
+        ],
+        "damage_coefficient": 0.5,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [880,1880,2880,3880,4880,5880,6880,7880,8880,9880,10880],
+            [880,1880,2880,3880,4880,5880,6880,7880,8880,9880,10880]
+        ],
+        "on_strike_effect_applications": [
+            {
+                "effect": "BURNING",
+                "base_duration_ms": 2000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }
+        ],
+        "tags": ["Etching Charges"],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "empty_handed",
+        "icon": "https://render.guildwars2.com/file/72030C6DDD3A36ACEC0A39FF03299271CB2FE433/1424240.png"
+    },{
+        "skill_key": "Lightning Storm",
+        "INFO": "Hits only about 22 times on golem but 36 in total | To simulate that every 3rd hit misses",
+        "HITS": "880, 880, 880, 1400, 1560, 1680, 1880, 2200, 2400, 2480, 2880, 3280, 3400, 3480, 3880, 4080, 4160, 4400, 4800, 4880, 4880, 5400, 5440, 5680, 5880, 6080, 6400, 6480, 6760, 7280, 7400, 8040, 8080, 8880, 9680",
+        "cast_duration": [1120, 1120],
+        "cooldown": [60000, 48000],
+        "skills_to_put_on_cooldown": ["Firestorm"],
+        "cooldown_modifiers": [
+            {
+                "skill_key": "Lightning Storm",
+                "operation": "set",
+                "value": 35000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Firestorm"
+                }
+            }
+        ],
+        "skill_ticks": [{
+            "on_tick": 880,
+            "strike": true,
+            "damage_coefficient": 0.825,
+            "num_targets": 5
+        },{
+            "on_tick": 880,
+            "strike": true,
+            "damage_coefficient": 0.78375,
+            "num_targets": 5
+        },{
+            "on_tick": 1400,
+            "strike": true,
+            "damage_coefficient": 0.7425,
+            "num_targets": 5
+        },{
+            "on_tick": 1560,
+            "strike": true,
+            "damage_coefficient": 0.70125,
+            "num_targets": 5
+        },{
+            "on_tick": 1880,
+            "strike": true,
+            "damage_coefficient": 0.660,
+            "num_targets": 5
+        },{
+            "on_tick": 2200,
+            "strike": true,
+            "damage_coefficient": 0.61875,
+            "num_targets": 5
+        },{
+            "on_tick": 2480,
+            "strike": true,
+            "damage_coefficient": 0.5775,
+            "num_targets": 5
+        },{
+            "on_tick": 2880,
+            "strike": true,
+            "damage_coefficient": 0.53625,
+            "num_targets": 5
+        },{
+            "on_tick": 3400,
+            "strike": true,
+            "damage_coefficient": 0.495,
+            "num_targets": 5
+        },{
+            "on_tick": 3480,
+            "strike": true,
+            "damage_coefficient": 0.45375,
+            "num_targets": 5
+        },{
+            "on_tick": 4080,
+            "strike": true,
+            "damage_coefficient": 0.4125,
+            "num_targets": 5
+        },{
+            "on_tick": 4160,
+            "strike": true,
+            "damage_coefficient": 0.37125,
+            "num_targets": 5
+        },{
+            "on_tick": 4800,
+            "strike": true,
+            "damage_coefficient": 0.330,
+            "num_targets": 5
+        },{
+            "on_tick": 4880,
+            "strike": true,
+            "damage_coefficient": 0.28875,
+            "num_targets": 5
+        },{
+            "on_tick": 5400,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 5440,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 5880,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 6080,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 6480,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 6760,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 7400,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 8040,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        },{
+            "on_tick": 8880,
+            "strike": true,
+            "damage_coefficient": 0.2475,
+            "num_targets": 5
+        }],
+        "pulse_on_tick_list": [
+            [880, 880, 1400, 1560, 1880, 2200, 2480, 2880, 3400, 3480, 4080, 4160, 4800, 4880, 5400, 5440, 5880, 6080, 6480, 6760, 7400, 8040, 8880],
+            [880, 880, 1400, 1560, 1880, 2200, 2480, 2880, 3400, 3480, 4080, 4160, 4800, 4880, 5400, 5440, 5880, 6080, 6480, 6760, 7400, 8040, 8880]
+        ],
+        "on_pulse_effect_applications": [{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 8000,
+            "num_stacks": 2,
+            "num_targets": 5,
+            "direction": "OUTGOING"
+        }],
+        "tags": ["Etching Charges"],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

@@ -49,7 +49,7 @@
         },
         {
             "skill_key": "Overload Fire",
-            "cast_duration": [4150, 3320],
+            "cast_duration": [3320, 3320],
             "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Fire Attunement",
@@ -187,7 +187,7 @@
         },
         {
             "skill_key": "Overload Water",
-            "cast_duration": [3650, 2920],
+            "cast_duration": [2920, 2920],
             "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Water Attunement",
@@ -295,7 +295,7 @@
         },
         {
             "skill_key": "Overload Air",
-            "cast_duration": [4000, 3200],
+            "cast_duration": [3200, 3200],
             "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Air Attunement",
@@ -496,7 +496,7 @@
         },
         {
             "skill_key": "Overload Earth",
-            "cast_duration": [3450, 2760],
+            "cast_duration": [2760, 2760],
             "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Earth Attunement",

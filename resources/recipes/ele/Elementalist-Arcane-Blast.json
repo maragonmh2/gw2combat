@@ -1,0 +1,53 @@
+{
+    "counters": [{
+        "counter_key": "Arcane Blast Counter",
+        "initial_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Arcane Blast Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_ammo_gain_of_skill": "Arcane Blast Ammo"
+            }
+        },{
+            "counter_key": "Arcane Blast Counter",
+            "operation": "subtract",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Arcane Blast"
+            }
+        }]
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Arcane Blast Ammo",
+        "cooldown": [20000, 16000],
+        "ammo": 3
+    },{
+        "skill_key": "Arcane Blast",
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Arcane Blast",
+            "operation": "set",
+            "value": 19000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Arcane Blast",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Arcane Blast Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            }
+        }],
+        "skill_ticks": [{
+            "strike": true,
+            "damage_coefficient": 1.4,
+            "child_skill_keys": ["Arcane Blast Ammo"]
+        }],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

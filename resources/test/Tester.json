@@ -13,5 +13,9 @@
     ],
     "recipe_paths": [
         "resources/test/Tester-Recipe.json"
+    ],
+    "permanent_effects": [
+        "ALACRITY",
+        "QUICKNESS"
     ]
 }

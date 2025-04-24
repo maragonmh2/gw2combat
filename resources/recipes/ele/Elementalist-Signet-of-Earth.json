@@ -1,9 +1,44 @@
-"attribute_modifiers": [{
-    "attribute": "toughness",
-    "addend": 180,
-    "condition": {
-        "not": [{
-            "depends_on_skill_off_cooldown": "Signet of Earth"
-        }]
-    }
-}],
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Signet of Earth",
+        "cast_duration": [520, 520],
+        "cooldown": [15000, 12000],
+        "skill_ticks": [{
+            "on_tick": 420,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "on_strike_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 9000,
+                "num_stacks": 4,
+                "direction": "OUTGOING"
+            },{
+                "effect": "IMMOBILIZED",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "attribute_modifiers": [{
+            "attribute": "toughness",
+            "addend": 180,
+            "condition": {
+                "unique_effect_on_source": "Written in Stone",
+                "not": [{
+                    "depends_on_skill_off_cooldown": "Signet of Earth"
+                }]
+            }
+        },{
+            "attribute": "incoming_strike_damage_multiplier",
+            "multiplier": 0.9,
+            "condition": {
+                "depends_on_skill_off_cooldown": "Signet of Earth"
+            }
+        }],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}
+
