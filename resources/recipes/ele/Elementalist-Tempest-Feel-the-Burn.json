@@ -1,0 +1,35 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Feel the Burn!",
+        "cooldown": [25000, 20000],
+        "skill_ticks": [{
+            "strike": true,
+            "damage_coefficient": 2.5,
+            "on_strike_effect_applications": [{
+                "effect": "MIGHT",
+                "base_duration_ms": 15000,
+                "num_stacks": 8,
+                "num_targets": 5,
+                "direction": "TEAM"
+            },{
+                "effect": "FURY",
+                "base_duration_ms": 10000,
+                "num_targets": 5,
+                "direction": "TEAM"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "TEAM"
+            }]
+        }],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

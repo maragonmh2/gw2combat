@@ -19,6 +19,7 @@
     "skills": [
         {
             "skill_key": "Attunement Timer",
+            "INFO": "Just for tempest attunement cd",
             "cooldown": [10000, 8000],
             "cooldown_modifiers": [{
                 "skill_key": "Attunement Timer",
@@ -45,6 +46,10 @@
                     },{
                         "not": [{
                             "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
                         }]
                     }]
                 }
@@ -97,6 +102,10 @@
                         "not": [{
                             "unique_effect_on_source": "Elemental Enchantment"
                         }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
                     }]
                 }
             }],
@@ -148,6 +157,10 @@
                         "not": [{
                             "unique_effect_on_source": "Elemental Enchantment"
                         }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
                     }]
                 }
             }],
@@ -198,6 +211,10 @@
                     },{
                         "not": [{
                             "unique_effect_on_source": "Elemental Enchantment"
+                        }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
                         }]
                     }]
                 }

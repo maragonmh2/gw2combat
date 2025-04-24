@@ -10,6 +10,82 @@
             "addend": 180
         }],
         "cooldown_modifiers": [{
+            "skill_key": "Attunement Timer",
+            "operation": "set",
+            "value": 1000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Overload"
+            }
+        },{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": 225,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Fire Attunement Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": 225,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Water Attunement Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": 225,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Air Attunement Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": 225,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Earth Attunement Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
+            }
+        },{
             "skill_key": "Fire Attunement",
             "operation": "set",
             "value": -6000,
@@ -17,7 +93,13 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Attunement",
                 "depends_on_skill_off_cooldown": "Attunement Timer",
-                "unique_effect_on_source": "Fire Attunement Effect"
+                "and": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
             }
         },{
             "skill_key": "Water Attunement",
@@ -27,7 +109,13 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Attunement",
                 "depends_on_skill_off_cooldown": "Attunement Timer",
-                "unique_effect_on_source": "Water Attunement Effect"
+                "and": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
             }
         },{
             "skill_key": "Air Attunement",
@@ -37,7 +125,13 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Attunement",
                 "depends_on_skill_off_cooldown": "Attunement Timer",
-                "unique_effect_on_source": "Air Attunement Effect"
+                "and": [{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
             }
         },{
             "skill_key": "Earth Attunement",
@@ -47,7 +141,125 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Attunement",
                 "depends_on_skill_off_cooldown": "Attunement Timer",
-                "unique_effect_on_source": "Earth Attunement Effect"
+                "and": [{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": -1900,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": -1900,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": -1900,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": -1900,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": -200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": -200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": -200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": -200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Attunement",
+                "and": [{
+                    "unique_effect_on_source": "Weaver"
+                },{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
             }
         }]
     }],

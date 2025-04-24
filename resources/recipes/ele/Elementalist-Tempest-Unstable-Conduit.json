@@ -1,0 +1,60 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Unstable Conduit",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Frost Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Water Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Shocking Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Air Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Magnetic Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Unstable Conduit",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Overload"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/51765B3330426700C8A2E580B23637CA9CD728FB/1029945.png"
+    }]
+}

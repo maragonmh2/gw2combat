@@ -1,0 +1,72 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Transcendent Tempest Effect": {
+			"icon": "https://render.guildwars2.com/file/0C79A761B446E53CAB6DA4B320D12D656B5E1151/2207773.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Transcendent Tempest",
+        "cooldown_modifiers": [{
+            "skill_key": "Overload Fire",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fire Attunement"
+            }
+        },{
+            "skill_key": "Overload Water",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Water Attunement"
+            }
+        },{
+            "skill_key": "Overload Air",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Air Attunement"
+            }
+        },{
+            "skill_key": "Overload Earth",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earth Attunement"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Transcendent Tempest Effect",
+                    "max_duration": 10000,
+                    "stacking_type": "duration",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.25
+                    },{
+                        "attribute": "outgoing_condition_damage_multiplier",
+                        "multiplier": 1.25
+                    }]
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Transcendent Tempest",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Overload"
+            }
+        }]
+    }]
+}

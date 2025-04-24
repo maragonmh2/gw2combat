@@ -20,6 +20,7 @@
     }],
     "skills": [{
         "skill_key": "Earthen Blast!",
+        "attribute_damage_to_skill": "Earthen Blast",
         "skill_ticks": [{
             "strike": true,
             "damage_coefficient": 0.36,

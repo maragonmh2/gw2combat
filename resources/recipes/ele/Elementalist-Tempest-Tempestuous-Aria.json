@@ -1,0 +1,39 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Tempestuous Aria Effect": {
+			"icon": "https://render.guildwars2.com/file/0C2A72B848A7FBB596DE6096B4C45814D3266EEB/1029946.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Apply Tempestuous Aria",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Tempestuous Aria Effect",
+                    "max_duration": 10000,
+                    "stacking_type": "duration",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.1
+                    },{
+                        "attribute": "outgoing_condition_damage_multiplier",
+                        "multiplier": 1.05
+                    }]
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Tempestuous Aria",
+            "condition": {
+                "only_applies_on_effect_application": true,
+                "only_applies_on_effect_application_of_type": ""
+            }
+        }]
+    }]
+}

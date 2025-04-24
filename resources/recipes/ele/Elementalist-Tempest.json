@@ -50,22 +50,28 @@
         {
             "skill_key": "Overload Fire",
             "cast_duration": [4150, 3320],
-            "cooldown": [4000, 3200],
+            "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Fire Attunement",
                 "operation": "set",
                 "value": -18500,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Fire"
+                    "only_applies_on_finished_casting_skill": "Overload Fire",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Overload Fire",
                 "operation": "set",
-                "value": -16000,
+                "value": -14000,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Fire"
+                    "only_applies_on_finished_casting_skill": "Overload Fire",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Water Attunement",
@@ -95,7 +101,7 @@
             "skills_to_put_on_cooldown": ["Fire Attunement"],
             "damage_coefficient": 0.9,
             "strike_on_tick_list": [
-                [350, 950, 1550, 2150, 4000, 5000, 6000, 7000, 8000, 9000],
+                [280, 760, 1240, 1720, 3200, 4200, 5200, 6200, 7200, 8200],
                 [280, 760, 1240, 1720, 3200, 4200, 5200, 6200, 7200, 8200]
             ],
             "on_strike_effect_applications": [{
@@ -109,6 +115,19 @@
                 "num_stacks": 2,
                 "num_targets": 5,
                 "direction": "TEAM"
+            }],
+            "pulse_on_tick_list": [
+                [320, 800, 1280, 1760],
+                [320, 800, 1280, 1760]
+            ],
+            "on_pulse_effect_applications": [{
+                "effect": "ALACRITY",
+                "base_duration_ms": 1000,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             }],
             "skill_ticks": [{
                 "pulse": true,
@@ -135,6 +154,18 @@
             },{
                 "on_tick": 2720,
                 "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 3200,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 4500,
+                    "num_targets": 5,
+                    "direction": "TEAM",
+                    "condition": {
+                        "unique_effect_on_source": "Lucid Singularity"
+                    }
+                }]
             }],
             "skill_triggers": [{
                 "skill_key": "Overload Fire Reset",
@@ -157,22 +188,28 @@
         {
             "skill_key": "Overload Water",
             "cast_duration": [3650, 2920],
-            "cooldown": [4000, 3200],
+            "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Water Attunement",
                 "operation": "set",
                 "value": -18500,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Water"
+                    "only_applies_on_finished_casting_skill": "Overload Water",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Overload Water",
                 "operation": "set",
-                "value": -16000,
+                "value": -14000,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Water"
+                    "only_applies_on_finished_casting_skill": "Overload Water",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Fire Attunement",
@@ -200,6 +237,19 @@
                 }
             }],
             "skills_to_put_on_cooldown": ["Water Attunement"],
+            "pulse_on_tick_list": [
+                [40, 760, 1480, 2200],
+                [40, 760, 1480, 2200]
+            ],
+            "on_pulse_effect_applications": [{
+                "effect": "ALACRITY",
+                "base_duration_ms": 1000,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            }],
             "skill_ticks": [{
                 "pulse": true,
                 "skills_to_put_on_cooldown": [
@@ -220,6 +270,14 @@
                     "base_duration_ms": 8000,
                     "num_targets": 5,
                     "direction": "TEAM"
+                },{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 4500,
+                    "num_targets": 5,
+                    "direction": "TEAM",
+                    "condition": {
+                        "unique_effect_on_source": "Lucid Singularity"
+                    }
                 }]
             }],
             "skill_triggers": [{
@@ -238,22 +296,28 @@
         {
             "skill_key": "Overload Air",
             "cast_duration": [4000, 3200],
-            "cooldown": [4000, 3200],
+            "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Air Attunement",
                 "operation": "set",
                 "value": -18500,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Air"
+                    "only_applies_on_finished_casting_skill": "Overload Air",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Overload Air",
                 "operation": "set",
-                "value": -16000,
+                "value": -14000,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Air"
+                    "only_applies_on_finished_casting_skill": "Overload Air",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Fire Attunement",
@@ -281,6 +345,32 @@
                 }
             }],
             "skills_to_put_on_cooldown": ["Air Attunement"],
+            "damage_coefficient": 0.85,
+            "strike": true,
+            "num_targets": 3,
+            "strike_on_tick_list": [
+                [720, 1120, 1550, 1920, 2320, 2720, 3120, 3640, 4160, 4680, 5200, 5720, 6240, 6760],
+                [720, 1120, 1550, 1920, 2320, 2720, 3120, 3640, 4160, 4680, 5200, 5720, 6240, 6760]
+            ],
+            "on_strike_effect_applications": [{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 10000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }],
+            "pulse_on_tick_list": [
+                [40, 760, 1560, 2360],
+                [40, 760, 1560, 2360]
+            ],
+            "on_pulse_effect_applications": [{
+                "effect": "ALACRITY",
+                "base_duration_ms": 1000,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            }],
             "skill_ticks": [
             {
                 "pulse": true,
@@ -291,205 +381,91 @@
                 ]
             },{
                 "on_tick": 720,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 1120,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 1550,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 1920,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 2320,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 2720,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 3120,
-                "damage_coefficient": 0.85,
-                "strike": true,
+                "pulse": true,
                 "child_skill_keys": ["Lightning Jolt"],
                 "tags": ["Lightning Jolt Source"],
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 },{
                     "unique_effect": {
                         "unique_effect_key": "Lightning Field"
                     },
                     "base_duration_ms": 7480,
                     "direction": "SELF"
+                },{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 4500,
+                    "num_targets": 5,
+                    "direction": "TEAM",
+                    "condition": {
+                        "unique_effect_on_source": "Lucid Singularity"
+                    }
                 }]
             },{
                 "on_tick": 3640,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 4160,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 4680,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 5200,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 5720,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
-                }]
-            },{
-                "on_tick": 6240,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             },{
                 "on_tick": 6760,
-                "damage_coefficient": 0.85,
-                "strike": true,
-                "num_targets": 3,
-                "on_strike_effect_applications": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "WEAKNESS",
-                    "base_duration_ms": 10000,
-                    "num_targets": 3,
-                    "direction": "OUTGOING"
                 }]
             }],
             "skill_triggers": [{
@@ -521,22 +497,37 @@
         {
             "skill_key": "Overload Earth",
             "cast_duration": [3450, 2760],
-            "cooldown": [4000, 3200],
+            "cooldown": [6000, 4800],
             "cooldown_modifiers": [{
                 "skill_key": "Earth Attunement",
                 "operation": "set",
                 "value": -18500,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Earth"
+                    "only_applies_on_finished_casting_skill": "Overload Earth",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
                 }
             },{
                 "skill_key": "Overload Earth",
                 "operation": "set",
-                "value": -16000,
+                "value": -14000,
                 "condition": {
                     "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Overload Earth"
+                    "only_applies_on_finished_casting_skill": "Overload Earth",
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
+                }
+            },{
+                "skill_key": "Overload Earth",
+                "operation": "set",
+                "value": 2000,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Earth Attunement",
+                    "unique_effect_on_source": "Transcendent Tempest Trait"
                 }
             },{
                 "skill_key": "Fire Attunement",
@@ -567,8 +558,8 @@
             "damage_coefficient": 0.75,
             "num_targets": 5,
             "strike_on_tick_list": [
-                [100, 1000, 1900, 2800, 3450, 4700, 5700, 6700, 7700],
-                [80, 800, 1520, 2240, 2760, 3760, 4760, 5760, 6760]  
+                [80, 800, 1520, 2240, 2760, 3760, 4760, 5760, 6760],
+                [80, 800, 1520, 2240, 2760, 3760, 4760, 5760, 6760]
             ],
             "on_strike_effect_applications": [{
                 "effect": "CRIPPLED",
@@ -586,6 +577,19 @@
                 "num_targets": 5,
                 "direction": "TEAM"
             }],
+            "pulse_on_tick_list": [
+                [120, 840, 1560, 2280],
+                [120, 840, 1560, 2280]
+            ],
+            "on_pulse_effect_applications": [{
+                "effect": "ALACRITY",
+                "base_duration_ms": 1000,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            }],
             "skill_ticks": [{
                 "pulse": true,
                 "skills_to_put_on_cooldown": [
@@ -602,6 +606,14 @@
                     "base_duration_ms": 4000,
                     "num_targets": 5,
                     "direction": "OUTGOING"
+                },{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 4500,
+                    "num_targets": 5,
+                    "direction": "TEAM",
+                    "condition": {
+                        "unique_effect_on_source": "Lucid Singularity"
+                    }
                 }]
             }],
             "skill_triggers": [{
