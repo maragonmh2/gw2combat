@@ -1,0 +1,149 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Conjure Lightning Hammer",
+        "cast_duration": [880, 880],
+        "cooldown": [60000, 48000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications":[{
+                "unique_effect": {
+                    "unique_effect_key": "Lightning Hammer on Ground Effect"
+                },
+                "base_duration_ms": 30000,
+                "direction": "SELF"
+            }]
+        },{
+            "on_tick": 560,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Conjure Lightning Attributes Effect",
+                    "max_duration": 30000,
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "addend": 75,
+                        "attribute": "ferocity"
+                    },{
+                        "addend": 180,
+                        "attribute": "precision"
+                    }]
+                },
+                "base_duration_ms": 30000,
+                "direction": "SELF"
+            }]
+        }],
+        "equip_bundle": "Lightning Hammer",
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true
+    },{
+        "skill_key": "Drop Lightning Hammer",
+        "effect_removals": [{
+            "unique_effect": "Conjure Lightning Attributes Effect",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Drop Lightning Hammer"
+            }
+        }],
+        "required_bundle": "Lightning Hammer",
+        "drop_bundle": "Lightning Hammer",
+        "executable": true
+    },{
+        "skill_key": "Lightning Hammer Pickup",
+        "cast_duration": [520,520],
+        "pulse_on_tick_list": [[520], [520]],
+        "on_pulse_effect_applications": [{
+            "unique_effect": {
+                "unique_effect_key": "Conjure Lightning Attributes Effect",
+                "max_duration": 30000,
+                "stacking_type": "replace",
+                "attribute_modifiers": [{
+                    "addend": 75,
+                    "attribute": "ferocity"
+                },{
+                    "addend": 180,
+                    "attribute": "precision"
+                }]
+            },
+            "base_duration_ms": 30000,
+            "direction": "SELF"
+        }],
+        "effect_removals": [{
+            "unique_effect": "Lightning Hammer on Ground Effect",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Lightning Hammer Pickup"
+            }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Lightning Hammer on Ground Effect"
+        },
+        "executable": true,
+        "equip_bundle": "Lightning Hammer",
+        "icon": "https://render.guildwars2.com/file/C3DA6AC980062B0A0EEA14CE51393748CFAE01CA/103369.png"
+    },{
+        "skill_key": "Invoke Lightning",
+        "INFO": "This is configured for large hitboxes",
+        "cast_duration": [920, 920],
+        "cooldown": [20000, 16000],
+        "damage_coefficient": 0.2475,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [600, 760, 760, 760, 880, 880, 880, 880, 880, 880, 1000, 1000],
+            [600, 760, 760, 760, 880, 880, 880, 880, 880, 880, 1000, 1000]
+        ],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.825,
+            "num_targets": 5
+        },{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.7425,
+            "num_targets": 5
+        },{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.660,
+            "num_targets": 5
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 0.5775,
+            "num_targets": 5
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 0.495,
+            "num_targets": 5
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 0.4125,
+            "num_targets": 5
+        },{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 0.4125,
+            "num_targets": 5
+        },{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 0.33,
+            "num_targets": 5
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "required_bundle": "Lightning Hammer",
+        "weapon_type": "kit_conjure"
+    }]
+}

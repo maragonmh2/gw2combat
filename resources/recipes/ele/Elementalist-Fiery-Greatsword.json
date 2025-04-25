@@ -1,0 +1,233 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Conjure Fiery Greatsword",
+        "cast_duration": [1160, 1160],
+        "cooldown": [180000, 144000],
+        "strike_on_tick_list": [[1440], [1440]],
+        "damage_coefficient": 1.0,
+        "num_targets": 3,
+        "on_strike_effect_applications": [{
+            "effect": "BURNING",
+            "base_duration_ms": 3000,
+            "num_targets": 3,
+            "direction": "OUTGOING"
+        },{
+            "unique_effect": {
+                "unique_effect_key": "Fiery Greatsword on Ground Effect"
+            },
+            "base_duration_ms": 30000,
+            "direction": "SELF"
+        }],
+        "skill_ticks": [{
+            "on_tick": 720,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Conjure Fire Attributes Effect",
+                    "max_duration": 30000,
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "addend": 260,
+                        "attribute": "power"
+                    },{
+                        "addend": 180,
+                        "attribute": "condition_damage"
+                    }]
+                },
+                "base_duration_ms": 30000,
+                "direction": "SELF"
+            }]
+        }],
+        "equip_bundle": "Fiery Greatsword",
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    },{
+        "skill_key": "Drop Fiery Greatsword",
+        "effect_removals": [{
+            "unique_effect": "Conjure Fire Attributes Effect",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Drop Fiery Greatsword"
+            }
+        }],
+        "required_bundle": "Fiery Greatsword",
+        "drop_bundle": "Fiery Greatsword",
+        "executable": true
+    },{
+        "skill_key": "Fiery Greatsword Pickup",
+        "cast_duration": [520,520],
+        "pulse_on_tick_list": [[520], [520]],
+        "on_pulse_effect_applications": [{
+            "unique_effect": {
+                "unique_effect_key": "Conjure Fire Attributes Effect",
+                "max_duration": 30000,
+                "stacking_type": "replace",
+                "attribute_modifiers": [{
+                    "addend": 260,
+                    "attribute": "power"
+                },{
+                    "addend": 180,
+                    "attribute": "condition_damage"
+                }]
+            },
+            "base_duration_ms": 30000,
+            "direction": "SELF"
+        }],
+        "effect_removals": [{
+            "unique_effect": "Fiery Greatsword on Ground Effect",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Fiery Greatsword Pickup"
+            }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fiery Greatsword on Ground Effect"
+        },
+        "executable": true,
+        "equip_bundle": "Fiery Greatsword",
+        "icon": "https://render.guildwars2.com/file/EEDA0B1847077DE93DBB0575D44BE0615FBCE728/103328.png"
+    },{
+        "skill_key": "Lesser Fiery Eruption",
+        "cooldown": [6000, 6000],
+        "damage_coefficient": 0.1,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [0, 1000, 2000, 3000, 4000, 5000],
+            [0, 1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "base_duration_ms": 3000,
+            "direction": "OUTGOING",
+            "num_targets": 5,
+            "effect": "BURNING"
+        }],
+        "skill_triggers": [{
+            "skill_key": "Lesser Fiery Eruption",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Lesser Fiery Eruption",
+                "unique_effect_on_source": "Conjure Fire Attributes Effect"
+            }
+        }],
+        "weapon_type": "kit_conjure",
+        "icon": "https://render.guildwars2.com/file/CC31AFD564F8090A34500C052A66634016F129F0/103335.png"
+    },{
+        "skill_key": "Flame Wave",
+        "cast_duration": [2160, 2160],
+        "damage_coefficient": 0.65,
+        "strike_on_tick_list": [
+            [360, 800, 1240, 1680],
+            [360, 800, 1240, 1680]
+        ],
+        "required_bundle": "Fiery Greatsword",
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "kit_conjure"
+    },{
+        "skill_key": "Fiery Eruption",
+        "cast_duration": [720, 720],
+        "cooldown": [5000,4000],
+        "pulse_on_tick_list": [
+            [720, 1720, 2720, 3720, 4720, 5720],
+            [720, 1720, 2720, 3720, 4720, 5720]
+        ],
+        "on_pulse_effect_applications": [{
+            "base_duration_ms": 3000,
+            "direction": "OUTGOING",
+            "num_targets": 5,
+            "effect": "BURNING"
+        }],
+        "required_bundle": "Fiery Greatsword",
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "kit_conjure"
+    },{
+        "skill_key": "Fiery Whirl Huge",
+        "INFO": "Full cast is 1440ms. Cancel with weapon swap. Finisher 1 frame after hit",
+        "HITS": "760, 880, 1000, 1120",
+        "cast_duration": [680, 680],
+        "cooldown": [5000, 4000],
+        "damage_coefficient": 0.65,
+        "num_targets": 3,
+        "strike_on_tick_list": [
+            [280, 400, 520, 640],
+            [280, 400, 520, 640]
+        ],
+        "skill_ticks": [{
+            "on_tick": 320,
+            "child_skill_keys": ["Whirl Finisher"]
+        },{
+            "on_tick": 320,
+            "child_skill_keys": ["Whirl Finisher"]
+        },{
+            "on_tick": 440,
+            "child_skill_keys": ["Whirl Finisher"]
+        },{
+            "on_tick": 560,
+            "child_skill_keys": ["Whirl Finisher"]
+        },{
+            "on_tick": 680,
+            "child_skill_keys": ["Whirl Finisher"]
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "required_bundle": "Fiery Greatsword",
+        "weapon_type": "kit_conjure"
+    },{
+        "skill_key": "Fiery Rush",
+        "INFO": "First part is 440ms, second part is 920ms",
+        "cast_duration": [1360, 1360],
+        "cooldown": [10000, 8000],
+        "damage_coefficient": 0.2,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [420, 1420, 2420, 3420],
+            [420, 1420, 2420, 3420]
+        ],
+        "skill_ticks": [{
+            "on_tick": 1260,
+            "strike": true,
+            "damage_coefficient": 2.0
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "required_bundle": "Fiery Greatsword",
+        "weapon_type": "kit_conjure"
+    },{
+        "skill_key": "Fire Storm",
+        "INFO": "Full cast is 1280ms, but should be canceled with fiery whirl or weapon swap",
+        "cast_duration": [560, 560],
+        "cooldown": [15000, 12000],
+        "executable": true,
+        "damage_coefficient": 0.65,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [520, 1520, 2520, 3520, 4520, 5520, 6520, 7520, 8520],
+            [520, 1520, 2520, 3520, 4520, 5520, 6520, 7520, 8520]
+        ],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "required_bundle": "Fiery Greatsword",
+        "weapon_type": "kit_conjure",
+        "icon": "https://render.guildwars2.com/file/50A93174F3F9A1042654A7B00F146F31B2FABC09/103333.png"
+    }]
+}

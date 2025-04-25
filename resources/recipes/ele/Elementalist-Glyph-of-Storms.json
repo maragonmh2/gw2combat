@@ -57,6 +57,12 @@
                 }
             }
         ],
+        "damage_coefficient": 0.2475,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [5400,5400,5880,6080,6480,6760,7400,8040,8880],
+            [5400,5400,5880,6080,6480,6760,7400,8040,8880]
+        ],
         "skill_ticks": [{
             "on_tick": 880,
             "strike": true,
@@ -126,51 +132,6 @@
             "on_tick": 4880,
             "strike": true,
             "damage_coefficient": 0.28875,
-            "num_targets": 5
-        },{
-            "on_tick": 5400,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 5440,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 5880,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 6080,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 6480,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 6760,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 7400,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 8040,
-            "strike": true,
-            "damage_coefficient": 0.2475,
-            "num_targets": 5
-        },{
-            "on_tick": 8880,
-            "strike": true,
-            "damage_coefficient": 0.2475,
             "num_targets": 5
         }],
         "pulse_on_tick_list": [
