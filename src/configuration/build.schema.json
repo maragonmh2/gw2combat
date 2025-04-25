@@ -262,7 +262,9 @@
                 "shortbow",
                 "staff",
                 "aquatic",
-                "spear"
+                "spear",
+                "fire_elemental",
+                "lesser_fire_elemental"
             ]
         },
         "weapon_position": {
