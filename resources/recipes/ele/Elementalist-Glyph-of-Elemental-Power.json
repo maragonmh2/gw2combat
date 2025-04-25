@@ -1,0 +1,53 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Glyph of Elemental Power",
+        "cooldown": [25000, 20000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Glyph of Elemental Power Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.25
+                    }]
+                },
+                "base_duration_ms": 25000,
+                "direction": "SELF"
+            }]
+        }],
+        "effect_removals": [{
+            "unique_effect": "Glyph of Elemental Power Effect",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "unique_effect_on_source": "Glyph of Elemental Power Effect"
+            }
+        }],
+        "skill_triggers": [{
+            "skill_key": "Glyph of Elemental Power Burn",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "unique_effect_on_source": "Glyph of Elemental Power Effect"
+            }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/0805084EF739CEDD5C9678561C331D7F0B01590B/1424236.png"
+    },{
+        "skill_key": "Glyph of Elemental Power Burn",
+        "attribute_damage_to_skill": "Glyph of Elemental Power",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }]
+    }]
+}

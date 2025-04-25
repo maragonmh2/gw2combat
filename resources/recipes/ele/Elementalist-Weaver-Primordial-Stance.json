@@ -1,0 +1,154 @@
+{
+    "counters": [{
+        "counter_key": "Primordial Stance Counter",
+        "initial_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Primordial Stance Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_ammo_gain_of_skill": "Primordial Stance Ammo"
+            }
+        },{
+            "counter_key": "Primordial Stance Counter",
+            "operation": "subtract",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Primordial Stance"
+            }
+        }]
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Primordial Stance Ammo",
+        "cooldown": [20000, 16000],
+        "ammo": 2
+    },{
+        "skill_key": "Primordial Stance",
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Primordial Stance",
+            "operation": "set",
+            "value": 15000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Primordial Stance",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Primordial Stance Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            }
+        }],
+        "damage_coefficient": 0.33,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [1000, 2000, 3000, 4000, 5000],
+            [1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "BURNING",
+            "base_duration_ms": 2000,
+            "num_stacks": 2,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        },{
+            "effect": "CHILLED",
+            "base_duration_ms": 1000,
+            "num_stacks": 2,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        },{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 3000,
+            "num_stacks": 16,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        },{
+            "effect": "BLEEDING",
+            "base_duration_ms": 6000,
+            "num_stacks": 4,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
+        },{
+            "effect": "BURNING",
+            "base_duration_ms": 2000,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }
+        },{
+            "effect": "CHILLED",
+            "base_duration_ms": 1000,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }
+        },{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 3000,
+            "num_stacks": 8,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        },{
+            "effect": "BLEEDING",
+            "base_duration_ms": 6000,
+            "num_stacks": 2,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        },{
+            "effect": "BURNING",
+            "base_duration_ms": 2000,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }
+        },{
+            "effect": "CHILLED",
+            "base_duration_ms": 1000,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Secondary Water Attunement Effect"
+            }
+        },{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 3000,
+            "num_stacks": 8,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }
+        },{
+            "effect": "BLEEDING",
+            "base_duration_ms": 6000,
+            "num_stacks": 2,
+            "direction": "OUTGOING",
+            "condition": {
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "child_skill_keys": ["Primordial Stance Ammo"]
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

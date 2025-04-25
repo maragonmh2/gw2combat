@@ -1,0 +1,164 @@
+{
+    "counters": [{
+        "counter_key": "Unravel Counter",
+        "initial_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Unravel Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_ammo_gain_of_skill": "Unravel Ammo"
+            }
+        },{
+            "counter_key": "Unravel Counter",
+            "operation": "subtract",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        }]
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Unravel Ammo",
+        "cooldown": [25000, 20000],
+        "ammo": 2
+    },{
+        "skill_key": "Unravel",
+        "cooldown": [25000, 20000],
+        "cooldown_modifiers": [{
+            "skill_key": "Unravel",
+            "operation": "set",
+            "value": 20000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Unravel Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            }
+        },{
+            "skill_key": "Fire Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Unravel Effect",
+                    "max_duration": 5000
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            },{
+                "effect": "MIGHT",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Fire Attunement"
+                    },{
+                        "unique_effect_on_source": "Primary Fire Attunement"
+                    }]
+                }
+            },{
+                "effect": "VIGOR",
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Water Attunement"
+                    },{
+                        "unique_effect_on_source": "Primary Water Attunement"
+                    }]
+                }
+            },{
+                "effect": "FURY",
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Air Attunement"
+                    },{
+                        "unique_effect_on_source": "Primary Air Attunement"
+                    }]
+                }
+            },{
+                "effect": "PROTECTION",
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Earth Attunement"
+                    },{
+                        "unique_effect_on_source": "Primary Earth Attunement"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Fire Attunement",
+            "condition": {
+                "unique_effect_on_source": "Primary Fire Attunement",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "condition": {
+                "unique_effect_on_source": "Primary Water Attunement",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "condition": {
+                "unique_effect_on_source": "Primary Air Attunement",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "condition": {
+                "unique_effect_on_source": "Primary Earth Attunement",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel"
+            }
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true
+    }]
+}

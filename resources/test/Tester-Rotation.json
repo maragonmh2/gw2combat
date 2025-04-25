@@ -1,11 +1,6 @@
 {
     "skill_casts": [
         { "skill": "Fire Attunement" },
-        { "skill": "Glyph of Fire Elemental" },
-        { "skill": "Pause" },
-        { "skill": "Pause" },
-        { "skill": "Flame Barrage" },
-        { "skill": "Flame Barrage" },
         { "skill": "Wait" }
     ]
 }
