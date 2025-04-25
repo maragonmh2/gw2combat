@@ -1,0 +1,84 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Glyph of Fire Elemental",
+        "cast_duration": [1120, 1120],
+        "cooldown": [160000, 152000],
+        "skill_ticks": [{
+            "on_tick": 1120,
+            "pulse": true,
+            "on_pulse_effect_applications": [
+                {
+                    "unique_effect": {
+                        "unique_effect_key": "Fire Elemental Effect"
+                    },
+                    "base_duration_ms": 120000,
+                    "direction": "SELF"
+                }
+            ]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/0D342F3FD05405DF451B1EF1731C7B9CE8F1BD07/867437.png"
+    },{
+        "skill_key": "Flame Barrage",
+        "cooldown": [15000, 12000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Flame Barrage Trigger"
+                },
+                "num_targets": 5,
+                "direction": "TEAM"
+            }]
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Elemental Effect"
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+    },{
+        "skill_key": "Flame Burst Burn",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Flame Burst Burn",
+            "condition": {
+                "unique_effect_on_source": "Flame Burst Burn Trigger"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+    },{
+        "skill_key": "Flame Barrage Burn",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Flame Barrage Burn",
+            "condition": {
+                "unique_effect_on_source": "Flame Barrage Burn Trigger"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+    }]
+}

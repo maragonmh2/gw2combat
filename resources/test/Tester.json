@@ -12,7 +12,10 @@
         }
     ],
     "recipe_paths": [
-        "resources/test/Tester-Recipe.json"
+        "resources/test/Tester-Recipe.json",
+        "resources/recipes/ele/Elementalist.json",
+        "resources/recipes/ele/Elementalist-Glyph-of-Lesser-Elementals.json",
+        "resources/recipes/ele/Elementalist-Glyph-of-Elementals.json"
     ],
     "permanent_effects": [
         "ALACRITY",

@@ -1,0 +1,66 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Relentless Fire Effect": {
+			"icon": "https://render.guildwars2.com/file/31372EE16EAB80BDB213EB99D1BF4C6C3B67B6AF/2491601.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Relentless Fire",
+        "cast_duration": [240, 240],
+        "cooldown": [20000, 16000],
+        "skill_ticks": [{
+            "on_tick": 200,
+            "pulse": true,
+            "on_pulse_effect_applications": [
+                {
+                    "unique_effect": {
+                        "unique_effect_key": "Relentless Fire Effect",
+                        "stacking_type": "duration",
+                        "attribute_modifiers": [
+                            {
+                                "multiplier": 1.10,
+                                "attribute": "outgoing_strike_damage_multiplier"
+                            },
+                            {
+                                "multiplier": 1.10,
+                                "attribute": "condition_damage_multiplier"
+                            }
+                        ]
+                    },
+                    "base_duration_ms": 5000,
+                    "direction": "SELF"
+                },
+                {
+                    "unique_effect": {
+                        "unique_effect_key": "Relentless Fire Effect",
+                        "stacking_type": "duration",
+                        "attribute_modifiers": [
+                            {
+                                "multiplier": 1.10,
+                                "attribute": "outgoing_strike_damage_multiplier"
+                            },
+                            {
+                                "multiplier": 1.10,
+                                "attribute": "condition_damage_multiplier"
+                            }
+                        ]		
+                    },
+                    "base_duration_ms": 3000,
+                    "direction": "SELF",
+                    "condition": {
+                        "unique_effect_on_source": "Fire Jade Sphere Effect"
+                    }
+                }
+            ]
+        }],
+        "tags": [
+            "Etching Charges",
+            "Pyromancers Puissance"
+        ],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

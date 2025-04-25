@@ -35,6 +35,10 @@
                 "depends_on_skill_off_cooldown": "Signet of Fire"
             }
         }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

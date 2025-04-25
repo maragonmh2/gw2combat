@@ -1,0 +1,73 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Shattering Ice Effect": {
+			"icon": "https://render.guildwars2.com/file/A1C20E2CE05D80B5A9DDF47ED0780301FC2C7477/2491603.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Shattering Ice",
+        "cast_duration": [240, 240],
+        "cooldown": [20000, 16000],
+        "skill_ticks": [{
+            "on_tick": 240,
+            "pulse": true,
+            "on_pulse_effect_applications": [
+                {
+                    "base_duration_ms": 5000,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Shattering Ice Effect",
+                        "stacking_type": "duration"
+                    }
+                },
+                {
+                    "base_duration_ms": 3000,
+                    "direction": "SELF",
+                    "unique_effect": {
+                        "unique_effect_key": "Shattering Ice Effect",
+                        "stacking_type": "duration"
+                    },
+                    "condition": {
+                        "unique_effect_on_source": "Water Jade Sphere Effect"
+                    }
+                }
+            ]
+        }],
+        "skill_triggers": [
+            {
+                "skill_key": "Shattering Ice (Hit)",
+                "condition": {
+                    "only_applies_on_strikes": true,
+                    "unique_effect_on_source": "Shattering Ice Effect",
+                    "depends_on_skill_off_cooldown": "Shattering Ice (Hit)"
+                }
+            }
+        ],
+        "tags": [
+            "Etching Charges",
+            "Pyromancers Puissance"
+        ],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    },
+    {
+        "skill_key": "Shattering Ice (Hit)",
+        "cast_duration": [0, 0],
+        "cooldown": [1000, 1000],
+        "skill_ticks": [{
+            "strike": true,
+            "damage_coefficient": 0.6,
+            "num_targets": 5,
+            "on_strike_effect_applications": [{
+                "effect": "CHILLED",
+                "base_duration_ms": 1000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/A1C20E2CE05D80B5A9DDF47ED0780301FC2C7477/2491603.png",
+        "weapon_type": "empty_handed"
+    }]
+}

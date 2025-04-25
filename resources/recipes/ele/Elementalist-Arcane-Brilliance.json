@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [        {
+        "skill_key": "Arcane Brilliance",
+        "cast_duration": [640, 640],
+        "cooldown": [20000, 16000],
+        "skill_ticks": [{
+            "on_tick": 520,
+            "strike": true,
+            "damage_coefficient": 0.5
+        }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "empty_handed"
+    }]
+}

@@ -1,0 +1,45 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Glyph of Lesser Fire Elemental",
+        "cast_duration": [1120, 1120],
+        "cooldown": [40000, 32000],
+        "skill_ticks": [{
+            "on_tick": 1120,
+            "pulse": true,
+            "on_pulse_effect_applications": [
+                {
+                    "unique_effect": {
+                        "unique_effect_key": "Lesser Fire Elemental Trigger"
+                    },
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }
+            ]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/0DB6250806EEE1F020543290797C4AA36A90EC07/867435.png"
+    },{
+        "skill_key": "Lesser Flame Burst Burn",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Lesser Flame Burst Burn",
+            "condition": {
+                "unique_effect_on_source": "Lesser Flame Burst Burn Trigger"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
+    }]
+}

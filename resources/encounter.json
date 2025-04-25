@@ -5,7 +5,12 @@
             "build_path": "resources/test/Tester.json",
             "rotation_path": "resources/test/Tester-Rotation.json",
             "team": 1
-        }, {
+        },{
+            "name": "elementals",
+            "build_path": "resources/ele/Fire-Elementals.json",
+            "rotation_path": "",
+            "team": 1
+        },{
             "name": "golem",
             "build_path": "resources/build-golem-fractal-relic.json",
             "team": 2

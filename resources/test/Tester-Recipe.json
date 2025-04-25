@@ -6,31 +6,11 @@
     "skills": [
         {
             "skill_key": "Wait",
+            "cast_duration": [100000, 100000],
+            "executable": true
+        },{
+            "skill_key": "Pause",
             "cast_duration": [1000, 1000],
-            "executable": true
-        },{
-            "skill_key": "CD",
-            "cooldown": [10000, 10000],
-            "executable": true
-        },{
-            "skill_key": "Reset CD",
-            "skill_ticks": [{
-                "pulse": true,
-                "on_pulse_effect_applications": [{
-                    "unique_effect": {
-                        "unique_effect_key": "Reset CD Trigger"
-                    },
-                    "direction": "SELF"
-                }]
-            }],
-            "cooldown_modifiers": [{
-                "skill_key": "CD",
-                "operation": "reset",
-                "condition": {
-                    "unique_effect_on_source": "Reset CD Trigger"
-                }
-            }],
-            "weapon_type": "empty_handed",
             "executable": true
         }
     ]

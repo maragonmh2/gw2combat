@@ -47,6 +47,10 @@
             "damage_coefficient": 1.4,
             "child_skill_keys": ["Arcane Blast Ammo"]
         }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

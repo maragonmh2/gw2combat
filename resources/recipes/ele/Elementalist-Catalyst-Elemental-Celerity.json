@@ -1,0 +1,15 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [		{
+        "skill_key": "Elemental Celerity",
+        "cast_duration": [240, 240],
+        "cooldown": [90000, 72000],
+        "tags": [
+            "Elemental Celerity",
+            "Etching Charges"
+        ],
+        "executable": true
+    }]
+}
