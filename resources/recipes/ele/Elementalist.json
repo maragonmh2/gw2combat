@@ -66,7 +66,12 @@
                         "unique_effect_key": "Fire Attunement Effect"
                     },
                     "base_duration_ms": 999999,
-                    "direction": "SELF"
+                    "direction": "SELF",
+                    "condition": {
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
+                    }
                 }]
             }],
             "effect_removals": [{
@@ -121,7 +126,12 @@
                         "unique_effect_key": "Water Attunement Effect"
                     },
                     "base_duration_ms": 999999,
-                    "direction": "SELF"
+                    "direction": "SELF",
+                    "condition": {
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
+                    }
                 }]
             }],
             "effect_removals": [{
@@ -176,7 +186,12 @@
                         "unique_effect_key": "Air Attunement Effect"
                     },
                     "base_duration_ms": 999999,
-                    "direction": "SELF"
+                    "direction": "SELF",
+                    "condition": {
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
+                    }
                 }]
             }],
             "effect_removals": [{
@@ -231,7 +246,12 @@
                         "unique_effect_key": "Earth Attunement Effect"
                     },
                     "base_duration_ms": 999999,
-                    "direction": "SELF"
+                    "direction": "SELF",
+                    "condition": {
+                        "not": [{
+                            "unique_effect_on_source": "Weaver"
+                        }]
+                    }
                 }]
             }],
             "effect_removals": [{

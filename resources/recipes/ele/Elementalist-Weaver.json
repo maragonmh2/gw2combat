@@ -1,0 +1,435 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Weaver",
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": -2500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": -2500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": -2500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": -2500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "and": [{
+                    "not": [{
+                        "unique_effect_on_source": "Weave Self Effect"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Elemental Enchantment"
+                    }]
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Primary Fire Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Fire Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }
+        },{
+            "unique_effect": "Primary Water Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Water Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Secondary Water Attunement Effect"
+            }
+        },{
+            "unique_effect": "Primary Air Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Air Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }
+        },{
+            "unique_effect": "Primary Earth Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Earth Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }
+        }]
+    },{
+        "unique_effect_key": "Elemental Polyphony",
+        "attribute_conversions": [{
+            "from": "power",
+            "to": "power",
+            "multiplier": 0,
+            "addend": 200,
+            "condition": {
+                "or": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            }
+        },{
+            "from": "healing_power",
+            "to": "healing_power",
+            "multiplier": 0,
+            "addend": 200,
+            "condition": {
+                "or": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }
+        },{
+            "from": "ferocity",
+            "to": "ferocity",
+            "multiplier": 0,
+            "addend": 200,
+            "condition": {
+                "or": [{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            }
+        },{
+            "from": "vitality",
+            "to": "vitality",
+            "multiplier": 0,
+            "addend": 200,
+            "condition": {
+                "or": [{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            }
+        }]
+    }],
+    "unique_effects": {
+        "Primary Fire Attunement Effect": {
+            "icon": "https://i.imgur.com/fQQ1x5B"
+        },
+        "Secondary Fire Attunement Effect": {
+            "icon": "https://i.imgur.com/yT5el8U"
+        },
+        "Primary Water Attunement Effect": {
+            "icon": "https://i.imgur.com/en2JlkP"
+        },
+        "Secondary Water Attunement Effect": {
+            "icon": "https://i.imgur.com/e5cbW6N"
+        },
+        "Primary Air Attunement Effect": {
+            "icon": "https://i.imgur.com/CAQftYl"
+        },
+        "Secondary Air Attunement Effect": {
+            "icon": "https://i.imgur.com/CHuVnc4"
+        },
+        "Primary Earth Attunement Effect": {
+            "icon": "https://i.imgur.com/U6cK8WI"
+        },
+        "Secondary Earth Attunement Effect": {
+            "icon": "https://i.imgur.com/C8c4Ehk"
+        }
+    },
+    "skills": [{
+        "skill_key": "Weaver Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Secondary Fire Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Primary Fire Attunement Effect"
+                    },{
+                        "unique_effect_on_source": "Fire Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Secondary Water Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Primary Water Attunement Effect"
+                    },{
+                        "unique_effect_on_source": "Water Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Secondary Air Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Primary Air Attunement Effect"
+                    },{
+                        "unique_effect_on_source": "Air Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Secondary Earth Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "or": [{
+                        "unique_effect_on_source": "Primary Earth Attunement Effect"
+                    },{
+                        "unique_effect_on_source": "Earth Attunement Effect"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weaver Attunement",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Attunement"
+            }
+        }]
+    },{
+        "skill_key": "Weaver Fire Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Primary Fire Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Primary Fire Attunement Effect"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weaver Fire Attunement",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Fire Attunement"
+            }
+        }]
+    },{
+        "skill_key": "Weaver Water Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Water Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Primary Water Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Primary Water Attunement Effect"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weaver Water Attunement",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Water Attunement"
+            }
+        }]
+    },{
+        "skill_key": "Weaver Air Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Air Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Primary Air Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Primary Air Attunement Effect"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weaver Air Attunement",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Air Attunement"
+            }
+        }]
+    },{
+        "skill_key": "Weaver Earth Attunement",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Earth Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Primary Earth Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Primary Earth Attunement Effect"
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weaver Earth Attunement",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Earth Attunement"
+            }
+        }]
+    },{
+        "skill_key": "Elemental Refreshment",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Barrier Effect"
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Elemental Refreshment",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Dual Attack"
+            }
+        }]
+    }]
+}

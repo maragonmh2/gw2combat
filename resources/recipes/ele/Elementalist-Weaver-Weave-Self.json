@@ -1,0 +1,297 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects":{
+        "Weave Self Effect": {
+            "icon": "https://render.guildwars2.com/file/E656D3A8B1339603A70BBB7237F2BA004258ED55/1770326.png"
+        },
+        "Perfect Weave Effect": {
+            "icon": "https://render.guildwars2.com/file/E656D3A8B1339603A70BBB7237F2BA004258ED55/1770326.png"
+        },
+        "Woven Fire Effect": {
+            "icon": "https://render.guildwars2.com/file/0597C2D6803EBDB3E309A1AEA1F5B7D414D208D9/1770336.png"
+        },
+        "Woven Water Effect": {
+            "icon": "https://render.guildwars2.com/file/490A54586F7D28AEE6E9A551F6B4DC0841B81AD0/1770340.png"
+        },
+        "Woven Air Effect": {
+            "icon": "https://render.guildwars2.com/file/CEE660D6BB939A06695643F5CEBA1F295B022305/1770333.png"
+        },
+        "Woven Earth Effect": {
+            "icon": "https://render.guildwars2.com/file/2DDE45C45EFBF5CC6D0C0562AB730FBB58021547/1770342.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Weave Self",
+        "cast_duration": [800, 800],
+        "cooldown": [90000, 72000],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "set",
+            "value": -500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Weave Self Effect"
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "set",
+            "value": -500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Weave Self Effect"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "set",
+            "value": -500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Weave Self Effect"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "set",
+            "value": -500,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "unique_effect_on_source": "Weave Self Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 520,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Weave Self Effect"
+                },
+                "base_duration_ms": 20000,
+                "direction": "SELF"
+            }]
+        }],
+        "effect_removals": [{
+            "unique_effect": "Weave Self Effect",
+            "condition": {
+                "unique_effect_on_source": "Perfect Weave Effect"
+            }
+        }],
+        "executable": true
+    },{
+        "skill_key": "Apply Perfect Weave",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Perfect Weave Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage_multiplier",
+                        "multiplier": 1.2
+                    },{
+                        "attribute": "boon_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.1
+                    },{
+                        "attribute": "incoming_strike_damage_multiplier",
+                        "multiplier": 0.8
+                    }]
+                },
+                "base_duration_ms": 10000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Perfect Weave",
+            "condition": {
+                "and": [{
+                    "unique_effect_on_source": "Woven Fire"
+                },{
+                    "unique_effect_on_source": "Woven Water"
+                },{
+                    "unique_effect_on_source": "Woven Air"
+                },{
+                    "unique_effect_on_source": "Woven Earth"
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Woven Fire",
+            "condition": {
+                "unique_effect_on_source": "Perfect Weave Effect"
+            }
+        },{
+            "unique_effect": "Woven Water",
+            "condition": {
+                "unique_effect_on_source": "Perfect Weave Effect"
+            }
+        },{
+            "unique_effect": "Woven Air",
+            "condition": {
+                "unique_effect_on_source": "Perfect Weave Effect"
+            }
+        },{
+            "unique_effect": "Woven Earth",
+            "condition": {
+                "unique_effect_on_source": "Perfect Weave Effect"
+            }
+        }]
+    },{
+        "skill_key": "Apply Woven Fire",
+        "cooldown": [30000, 30000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Woven Fire Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage_multiplier",
+                        "multiplier": 1.2
+                    }]
+                },
+                "base_duration_ms": 20000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Woven Fire",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Apply Woven Fire",
+                "or": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Woven Fire Effect",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        }]
+    },{
+        "skill_key": "Apply Woven Water",
+        "cooldown": [30000, 30000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Woven Water Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage_multiplier",
+                        "multiplier": 1.2
+                    }]
+                },
+                "base_duration_ms": 20000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Woven Water",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Apply Woven Water",
+                "or": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Woven Water Effect",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        }]
+    },{
+        "skill_key": "Apply Woven Air",
+        "cooldown": [30000, 30000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Woven Air Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage_multiplier",
+                        "multiplier": 1.2
+                    }]
+                },
+                "base_duration_ms": 20000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Woven Air",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Apply Woven Air",
+                "or": [{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Woven Air Effect",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        }]
+    },{
+        "skill_key": "Apply Woven Earth",
+        "cooldown": [30000, 30000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Woven Earth Effect",
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage_multiplier",
+                        "multiplier": 1.2
+                    }]
+                },
+                "base_duration_ms": 20000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Apply Woven Earth",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Apply Woven Earth",
+                "or": [{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Woven Earth Effect",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Weave Self Effect"
+                }]
+            }
+        }]
+    }]
+}

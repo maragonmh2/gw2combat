@@ -80,6 +80,66 @@
                 "base_duration_ms": 5000,
                 "direction": "SELF"
             },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Fire Attunement Effect"
+                        }]
+                    },{
+                        "unique_effect_on_source": "Primary Fire Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Water Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Water Attunement Effect"
+                        }]
+                    },{
+                        "unique_effect_on_source": "Primary Water Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Air Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Air Attunement Effect"
+                        }]
+                    },{
+                        "unique_effect_on_source": "Primary Air Attunement Effect"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Earth Attunement Effect"
+                },
+                "base_duration_ms": 999999,
+                "direction": "SELF",
+                "condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Earth Attunement Effect"
+                        }]
+                    },{
+                        "unique_effect_on_source": "Primary Earth Attunement Effect"
+                    }]
+                }
+            },{
                 "effect": "MIGHT",
                 "base_duration_ms": 5000,
                 "num_stacks": 5,
@@ -126,33 +186,61 @@
                 }
             }]
         }],
-        "skill_triggers": [{
-            "skill_key": "Fire Attunement",
+        "effect_removals": [{
+            "unique_effect": "Primary Fire Attunement Effect",
             "condition": {
-                "unique_effect_on_source": "Primary Fire Attunement",
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Unravel"
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
             }
         },{
-            "skill_key": "Water Attunement",
+            "unique_effect": "Secondary Fire Attunement Effect",
             "condition": {
-                "unique_effect_on_source": "Primary Water Attunement",
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Unravel"
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
             }
         },{
-            "skill_key": "Air Attunement",
+            "unique_effect": "Primary Water Attunement Effect",
             "condition": {
-                "unique_effect_on_source": "Primary Air Attunement",
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Unravel"
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Primary Water Attunement Effect"
             }
         },{
-            "skill_key": "Earth Attunement",
+            "unique_effect": "Secondary Water Attunement Effect",
             "condition": {
-                "unique_effect_on_source": "Primary Earth Attunement",
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Unravel"
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Secondary Water Attunement Effect"
+            }
+        },{
+            "unique_effect": "Primary Air Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Air Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }
+        },{
+            "unique_effect": "Primary Earth Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        },{
+            "unique_effect": "Secondary Earth Attunement Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Unravel",
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
             }
         }],
         "tags": [

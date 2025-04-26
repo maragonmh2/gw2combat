@@ -1,0 +1,35 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Swift Revenge",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.1,
+            "condition": {
+                "or": [{
+                    "effect_on_source": "SWIFTNESS"
+                },{
+                    "unique_effect_on_source": "Superspeed Effect"
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "SWIFTNESS",
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Swift Revenge",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Dual Attack"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/7B0B0072429031F44DC41404F9BA0D08A5B2EDE2/1769919.png"
+    }]
+}

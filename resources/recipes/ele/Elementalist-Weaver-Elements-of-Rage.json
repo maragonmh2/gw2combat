@@ -1,0 +1,51 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Elements of Rage": {
+            "icon": "https://render.guildwars2.com/file/4269910A34FB0FB861DAE2A13229D594523B0BA0/1769921.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Elements of Rage",
+        "attribute_conversions": [{
+            "from": "vitality",
+            "to": "precision",
+            "multiplier": 0.13
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Elements of Rage Effect",
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_condition_damage_multiplier",
+                        "multiplier": 1.07
+                    },{
+                        "attribute": "outgoing_condition_damage_multiplier",
+                        "multiplier": 1.07
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Elements of Rage",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "or": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/4269910A34FB0FB861DAE2A13229D594523B0BA0/1769921.png"
+    }]
+}

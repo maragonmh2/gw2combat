@@ -37,7 +37,20 @@
             "skill_key": "Fresh Air",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Air Attunement"
+                "only_applies_on_finished_casting_skill": "Air Attunement",
+                "or": [{
+                    "not": [{
+                        "unique_effect_on_source": "Weaver"
+                    }]
+                },{
+                    "unique_effect_on_source": "Primary Fire Attunement"
+                },{
+                    "unique_effect_on_source": "Primary Water Attunement"
+                },{
+                    "unique_effect_on_source": "Primary Air Attunement"
+                },{
+                    "unique_effect_on_source": "Primary Earth Attunement"                   
+                }]
             }
         }]
     }]

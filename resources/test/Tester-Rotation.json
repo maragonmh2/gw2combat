@@ -1,6 +1,6 @@
 {
     "skill_casts": [
-        { "skill": "Fire Attunement" },
+        { "skill": "Test" },
         { "skill": "Wait" }
     ]
 }

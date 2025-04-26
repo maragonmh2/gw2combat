@@ -1,0 +1,46 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Weavers Prowess": {
+            "icon": "https://render.guildwars2.com/file/78DA4AC17D4EBDA04BBBD325A024C346F59ED150/1769918.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Weavers Prowess",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Weavers Prowess Effect",
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_condition_damage_multiplier",
+                        "multiplier": 1.05
+                    },{
+                        "attribute": "condition_duration_multiplier",
+                        "addend": 0.2
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Weavers Prowess",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement",
+                "or": [{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/78DA4AC17D4EBDA04BBBD325A024C346F59ED150/1769918.png"
+    }]
+}
