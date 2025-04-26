@@ -1,0 +1,903 @@
+{
+    "counters": [{
+        "counter_key": "Catalyst Energy",
+        "initial_value": 300000,
+        "max_value": 300000,
+        "counter_modifiers": [
+            {
+                "counter_key": "Catalyst Energy",
+                "operation": "subtract",
+                "value": 100000,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Jade Sphere"
+                }
+            },{
+                "counter_key": "Catalyst Energy",
+                "operation": "add",
+                "value": 10000,
+                "condition": {
+                    "only_applies_on_strikes": true,
+                    "threshold": {
+                        "counter_value_subject_to_threshold": "Catalyst Energy",
+                        "threshold_type": "upper_bound_exclusive",
+                        "threshold_value": 300000
+                    },
+                    "or": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Jade Sphere Effect"
+                        }]
+                    }]
+                }
+            }
+        ]
+    },{
+        "counter_key": "Elemental Empowerment Counter",
+        "initial_value": 0,
+        "icon": "https://render.guildwars2.com/file/C3B3C99943ECABFAA936573030C599EE2A974420/2491529.png",
+        "counter_modifiers": [
+            {
+                "counter_key": "Elemental Empowerment Counter",
+                "operation": "add",
+                "value": 1,
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Apply Elemental Empowerment"
+                }
+            },
+            {
+                "counter_key": "Elemental Empowerment Counter",
+                "operation": "subtract",
+                "value": 1,
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill": "Apply Elemental Empowerment"
+                }
+            }
+        ]
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Apply Elemental Empowerment",
+        "cooldown": [15000, 15000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Elemental Empowerment Effect",
+                    "max_considered_stacks": 10,
+                    "attribute_conversions": [{
+                        "from": "power",
+                        "to": "power",
+                        "multiplier": 1.01
+                    },{
+                        "from": "precision",
+                        "to": "precision",
+                        "multiplier": 1.01
+                    },{
+                        "from": "ferocity",
+                        "to": "ferocity",
+                        "multiplier": 1.01
+                    },{
+                        "from": "toughness",
+                        "to":  "toughness",
+                        "multiplier": 1.01
+                    },{
+                        "from": "vitality",
+                        "to": "vitality",
+                        "multiplier": 1.01
+                    },{
+                        "from": "concentration",
+                        "to": "concentration",
+                        "multiplier": 1.01
+                    },{
+                        "from": "condition_damage",
+                        "to": "condition_damage",
+                        "multiplier": 1.01
+                    },{
+                        "from": "expertise",
+                        "to": "expertise",
+                        "multiplier": 1.01
+                    },{
+                        "from": "healing_power",
+                        "to": "healing_power",
+                        "multiplier": 1.01
+                    },{
+                        "from": "power",
+                        "to": "power",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "precision",
+                        "to": "precision",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "ferocity",
+                        "to": "ferocity",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "toughness",
+                        "to":  "toughness",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "vitality",
+                        "to": "vitality",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "concentration",
+                        "to": "concentration",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "condition_damage",
+                        "to": "condition_damage",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "expertise",
+                        "to": "expertise",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "healing_power",
+                        "to": "healing_power",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment"
+                        }
+                    },{
+                        "from": "power",
+                        "to": "power",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "precision",
+                        "to": "precision",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "ferocity",
+                        "to": "ferocity",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "toughness",
+                        "to":  "toughness",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "vitality",
+                        "to": "vitality",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "concentration",
+                        "to": "concentration",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "condition_damage",
+                        "to": "condition_damage",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "expertise",
+                        "to": "expertise",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    },{
+                        "from": "healing_power",
+                        "to": "healing_power",
+                        "multiplier": 1.005,
+                        "condition": {
+                            "unique_effect_on_source": "Empowering Empowerment",
+                            "threshold": {
+                                "counter_value_subject_to_threshold": "Elemental Empowerment Counter",
+                                "threshold_value": 10,
+                                "threshold_type": "lower_bound_inclusive"
+                            }
+                        }
+                    }]
+                },
+                "base_duration_ms": 15000,
+                "direction": "SELF"
+            }]
+        }]
+    },{
+        "skill_key": "Elemental Empowerment",
+        "cooldown": [15000, 15000],
+        "skill_ticks": [{
+            "child_skill_keys": [
+                "Apply Elemental Empowerment",
+                "Apply Elemental Empowerment",
+                "Apply Elemental Empowerment"
+            ]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Elemental Empowerment",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Elemental Empowerment"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/C3B3C99943ECABFAA936573030C599EE2A974420/2491529.png"
+    },{
+        "skill_key": "Elemental Epitome",
+        "skill_ticks": [{
+            "child_skill_keys": ["Elemental Epitome Fire"],
+            "tick_condition": {
+                "unique_effect_on_source": "Fire Attunement Effect",
+                "depends_on_skill_off_cooldown": "Elemental Epitome Fire"
+            }
+        },{
+            "child_skill_keys": ["Elemental Epitome Water"],
+            "tick_condition": {
+                "unique_effect_on_source": "Water Attunement Effect",
+                "depends_on_skill_off_cooldown": "Elemental Epitome Water"
+            }
+        },{
+            "child_skill_keys": ["Elemental Epitome Air"],
+            "tick_condition": {
+                "unique_effect_on_source": "Air Attunement Effect",
+                "depends_on_skill_off_cooldown": "Elemental Epitome Air"
+            }
+        },{
+            "child_skill_keys": ["Elemental Epitome Earth"],
+            "tick_condition": {
+                "unique_effect_on_source": "Earth Attunement Effect",
+                "depends_on_skill_off_cooldown": "Elemental Epitome Earth"
+            }
+        }],
+        "skill_triggers": [{
+            "skill_key": "Elemental Epitome",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Finisher",
+                "unique_effect_on_source": "Field Effect"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
+    },{
+        "skill_key": "Elemental Epitome Fire",
+        "cooldown": [10000, 10000],
+        "skill_ticks": [{
+            "pulse": true,
+            "child_skill_keys": ["Apply Elemental Empowerment"],
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
+    },{
+        "skill_key": "Elemental Epitome Water",
+        "cooldown": [10000, 10000],
+        "skill_ticks": [{
+            "pulse": true,
+            "child_skill_keys": ["Apply Elemental Empowerment"],
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Frost Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
+    },{
+        "skill_key": "Elemental Epitome Air",
+        "cooldown": [10000, 10000],
+        "skill_ticks": [{
+            "pulse": true,
+            "child_skill_keys": ["Apply Elemental Empowerment"],
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Shocking Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
+    },{
+        "skill_key": "Elemental Epitome Earth",
+        "cooldown": [10000, 10000],
+        "skill_ticks": [{
+            "pulse": true,
+            "child_skill_keys": ["Apply Elemental Empowerment"],
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Magnetic Aura Effect",
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
+    },{
+        "skill_key": "Deploy Jade Sphere",
+        "skill_ticks": [{
+            "child_skill_keys": ["Deploy Fire Jade Sphere"],
+            "tick_condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        },{
+            "child_skill_keys": ["Deploy Water Jade Sphere"],
+            "tick_condition": {
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        },{
+            "child_skill_keys": ["Deploy Air Jade Sphere"],
+            "tick_condition": {
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        },{
+            "child_skill_keys": ["Deploy Earth Jade Sphere"],
+            "tick_condition": {
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
+        }],
+        "executable": false
+    },{
+        "skill_key": "Deploy Fire Jade Sphere",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Deploy Fire Jade Sphere",
+            "operation": "set",
+            "value": 2250,
+            "condition": {
+                "unique_effect_on_source": "Elemental Enchantment"
+            }
+        }],
+        "damage_coefficient": 0.25,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [0, 1000, 2000, 3000, 4000, 5000],
+            [0, 1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "MIGHT",
+            "base_duration_ms": 10000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Sphere Specialist"
+                }]
+            }
+        },{
+            "effect": "MIGHT",
+            "base_duration_ms": 20000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "unique_effect_on_source": "Sphere Specialist"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Fire Jade Sphere Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Field Effect"
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            },{
+                "effect": "MIGHT",
+                "base_duration_ms": 10000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }    
+            },{
+                "effect": "MIGHT",
+                "base_duration_ms": 20000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 2500,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }  
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Catalyst Energy",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 100000
+            }
+        },
+        "weapon_type": "hammer",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/22CA7C0F420C7F61CEBFA323DF3AADC5EF237475/2491598.png"
+    },{
+        "skill_key": "Deploy Water Jade Sphere",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Deploy Water Jade Sphere",
+            "operation": "set",
+            "value": 2250,
+            "condition": {
+                "unique_effect_on_source": "Elemental Enchantment"
+            }
+        }],
+        "damage_coefficient": 0.25,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [0, 1000, 2000, 3000, 4000, 5000],
+            [0, 1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "RESOLUTION",
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Sphere Specialist"
+                }]
+            }
+        },{
+            "effect": "RESOLUTION",
+            "base_duration_ms": 2000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "unique_effect_on_source": "Sphere Specialist"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Water Jade Sphere Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Water Field Effect"
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            },{
+                "effect": "VIGOR",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }    
+            },{
+                "effect": "VIGOR",
+                "base_duration_ms": 10000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 2500,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }  
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Catalyst Energy",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 100000
+            }
+        },
+        "weapon_type": "hammer",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/6016319AAF18417F0401800EF36C0F18E207FFD5/2491600.png"
+    },{
+        "skill_key": "Deploy Air Jade Sphere",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Deploy Air Jade Sphere",
+            "operation": "set",
+            "value": 2250,
+            "condition": {
+                "unique_effect_on_source": "Elemental Enchantment"
+            }
+        }],
+        "damage_coefficient": 0.25,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [0, 1000, 2000, 3000, 4000, 5000],
+            [0, 1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "FURY",
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Sphere Specialist"
+                }]
+            }
+        },{
+            "effect": "FURY",
+            "base_duration_ms": 2000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "unique_effect_on_source": "Sphere Specialist"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Air Jade Sphere Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Lightning Field Effect"
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            },{
+                "effect": "FURY",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }    
+            },{
+                "effect": "FURY",
+                "base_duration_ms": 10000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 2500,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }  
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Catalyst Energy",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 100000
+            }
+        },
+        "weapon_type": "hammer",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/07D9C76FEB07BB04B9D07A05D87C09A0A0AE0319/2491594.png"
+    },{
+        "skill_key": "Deploy Earth Jade Sphere",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Deploy Earth Jade Sphere",
+            "operation": "set",
+            "value": 2250,
+            "condition": {
+                "unique_effect_on_source": "Elemental Enchantment"
+            }
+        }],
+        "damage_coefficient": 0.25,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [0, 1000, 2000, 3000, 4000, 5000],
+            [0, 1000, 2000, 3000, 4000, 5000]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "PROTECTION",
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Sphere Specialist"
+                }]
+            }
+        },{
+            "effect": "PROTECTION",
+            "base_duration_ms": 2000,
+            "num_targets": 5,
+            "direction": "TEAM",
+            "condition": {
+                "unique_effect_on_source": "Sphere Specialist"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Earth Jade Sphere Effect"
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Poison Field Effect"
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            },{
+                "effect": "AEGIS",
+                "base_duration_ms": 3000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }    
+            },{
+                "effect": "AEGIS",
+                "base_duration_ms": 6000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 2500,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Sphere Specialist"
+                        }]
+                    }]
+                }  
+            },{
+                "effect": "QUICKNESS",
+                "base_duration_ms": 5000,
+                "num_stacks": 5,
+                "num_targets": 5,
+                "direction": "TEAM",
+                "condition": {
+                    "and": [{
+                        "unique_effect_on_source": "Spectacular Sphere"
+                    },{
+                        "unique_effect_on_source": "Sphere Specialist"
+                    }]
+                }    
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Catalyst Energy",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 100000
+            }
+        },
+        "weapon_type": "hammer",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/97BEF22148DDA3159B4CF6DB18ECFEDE7107710B/2491596.png"
+    }]
+}

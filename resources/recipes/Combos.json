@@ -11,16 +11,20 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Dark Field Effect"
                 }
-            }]
+            }],
+            "tags": ["Finisher"]
         },
         {
-            "skill_key": "Projectile Finisher"
+            "skill_key": "Projectile Finisher",
+            "tags": ["Finisher"]
         },
         {
-            "skill_key": "Leap Finisher"
+            "skill_key": "Leap Finisher",
+            "tags": ["Finisher"]
         },
         {
-            "skill_key": "Blast Finisher"
+            "skill_key": "Blast Finisher",
+            "tags": ["Finisher"]
         },
 
         {

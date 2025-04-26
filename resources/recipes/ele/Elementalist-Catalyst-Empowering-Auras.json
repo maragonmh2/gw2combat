@@ -1,0 +1,33 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Empowering Auras",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Empowering Auras Effect",
+                    "max_considered_stacks": 5,
+                    "refreshes_other_stacks": true,
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_condition_damage_multiplier_add_group",
+                        "addend": 0.02
+                    },{
+                        "attribute": "outgoing_strike_damage_multiplier_add_group",
+                        "addend": 0.02
+                    }]
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Empowering Auras",
+            "condition": {
+                "only_applies_on_effect_application": true,
+                "only_applies_on_effect_application_of_type": "Aura Effect"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/C52EDB20EC120936089EC83C54A55A610A075652/2491522.png"
+    }]
+}
