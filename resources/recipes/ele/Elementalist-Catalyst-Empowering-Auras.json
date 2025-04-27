@@ -24,8 +24,8 @@
         "skill_triggers": [{
             "skill_key": "Empowering Auras",
             "condition": {
-                "only_applies_on_effect_application": true,
-                "only_applies_on_effect_application_of_type": "Aura Effect"
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Aura"
             }
         }],
         "icon": "https://render.guildwars2.com/file/C52EDB20EC120936089EC83C54A55A610A075652/2491522.png"

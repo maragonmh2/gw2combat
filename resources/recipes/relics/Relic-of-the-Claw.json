@@ -1,0 +1,34 @@
+{
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Relic of the Claw Effect": {
+            "icon": "https://render.guildwars2.com/file/19B5DB56E495C70754A8BE3621CADC0FD7402845/3375220.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Relic of the Claw",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Relic of the Claw",
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.07
+                    }]
+                },
+                "base_duration_ms": 8000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Relic of the Claw",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "CC"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/19B5DB56E495C70754A8BE3621CADC0FD7402845/3375220.png"
+    }]
+}

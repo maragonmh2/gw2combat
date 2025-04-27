@@ -1,0 +1,34 @@
+{
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Relic of Fireworks Effect": {
+            "icon": "https://render.guildwars2.com/file/2999CCF7C94267B2EE3DDA7459050864622927C9/3122349.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Relic of Fireworks",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Relic of Fireworks",
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.07
+                    }]
+                },
+                "base_duration_ms": 6000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Relic of Fireworks",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_strikes_by_skill_with_tag": "Relic of Fireworks"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/2999CCF7C94267B2EE3DDA7459050864622927C9/3122349.png"
+    }]
+}

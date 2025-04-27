@@ -64,6 +64,8 @@
             }
         }],
         "skill_ticks": [{
+            "child_skill_keys": ["Weave Self Relic Timer"]
+        },{
             "on_tick": 520,
             "pulse": true,
             "on_pulse_effect_applications": [{
@@ -80,7 +82,15 @@
                 "unique_effect_on_source": "Perfect Weave Effect"
             }
         }],
+        "tags": [
+            "Pyromancers Puissance",
+            "Etching Charges"
+        ],
         "executable": true
+    },{
+        "skill_key": "Weave Self Relic Timer",
+        "cast_duration": [1280, 1280],
+        "tags": ["Stance"]
     },{
         "skill_key": "Apply Perfect Weave",
         "skill_ticks": [{

@@ -1,0 +1,25 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Sigil of Earth",
+        "cooldown": [2000,2000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 6000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Sigil of Earth",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Sigil of Earth",
+                "only_applies_on_critical_strikes": true
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/251EE3B8B5ADB8D7F7A35DBAEFABA35AEACDF51B/220677.png"
+    }]
+}

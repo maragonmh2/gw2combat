@@ -1,0 +1,35 @@
+{
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Relic of Thorns Effect": {
+            "icon": "https://render.guildwars2.com/file/B6166933459C27FE500FCC23B572A7AE2A0F4DDA/3592841.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Relic of Thorns",
+        "cooldown": [5000, 5000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Relic of Thorns",
+                    "refreshes_other_stacks": true,
+                    "attribute_modifiers": [{
+                        "attribute": "condition_damage",
+                        "addend": 30
+                    }]
+                },
+                "base_duration_ms": 30000,
+                "direction": "SELF"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Relic of Thorns",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Relic of Thorns",
+                "effect_on_target": "POISON"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/B6166933459C27FE500FCC23B572A7AE2A0F4DDA/3592841.png"
+    }]
+}

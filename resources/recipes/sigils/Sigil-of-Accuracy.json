@@ -1,0 +1,12 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Sigil of Accuracy",
+        "attribute_modifiers": [{
+            "attribute": "critical_chance_multiplier",
+            "addend": 0.07
+        }]
+    }],
+    "skills": []
+}

@@ -6,10 +6,12 @@
         "skill_key": "Conjurer",
         "skill_ticks": [{
             "pulse": true,
+            "child_skill_keys": ["Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Fire Aura Effect",
-                    "stacking_type": "duration"
+                    "stacking_type": "duration",
+                    "max_duration": 10000
                 },
                 "base_duration_ms": 4000,
                 "direction": "SELF"

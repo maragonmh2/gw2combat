@@ -8,6 +8,7 @@
         "skill_ticks": [{
             "strike": true,
             "damage_coefficient": 2.5,
+            "child_skill_keys": ["Aura"],
             "on_strike_effect_applications": [{
                 "effect": "MIGHT",
                 "base_duration_ms": 15000,
@@ -22,7 +23,8 @@
             },{
                 "unique_effect": {
                     "unique_effect_key": "Fire Aura Effect",
-                    "stacking_type": "duration"
+                    "stacking_type": "duration",
+                    "max_duration": 10000
                 },
                 "base_duration_ms": 4000,
                 "num_targets": 5,

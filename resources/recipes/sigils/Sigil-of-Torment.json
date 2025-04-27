@@ -1,0 +1,26 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Sigil of Torment",
+        "cooldown": [5000,5000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "TORMENT",
+                "base_duration_ms": 5000,
+                "num_stacks": 2,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Sigil of Torment",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Sigil of Torment",
+                "only_applies_on_critical_strikes": true
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/E42EB6198022E5B4D71C5EE41465DD4EB84A0465/665778.png"
+    }]
+}

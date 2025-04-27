@@ -1,0 +1,12 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Sigil of Concentration",
+        "attribute_modifiers": [{
+            "attribute": "boon_duration_multiplier",
+            "addend": 0.1
+        }]
+    }],
+    "skills": []
+}

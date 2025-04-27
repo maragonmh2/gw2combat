@@ -1,0 +1,30 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Rune of the Trapper",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 300
+        },{
+            "attribute": "condition_duration_multiplier",
+            "addend": 0.15
+        },{
+            "attribute": "burning_duration_multiplier",
+            "addend": 0.15
+        },{
+            "attribute": "bleeding_duration_multiplier",
+            "addend": 0.15
+        },{
+            "attribute": "torment_duration_multiplier",
+            "addend": 0.15
+        },{
+            "attribute": "confusion_duration_multiplier",
+            "addend": 0.15
+        },{
+            "attribute": "poison_duration_multiplier",
+            "addend": 0.15
+        }]
+    }],
+    "skills": []
+}

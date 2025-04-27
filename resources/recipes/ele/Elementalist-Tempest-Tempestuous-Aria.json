@@ -31,8 +31,8 @@
         "skill_triggers": [{
             "skill_key": "Apply Tempestuous Aria",
             "condition": {
-                "only_applies_on_effect_application": true,
-                "only_applies_on_effect_application_of_type": "Aura Effect"
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Aura"
             }
         }]
     }]

@@ -47,8 +47,7 @@
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Transcendent Tempest Effect",
-                    "max_duration": 10000,
-                    "stacking_type": "duration",
+                    "stacking_type": "replace",
                     "attribute_modifiers": [{
                         "attribute": "outgoing_strike_damage_multiplier",
                         "multiplier": 1.25

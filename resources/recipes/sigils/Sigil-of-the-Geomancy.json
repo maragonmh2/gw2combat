@@ -1,0 +1,35 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Sigil of Geomancy",
+        "cooldown": [9000,9000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 8000,
+                "num_stacks": 2,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "Sigil of Geomancy",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Sigil of Geomancy",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Attunement"
+            }
+        },{
+            "skill_key": "Sigil of Geomancy",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Sigil of Geomancy",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Weapon Swap",
+                "weapon_set": "set_1"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/E42EB6198022E5B4D71C5EE41465DD4EB84A0465/665778.png"
+    }]
+}

@@ -1,0 +1,39 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "skills": [{
+        "skill_key": "Relic of the Fractal",
+        "cooldown": [20000, 20000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [
+                {
+                    "effect": "BURNING",
+                    "base_duration_ms": 8000,
+                    "num_stacks": 2,
+                    "direction": "OUTGOING"
+                },
+                {
+                    "effect": "TORMENT",
+                    "base_duration_ms": 8000,
+                    "num_stacks": 3,
+                    "direction": "OUTGOING"
+                }
+            ]
+        }],
+        "skill_triggers": [
+            {
+                "skill_key": "Relic of the Fractal",
+                "condition": {
+                    "depends_on_skill_off_cooldown": "Relic of the Fractal",
+                    "only_applies_on_effect_application": true,
+                    "only_applies_on_effect_application_of_type": "BLEEDING",
+                    "effect_on_target": "BLEEDING",
+                    "stacks_of_effect_on_target": 6,
+                    "unique_effect_on_source": "Fractal Relic Effect"
+                }
+            }
+        ],
+        "icon": "https://render.guildwars2.com/file/B2D409644147BF18935A95A52505ABCB9EECE142/3122351.png"
+    }]
+}

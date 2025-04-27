@@ -15,24 +15,6 @@
         },{
             "skill_key": "Test",
             "executable": true
-        },{
-            "skill_key": "Test 2",
-            "skill_triggers": [{
-                "skill_key": "Test 2",
-                "condition": {
-                    "only_applies_on_finished_casting": true,
-                    "only_applies_on_finished_casting_skill": "Test"
-                }
-            }]
-        },{
-            "skill_key": "Test 3",
-            "skill_triggers": [{
-                "skill_key": "Test 3",
-                "condition": {
-                    "only_applies_on_begun_casting": true,
-                    "only_applies_on_begun_casting_skill": "Test"
-                }
-            }]
         }
     ]
 }

@@ -21,8 +21,8 @@
         "skill_triggers": [{
             "skill_key": "Vicious Empowerment",
             "condition": {
-                "only_applies_on_effect_application": true,
-                "only_applies_on_effect_application_of_type": "CC Effect",
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "CC",
                 "depends_on_skill_off_cooldown": "Vicious Empowerment"
             }
         }],
