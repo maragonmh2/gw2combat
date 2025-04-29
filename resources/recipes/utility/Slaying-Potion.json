@@ -1,0 +1,12 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Slaying Potion",
+        "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier",
+            "multiplier": 1.1
+        }]
+    }],
+    "skills": []
+}

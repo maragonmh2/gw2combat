@@ -62,7 +62,6 @@
     "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Apply Elemental Empowerment",
-        "cooldown": [15000, 15000],
         "skill_ticks": [{
             "pulse": true,
             "on_pulse_effect_applications": [{
@@ -338,9 +337,9 @@
     },{
         "skill_key": "Elemental Epitome Fire",
         "cooldown": [10000, 10000],
+        "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
         "skill_ticks": [{
             "pulse": true,
-            "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Fire Aura Effect",
@@ -355,9 +354,9 @@
     },{
         "skill_key": "Elemental Epitome Water",
         "cooldown": [10000, 10000],
+        "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
         "skill_ticks": [{
             "pulse": true,
-            "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Frost Aura Effect",
@@ -372,9 +371,9 @@
     },{
         "skill_key": "Elemental Epitome Air",
         "cooldown": [10000, 10000],
+        "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
         "skill_ticks": [{
             "pulse": true,
-            "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Shocking Aura Effect",
@@ -389,9 +388,9 @@
     },{
         "skill_key": "Elemental Epitome Earth",
         "cooldown": [10000, 10000],
+        "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
         "skill_ticks": [{
             "pulse": true,
-            "child_skill_keys": ["Apply Elemental Empowerment", "Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Magnetic Aura Effect",

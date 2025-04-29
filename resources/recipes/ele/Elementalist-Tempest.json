@@ -135,7 +135,14 @@
                     "Water Attunement",
                     "Air Attunement",
                     "Earth Attunement"
-                ]
+                ],
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Fire Field Effect"
+                    },
+                    "base_duration_ms": 12480,
+                    "direction": "SELF"
+                }]
             },{
                 "on_tick": 800,
                 "child_skill_keys": ["Whirl Finisher"]
@@ -410,7 +417,6 @@
                 "on_tick": 3120,
                 "pulse": true,
                 "child_skill_keys": ["Lightning Jolt"],
-                "tags": ["Lightning Jolt Source"],
                 "on_pulse_effect_applications": [{
                     "effect": "FURY",
                     "base_duration_ms": 1000,
@@ -418,7 +424,7 @@
                     "direction": "TEAM"
                 },{
                     "unique_effect": {
-                        "unique_effect_key": "Lightning Field"
+                        "unique_effect_key": "Lightning Field Effect"
                     },
                     "base_duration_ms": 7480,
                     "direction": "SELF"
@@ -490,7 +496,14 @@
             "skill_ticks": [{
                 "strike": true,
                 "can_critical_strike": false,
-                "damage_coefficient": 1.32
+                "damage_coefficient": 1.32,
+                "on_strike_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Lightning Jolt Trigger"
+                    },
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }]
             }],
             "weapon_type": "empty_handed"
         },

@@ -8,27 +8,37 @@
         },{
             "skill_key": "CC"
         },{
-            "skill_key": "Whirl Finisher",
+            "skill_key": "Leeching Bolts",
+            "TODO": "Damage: 202 + 3% power",
             "skill_ticks": [{
-                "child_skill_keys": ["Leeching Bolts"],
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leaching Bolts Damage",
+                        "flat_damage": 202,
+                        "attribute": "power",
+                        "multiplier": 0.03
+                    },
+                    "base_duration_ms": 1000,
+                    "direction": "OUTGOING"
+                }],
                 "tick_condition": {
                     "unique_effect_on_source": "Dark Field Effect"
                 }
-            }],
-            "tags": ["Finisher"]
-        },{
-            "skill_key": "Projectile Finisher",
-            "tags": ["Finisher"]
-        },{
-            "skill_key": "Leap Finisher",
-            "tags": ["Finisher"]
-        },{
-            "skill_key": "Blast Finisher",
-            "tags": ["Finisher"]
-        },{
-            "skill_key": "Leeching Bolts",
-            "TODO": "Damage: 202 + 3% power",
-            "flat_damage": 290
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Confounding Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Dark Field Effect"
+                    }]
+                }
+            }]
         },{
             "skill_key": "Confounding Bolts",
             "skill_ticks": [{
@@ -37,7 +47,29 @@
                     "effect": "CONFUSION",
                     "base_duration_ms": 5000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Ethereal Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Burning Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Ethereal Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Confounding Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Confounding Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Burning Bolts",
@@ -47,7 +79,29 @@
                     "effect": "BURNING",
                     "base_duration_ms": 1000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Fire Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Chilling Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Fire Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Burning Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Burning Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Chilling Bolts",
@@ -57,10 +111,52 @@
                     "effect": "CHILLED",
                     "base_duration_ms": 1000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Ice Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Cleansing Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Ice Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Chilling Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Chilling Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Cleansing Bolts",
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Brutal Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Light Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Cleansing Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Cleansing Bolts Trigger"
+                }
+            }],
             "tags": ["Cleanse"]
         },{
             "skill_key": "Brutal Bolts",
@@ -71,7 +167,29 @@
                     "base_duration_ms": 5000,
                     "num_stacks": 2,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lightning Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Poison Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Lightning Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Brutal Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Brutal Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Poison Bolts",
@@ -81,7 +199,29 @@
                     "effect": "POISON",
                     "base_duration_ms": 2000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Poison Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Blinding Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Poison Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Poison Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Poison Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Blinding Bolts",
@@ -91,7 +231,29 @@
                     "effect": "BLINDED",
                     "base_duration_ms": 3000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Smoke Field Effect"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Healing Bolts Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Smoke Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Blinding Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Blinding Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Healing Bolts",
@@ -101,7 +263,16 @@
                     "effect": "REGENERATION",
                     "base_duration_ms": 2000,
                     "direction": "OUTGOING"
-                }]
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Water Field Effect"
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Healing Bolts",
+                "condition": {
+                    "unique_effect_on_source": "Healing Bolts Trigger"
+                }
             }]
         },{
             "skill_key": "Leeching Projectile",
@@ -384,6 +555,22 @@
         },{
             "skill_key": "Healing Blast",
             "tags": ["Heal"]
+        },{
+            "skill_key": "Whirl Finisher",
+            "child_skill_keys": ["Leeching Bolts"],
+            "tags": ["Finisher"]
+        },{
+            "skill_key": "Projectile Finisher",
+            "child_skill_keys": ["Leeching Projectile"],
+            "tags": ["Finisher"]
+        },{
+            "skill_key": "Leap Finisher",
+            "child_skill_keys": ["Dark Leap"],
+            "tags": ["Finisher"]
+        },{
+            "skill_key": "Blast Finisher",
+            "child_skill_keys": ["Blinding Blast"],
+            "tags": ["Finisher"]
         }
     ]
 }

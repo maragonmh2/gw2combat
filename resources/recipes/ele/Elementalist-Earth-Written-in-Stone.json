@@ -6,8 +6,7 @@
         "INFO": "Passive Effect is done in Signet"
     }],
     "skills": [{
-        "skill_key": "Signet of Fire Aura",
-        
+        "skill_key": "Signet of Fire Aura",    
         "skill_ticks": [{
             "pulse": true,
             "child_skill_keys": ["Aura"],

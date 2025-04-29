@@ -1,0 +1,17 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Superior Sharpening Stone",
+        "attribute_conversions": [{
+            "from": "power",
+            "to": "precision",
+            "multiplier": 0.03
+        },{
+            "from": "power",
+            "to": "ferocity",
+            "multiplier": 0.06
+        }]
+    }],
+    "skills": []
+}

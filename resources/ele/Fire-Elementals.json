@@ -133,5 +133,19 @@
                 "unique_effect_on_source": "Lesser Fire Elemental Trigger"
             }
         }]
+    },{
+        "skill_key": "Lightning Jolt",
+        "skill_ticks": [{
+            "strike": true,
+            "can_critical_strike": false,
+            "damage_coefficient": 1.32
+        }],
+        "skill_triggers": [{
+            "skill_key": "Lightning Jolt",
+            "condition": {
+                "unique_effect_on_source": "Lightning Jolt Trigger"
+            }
+        }],
+        "weapon_type": "fire_elemental"
     }]
 }

@@ -1,7 +1,11 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Fire Field Effect"
+    },{
+        "unique_effect_key": "Dark Field Effect"
+    }],
     "unique_effects": [],
     "skills": [
         {
@@ -14,7 +18,13 @@
             "executable": true
         },{
             "skill_key": "Test",
-            "executable": true
+            "skill_ticks": [{
+                "on_tick": 500,
+                "child_skill_keys": ["Whirl Finisher"]
+            },{
+                "on_tick": 1000,
+                "child_skill_keys": ["Whirl Finisher"]
+            }]
         }
     ]
 }

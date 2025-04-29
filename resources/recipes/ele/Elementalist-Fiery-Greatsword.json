@@ -154,9 +154,9 @@
         "executable": true,
         "weapon_type": "kit_conjure"
     },{
-        "skill_key": "Fiery Whirl Huge",
+        "skill_key": "Fiery Whirl",
         "INFO": "Full cast is 1440ms. Cancel with weapon swap. Finisher 1 frame after hit",
-        "HITS": "760, 880, 1000, 1120",
+        "HITS": "280, 400, 520, 640, 760, 880, 1000, 1120",
         "cast_duration": [680, 680],
         "cooldown": [5000, 4000],
         "damage_coefficient": 0.65,

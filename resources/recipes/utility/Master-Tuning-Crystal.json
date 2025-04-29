@@ -1,0 +1,17 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Master Tuning Crystal",
+        "attribute_conversions": [{
+            "from": "precision",
+            "to": "condition_damage",
+            "multiplier": 0.03
+        },{
+            "from": "expertise",
+            "to": "condition_damage",
+            "multiplier": 0.08
+        }]
+    }],
+    "skills": []
+}
