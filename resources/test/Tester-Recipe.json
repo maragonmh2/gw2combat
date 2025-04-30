@@ -1,11 +1,7 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [{
-        "unique_effect_key": "Fire Field Effect"
-    },{
-        "unique_effect_key": "Dark Field Effect"
-    }],
+    "permanent_unique_effects": [],
     "unique_effects": [],
     "skills": [
         {
@@ -19,12 +15,10 @@
         },{
             "skill_key": "Test",
             "skill_ticks": [{
-                "on_tick": 500,
-                "child_skill_keys": ["Whirl Finisher"]
-            },{
-                "on_tick": 1000,
-                "child_skill_keys": ["Whirl Finisher"]
-            }]
+                "strike": true,
+                "damage_coefficient": 2
+            }],
+            "weapon_type": "empty_handed"
         }
     ]
 }

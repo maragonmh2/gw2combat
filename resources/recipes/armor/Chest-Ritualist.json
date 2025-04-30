@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Chest Ritualist",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": -121
+        },{
+            "attribute": "precision",
+            "addend": -67
+        },{
+            "attribute": "vitality",
+            "addend": 121
+        },{
+            "attribute": "concentration",
+            "addend": 67
+        }]
+    }],
+    "skills": []
+}
