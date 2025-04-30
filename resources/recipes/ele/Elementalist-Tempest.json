@@ -166,7 +166,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "effect": "ALACRITY",
-                    "base_duration_ms": 4500,
+                    "base_duration_ms": 5000,
                     "num_targets": 5,
                     "direction": "TEAM",
                     "condition": {
@@ -279,7 +279,7 @@
                     "direction": "TEAM"
                 },{
                     "effect": "ALACRITY",
-                    "base_duration_ms": 4500,
+                    "base_duration_ms": 5000,
                     "num_targets": 5,
                     "direction": "TEAM",
                     "condition": {
@@ -430,7 +430,7 @@
                     "direction": "SELF"
                 },{
                     "effect": "ALACRITY",
-                    "base_duration_ms": 4500,
+                    "base_duration_ms": 5000,
                     "num_targets": 5,
                     "direction": "TEAM",
                     "condition": {
@@ -621,7 +621,7 @@
                     "direction": "OUTGOING"
                 },{
                     "effect": "ALACRITY",
-                    "base_duration_ms": 4500,
+                    "base_duration_ms": 5000,
                     "num_targets": 5,
                     "direction": "TEAM",
                     "condition": {

@@ -1,0 +1,12 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Malign Infusions",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 90
+        }]
+    }],
+    "skills": []
+}

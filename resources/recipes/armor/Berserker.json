@@ -1,0 +1,18 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Berserker",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": 1381
+        },{
+            "attribute": "precision",
+            "addend": 961
+        },{
+            "attribute": "ferocity",
+            "addend": 961
+        }]
+    }],
+    "skills": []
+}

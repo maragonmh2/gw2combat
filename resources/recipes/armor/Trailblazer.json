@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Trailblazer",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 1173
+        },{
+            "attribute": "toughness",
+            "addend": 1173
+        },{
+            "attribute": "vitality",
+            "addend": 633
+        },{
+            "attribute": "expertise",
+            "addend": 633
+        }]
+    }],
+    "skills": []
+}

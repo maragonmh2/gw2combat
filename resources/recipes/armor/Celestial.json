@@ -1,0 +1,36 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Celestial",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 633
+        },{
+            "attribute": "toughness",
+            "addend": 633
+        },{
+            "attribute": "vitality",
+            "addend": 633
+        },{
+            "attribute": "expertise",
+            "addend": 633
+        },{
+            "attribute": "power",
+            "addend": 633
+        },{
+            "attribute": "precision",
+            "addend": 633
+        },{
+            "attribute": "ferocity",
+            "addend": 633
+        },{
+            "attribute": "healing_power",
+            "addend": 633
+        },{
+            "attribute": "concentration",
+            "addend": 633
+        }]
+    }],
+    "skills": []
+}
