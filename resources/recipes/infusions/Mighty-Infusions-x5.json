@@ -2,16 +2,16 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [{
-        "unique_effect_key": "Precise Infusions x2",
+        "unique_effect_key": "Mighty Infusions x5",
         "attribute_modifiers": [{
             "attribute": "power",
-            "addend": -10,
-            "condition": {
-                "unique_effect_on_source": "Mighty Infusions"
-            }
+            "addend": 25
         },{
             "attribute": "precision",
-            "addend": 10
+            "addend": -25,
+            "condition": {
+                "unique_effect_on_source": "Precise Infusions"
+            }
         }]
     }],
     "skills": []
