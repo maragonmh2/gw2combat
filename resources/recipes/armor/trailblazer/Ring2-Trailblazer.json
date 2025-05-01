@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Ring2 Armor",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 106
+        },{
+            "attribute": "toughness",
+            "addend": 106
+        },{
+            "attribute": "vitality",
+            "addend": 56
+        },{
+            "attribute": "expertise",
+            "addend": 56
+        }]
+    }],
+    "skills": []
+}

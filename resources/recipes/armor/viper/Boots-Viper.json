@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Boots Armor",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 40
+        },{
+            "attribute": "power",
+            "addend": 40
+        },{
+            "attribute": "precision",
+            "addend": 22
+        },{
+            "attribute": "expertise",
+            "addend": 22
+        }]
+    }],
+    "skills": []
+}

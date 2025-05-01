@@ -1,0 +1,18 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Boots Armor",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": 47
+        },{
+            "attribute": "precision",
+            "addend": 34
+        },{
+            "attribute": "ferocity",
+            "addend": 34
+        }]
+    }],
+    "skills": []
+}

@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Legs Armor",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 81
+        },{
+            "attribute": "toughness",
+            "addend": 81
+        },{
+            "attribute": "vitality",
+            "addend": 44
+        },{
+            "attribute": "expertise",
+            "addend": 44
+        }]
+    }],
+    "skills": []
+}

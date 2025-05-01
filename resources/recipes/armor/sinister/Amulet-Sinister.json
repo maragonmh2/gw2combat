@@ -1,0 +1,18 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Amulet Armor",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 157
+        },{
+            "attribute": "precision",
+            "addend": 108
+        },{
+            "attribute": "power",
+            "addend": 108
+        }]
+    }],
+    "skills": []
+}

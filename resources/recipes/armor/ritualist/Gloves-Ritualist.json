@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Gloves Armor",
+        "attribute_modifiers": [{
+            "attribute": "condition_damage",
+            "addend": 40
+        },{
+            "attribute": "vitality",
+            "addend": 40
+        },{
+            "attribute": "concentration",
+            "addend": 22
+        },{
+            "attribute": "expertise",
+            "addend": 22
+        }]
+    }],
+    "skills": []
+}

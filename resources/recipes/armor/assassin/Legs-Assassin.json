@@ -1,0 +1,18 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Legs Armor",
+        "attribute_modifiers": [{
+            "attribute": "precision",
+            "addend": 94
+        },{
+            "attribute": "power",
+            "addend": 67
+        },{
+            "attribute": "ferocity",
+            "addend": 67
+        }]
+    }],
+    "skills": []
+}

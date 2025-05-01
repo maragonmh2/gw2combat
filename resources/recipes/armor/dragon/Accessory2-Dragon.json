@@ -1,0 +1,21 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Accessory2 Armor",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": 92
+        },{
+            "attribute": "ferocity",
+            "addend": 92
+        },{
+            "attribute": "vitality",
+            "addend": 49
+        },{
+            "attribute": "precision",
+            "addend": 49
+        }]
+    }],
+    "skills": []
+}

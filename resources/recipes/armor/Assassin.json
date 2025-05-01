@@ -2,24 +2,24 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [{
-        "unique_effect_key": "Berserker",
+        "unique_effect_key": "Assassin",
         "attribute_modifiers": [{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": 1381
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": 961
         },{
             "attribute": "ferocity",
             "addend": 961
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -54,
             "condition": {
                 "unique_effect_on_source": "Head Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -45,
             "condition": {
                 "unique_effect_on_source": "Head Armor"
@@ -31,13 +31,13 @@
                 "unique_effect_on_source": "Head Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -141,
             "condition": {
                 "unique_effect_on_source": "Chest Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -101,
             "condition": {
                 "unique_effect_on_source": "Chest Armor"
@@ -49,13 +49,13 @@
                 "unique_effect_on_source": "Chest Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -94,
             "condition": {
                 "unique_effect_on_source": "Legs Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -67,
             "condition": {
                 "unique_effect_on_source": "Legs Armor"
@@ -67,13 +67,13 @@
                 "unique_effect_on_source": "Legs Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -47,
             "condition": {
                 "unique_effect_on_source": "Shoulders Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -34,
             "condition": {
                 "unique_effect_on_source": "Shoulders Armor"
@@ -85,13 +85,13 @@
                 "unique_effect_on_source": "Shoulders Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -67,
             "condition": {
                 "unique_effect_on_source": "Gloves Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -34,
             "condition": {
                 "unique_effect_on_source": "Gloves Armor"
@@ -103,13 +103,13 @@
                 "unique_effect_on_source": "Gloves Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -67,
             "condition": {
                 "unique_effect_on_source": "Boots Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -34,
             "condition": {
                 "unique_effect_on_source": "Boots Armor"
@@ -121,13 +121,13 @@
                 "unique_effect_on_source": "Boots Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -157,
             "condition": {
                 "unique_effect_on_source": "Amulet Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -108,
             "condition": {
                 "unique_effect_on_source": "Amulet Armor"
@@ -139,13 +139,13 @@
                 "unique_effect_on_source": "Amulet Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -126,
             "condition": {
                 "unique_effect_on_source": "Ring1 Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -85,
             "condition": {
                 "unique_effect_on_source": "Ring1 Armor"
@@ -157,13 +157,13 @@
                 "unique_effect_on_source": "Ring1 Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -126,
             "condition": {
                 "unique_effect_on_source": "Ring2 Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -85,
             "condition": {
                 "unique_effect_on_source": "Ring2 Armor"
@@ -175,13 +175,13 @@
                 "unique_effect_on_source": "Ring2 Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -110,
             "condition": {
                 "unique_effect_on_source": "Accessory1 Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -74,
             "condition": {
                 "unique_effect_on_source": "Accessory1 Armor"
@@ -193,13 +193,13 @@
                 "unique_effect_on_source": "Accessory1 Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -110,
             "condition": {
                 "unique_effect_on_source": "Accessory2 Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -74,
             "condition": {
                 "unique_effect_on_source": "Accessory2 Armor"
@@ -211,13 +211,13 @@
                 "unique_effect_on_source": "Accessory2 Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": -63,
             "condition": {
                 "unique_effect_on_source": "Back Armor"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -40,
             "condition": {
                 "unique_effect_on_source": "Back Armor"
@@ -229,14 +229,14 @@
                 "unique_effect_on_source": "Back Armor"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": 1,
             "condition": {
                 "unique_effect_on_source": "Two Handed Set1",
                 "weapon_set": "set_1"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -1,
             "condition": {
                 "unique_effect_on_source": "Two Handed Set1",
@@ -250,14 +250,14 @@
                 "weapon_set": "set_1"
             }
         },{
-            "attribute": "power",
+            "attribute": "precision",
             "addend": 1,
             "condition": {
                 "unique_effect_on_source": "Two Handed Set2",
                 "weapon_set": "set_2"
             }
         },{
-            "attribute": "precision",
+            "attribute": "power",
             "addend": -1,
             "condition": {
                 "unique_effect_on_source": "Two Handed Set2",

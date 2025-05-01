@@ -15,6 +15,322 @@
         },{
             "attribute": "expertise",
             "addend": 633
+        },{
+            "attribute": "condition_damage",
+            "addend": -54,
+            "condition": {
+                "unique_effect_on_source": "Head Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -54,
+            "condition": {
+                "unique_effect_on_source": "Head Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -30,
+            "condition": {
+                "unique_effect_on_source": "Head Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -30,
+            "condition": {
+                "unique_effect_on_source": "Head Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -121,
+            "condition": {
+                "unique_effect_on_source": "Chest Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -121,
+            "condition": {
+                "unique_effect_on_source": "Chest Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -67,
+            "condition": {
+                "unique_effect_on_source": "Chest Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -67,
+            "condition": {
+                "unique_effect_on_source": "Chest Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -81,
+            "condition": {
+                "unique_effect_on_source": "Legs Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -81,
+            "condition": {
+                "unique_effect_on_source": "Legs Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -44,
+            "condition": {
+                "unique_effect_on_source": "Legs Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -44,
+            "condition": {
+                "unique_effect_on_source": "Legs Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Shoulders Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Shoulders Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Shoulders Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Shoulders Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Gloves Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Gloves Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Gloves Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Gloves Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Boots Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -40,
+            "condition": {
+                "unique_effect_on_source": "Boots Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Boots Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -22,
+            "condition": {
+                "unique_effect_on_source": "Boots Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -133,
+            "condition": {
+                "unique_effect_on_source": "Amulet Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -133,
+            "condition": {
+                "unique_effect_on_source": "Amulet Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -71,
+            "condition": {
+                "unique_effect_on_source": "Amulet Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -71,
+            "condition": {
+                "unique_effect_on_source": "Amulet Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -106,
+            "condition": {
+                "unique_effect_on_source": "Ring1 Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -106,
+            "condition": {
+                "unique_effect_on_source": "Ring1 Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -56,
+            "condition": {
+                "unique_effect_on_source": "Ring1 Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -56,
+            "condition": {
+                "unique_effect_on_source": "Ring1 Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -106,
+            "condition": {
+                "unique_effect_on_source": "Ring2 Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -106,
+            "condition": {
+                "unique_effect_on_source": "Ring2 Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -56,
+            "condition": {
+                "unique_effect_on_source": "Ring2 Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -56,
+            "condition": {
+                "unique_effect_on_source": "Ring2 Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -92,
+            "condition": {
+                "unique_effect_on_source": "Accessory1 Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -92,
+            "condition": {
+                "unique_effect_on_source": "Accessory1 Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -49,
+            "condition": {
+                "unique_effect_on_source": "Accessory1 Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -49,
+            "condition": {
+                "unique_effect_on_source": "Accessory1 Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -92,
+            "condition": {
+                "unique_effect_on_source": "Accessory2 Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -92,
+            "condition": {
+                "unique_effect_on_source": "Accessory2 Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -49,
+            "condition": {
+                "unique_effect_on_source": "Accessory2 Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -49,
+            "condition": {
+                "unique_effect_on_source": "Accessory2 Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -52,
+            "condition": {
+                "unique_effect_on_source": "Back Armor"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -52,
+            "condition": {
+                "unique_effect_on_source": "Back Armor"
+            }
+        },{
+            "attribute": "vitality",
+            "addend": -27,
+            "condition": {
+                "unique_effect_on_source": "Back Armor"
+            }
+        },{
+            "attribute": "expertise",
+            "addend": -27,
+            "condition": {
+                "unique_effect_on_source": "Back Armor"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -1,
+            "condition": {
+                "unique_effect_on_source": "Two Handed Set1",
+                "weapon_set": "set_1"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -1,
+            "condition": {
+                "unique_effect_on_source": "Two Handed Set1",
+                "weapon_set": "set_1"
+            }
+        },{
+            "attribute": "condition_damage",
+            "addend": -1,
+            "condition": {
+                "unique_effect_on_source": "Two Handed Set2",
+                "weapon_set": "set_2"
+            }
+        },{
+            "attribute": "toughness",
+            "addend": -1,
+            "condition": {
+                "unique_effect_on_source": "Two Handed Set2",
+                "weapon_set": "set_2"
+            }
         }]
     }],
     "skills": []

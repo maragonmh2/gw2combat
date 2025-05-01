@@ -1,0 +1,18 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Head Armor",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": 63
+        },{
+            "attribute": "precision",
+            "addend": 45
+        },{
+            "attribute": "ferocity",
+            "addend": 45
+        }]
+    }],
+    "skills": []
+}
