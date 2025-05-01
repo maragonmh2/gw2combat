@@ -27,11 +27,11 @@
     "skills": [{
         "skill_key": "Sunspot!",
         "attribute_damage_to_skill": "Sunspot",
+        "child_skill_keys": ["Aura"],
         "skill_ticks": [{
             "strike": true,
             "can_critical_strike": false,
             "damage_coefficient": 0.6,
-            "child_skill_keys": ["Aura"],
             "on_strike_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Fire Aura Effect",

@@ -42,10 +42,10 @@
                 }
             }
         }],
+        "child_skill_keys": ["Arcane Blast Ammo"],
         "skill_ticks": [{
             "strike": true,
-            "damage_coefficient": 1.4,
-            "child_skill_keys": ["Arcane Blast Ammo"]
+            "damage_coefficient": 1.4
         }],
         "tags": [
             "Pyromancers Puissance",

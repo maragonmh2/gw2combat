@@ -141,9 +141,7 @@
                 "unique_effect_on_source": "Secondary Earth Attunement Effect"
             }
         }],
-        "skill_ticks": [{
-            "child_skill_keys": ["Primordial Stance Ammo"]
-        }],
+        "child_skill_keys": ["Primordial Stance Ammo"],
         "tags": [
             "Stance",
             "Pyromancers Puissance",

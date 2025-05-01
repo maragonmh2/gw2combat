@@ -5,10 +5,10 @@
     "skills": [{
         "skill_key": "Feel the Burn!",
         "cooldown": [25000, 20000],
+        "child_skill_keys": ["Aura"],
         "skill_ticks": [{
             "strike": true,
             "damage_coefficient": 2.5,
-            "child_skill_keys": ["Aura"],
             "on_strike_effect_applications": [{
                 "effect": "MIGHT",
                 "base_duration_ms": 15000,

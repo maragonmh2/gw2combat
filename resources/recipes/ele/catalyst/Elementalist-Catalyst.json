@@ -284,13 +284,11 @@
     },{
         "skill_key": "Elemental Empowerment",
         "cooldown": [15000, 15000],
-        "skill_ticks": [{
-            "child_skill_keys": [
-                "Apply Elemental Empowerment",
-                "Apply Elemental Empowerment",
-                "Apply Elemental Empowerment"
-            ]
-        }],
+        "child_skill_keys": [
+            "Apply Elemental Empowerment",
+            "Apply Elemental Empowerment",
+            "Apply Elemental Empowerment"
+        ],
         "skill_triggers": [{
             "skill_key": "Elemental Empowerment",
             "condition": {
@@ -325,7 +323,7 @@
                 "depends_on_skill_off_cooldown": "Elemental Epitome Earth"
             }
         }],
-        "skill_triggers": [{
+        "source_actor_skill_triggers": [{
             "skill_key": "Elemental Epitome",
             "condition": {
                 "only_applies_on_finished_casting": true,

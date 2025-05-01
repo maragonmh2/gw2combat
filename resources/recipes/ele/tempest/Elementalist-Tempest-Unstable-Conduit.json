@@ -4,9 +4,9 @@
     "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Unstable Conduit",
+        "child_skill_keys": ["Aura"],
         "skill_ticks": [{
             "pulse": true,
-            "child_skill_keys": ["Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Fire Aura Effect",

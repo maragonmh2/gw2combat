@@ -354,9 +354,9 @@
             }]
         },{
             "skill_key": "Dark Leap",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Dark Aura Effect",
@@ -369,9 +369,9 @@
             }]
         },{
             "skill_key": "Chaos Leap",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Chaos Aura Effect",
@@ -384,9 +384,9 @@
             }]
         },{
             "skill_key": "Fire Leap",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Fire Aura Effect",
@@ -399,9 +399,9 @@
             }]
         },{
             "skill_key": "Frost Leap",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Frost Aura Effect",
@@ -414,9 +414,9 @@
             }]
         },{
             "skill_key": "Light Leap",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Light Aura Effect",
@@ -429,9 +429,7 @@
             }]
         },{
             "skill_key": "Dazing Strike",
-            "skill_ticks": [{
-                "child_skill_keys": ["CC"]
-            }]
+            "child_skill_keys": ["CC"]
         },{
             "skill_key": "Weakening Leap",
             "skill_ticks": [{
@@ -471,9 +469,9 @@
             }]
         },{
             "skill_key": "Chaos Blast",
+            "child_skill_keys": ["Aura"],
             "skill_ticks": [{
                 "pulse": true,
-                "child_skill_keys": ["Aura"],
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
                         "unique_effect_key": "Chaos Aura Effect",
