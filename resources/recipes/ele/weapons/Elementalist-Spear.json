@@ -1,0 +1,2278 @@
+{
+    "counters": [{
+        "counter_key": "Volcano Charges",
+        "initial_value": 0,
+        "max_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Volcano Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "unique_effect_on_source": "Etching Volcano Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Volcano Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Volcano Charges",
+            "operation": "reset",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Etching Volcano Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/334EA928E56F38C176A22415DE3ECE144C5FD5BB/3379101.png"
+    },{
+        "counter_key": "Jökulhlaup Charges",
+        "initial_value": 0,
+        "max_value": 3,
+        "counter_modifiers": [
+        {
+            "counter_key": "Jökulhlaup Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "unique_effect_on_source": "Etching Jökulhlaup Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Jökulhlaup Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Jökulhlaup Charges",
+            "operation": "reset",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Etching Jökulhlaup Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/48EB1A03297EE4DFA0FE2CA41F0B02B77302060B/3379104.png"
+    },{
+        "counter_key": "Derecho Charges",
+        "initial_value": 0,
+        "max_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Derecho Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "unique_effect_on_source": "Etching Derecho Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Derecho Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Derecho Charges",
+            "operation": "reset",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Etching Derecho Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/94F1A894667CA4F3407C57B055F8236804264B1F/3379095.png"
+    },{
+        "counter_key": "Haboob Charges",
+        "initial_value": 0,
+        "max_value": 3,
+        "counter_modifiers": [{
+            "counter_key": "Haboob Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "unique_effect_on_source": "Etching Haboob Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Haboob Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Haboob Charges",
+            "operation": "reset",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Etching Haboob Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png"
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Seethe Effect": {
+			"icon": "https://render.guildwars2.com/file/409EE1CC3F41C1FC20B71D0944063179BB94C471/3379087.png"
+		},
+		"Ripple Effect": {
+			"icon": "https://render.guildwars2.com/file/D246C6CE0468F2484643935675010B0A963EC9D8/3379088.png"
+		},
+		"Energize Effect": {
+			"icon": "https://render.guildwars2.com/file/0BA3490023A82B4B5FCA597C3CB965E21D3CE504/3379085.png"
+		},
+		"Harden Effect": {
+			"icon": "https://render.guildwars2.com/file/08F199900A0613B465DF63D1DA4D6647A954DE0B/3379086.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Flame Spear",
+        "cast_duration": [640, 640],
+        "damage_coefficient": 1.25,
+        "num_targets": 3,
+        "strike_on_tick_list": [[520], [520]],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "tags": [
+            "Etching Charges",
+            "Harden",
+            "Pyromancers Puissance"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/74B333AD21E95C9D63AE0128F2DDA7CBEE75A841/3379079.png"
+    },{
+        "skill_key": "Blazing Barrage",
+        "cast_duration": [560, 560],
+        "cooldown": [6000, 4800],
+        "cooldown_modifiers": [{
+            "skill_key": "Blazing Barrage",
+            "operation": "set",
+            "value": 1200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Blazing Barrage",
+                "and": [{
+                    "unique_effect_on_source": "Pyromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Blazing Barrage",
+            "operation": "set",
+            "value": 1980,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Blazing Barrage",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Blazing Barrage",
+            "operation": "set",
+            "value": 2784,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Blazing Barrage",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_tick": 560,
+            "num_targets": 5,
+            "child_skill_keys": ["Blast Finisher"],
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 5000,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 2.2,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 2.64,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges", 
+            "Seethe", 
+            "Ripple",
+            "Harden",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/FA97DE180DF595E721D064D7472DC7694D6F78B1/3379083.png"
+    },{
+        "skill_key": "Seethe",
+        "cast_duration": [360, 360],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Seethe",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Seethe",
+                "and": [{
+                    "unique_effect_on_source": "Pyromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Seethe",
+            "operation": "set",
+            "value": 4950,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Seethe",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Seethe",
+            "operation": "set",
+            "value": 6960,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Seethe",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "pulse_on_tick_list": [[340], [340]],
+        "on_pulse_effect_applications": [{
+            "unique_effect": {
+                "unique_effect_key": "Seethe Effect",
+                "max_duration": 5000
+            },
+            "base_duration_ms": 5000,
+            "direction": "SELF"
+        },{
+            "effect": "FURY",
+            "base_duration_ms": 4000,
+            "direction": "SELF"
+        },{
+            "effect": "MIGHT",
+            "base_duration_ms": 10000,
+            "num_stacks": 5,
+            "direction": "SELF"
+        }],
+        "effect_removals": [{
+            "unique_effect": "Seethe Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Seethe"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Ripple",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/409EE1CC3F41C1FC20B71D0944063179BB94C471/3379087.png"
+    },{
+        "skill_key": "Meteor",
+        "cast_duration": [680, 680],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Meteor",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Meteor",
+                "and": [{
+                    "unique_effect_on_source": "Pyromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Meteor",
+            "operation": "set",
+            "value": 6600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Meteor",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Meteor",
+            "operation": "set",
+            "value": 9280,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Meteor",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "strike_on_tick_list": [[560], [560]],
+        "skill_ticks": [{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 2.875,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 3.45,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Seethe",
+            "Ripple",
+            "Harden",
+            "Relic of Fireworks",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/FAE0AFE5623F58965BFC327F99105ED605E6B2F5/3379091.png"
+    },{
+        "skill_key": "Etching: Volcano",
+        "cast_duration": [240, 240],
+        "cooldown": [25000, 20000],
+        "cooldown_modifiers": [{
+            "skill_key": "Etching: Volcano",
+            "operation": "set",
+            "value": 5000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "and": [{
+                    "unique_effect_on_source": "Pyromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Volcano",
+            "operation": "set",
+            "value": 8250,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Volcano",
+            "operation": "set",
+            "value": 11600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "pulse_on_tick_list": [
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240]
+        ],
+        "on_pulse_effect_applications": [{
+            "effect": "MIGHT",
+            "base_duration_ms": 8000,
+            "direction": "SELF"
+        }],
+        "skill_ticks": [{
+            "on_tick": 240,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Etching Volcano Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Field Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            }]
+        }],
+        "effect_removals": [{
+                "unique_effect": "Etching Volcano Effect",
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Volcano"
+                }
+        }],
+        "tags": [
+            "Ripple",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/037DCBFCCD3BA4C3ACC7B73DF4965D3A170F0F3E/3379099.png"
+    },{
+        "skill_key": "Volcano",
+        "cast_duration": [600, 600],
+        "skill_ticks": [{
+            "child_skill_keys": ["Volcano Strike Seethe"],
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        },{
+            "child_skill_keys": ["Volcano Strike"],
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        }],
+        "tags": [
+            "Seethe",
+            "Ripple",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "and": [
+                { "unique_effect_on_source": "Fire Attunement Effect" },
+                { "unique_effect_on_source": "Etching Volcano Effect" }
+            ],
+            "threshold": {
+                "counter_value_subject_to_threshold": "Volcano Charges",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 3
+            }
+        },
+        "weapon_type": "spear",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/334EA928E56F38C176A22415DE3ECE144C5FD5BB/3379101.png"
+    },{
+        "skill_key": "Volcano Strike Seethe",
+        "attribute_damage_to_skill": "Volcano",
+        "skill_ticks": [{
+            "on_tick": 2080,
+            "strike": true,
+            "damage_coefficient": 1.32,
+            "num_targets": 5
+        },{
+            "on_tick": 2360,
+            "strike": true,
+            "damage_coefficient": 1.188,
+            "num_targets": 5
+        },{
+            "on_tick": 2640,
+            "strike": true,
+            "damage_coefficient": 1.056,
+            "num_targets": 5
+        },{
+            "on_tick": 2920,
+            "strike": true,
+            "damage_coefficient": 0.924,
+            "num_targets": 5
+        },{
+            "on_tick": 3200,
+            "strike": true,
+            "damage_coefficient": 0.792,
+            "num_targets": 5
+        },{
+            "on_tick": 3480,
+            "strike": true,
+            "damage_coefficient": 0.66,
+            "num_targets": 5
+        },{
+            "on_tick": 3760,
+            "strike": true,
+            "damage_coefficient": 0.528,
+            "num_targets": 5
+        },{
+            "on_tick": 4040,
+            "strike": true,
+            "damage_coefficient": 0.396,
+            "num_targets": 5
+        },{
+            "on_tick": 4320,
+            "strike": true,
+            "damage_coefficient": 0.264,
+            "num_targets": 5
+        },{
+            "on_tick": 4600,
+            "strike": true,
+            "damage_coefficient": 0.132,
+            "num_targets": 5
+        },{
+            "on_tick": 4880,
+            "strike": true,
+            "damage_coefficient": 0.066,
+            "num_targets": 5
+        },{
+            "on_tick": 5160,
+            "strike": true,
+            "damage_coefficient": 0.066,
+            "num_targets": 5
+        }],
+        "tags": ["Harden"],
+        "weapon_type": "spear"
+    },{
+        "skill_key": "Volcano Strike",
+        "attribute_damage_to_skill": "Volcano",
+        "skill_ticks": [{
+            "on_tick": 2080,
+            "strike": true,
+            "damage_coefficient": 1.1,
+            "num_targets": 5
+        },{
+            "on_tick": 2360,
+            "strike": true,
+            "damage_coefficient": 0.99,
+            "num_targets": 5
+        },{
+            "on_tick": 2640,
+            "strike": true,
+            "damage_coefficient": 0.88,
+            "num_targets": 5
+        },{
+            "on_tick": 2920,
+            "strike": true,
+            "damage_coefficient": 0.77,
+            "num_targets": 5
+        },{
+            "on_tick": 3200,
+            "strike": true,
+            "damage_coefficient": 0.66,
+            "num_targets": 5
+        },{
+            "on_tick": 3480,
+            "strike": true,
+            "damage_coefficient": 0.55,
+            "num_targets": 5
+        },{
+            "on_tick": 3760,
+            "strike": true,
+            "damage_coefficient": 0.44,
+            "num_targets": 5
+        },{
+            "on_tick": 4040,
+            "strike": true,
+            "damage_coefficient": 0.33,
+            "num_targets": 5
+        },{
+            "on_tick": 4320,
+            "strike": true,
+            "damage_coefficient": 0.22,
+            "num_targets": 5
+        },{
+            "on_tick": 4600,
+            "strike": true,
+            "damage_coefficient": 0.11,
+            "num_targets": 5
+        },{
+            "on_tick": 4880,
+            "strike": true,
+            "damage_coefficient": 0.055,
+            "num_targets": 5
+        },{
+            "on_tick": 5160,
+            "strike": true,
+            "damage_coefficient": 0.055,
+            "num_targets": 5
+        }],
+        "tags": ["Harden"],
+        "weapon_type": "spear"
+    },{
+        "skill_key": "Restorative Spear",
+        "cast_duration": [640, 640],
+        "damage_coefficient": 1.0,
+        "strike_on_tick_list": [[520], [520]],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect"
+        },
+        "tags": ["Etching Charges", "Harden"],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/B756C80D01D7EAB61B7EBA231B029C7E9DBCAF54/3379080.png"
+    },{
+        "skill_key": "Ice Beam",
+        "cast_duration": [840, 840],
+        "cooldown": [6000, 4800],
+        "cooldown_modifiers": [{
+            "skill_key": "Ice Beam",
+            "operation": "set",
+            "value": 1200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ice Beam",
+                "and": [{
+                    "unique_effect_on_source": "Aquamancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Ice Beam",
+            "operation": "set",
+            "value": 1980,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ice Beam",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Ice Beam",
+            "operation": "set",
+            "value": 2784,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ice Beam",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        }],
+        "pulse_on_tick_list": [
+            [360, 520, 720], 
+            [360, 520, 720] 
+        ],
+        "on_pulse_effect_applications": [{
+            "effect": "CHILLED",
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "OUTGOING"
+        }],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.7,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 520,
+            "strike": true,
+            "damage_coefficient": 0.7,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 720,
+            "strike": true,
+            "damage_coefficient": 0.7,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.84,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        },{
+            "on_tick": 520,
+            "strike": true,
+            "damage_coefficient": 0.84,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        },{
+            "on_tick": 720,
+            "strike": true,
+            "damage_coefficient": 0.84,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Seethe",
+            "Ripple",
+            "Harden",
+            "Etching Charges"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/076572AF05EF210B9CCA6422641A0AA52A6B9156/3379084.png"
+    },{
+        "skill_key": "Ripple",
+        "cast_duration": [800, 800],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Ripple",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ripple",
+                "and": [{
+                    "unique_effect_on_source": "Aquamancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Ripple",
+            "operation": "set",
+            "value": 4950,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ripple",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Ripple",
+            "operation": "set",
+            "value": 6960,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ripple",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 760,
+            "pulse": true,
+            "child_skill_keys": ["Leap Finisher"],
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Ripple Effect"
+                }
+            }]
+        }],
+        "effect_removals": [{
+                "unique_effect": "Ripple Effect",
+                "condition": {
+                    "only_applies_on_finished_casting": true,
+                    "only_applies_on_finished_casting_skill_with_tag": "Ripple"
+                }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect"
+        },
+        "tags": [
+            "Etching Charges"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/D246C6CE0468F2484643935675010B0A963EC9D8/3379088.png"
+    },{
+        "skill_key": "Undertow",
+        "cast_duration": [600, 600],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Undertow",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Undertow",
+                "and": [{
+                    "unique_effect_on_source": "Aquamancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Undertow",
+            "operation": "set",
+            "value": 6600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Undertow",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Undertow",
+            "operation": "set",
+            "value": 9280,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Undertow",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "pulse": true,
+            "child_skill_keys": ["CC"],
+            "on_pulse_effect_applications": [{
+                "effect": "SLOW",
+                "base_duration_ms": 3000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.7,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 2.04,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Seethe",
+            "Ripple", 
+            "Harden",
+            "Relic of Fireworks"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect"
+        },
+        "weapon_type": "spear",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/01E36A1DDA2D1709E109210A71041812F65C496B/3379092.png"
+    },{
+        "skill_key": "Etching: Jökulhlaup",
+        "cast_duration": [240, 240],
+        "cooldown": [25000, 20000],
+        "cooldown_modifiers": [{
+            "skill_key": "Etching: Jökulhlaup",
+            "operation": "set",
+            "value": 5000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Jökulhlaup",
+                "and": [{
+                    "unique_effect_on_source": "Aquamancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Jökulhlaup",
+            "operation": "set",
+            "value": 8250,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Jökulhlaup",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Jökulhlaup",
+            "operation": "set",
+            "value": 11600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Jökulhlaup",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aquamancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 240,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Etching Jökulhlaup Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Water Field Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            }]
+        }],
+        "effect_removals": [
+            {
+                "unique_effect": "Etching Jökulhlaup Effect",
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Jökulhlaup"
+                }
+            }
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Water Attunement Effect"
+        },
+        "tags": ["Ripple"],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/7B61A40CFC6F2A9DE5A5414C50E87BD9D9711E43/3379102.png"
+    },{
+        "skill_key": "Jökulhlaup",
+        "cast_duration": [600, 600],
+        "skill_ticks": [{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 3,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 3.6,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Seethe",
+            "Ripple", 
+            "Harden"
+        ],
+        "cast_condition": {
+            "and": [
+                { "unique_effect_on_source": "Water Attunement Effect" },
+                { "unique_effect_on_source": "Etching Jökulhlaup Effect" }
+            ],
+            "threshold": {
+                "counter_value_subject_to_threshold": "Jökulhlaup Charges",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 3
+            }
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/48EB1A03297EE4DFA0FE2CA41F0B02B77302060B/3379104.png"
+    },{
+        "skill_key": "Lightning Javelin",
+        "cast_duration": [640, 640],
+        "strike_on_tick_list": [[520], [520]],
+        "damage_coefficient": 1.1,
+        "on_strike_effect_applications": [{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 6000,
+            "direction": "OUTGOING"
+        }],
+        "tags": ["Etching Charges", "Harden"],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/0F2F5806E0C2424234562CF27B06606031B32DFE/3379077.png"
+    },{
+        "skill_key": "Fulgor",
+        "cast_duration": [560, 560],
+        "cooldown": [6000, 4800],
+        "cooldown_modifiers": [{
+            "skill_key": "Fulgor",
+            "operation": "set",
+            "value": 1200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fulgor",
+                "and": [{
+                    "unique_effect_on_source": "Aeromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fulgor",
+            "operation": "set",
+            "value": 1980,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fulgor",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fulgor",
+            "operation": "set",
+            "value": 2784,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fulgor",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "child_skill_keys": ["Fulgor Strike Seethe"],
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        },{
+            "child_skill_keys": ["Fulgor Strike"],
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        }],
+        "tags": [
+            "Seethe",
+            "Ripple",
+            "Etching Charges"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/ECE34CA514D057F0166EC50EF9AB19751C53BE96/3379081.png"
+    },{
+        "skill_key": "Fulgor Strike Seethe",
+        "attribute_damage_to_skill": "Fulgor",
+        "damage_coefficient": 0.48,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [480, 1480, 2480, 3480, 4480],
+            [480, 1480, 2480, 3480, 4480]
+        ],
+        "on_strike_effect_applications": [{
+            "unique_effect": {
+                "unique_effect_key": "Fulgor Condi",
+                "flat_damage": 240,
+                "attribute": "power",
+                "multiplier": 0.48
+            },
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "OUTGOING"
+        }],
+        "tags": ["Harden"],
+        "weapon_type": "spear"
+    },{
+        "skill_key": "Fulgor Strike",
+        "attribute_damage_to_skill": "Fulgor",
+        "damage_coefficient": 0.4,
+        "num_targets": 5,
+        "strike_on_tick_list": [
+            [480, 1480, 2480, 3480, 4480],
+            [480, 1480, 2480, 3480, 4480]
+        ],
+        "on_strike_effect_applications": [{
+            "unique_effect": {
+                "unique_effect_key": "Fulgor Condi",
+                "flat_damage": 200,
+                "attribute": "power",
+                "multiplier": 0.4
+            },
+            "base_duration_ms": 1000,
+            "num_targets": 5,
+            "direction": "OUTGOING"
+        }],
+        "tags": ["Harden"],
+        "weapon_type": "spear"
+    },{
+        "skill_key": "Energize",
+        "TODO": "Energize Effect missing, because there is currenlty no way to apply stats to individual hits",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Energize",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Energize",
+                "and": [{
+                    "unique_effect_on_source": "Aeromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Energize",
+            "operation": "set",
+            "value": 4950,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Energize",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Energize",
+            "operation": "set",
+            "value": 6960,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Energize",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Superspeed Effect"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "tags": [
+            "Etching Charges",
+            "Seethe",
+            "Ripple"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/0BA3490023A82B4B5FCA597C3CB965E21D3CE504/3379085.png"
+    },{
+        "skill_key": "Twister",
+        "cast_duration": [560, 560],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Twister",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Twister",
+                "and": [{
+                    "unique_effect_on_source": "Aeromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Twister",
+            "operation": "set",
+            "value": 6600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Twister",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Twister",
+            "operation": "set",
+            "value": 9280,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Twister",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 520,
+            "pulse": true,
+            "child_skill_keys": ["CC", "Blast Finisher"],
+            "on_pulse_effect_applications": [{
+                "effect": "VULNERABILITY",
+                "base_duration_ms": 10,
+                "num_stacks": 10,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 520,
+            "strike": true,
+            "damage_coefficient": 1.84,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 520,
+            "strike": true,
+            "damage_coefficient": 2.208,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Seethe",
+            "Ripple",
+            "Harden",
+            "Relic of Fireworks"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/BAD1E32FA0F93A560B60DB703D716B70C6ED0F63/3379089.png"
+    },{
+        "skill_key": "Etching: Derecho",
+        "cast_duration": [240, 240],
+        "cooldown": [25000, 20000],
+        "cooldown_modifiers": [{
+            "skill_key": "Etching: Derecho",
+            "operation": "set",
+            "value": 5000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Derecho",
+                "and": [{
+                    "unique_effect_on_source": "Aeromancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Derecho",
+            "operation": "set",
+            "value": 8250,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Derecho",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Derecho",
+            "operation": "set",
+            "value": 11600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Derecho",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Aeromancers Training"
+                    }]
+                }]
+            }
+        }],
+        "pulse_on_tick_list": [
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240]
+        ],
+        "on_pulse_effect_applications": [{
+            "effect": "FURY",
+            "base_duration_ms": 8000,
+            "direction": "SELF"
+        }],
+        "skill_ticks": [{
+            "on_tick": 240,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Etching Derecho Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Lightning Field Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            }]
+        }],
+        "effect_removals": [{
+                "unique_effect": "Etching Derecho Effect",
+                "condition": {
+                    "only_applies_on_begun_casting": true,
+                    "only_applies_on_begun_casting_skill": "Derecho"
+                }
+        }],
+        "tags": ["Ripple"],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/F1B3331AB23F37964BE8D6A91F43FF066BE970AA/3379093.png"
+    },{
+        "skill_key": "Derecho",
+        "cast_duration": [600, 600],
+        "skill_ticks": [{
+            "on_tick": 560,
+            "child_skill_keys": ["CC"]
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 4,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 4.8,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Seethe",
+            "Ripple",
+            "Harden"
+        ],
+        "cast_condition": {
+            "and": [
+                { "unique_effect_on_source": "Air Attunement Effect" },
+                { "unique_effect_on_source": "Etching Derecho Effect" }
+            ],
+            "threshold": {
+                "counter_value_subject_to_threshold": "Derecho Charges",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 3
+            }
+        },
+        "weapon_type": "spear",
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/94F1A894667CA4F3407C57B055F8236804264B1F/3379095.png"
+    },{
+        "skill_key": "Stone Strike",
+        "cast_duration": [640, 640],
+        "damage_coefficient": 1.2,
+        "strike_on_tick_list": [[520], [520]],
+        "on_strike_effect_applications": [
+            {
+                "base_duration_ms": 5000,
+                "direction": "OUTGOING",
+                "effect": "BLEEDING"
+            }
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect"
+        },
+        "tags": ["Etching Charges", "Harden"],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/19C7C57CCB3B22A11D29684F35C967A5A66D5BE0/3379078.png"
+    },{
+        "skill_key": "Earthen Spear",
+        "cast_duration": [680, 680],
+        "cooldown": [6000, 4800],
+        "cooldown_modifiers": [{
+            "skill_key": "Earthen Spear",
+            "operation": "set",
+            "value": 1200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earthen Spear",
+                "and": [{
+                    "unique_effect_on_source": "Geomancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Earthen Spear",
+            "operation": "set",
+            "value": 1980,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earthen Spear",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Earthen Spear",
+            "operation": "set",
+            "value": 2784,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earthen Spear",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 600,
+            "pulse": true,
+            "child_skill_keys": ["Projectile Finisher"],
+            "on_pulse_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 5000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 2.6,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 3.12,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Seethe",
+            "Ripple",
+            "Harden"
+        ],
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect"
+        },
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/98B2192A9DB346C7E2C90F0071A880737416F32E/3379082.png"
+    },{
+        "skill_key": "Harden",
+        "cast_duration": [200, 200],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Harden",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Harden",
+                "and": [{
+                    "unique_effect_on_source": "Geomancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Harden",
+            "operation": "set",
+            "value": 4950,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Harden",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Harden",
+            "operation": "set",
+            "value": 6960,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Harden",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 200,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "base_duration_ms": 5000,
+                "direction": "SELF",
+                "unique_effect": {
+                    "unique_effect_key": "Harden Effect"
+                }
+            }]
+        }],
+        "skill_triggers": [{
+            "skill_key": "CC",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_strikes_by_skill_with_tag": "Harden",
+                "unique_effect_on_source": "Harden Effect"
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Harden",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_strikes_by_skill_with_tag": "Harden",
+                "unique_effect_on_source": "Harden Effect"
+            }
+        }],
+        "tags": [
+            "Etching Charges",
+            "Ripple"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect"
+        },
+        "icon": "https://render.guildwars2.com/file/08F199900A0613B465DF63D1DA4D6647A954DE0B/3379086.png"
+    },{
+        "skill_key": "Fissure",
+        "cast_duration": [680, 680],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Fissure",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fissure",
+                "and": [{
+                    "unique_effect_on_source": "Geomancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fissure",
+            "operation": "set",
+            "value": 6600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fissure",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Fissure",
+            "operation": "set",
+            "value": 9280,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fissure",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 560,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 2.625,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 3.15,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect"
+        },
+        "tags": [
+            "Etching Charges", 
+            "Seethe",
+            "Ripple",  
+            "Harden",
+            "Relic of Fireworks"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/51A85B4EC564F24A10EF7D982DDA73BF1940CA01/3379090.png"
+    },{
+        "skill_key": "Etching: Haboob",
+        "cast_duration": [240, 240],
+        "cooldown": [25000, 20000],
+        "cooldown_modifiers": [{
+            "skill_key": "Etching: Haboob",
+            "operation": "set",
+            "value": 5000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Haboob",
+                "and": [{
+                    "unique_effect_on_source": "Geomancers Training"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Ripple Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Haboob",
+            "operation": "set",
+            "value": 8250,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Haboob",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Etching: Haboob",
+            "operation": "set",
+            "value": 11600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Haboob",
+                "and": [{
+                    "unique_effect_on_source": "Ripple Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Geomancers Training"
+                    }]
+                }]
+            }
+        }],
+        "pulse_on_tick_list": [
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
+            [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240]
+        ],
+        "on_pulse_effect_applications": [{
+            "effect": "STABILITY",
+            "base_duration_ms": 1000,
+            "direction": "SELF"
+        }],
+        "skill_ticks": [{
+            "on_tick": 240,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Etching Haboob Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Dark Field Effect"
+                },
+                "base_duration_ms": 7000,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Earth Attunement Effect"
+        },
+        "effect_removals": [{
+            "unique_effect": "Etching Haboob Effect",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Haboob"
+            }
+        }],
+        "tags": ["Ripple"],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/7C7339E9EA33F7CD05806CE20066DF0EC4673767/3379096.png"
+    },{
+        "skill_key": "Haboob",
+        "cast_duration": [600, 600],
+        "skill_ticks": [{
+            "on_tick": 560,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 5000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "BLINDED",
+                "base_duration_ms": 3000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "effect": "VULNERABILITY",
+                "base_duration_ms": 6000,
+                "num_targets": 5,
+                "num_stacks": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 4.25,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Seethe Effect"
+                }]
+            }
+        },{
+            "on_tick": 560,
+            "strike": true,
+            "damage_coefficient": 5.1,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Seethe Effect"
+            }
+        }],
+        "cast_condition": {
+            "and": [
+                { "unique_effect_on_source": "Earth Attunement Effect" },
+                { "unique_effect_on_source": "Etching Haboob Effect" }
+            ],
+            "threshold": {
+                "counter_value_subject_to_threshold": "Haboob Charges",
+                "threshold_type": "lower_bound_inclusive",
+                "threshold_value": 3
+            }
+        },
+        "tags": [
+            "Seethe",
+            "Ripple",
+            "Harden"
+        ],
+        "executable": true,
+        "weapon_type": "spear",
+        "icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png"
+    },{
+        "skill_key": "Frostfire Ward",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Frostfire Ward",
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }
+        },{
+            "skill_key": "Water Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Frostfire Ward",
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Aura Effect",
+                    "stacking_type": "duration",
+                    "max_duration": 10000
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Frost Aura Effect",
+                    "stacking_type": "duration",
+                    "max_duration": 10000
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "tags": [
+            "Dual Attack",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/DD1B9616EB330DC50729663B497B31D40104290C/3379105.png"
+    },{
+        "skill_key": "Galvanize",
+        "cooldown": [12000, 9600],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Galvanize",
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Galvanize",
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "MIGHT",
+                "num_stacks": 3,
+                "base_duration_ms": 6000,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Superspeed Effect",
+                    "stacking_type": "duration",
+                    "max_duration": 10000
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            }]
+        }],
+        "tags": [
+            "Dual Attack",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/14A70A6CE40336397DAA5C0F03940C08C7622376/3379106.png"
+    },{
+        "skill_key": "Fiery Impact",
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fiery Impact",
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fiery Impact",
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "child_skill_keys": ["Blast Finisher"],
+            "on_pulse_effect_applications": [{
+                "effect": "STABILITY",
+                "base_duration_ms": 4000,
+                "direction": "SELF"
+            }]
+        }],
+        "tags": [
+            "Dual Attack",
+            "Pyromancers Puissance"
+        ],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/69FB136A0D3615BBBE1B04DCBE09407D7E9297F3/3379107.png"
+    },{
+        "skill_key": "Elutriate",
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Water Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Elutriate",
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }
+        },{
+            "skill_key": "Air Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Elutriate",
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        }],
+        "tags": ["Dual Attack"],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/1EF742E5936B0D160F3869511D2EBEC6745EEA18/3379108.png"
+    },{
+        "skill_key": "Soothing Burst",
+        "cast_duration": [200, 200],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Water Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Soothing Burst",
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Soothing Burst",
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "child_skill_keys": ["Blast Finisher"]
+        }],
+        "tags": ["Dual Attack"],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/110F9A310F3A6D0E999B36DAB4F5390F70727DEB/3379109.png"
+    },{
+        "skill_key": "Shale Storm",
+        "cooldown": [18000, 14400],
+        "cooldown_modifiers": [{
+            "skill_key": "Air Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Shale Storm",
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }
+        },{
+            "skill_key": "Earth Attunement",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Shale Storm",
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }
+        }],
+        "tags": ["Dual Attack"],
+        "cast_condition": {
+            "or": [{
+                "and": [{
+                    "unique_effect_on_source": "Primary Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            },{
+                "and": [{
+                    "unique_effect_on_source": "Primary Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/53AD3D92123744A13D0D2434661EFA3608213D06/3379110.png"
+    }]
+}

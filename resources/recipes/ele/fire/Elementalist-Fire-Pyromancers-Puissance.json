@@ -16,8 +16,8 @@
         "skill_triggers": [{
             "skill_key": "Pyromancers Puissance",
             "condition": {
-                "only_applies_on_begun_casting": true,
-                "only_applies_on_begun_casting_skill_with_tag": "Pyromancers Puissance",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Pyromancers Puissance",
                 "unique_effect_on_source": "Fire Attunement"
             }
         }],

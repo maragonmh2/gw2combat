@@ -18,6 +18,7 @@
                 "strike": true,
                 "damage_coefficient": 2
             }],
+            "executable": true,
             "weapon_type": "empty_handed"
         }
     ]

@@ -12,8 +12,7 @@
         }
     ],
     "recipe_paths": [
-        "resources/test/Tester-Recipe.json",
-        "resources/recipes/Combos.json"
+        "resources/test/Tester-Recipe.json"
     ],
     "permanent_effects": [
         "ALACRITY",
