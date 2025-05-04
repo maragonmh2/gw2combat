@@ -17,7 +17,7 @@
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
                         "attribute": "outgoing_condition_damage_multiplier_add_group",
-                        "addend": 1.05
+                        "addend": 0.05
                     },{
                         "attribute": "condition_duration_multiplier",
                         "addend": 0.2

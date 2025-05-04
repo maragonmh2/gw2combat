@@ -31,8 +31,8 @@
                 }]
             }
         },{
-            "attribute": "incoming_strike_damage_multiplier",
-            "multiplier": 0.9,
+            "attribute": "incoming_strike_damage_multiplier_add_group",
+            "addend": -0.1,
             "condition": {
                 "depends_on_skill_off_cooldown": "Signet of Earth"
             }

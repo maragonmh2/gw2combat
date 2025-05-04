@@ -62,7 +62,8 @@
     "permanent_unique_effects": [],
     "skills": [{
         "skill_key": "Apply Elemental Empowerment",
-        "attribute_conversions": [{
+        "attribute_conversions": [
+        {
             "from": "power",
             "to": "power",
             "multiplier": 0.01,
@@ -2460,7 +2461,25 @@
             "condition": {
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill_with_tag": "Finisher",
-                "unique_effect_on_source": "Field Effect"
+                "or": [{
+                    "unique_effect_on_source": "Dark Field Effect"
+                },{
+                    "unique_effect_on_source": "Ethereal Field Effect"
+                },{
+                    "unique_effect_on_source": "Fire Field Effect"
+                },{
+                    "unique_effect_on_source": "Ice Field Effect"
+                },{
+                    "unique_effect_on_source": "Light Field Effect"
+                },{
+                    "unique_effect_on_source": "Lightning Field Effect"
+                },{
+                    "unique_effect_on_source": "Poison Field Effect"
+                },{
+                    "unique_effect_on_source": "Smoke Field Effect"
+                },{
+                    "unique_effect_on_source": "Water Field Effect"
+                }]
             }
         }],
         "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"

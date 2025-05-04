@@ -18,7 +18,9 @@
                         "attribute": "outgoing_strike_damage_multiplier_add_group",
                         "addend": 0.02
                     }]
-                }
+                },
+                "base_duration_ms": 10000,
+                "direction": "SELF"
             }]
         }],
         "skill_triggers": [{

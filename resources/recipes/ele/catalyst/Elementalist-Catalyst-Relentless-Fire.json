@@ -18,35 +18,26 @@
                 {
                     "unique_effect": {
                         "unique_effect_key": "Relentless Fire Effect",
-                        "stacking_type": "duration",
-                        "attribute_modifiers": [
-                            {
-                                "multiplier": 1.10,
-                                "attribute": "outgoing_strike_damage_multiplier"
-                            },
-                            {
-                                "multiplier": 1.10,
-                                "attribute": "condition_damage_multiplier"
-                            }
-                        ]
+                        "attribute_modifiers": [{
+                            "attribute": "outgoing_strike_damage_multiplier_add_group",
+                            "addend": 0.2
+                        },{
+                            "attribute": "outgoing_condition_damage_multiplier_add_group",
+                            "addend": 0.2
+                        }]	
                     },
                     "base_duration_ms": 5000,
                     "direction": "SELF"
-                },
-                {
+                },{
                     "unique_effect": {
                         "unique_effect_key": "Relentless Fire Effect",
-                        "stacking_type": "duration",
-                        "attribute_modifiers": [
-                            {
-                                "multiplier": 1.10,
-                                "attribute": "outgoing_strike_damage_multiplier"
-                            },
-                            {
-                                "multiplier": 1.10,
-                                "attribute": "condition_damage_multiplier"
-                            }
-                        ]		
+                        "attribute_modifiers": [{
+                            "attribute": "outgoing_strike_damage_multiplier_add_group",
+                            "addend": 0.2
+                        },{
+                            "attribute": "outgoing_condition_damage_multiplier_add_group",
+                            "addend": 0.2
+                        }]	
                     },
                     "base_duration_ms": 3000,
                     "direction": "SELF",

@@ -1,5 +1,20 @@
 {
-    "counters": [],
+    "counters": [{
+        "counter_key": "Combat Counter",
+        "INFO": "This Counter is set to 1 once the fight starts. Use for skills that only activate in combat",
+        "counter_modifiers": [{
+            "counter_key": "Combat Counter",
+            "operation": "set",
+            "value": 1,
+            "condition": {
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 1
+                }
+            }
+        }]
+    }],
     "permanent_effects": [],
     "permanent_unique_effects": [],
     "skills": [{

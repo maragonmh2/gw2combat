@@ -42,9 +42,9 @@
                 "only_applies_on_begun_casting": true,
                 "only_applies_on_begun_casting_skill_with_tag": "Overload Air",
                 "threshold": {
-                    "target_health_pct_subject_to_threshold": true,
-                    "threshold_type": "upper_bound_exclusive",
-                    "threshold_value": 0.99
+                    "counter_value_subject_to_threshold": "Combat Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
                 }
             }
         },{
@@ -53,9 +53,9 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Air Attunement",
                 "threshold": {
-                    "target_health_pct_subject_to_threshold": true,
-                    "threshold_type": "upper_bound_exclusive",
-                    "threshold_value": 0.99
+                    "counter_value_subject_to_threshold": "Combat Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
                 }
             }
         }],

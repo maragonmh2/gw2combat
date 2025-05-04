@@ -99,17 +99,17 @@
                 "unique_effect": {
                     "unique_effect_key": "Perfect Weave Effect",
                     "attribute_modifiers": [{
-                        "attribute": "condition_damage_multiplier",
-                        "multiplier": 1.2
+                        "attribute": "outgoing_condition_damage_multiplier_add_group",
+                        "addend": 0.2
                     },{
                         "attribute": "boon_duration_multiplier",
                         "addend": 0.2
                     },{
-                        "attribute": "outgoing_strike_damage_multiplier",
-                        "multiplier": 1.1
+                        "attribute": "outgoing_strike_damage_multiplier_add_group",
+                        "addend": 0.1
                     },{
-                        "attribute": "incoming_strike_damage_multiplier",
-                        "multiplier": 0.8
+                        "attribute": "incoming_strike_damage_multiplier_add_group",
+                        "addend": -0.2
                     }]
                 },
                 "base_duration_ms": 10000,
