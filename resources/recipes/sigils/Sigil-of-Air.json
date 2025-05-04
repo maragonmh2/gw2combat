@@ -1,7 +1,17 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Sigil of Air",
+        "skill_triggers": [{
+            "skill_key": "Lightning Strike",
+            "condition": {
+                "depends_on_skill_off_cooldown": "Lightning Strike",
+                "only_applies_on_strikes": true,
+                "only_applies_on_critical_strikes": true
+            }
+        }]
+    }],
     "skills": [{
         "skill_key": "Lightning Strike",
         "cooldown": [3000,3000],
@@ -9,13 +19,6 @@
             "strike": true,
             "can_critical_strike": false,
             "damage_coefficient": 1.1
-        }],
-        "skill_triggers": [{
-            "skill_key": "Lightning Strike",
-            "condition": {
-                "depends_on_skill_off_cooldown": "Lightning Strike",
-                "only_applies_on_critical_strikes": true
-            }
         }],
         "weapon_type": "empty_handed",
         "icon": "https://render.guildwars2.com/file/C337CC61DF2F5EE44B7D053EFF33059111024444/220676.png"

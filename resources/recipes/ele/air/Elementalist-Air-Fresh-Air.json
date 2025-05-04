@@ -1,37 +1,15 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
-    "unique_effects": {
-        "Persisting Flames Effect": {
-			"icon": "https://render.guildwars2.com/file/FA64C9F2750F986E52E8376F22EDBA3844A8C603/1012277.png"
-		}
-    },
-    "skills": [{
-        "skill_key": "Fresh Air",
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Fresh Air Trait",
         "cooldown_modifiers": [{
             "skill_key": "Air Attunement",
             "operation": "reset",
             "condition": {
+                "only_applies_on_strikes": true,
                 "only_applies_on_critical_strikes": true
             }
-        }],
-        "skill_ticks": [{
-            "pulse": true,
-            "on_pulse_effect_applications": [{
-                "unique_effect": {
-                    "unique_effect_key": "Fresh Air Effect",
-                    "stacking_type": "duration",
-                    "attribute_conversions": [{
-                        "from": "ferocity",
-                        "to": "ferocity",
-                        "multiplier": 0,
-                        "addend": 250
-                    }]
-                },
-                "base_duration_ms": 5000,
-                "direction": "SELF"
-            }]
         }],
         "skill_triggers": [{
             "skill_key": "Fresh Air",
@@ -52,6 +30,31 @@
                     "unique_effect_on_source": "Primary Earth Attunement"                   
                 }]
             }
+        }]
+    }],
+    "unique_effects": {
+        "Persisting Flames Effect": {
+			"icon": "https://render.guildwars2.com/file/FA64C9F2750F986E52E8376F22EDBA3844A8C603/1012277.png"
+		}
+    },
+    "skills": [{
+        "skill_key": "Fresh Air",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fresh Air Effect",
+                    "stacking_type": "duration",
+                    "attribute_conversions": [{
+                        "from": "ferocity",
+                        "to": "ferocity",
+                        "multiplier": 0,
+                        "addend": 250
+                    }]
+                },
+                "base_duration_ms": 5000,
+                "direction": "SELF"
+            }]
         }]
     }]
 }

@@ -1,37 +1,36 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Coq Au Vin with Salsa",
+        "attribute_modifiers": [{
+            "attribute": "power",
+            "addend": 100
+        },{
+            "attribute": "precision",
+            "addend": 70
+        }],
+        "skill_triggers": [{
+            "condition": {
+                "threshold": {
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 66,
+                    "generate_random_number_subject_to_threshold": true
+                },
+                "only_applies_on_strikes": true,
+                "only_applies_on_critical_strikes": true,
+                "depends_on_skill_off_cooldown": "Lifesteal Proc"
+            },
+            "skill_key": "Lifesteal Proc"
+        }]
+    }],
     "skills": [{
         "NOTE": "This is a hardcoded skill name. Change only flat_damage and nothing else based on traits",
         "skill_key": "Lifesteal Proc",
         "cooldown": [2000, 2000],
-        "attribute_modifiers": [
-            {
-                "attribute": "power",
-                "addend": 100
-            }, {
-                "attribute": "precision",
-                "addend": 70
-            }
-        ],
         "flat_damage": 325,
         "can_critical_strike": false,
         "strike_on_tick_list": [[0], [0]],
-        "skill_triggers": [
-            {
-                "condition": {
-                    "threshold": {
-                        "threshold_type": "upper_bound_exclusive",
-                        "threshold_value": 66,
-                        "generate_random_number_subject_to_threshold": true
-                    },
-                    "only_applies_on_strikes": true,
-                    "depends_on_skill_off_cooldown": "Lifesteal Proc"
-                },
-                "skill_key": "Lifesteal Proc"
-            }
-        ],
         "weapon_type": "empty_handed"
     }]
 }

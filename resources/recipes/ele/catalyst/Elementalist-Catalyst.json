@@ -27,7 +27,15 @@
                         "unique_effect_on_source": "Spectacular Sphere"
                     },{
                         "not": [{
-                            "unique_effect_on_source": "Jade Sphere Effect"
+                            "or": [{
+                                "unique_effect_on_source": "Fire Jade Sphere Effect"
+                            },{
+                                "unique_effect_on_source": "Water Jade Sphere Effect"
+                            },{
+                                "unique_effect_on_source": "Air Jade Sphere Effect"
+                            },{
+                                "unique_effect_on_source": "Earth Jade Sphere Effect"
+                            }]
                         }]
                     }]
                 }
