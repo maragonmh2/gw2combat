@@ -4,12 +4,12 @@
     "permanent_unique_effects": [{
         "unique_effect_key": "Superior Sharpening Stone",
         "attribute_conversions": [{
-            "from": "power",
-            "to": "precision",
+            "from": "precision",
+            "to": "power",
             "multiplier": 0.03
         },{
-            "from": "power",
-            "to": "ferocity",
+            "from": "ferocity",
+            "to": "power",
             "multiplier": 0.06
         }]
     }],

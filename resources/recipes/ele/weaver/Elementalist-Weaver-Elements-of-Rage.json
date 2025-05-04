@@ -21,11 +21,11 @@
                     "unique_effect_key": "Elements of Rage Effect",
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
-                        "attribute": "outgoing_condition_damage_multiplier",
-                        "multiplier": 1.07
+                        "attribute": "outgoing_strike_damage_multiplier_add_group",
+                        "addend": 0.07
                     },{
-                        "attribute": "outgoing_condition_damage_multiplier",
-                        "multiplier": 1.07
+                        "attribute": "outgoing_condition_damage_multiplier_add_group",
+                        "addend": 0.07
                     }]
                 }
             }]

@@ -4,8 +4,11 @@
     "permanent_unique_effects": [{
         "unique_effect_key": "Sigil of the Night",
         "attribute_modifiers": [{
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.03
+        },{
             "attribute": "outgoing_strike_damage_multiplier",
-            "multiplier": 1.1
+            "multiplier": 1.07
         }]
     }],
     "skills": []

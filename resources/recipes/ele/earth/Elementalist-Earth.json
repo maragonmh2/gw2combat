@@ -35,13 +35,23 @@
             "skill_key": "Earthen Blast!",
             "condition": {
                 "only_applies_on_begun_casting": true,
-                "only_applies_on_begun_casting_skill_with_tag": "Overload Earth"
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Earth",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 1
+                }
             }
         },{
             "skill_key": "Earthen Blast!",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Earth Attunement"
+                "only_applies_on_finished_casting_skill": "Earth Attunement",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 1
+                }
             }
         }],
         "weapon_type": "empty_handed",

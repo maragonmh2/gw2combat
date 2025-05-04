@@ -2,10 +2,10 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [{
-        "unique_effect_key": "Sigil of Force",
+        "unique_effect_key": "Sigil of Impact",
         "attribute_modifiers": [{
-            "attribute": "outgoing_strike_damage_multiplier",
-            "multiplier": 1.03
+            "attribute": "outgoing_strike_damage_multiplier_add_group",
+            "addend": 0.03
         }]
     }],
     "skills": []

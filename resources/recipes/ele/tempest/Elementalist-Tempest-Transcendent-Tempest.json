@@ -49,11 +49,11 @@
                     "unique_effect_key": "Transcendent Tempest Effect",
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
-                        "attribute": "outgoing_strike_damage_multiplier",
-                        "multiplier": 1.25
+                        "attribute": "outgoing_strike_damage_multiplier_add_group",
+                        "addend": 0.25
                     },{
-                        "attribute": "outgoing_condition_damage_multiplier",
-                        "multiplier": 1.25
+                        "attribute": "outgoing_condition_damage_multiplier_add_group",
+                        "addend": 0.25
                     }]
                 },
                 "base_duration_ms": 7000,

@@ -4,12 +4,12 @@
     "permanent_unique_effects": [{
         "unique_effect_key": "Toxic Tuning Crystal",
         "attribute_conversions": [{
-            "from": "condition_damage",
-            "to": "power",
+            "from": "power",
+            "to": "condition_damage",
             "multiplier": 0.03
         },{
-            "from": "condition_damage",
-            "to": "precision",
+            "from": "precision",
+            "to": "condition_damage",
             "multiplier": 0.03
         }]
     }],

@@ -1,0 +1,16 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Break",
+        "cast_duration": [5, 5],
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/4BC57236074A98D1043F070751AC0A45C0301506/1302743.png"
+    },{
+        "skill_key": "Idle",
+        "cast_duration": [1000, 1000],
+        "executable": true,
+        "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png"
+    }]
+}

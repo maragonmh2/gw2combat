@@ -8,6 +8,7 @@
     ],
     "recipe_paths": [
         "resources/recipes/Combos.json",
+        "resources/recipes/Helper.json",
         "resources/recipes/armor/Berserker.json",
         "resources/recipes/armor/Two-Handed-Set1.json",
         "resources/recipes/sigils/Sigil-of-Force.json",

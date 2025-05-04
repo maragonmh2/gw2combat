@@ -46,13 +46,23 @@
             "skill_key": "Sunspot!",
             "condition": {
                 "only_applies_on_begun_casting": true,
-                "only_applies_on_begun_casting_skill_with_tag": "Overload Fire"
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Fire",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 1
+                }
             }
         },{
             "skill_key": "Sunspot!",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Fire Attunement"
+                "only_applies_on_finished_casting_skill": "Fire Attunement",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 1
+                }
             }
         }],
         "tags": ["Pyromancers Puissance"],

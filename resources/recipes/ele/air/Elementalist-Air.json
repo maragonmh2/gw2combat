@@ -29,32 +29,34 @@
         "skill_key": "Electric Discharge",
         "skill_ticks": [{
             "strike": true,
-            "damage_coefficient": 0.35,
+            "damage_coefficient": 0.7,
             "on_strike_effect_applications": [{
                 "effect": "VULNERABILITY",
                 "base_duration_ms": 8000,
                 "direction": "OUTGOING"
-            }],
-            "attribute_modifiers": [{
-                "attribute": "critical_damage_multiplier",
-                "addend": 1,
-                "condition": {
-                    "only_applies_on_strikes": true,
-                    "only_applies_on_strikes_by_skill": "Electric Discharge"
-                }
             }]
         }],
         "skill_triggers": [{
             "skill_key": "Electric Discharge",
             "condition": {
                 "only_applies_on_begun_casting": true,
-                "only_applies_on_begun_casting_skill_with_tag": "Overload Air"
+                "only_applies_on_begun_casting_skill_with_tag": "Overload Air",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 0.99
+                }
             }
         },{
             "skill_key": "Electric Discharge",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Air Attunement"
+                "only_applies_on_finished_casting_skill": "Air Attunement",
+                "threshold": {
+                    "target_health_pct_subject_to_threshold": true,
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 0.99
+                }
             }
         }],
         "weapon_type": "empty_handed",

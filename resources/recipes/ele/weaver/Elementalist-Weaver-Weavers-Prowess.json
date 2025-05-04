@@ -16,10 +16,25 @@
                     "unique_effect_key": "Weavers Prowess Effect",
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
-                        "attribute": "outgoing_condition_damage_multiplier",
-                        "multiplier": 1.05
+                        "attribute": "outgoing_condition_damage_multiplier_add_group",
+                        "addend": 1.05
                     },{
                         "attribute": "condition_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "burning_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "bleeding_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "torment_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "confusion_duration_multiplier",
+                        "addend": 0.2
+                    },{
+                        "attribute": "poison_duration_multiplier",
                         "addend": 0.2
                     }]
                 }

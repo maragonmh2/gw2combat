@@ -378,7 +378,6 @@
                 }]
             }
         }],
-        "strike_on_tick_list": [[560], [560]],
         "skill_ticks": [{
             "on_tick": 560,
             "strike": true,
