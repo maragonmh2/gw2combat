@@ -1,7 +1,17 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Shattering Ice Trait",
+        "skill_triggers": [{
+            "skill_key": "Shattering Ice (Hit)",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "unique_effect_on_source": "Shattering Ice Effect",
+                "depends_on_skill_off_cooldown": "Shattering Ice (Hit)"
+            }
+        }]
+    }],
     "unique_effects": {
         "Shattering Ice Effect": {
 			"icon": "https://render.guildwars2.com/file/A1C20E2CE05D80B5A9DDF47ED0780301FC2C7477/2491603.png"
@@ -36,24 +46,13 @@
                 }
             ]
         }],
-        "skill_triggers": [
-            {
-                "skill_key": "Shattering Ice (Hit)",
-                "condition": {
-                    "only_applies_on_strikes": true,
-                    "unique_effect_on_source": "Shattering Ice Effect",
-                    "depends_on_skill_off_cooldown": "Shattering Ice (Hit)"
-                }
-            }
-        ],
         "tags": [
             "Etching Charges",
             "Pyromancers Puissance"
         ],
         "executable": true,
         "weapon_type": "empty_handed"
-    },
-    {
+    },{
         "skill_key": "Shattering Ice (Hit)",
         "cast_duration": [0, 0],
         "cooldown": [1000, 1000],

@@ -6,26 +6,17 @@
     "skills": [
         {
             "skill_key": "Wait",
-            "cast_duration": [100000, 100000],
-            "executable": true
+            "cast_duration": [100000, 100000]
         },{
             "skill_key": "Pause",
-            "cast_duration": [1000, 1000],
-            "executable": true
-        },
-        {
-            "skill_key": "Test",
-            "skill_ticks": [{
-                "child_skill_keys": ["CD"]
-            },{
-                "child_skill_keys": ["CD"]
-            }],
-            "executable": true,
-            "weapon_type": "empty_handed"
+            "cast_duration": [1000, 1000]
         },{
-            "skill_key": "CD",
-            "cast_duration": [100, 100],
-            "cooldown": [5000, 5000]
+            "skill_key": "Strike",
+            "cast_duration": [1000, 1000],
+            "skill_ticks": [{
+                "strike": true
+            }],
+            "weapon_type": "empty_handed"
         }
     ]
 }

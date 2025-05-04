@@ -118,7 +118,25 @@
         "icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png"
     }],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Harden Trait",
+        "skill_triggers": [{
+            "skill_key": "CC",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_strikes_by_skill_with_tag": "Harden",
+                "unique_effect_on_source": "Harden Effect"
+            }
+        }],
+        "effect_removals": [{
+            "unique_effect": "Harden",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_strikes_by_skill_with_tag": "Harden",
+                "unique_effect_on_source": "Harden Effect"
+            }
+        }]
+    }],
     "unique_effects": {
         "Seethe Effect": {
 			"icon": "https://render.guildwars2.com/file/409EE1CC3F41C1FC20B71D0944063179BB94C471/3379087.png"
@@ -1707,22 +1725,6 @@
                     "unique_effect_key": "Harden Effect"
                 }
             }]
-        }],
-        "skill_triggers": [{
-            "skill_key": "CC",
-            "condition": {
-                "only_applies_on_strikes": true,
-                "only_applies_on_strikes_by_skill_with_tag": "Harden",
-                "unique_effect_on_source": "Harden Effect"
-            }
-        }],
-        "effect_removals": [{
-            "unique_effect": "Harden",
-            "condition": {
-                "only_applies_on_strikes": true,
-                "only_applies_on_strikes_by_skill_with_tag": "Harden",
-                "unique_effect_on_source": "Harden Effect"
-            }
         }],
         "tags": [
             "Etching Charges",

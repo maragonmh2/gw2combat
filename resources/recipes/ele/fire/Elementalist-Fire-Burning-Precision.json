@@ -1,7 +1,26 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Burning Precision Trait",
+        "attribute_modifiers": [{
+            "addend": 0.20,
+            "attribute": "burning_duration_multiplier"
+        }],
+        "skill_triggers": [{
+            "skill_key": "Burning Precision",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "only_applies_on_critical_strikes": true,
+                "depends_on_skill_off_cooldown": "Burning Precision",
+                "threshold": {
+                    "generate_random_number_subject_to_threshold": true,
+                    "threshold_value": 33,
+                    "threshold_type": "upper_bound_exclusive"
+                }
+            }
+        }]
+    }],
     "skills": [{
         "skill_key": "Burning Precision",
         "cooldown": [5000, 5000],
@@ -14,27 +33,6 @@
                 "direction": "OUTGOING"
             }]
         }],
-        "attribute_modifiers": [
-            {
-                "addend": 0.20,
-                "attribute": "burning_duration_multiplier"
-            }
-        ],
-        "skill_triggers": [
-            {
-                "skill_key": "Burning Precision",
-                "condition": {
-                    "only_applies_on_strikes": true,
-                    "only_applies_on_critical_strikes": true,
-                    "depends_on_skill_off_cooldown": "Burning Precision",
-                    "threshold": {
-                        "generate_random_number_subject_to_threshold": true,
-                        "threshold_value": 33,
-                        "threshold_type": "upper_bound_exclusive"
-                    }
-                }
-            }
-        ],
         "icon": "https://render.guildwars2.com/file/774471FA3841BB90EB6F935A76D8017A0C4B005E/1012306.png"
     }]
 }

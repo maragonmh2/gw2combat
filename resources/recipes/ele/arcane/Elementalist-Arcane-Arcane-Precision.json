@@ -1,7 +1,24 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Arcane Precision Trait",
+        "skill_triggers": [
+            {
+                "skill_key": "Arcane Precision",
+                "condition": {
+                    "only_applies_on_strikes": true,
+                    "only_applies_on_critical_strikes": true,
+                    "depends_on_skill_off_cooldown": "Arcane Precision",
+                    "threshold": {
+                        "generate_random_number_subject_to_threshold": true,
+                        "threshold_value": 33,
+                        "threshold_type": "upper_bound_exclusive"
+                    }
+                }
+            }
+        ]
+    }],
     "skills": [{
         "skill_key": "Arcane Precision",
         "cooldown": [3000, 3000],
@@ -41,21 +58,6 @@
                 }
             }]
         }],
-        "skill_triggers": [
-            {
-                "skill_key": "Arcane Precision",
-                "condition": {
-                    "only_applies_on_strikes": true,
-                    "only_applies_on_critical_strikes": true,
-                    "depends_on_skill_off_cooldown": "Arcane Precision",
-                    "threshold": {
-                        "generate_random_number_subject_to_threshold": true,
-                        "threshold_value": 33,
-                        "threshold_type": "upper_bound_exclusive"
-                    }
-                }
-            }
-        ],
         "icon": "https://render.guildwars2.com/file/1CB6B7903F10246E9405DD625380161FCD4E6C23/1012282.png"
     }]
 }

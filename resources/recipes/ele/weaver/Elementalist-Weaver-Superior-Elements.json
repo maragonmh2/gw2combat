@@ -1,24 +1,14 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
-    "skills": [{
-        "skill_key": "Superior Elements",
-        "cooldown": [4000, 4000],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Superior Elements Trait",
         "attribute_modifiers": [{
             "attribute": "critical_chance_multiplier",
             "addend": 0.15,
             "condition": {
                 "effect_on_target": "WEAKNESS"
             }
-        }],
-        "skill_ticks": [{
-            "pulse": true,
-            "on_pulse_effect_applications": [{
-                "effect": "WEAKNESS",
-                "base_duration_ms": 5000,
-                "direction": "OUTGOING"
-            }]
         }],
         "skill_triggers": [{
             "skill_key": "Superior Elements",
@@ -27,6 +17,18 @@
                 "only_applies_on_strikes_by_skill_with_tag": "Dual Attack",
                 "depends_on_skill_off_cooldown": "Superior Elements"
             }
+        }]
+    }],
+    "skills": [{
+        "skill_key": "Superior Elements",
+        "cooldown": [4000, 4000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 5000,
+                "direction": "OUTGOING"
+            }]
         }],
         "icon": "https://render.guildwars2.com/file/0017B2083219583F0150B537B0B8B54A3A7E3228/1769915.png"
     }]

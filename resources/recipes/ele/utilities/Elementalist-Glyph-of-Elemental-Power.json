@@ -1,7 +1,23 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Glyph of Elemental Power Trait",
+        "effect_removals": [{
+            "unique_effect": "Glyph of Elemental Power Effect",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "unique_effect_on_source": "Glyph of Elemental Power Effect"
+            }
+        }],
+        "skill_triggers": [{
+            "skill_key": "Glyph of Elemental Power Burn",
+            "condition": {
+                "only_applies_on_strikes": true,
+                "unique_effect_on_source": "Glyph of Elemental Power Effect"
+            }
+        }]
+    }],
     "skills": [{
         "skill_key": "Glyph of Elemental Power",
         "cooldown": [25000, 20000],
@@ -18,20 +34,6 @@
                 "base_duration_ms": 25000,
                 "direction": "SELF"
             }]
-        }],
-        "effect_removals": [{
-            "unique_effect": "Glyph of Elemental Power Effect",
-            "condition": {
-                "only_applies_on_strikes": true,
-                "unique_effect_on_source": "Glyph of Elemental Power Effect"
-            }
-        }],
-        "skill_triggers": [{
-            "skill_key": "Glyph of Elemental Power Burn",
-            "condition": {
-                "only_applies_on_strikes": true,
-                "unique_effect_on_source": "Glyph of Elemental Power Effect"
-            }
         }],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
