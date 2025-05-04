@@ -130,7 +130,8 @@ void apply_strikes(registry_t& registry) {
                     });
                 spdlog::info(
                     "[{}] skill {} pow {} fero {} prec {} crit% {} crit_mult {} is_crit {} "
-                    "ws_roll {} this_dmg {} total_incoming_dmg {}",
+                    "ws_roll {} this_dmg {} total_incoming_dmg {} "
+                    "strike_mult {} strike_mult_add {} condi_mult {} condi_mult_add {}",
                     utils::get_current_tick(registry),
                     skill_configuration.skill_key,
                     strike_source_relative_attributes.get(target_entity, actor::attribute_t::POWER),
@@ -145,7 +146,12 @@ void apply_strikes(registry_t& registry) {
                     strike.is_critical,
                     strike.strike.weapon_strength,
                     damage.value,
-                    total_incoming_damage);
+                    total_incoming_damage,
+                    strike_source_relative_attributes.get(target_entity, actor::attribute_t::OUTGOING_STRIKE_DAMAGE_MULTIPLIER),
+                    strike_source_relative_attributes.get(target_entity, actor::attribute_t::OUTGOING_STRIKE_DAMAGE_MULTIPLIER_ADD_GROUP),
+                    strike_source_relative_attributes.get(target_entity, actor::attribute_t::OUTGOING_CONDITION_DAMAGE_MULTIPLIER),
+                    strike_source_relative_attributes.get(target_entity, actor::attribute_t::OUTGOING_CONDITION_DAMAGE_MULTIPLIER_ADD_GROUP)
+                );
             }
         });
 }
