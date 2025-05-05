@@ -158,7 +158,11 @@
         "num_targets": 3,
         "strike_on_tick_list": [[520], [520]],
         "cast_condition": {
-            "unique_effect_on_source": "Fire Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
         },
         "tags": [
             "Etching Charges",
@@ -217,6 +221,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Blazing Barrage",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "pulse": true,
@@ -255,7 +267,11 @@
             "Pyromancers Puissance"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Fire Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -308,6 +324,14 @@
                         "unique_effect_on_source": "Pyromancers Training"
                     }]
                 }]
+            }
+        },{
+            "skill_key": "Seethe",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
             }
         }],
         "pulse_on_tick_list": [[340], [340]],
@@ -395,6 +419,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Meteor",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 560,
@@ -424,7 +456,11 @@
             "Pyromancers Puissance"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Fire Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -478,6 +514,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Etching: Volcano",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
         }],
         "pulse_on_tick_list": [
             [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
@@ -517,7 +561,11 @@
             "Pyromancers Puissance"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Fire Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -544,10 +592,15 @@
             "Pyromancers Puissance"
         ],
         "cast_condition": {
-            "and": [
-                { "unique_effect_on_source": "Fire Attunement Effect" },
-                { "unique_effect_on_source": "Etching Volcano Effect" }
-            ],
+            "and": [{
+                "or": [{
+                    "unique_effect_on_source": "Fire Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Fire Attunement Effect"
+                }]
+            },{ 
+                "unique_effect_on_source": "Etching Volcano Effect" 
+            }],
             "threshold": {
                 "counter_value_subject_to_threshold": "Volcano Charges",
                 "threshold_type": "lower_bound_inclusive",
@@ -695,7 +748,11 @@
         "damage_coefficient": 1.0,
         "strike_on_tick_list": [[520], [520]],
         "cast_condition": {
-            "unique_effect_on_source": "Water Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
         },
         "tags": ["Etching Charges", "Harden"],
         "executable": true,
@@ -749,6 +806,14 @@
                         "unique_effect_on_source": "Aquamancers Training"
                     }]
                 }]
+            }
+        },{
+            "skill_key": "Ice Beam",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
             }
         }],
         "pulse_on_tick_list": [
@@ -823,7 +888,11 @@
             "Etching Charges"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Water Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -876,6 +945,14 @@
                         "unique_effect_on_source": "Aquamancers Training"
                     }]
                 }]
+            }
+        },{
+            "skill_key": "Ripple",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
             }
         }],
         "skill_ticks": [{
@@ -955,6 +1032,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Undertow",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 480,
@@ -993,7 +1078,11 @@
             "Relic of Fireworks"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Water Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Water Attunement Effect"
+            }]
         },
         "weapon_type": "spear",
         "executable": true,
@@ -1047,6 +1136,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Etching: Jökulhlaup",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 240,
@@ -1075,7 +1172,11 @@
             }
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Water Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Water Attunement Effect"
+            }]
         },
         "tags": ["Ripple"],
         "executable": true,
@@ -1109,10 +1210,15 @@
             "Harden"
         ],
         "cast_condition": {
-            "and": [
-                { "unique_effect_on_source": "Water Attunement Effect" },
-                { "unique_effect_on_source": "Etching Jökulhlaup Effect" }
-            ],
+            "and": [{ 
+                "or": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            },{
+                "unique_effect_on_source": "Etching Jökulhlaup Effect" 
+            }],
             "threshold": {
                 "counter_value_subject_to_threshold": "Jökulhlaup Charges",
                 "threshold_type": "lower_bound_inclusive",
@@ -1134,7 +1240,11 @@
         }],
         "tags": ["Etching Charges", "Harden"],
         "cast_condition": {
-            "unique_effect_on_source": "Air Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -1188,6 +1298,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Fulgor",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "child_skill_keys": ["Fulgor Strike Seethe"],
@@ -1208,7 +1326,11 @@
             "Etching Charges"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Air Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -1306,6 +1428,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Energize",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "pulse": true,
@@ -1377,6 +1507,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Twister",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 520,
@@ -1416,7 +1554,11 @@
             "Relic of Fireworks"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Air Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -1470,6 +1612,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Etching: Derecho",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
         }],
         "pulse_on_tick_list": [
             [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
@@ -1506,7 +1656,11 @@
         }],
         "tags": ["Ripple"],
         "cast_condition": {
-            "unique_effect_on_source": "Air Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -1542,10 +1696,15 @@
             "Harden"
         ],
         "cast_condition": {
-            "and": [
-                { "unique_effect_on_source": "Air Attunement Effect" },
-                { "unique_effect_on_source": "Etching Derecho Effect" }
-            ],
+            "and": [{
+                "or": [{
+                    "unique_effect_on_source": "Air Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Air Attunement Effect"
+                }]
+            },{ 
+                "unique_effect_on_source": "Etching Derecho Effect" 
+            }],
             "threshold": {
                 "counter_value_subject_to_threshold": "Derecho Charges",
                 "threshold_type": "lower_bound_inclusive",
@@ -1568,7 +1727,11 @@
             }
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Earth Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
         },
         "tags": ["Etching Charges", "Harden"],
         "executable": true,
@@ -1623,6 +1786,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Earthen Spear",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 600,
@@ -1660,7 +1831,11 @@
             "Harden"
         ],
         "cast_condition": {
-            "unique_effect_on_source": "Earth Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
         },
         "executable": true,
         "weapon_type": "spear",
@@ -1713,6 +1888,14 @@
                         "unique_effect_on_source": "Geomancers Training"
                     }]
                 }]
+            }
+        },{
+            "skill_key": "Harden",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
             }
         }],
         "skill_ticks": [{
@@ -1785,6 +1968,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Fissure",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 560,
@@ -1820,7 +2011,11 @@
             }
         }],
         "cast_condition": {
-            "unique_effect_on_source": "Earth Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }]
         },
         "tags": [
             "Etching Charges", 
@@ -1881,6 +2076,14 @@
                     }]
                 }]
             }
+        },{
+            "skill_key": "Etching: Haboob",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
         }],
         "pulse_on_tick_list": [
             [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],
@@ -1909,7 +2112,11 @@
             }]
         }],
         "cast_condition": {
-            "unique_effect_on_source": "Earth Attunement Effect"
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }]
         },
         "effect_removals": [{
             "unique_effect": "Etching Haboob Effect",
@@ -1970,10 +2177,15 @@
             }
         }],
         "cast_condition": {
-            "and": [
-                { "unique_effect_on_source": "Earth Attunement Effect" },
-                { "unique_effect_on_source": "Etching Haboob Effect" }
-            ],
+            "and": [{
+                "or": [{
+                    "unique_effect_on_source": "Earth Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Earth Attunement Effect"
+                }]
+            },{ 
+                "unique_effect_on_source": "Etching Haboob Effect"
+            }],
             "threshold": {
                 "counter_value_subject_to_threshold": "Haboob Charges",
                 "threshold_type": "lower_bound_inclusive",

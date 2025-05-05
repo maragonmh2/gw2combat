@@ -5,12 +5,10 @@
     "skills": [{
         "skill_key": "Vicious Empowerment",
         "cooldown": [240, 240],
-        "child_skill_keys": [
-            "Apply Elemental Empowerment",
-            "Apply Elemental Empowerment"
-        ],
+        "child_skill_keys": ["Apply Elemental Empowerment"],
         "skill_ticks": [{
             "pulse": true,
+            "child_skill_keys": ["Apply Elemental Empowerment"],
             "on_pulse_effect_applications": [{
                 "effect": "MIGHT",
                 "base_duration_ms": 10000,

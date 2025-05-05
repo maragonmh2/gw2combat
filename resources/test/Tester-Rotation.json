@@ -1,10 +1,10 @@
 {
     "skill_casts": [
-      { "skill": "Test" },
-      { "skill": "Test" },
-      { "skill": "Test" },
-      { "skill": "Test" },
-      { "skill": "Test" },
+      { "skill": "Strike" },
+      { "skill": "Strike" },
+      { "skill": "Strike" },
+      { "skill": "Strike" },
+      { "skill": "Strike" },
       { "skill": "Wait" }
     ]
   }
