@@ -116,19 +116,6 @@
                 "num_targets": 5,
                 "direction": "TEAM"
             }],
-            "pulse_on_tick_list": [
-                [320, 800, 1280, 1760],
-                [320, 800, 1280, 1760]
-            ],
-            "on_pulse_effect_applications": [{
-                "effect": "ALACRITY",
-                "base_duration_ms": 1000,
-                "num_targets": 5,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Lucid Singularity"
-                }
-            }],
             "skill_ticks": [{
                 "pulse": true,
                 "skills_to_put_on_cooldown": [
@@ -162,17 +149,65 @@
                 "on_tick": 2720,
                 "child_skill_keys": ["Whirl Finisher"]
             },{
+                "on_tick": 320,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 800,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 1280,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 1760,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
                 "on_tick": 3200,
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "effect": "ALACRITY",
                     "base_duration_ms": 5000,
                     "num_targets": 5,
-                    "direction": "TEAM",
-                    "condition": {
-                        "unique_effect_on_source": "Lucid Singularity"
-                    }
-                }]
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Overload Fire Reset",
@@ -244,19 +279,6 @@
                 }
             }],
             "skills_to_put_on_cooldown": ["Water Attunement"],
-            "pulse_on_tick_list": [
-                [40, 760, 1480, 2200],
-                [40, 760, 1480, 2200]
-            ],
-            "on_pulse_effect_applications": [{
-                "effect": "ALACRITY",
-                "base_duration_ms": 1000,
-                "num_targets": 5,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Lucid Singularity"
-                }
-            }],
             "skill_ticks": [{
                 "pulse": true,
                 "skills_to_put_on_cooldown": [
@@ -264,6 +286,66 @@
                     "Air Attunement",
                     "Earth Attunement"
                 ]
+            },{
+                "on_tick": 40,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 760,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 1480,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 2200,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 2920,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 5000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             },{
                 "on_tick": 2920,
                 "pulse": true,
@@ -277,14 +359,6 @@
                     "base_duration_ms": 8000,
                     "num_targets": 5,
                     "direction": "TEAM"
-                },{
-                    "effect": "ALACRITY",
-                    "base_duration_ms": 5000,
-                    "num_targets": 5,
-                    "direction": "TEAM",
-                    "condition": {
-                        "unique_effect_on_source": "Lucid Singularity"
-                    }
                 }]
             }],
             "skill_triggers": [{
@@ -365,19 +439,6 @@
                 "num_targets": 3,
                 "direction": "OUTGOING"
             }],
-            "pulse_on_tick_list": [
-                [40, 760, 1560, 2360],
-                [40, 760, 1560, 2360]
-            ],
-            "on_pulse_effect_applications": [{
-                "effect": "ALACRITY",
-                "base_duration_ms": 1000,
-                "num_targets": 5,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Lucid Singularity"
-                }
-            }],
             "skill_ticks": [
             {
                 "pulse": true,
@@ -428,14 +489,6 @@
                     },
                     "base_duration_ms": 7480,
                     "direction": "SELF"
-                },{
-                    "effect": "ALACRITY",
-                    "base_duration_ms": 5000,
-                    "num_targets": 5,
-                    "direction": "TEAM",
-                    "condition": {
-                        "unique_effect_on_source": "Lucid Singularity"
-                    }
                 }]
             },{
                 "on_tick": 3640,
@@ -473,6 +526,66 @@
                     "num_targets": 5,
                     "direction": "TEAM"
                 }]
+            },{
+                "on_tick": 40,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 760,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 1560,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 2360,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 3120,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 5000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Overload Air Reset",
@@ -590,19 +703,6 @@
                 "num_targets": 5,
                 "direction": "TEAM"
             }],
-            "pulse_on_tick_list": [
-                [120, 840, 1560, 2280],
-                [120, 840, 1560, 2280]
-            ],
-            "on_pulse_effect_applications": [{
-                "effect": "ALACRITY",
-                "base_duration_ms": 1000,
-                "num_targets": 5,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Lucid Singularity"
-                }
-            }],
             "skill_ticks": [{
                 "pulse": true,
                 "skills_to_put_on_cooldown": [
@@ -610,6 +710,54 @@
                     "Water Attunement",
                     "Air Attunement"
                 ]
+            },{
+                "on_tick": 120,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 840,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 1560,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
+            },{
+                "on_tick": 2280,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "effect": "ALACRITY",
+                    "base_duration_ms": 1000,
+                    "num_targets": 5,
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             },{
                 "on_tick": 2760,
                 "pulse": true,
@@ -619,15 +767,19 @@
                     "base_duration_ms": 4000,
                     "num_targets": 5,
                     "direction": "OUTGOING"
-                },{
+                }]
+            },{
+                "on_tick": 2760,
+                "pulse": true,
+                "on_pulse_effect_applications": [{
                     "effect": "ALACRITY",
                     "base_duration_ms": 5000,
                     "num_targets": 5,
-                    "direction": "TEAM",
-                    "condition": {
-                        "unique_effect_on_source": "Lucid Singularity"
-                    }
-                }]
+                    "direction": "TEAM"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Lucid Singularity"
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Overload Earth Reset",

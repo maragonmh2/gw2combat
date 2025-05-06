@@ -288,32 +288,41 @@
             "on_pulse_effect_applications": [{
                 "effect": "MIGHT",
                 "base_duration_ms": 15000,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Fire Attunement Effect"
-                }
-            },{
+                "direction": "TEAM"
+        }],
+            "tick_condition": {
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        },{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
                 "effect": "REGENERATION",
                 "base_duration_ms": 5000,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Water Attunement Effect"
-                }
-            },{
+                "direction": "TEAM"
+            }],
+            "tick_condition": {
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
+        },{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
                 "effect": "SWIFTNESS",
                 "base_duration_ms": 8000,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Air Attunement Effect"
-                }
-            },{
+                "direction": "TEAM"
+            }],
+            "tick_condition": {
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        },{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
                 "effect": "PROTECTION",
                 "base_duration_ms": 5000,
-                "direction": "TEAM",
-                "condition": {
-                    "unique_effect_on_source": "Earth Attunement Effect"
-                }
-            }]
+                "direction": "TEAM"
+            }],
+            "tick_condition": {
+                "unique_effect_on_source": "Earth Attunement Effect"
+            }
         }],
         "skill_triggers": [{
             "skill_key": "Elemental Attunement",
