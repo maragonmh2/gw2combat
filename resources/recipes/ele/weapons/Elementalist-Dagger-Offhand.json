@@ -1,0 +1,280 @@
+{
+    "counters": [],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Ring of Fire",
+        "cast_duration": [480, 480],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Ring of Fire",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "unique_effect_on_source": "Pyromancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ring of Fire"
+            }
+        }],
+        "strike_on_tick_list": [[280],[280]],
+        "damage_coefficient": 2,
+        "num_targets": 5,
+        "on_strike_effect_applications": [{
+            "effect": "BURNING",
+            "base_duration_ms": 4000,
+            "num_stacks": 2,
+            "num_targets": 5,
+            "direction": "OUTGOING"
+        },{
+            "unique_effect": {
+                "unique_effect_key": "Fire Field Effect"
+            },
+            "base_duration_ms": 5000,
+            "direction": "SELF",
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Persisting Flames Trait"
+                }]
+            }
+        },{
+            "unique_effect": {
+                "unique_effect_key": "Fire Field Effect"
+            },
+            "base_duration_ms": 7000,
+            "direction": "SELF",
+            "condition": {
+                "unique_effect_on_source": "Persisting Flames Trait"
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger",
+        "icon": "https://render.guildwars2.com/file/CD08FDC23B56EBB19C90B909C65D9EE4D9FFF8C8/103183.png"
+    },{
+        "skill_key": "Fire Grab",
+        "cast_duration": [560,560],
+        "cooldown": [20000,16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Fire Grab",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "unique_effect_on_source": "Pyromancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Fire Grab"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 3.5,
+            "num_targets": 5,
+            "tick_condition": {
+                "effect_on_target": "BURNING"
+            }
+        },{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.75,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "effect_on_target": "BURNING"
+                }]
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Fire Attunement Effect"
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger"
+    },{
+        "skill_key": "Frost Aura",
+        "cooldown": [10000,8000],
+        "cooldown_modifiers": [{
+            "skill_key": "Frost Aura",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "unique_effect_on_source": "Aquamancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Frost Aura"
+            }
+        }],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Frost Aura Effect",
+                    "max_duration": 10000,
+                    "stacking_type": "duration"
+                },
+                "base_duration_ms": 10000,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "and": [{
+                "not": [{
+                    "unique_effect_on_source": "Frost Aura Effect"
+                }]
+            },{
+                "or": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger"
+    },{
+        "skill_key": "Transmute Frost",
+        "cast_duration": [360,360],
+        "cooldown": [10000,8000],
+        "cooldown_modifiers": [{
+            "skill_key": "Transmute Frost",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "unique_effect_on_source": "Aquamancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Transmute Frost"
+            }
+        }],
+        "damage_coefficient": 0.5,
+        "strike_on_tick_list": [[840],[840]],
+        "num_targets": 5,
+        "on_strike_effect_applications": [{
+            "effect": "REGENERATION",
+            "base_duration_ms": 4000,
+            "num_targets": 5,
+            "direction": "TEAM"
+        }],
+        "cast_condition": {
+            "and": [{
+                "unique_effect_on_source": "Frost Aura Effect"
+            },{
+                "or": [{
+                    "unique_effect_on_source": "Water Attunement Effect"
+                },{
+                    "unique_effect_on_source": "Secondary Water Attunement Effect"
+                }]
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger"
+    },{
+        "skill_key": "Ride the Lightning",
+        "cast_duration": [120,120],
+        "cooldown": [10000,8000],
+        "cooldown_modifiers": [{
+            "skill_key": "Ride the Lightning",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "unique_effect_on_source": "Aeromancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Ride the Lightning"
+            }
+        }],
+        "damage_coefficient": 1.5,
+        "strike_on_tick_list": [[80],[80]],
+        "num_targets": 5,
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Air Attunement Effect"
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger",
+        "icon": "https://render.guildwars2.com/file/23066340DF3C6E4F06A1B105479809E1647FF5D6/103332.png"
+    },{
+        "skill_key": "Earthquake",
+        "cast_duration": [680, 680],
+        "cooldown": [16000, 10240],
+        "cooldown_modifiers": [{
+            "skill_key": "Earthquake",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "unique_effect_on_source": "Geomancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earthquake"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 3,
+            "num_targets": 5,
+            "child_skill_keys": ["Blast Finisher"]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger"
+    },{
+        "skill_key": "Churning Earth",
+        "damage_coefficient": 3,
+        "cast_duration": [960, 960],
+        "cooldown": [20000, 16000],
+        "cooldown_modifiers": [{
+            "skill_key": "Churning Earth",
+            "operation": "set",
+            "value": 4000,
+            "condition": {
+                "unique_effect_on_source": "Geomancers Training",
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Churning Earth"
+            }
+        }],
+        "skill_ticks": [{
+            "TODO": "Register blast finisher here but apply it only on strike below",
+            "pulse": true,
+            "child_skill_keys": ["Blast Finisher"]
+        },{
+            "on_tick": 800,
+            "strike": true,
+            "damage_coefficient": 3,
+            "on_strike_effect_applications": [{
+                "base_duration_ms": 8000,
+                "num_stacks": 10,
+                "num_targets": 5,
+                "direction": "OUTGOING",
+                "effect": "BLEEDING"
+            },{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Secondary Earth Attunement Effect"
+            }]
+        },
+        "executable": true,
+        "weapon_type": "dagger"
+    }]
+}
