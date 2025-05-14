@@ -1,7 +1,190 @@
 {
     "counters": [],
     "permanent_effects": [],
-    "permanent_unique_effects": [],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Combo Triggers",
+        "skill_triggers": [{
+            "skill_key": "Leeching Bolts",
+            "condition": {
+                "unique_effect_on_source": "Leeching Bolts Trigger"
+            }
+        },{
+            "skill_key": "Confounding Bolts",
+            "condition": {
+                "unique_effect_on_source": "Confounding Bolts Trigger"
+            }
+        },{
+            "skill_key": "Burning Bolts",
+            "condition": {
+                "unique_effect_on_source": "Burning Bolts Trigger"
+            }
+        },{
+            "skill_key": "Chilling Bolts",
+            "condition": {
+                "unique_effect_on_source": "Chilling Bolts Trigger"
+            }
+        },{
+            "skill_key": "Cleansing Bolts",
+            "condition": {
+                "unique_effect_on_source": "Cleansing Bolts Trigger"
+            }
+        },{
+            "skill_key": "Brutal Bolts",
+            "condition": {
+                "unique_effect_on_source": "Brutal Bolts Trigger"
+            }
+        },{
+            "skill_key": "Poison Bolts",
+            "condition": {
+                "unique_effect_on_source": "Poison Bolts Trigger"
+            }
+        },{
+            "skill_key": "Blinding Bolts",
+            "condition": {
+                "unique_effect_on_source": "Blinding Bolts Trigger"
+            }
+        },{
+            "skill_key": "Healing Bolts",
+            "condition": {
+                "unique_effect_on_source": "Healing Bolts Trigger"
+            }
+        },{
+                "skill_key": "Leeching Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Leeching Projectile Trigger"
+                }
+            },{
+                "skill_key": "Confounding Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Confounding Projectile Trigger"
+                }
+            },{
+                "skill_key": "Burning Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Burning Projectile Trigger"
+                }
+            },{
+                "skill_key": "Chilling Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Chilling Projectile Trigger"
+                }
+            },{
+                "skill_key": "Cleansing Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Cleansing Projectile Trigger"
+                }
+            },{
+                "skill_key": "Brutal Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Brutal Projectile Trigger"
+                }
+            },{
+                "skill_key": "Poison Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Poison Projectile Trigger"
+                }
+            },{
+                "skill_key": "Blinding Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Blinding Projectile Trigger"
+                }
+            },{
+                "skill_key": "Healing Projectile",
+                "condition": {
+                    "unique_effect_on_source": "Healing Projectile Trigger"
+                }
+            },{
+                "skill_key": "Dark Leap",
+                "condition": {
+                    "unique_effect_on_source": "Dark Leap Trigger"
+                }
+            },{
+                "skill_key": "Chaos Leap",
+                "condition": {
+                    "unique_effect_on_source": "Chaos Leap Trigger"
+                }
+            },{
+                "skill_key": "Fire Leap",
+                "condition": {
+                    "unique_effect_on_source": "Fire Leap Trigger"
+                }
+            },{
+                "skill_key": "Frost Leap",
+                "condition": {
+                    "unique_effect_on_source": "Frost Leap Trigger"
+                }
+            },{
+                "skill_key": "Light Leap",
+                "condition": {
+                    "unique_effect_on_source": "Light Leap Trigger"
+                }
+            },{
+                "skill_key": "Dazing Strikes",
+                "condition": {
+                    "unique_effect_on_source": "Dazing Strikes Trigger"
+                }
+            },{
+                "skill_key": "Weakening Leap",
+                "condition": {
+                    "unique_effect_on_source": "Weakening Leap Trigger"
+                }
+            },{
+                "skill_key": "Stealth Leap",
+                "condition": {
+                    "unique_effect_on_source": "Stealth Leap Trigger"
+                }
+            },{
+                "skill_key": "Healing Leap",
+                "condition": {
+                    "unique_effect_on_source": "Healing Leap Trigger"
+                }
+            },{
+                "skill_key": "Blinding Blast",
+                "condition": {
+                    "unique_effect_on_source": "Blinding Blast Trigger"
+                }
+            },{
+                "skill_key": "Chaos Blast",
+                "condition": {
+                    "unique_effect_on_source": "Chaos Blast Trigger"
+                }
+            },{
+                "skill_key": "Mighty Blast",
+                "condition": {
+                    "unique_effect_on_source": "Mighty Blast Trigger"
+                }
+            },{
+                "skill_key": "Frost Blast",
+                "condition": {
+                    "unique_effect_on_source": "Frost Blast Trigger"
+                }
+            },{
+                "skill_key": "Cleansing Blast",
+                "condition": {
+                    "unique_effect_on_source": "Cleansing Blast Trigger"
+                }
+            },{
+                "skill_key": "Swift Blast",
+                "condition": {
+                    "unique_effect_on_source": "Swift Blast Trigger"
+                }
+            },{
+                "skill_key": "Weakening Blast",
+                "condition": {
+                    "unique_effect_on_source": "Weakening Blast Trigger"
+                }
+            },{
+                "skill_key": "Stealth Blast",
+                "condition": {
+                    "unique_effect_on_source": "Stealth Blast Trigger"
+                }
+            },{
+                "skill_key": "Healing Blast",
+                "condition": {
+                    "unique_effect_on_source": "Healing Blast Trigger"
+                }
+            }]
+    }],
     "unique_effects": {},
     "skills": [{
             "skill_key": "Aura"
@@ -414,12 +597,6 @@
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
                 }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Leeching Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Leeching Bolts Trigger"
-                }
             }]
         },{
             "skill_key": "Whirl Finisher Ethereal",
@@ -452,11 +629,6 @@
                 "skill_key": "Whirl Finisher Ethereal",
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Ethereal Trigger"
-                }
-            },{
-                "skill_key": "Confounding Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Confounding Bolts Trigger"
                 }
             }]
         },{
@@ -491,11 +663,6 @@
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Fire Trigger"
                 }
-            },{
-                "skill_key": "Burning Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Burning Bolts Trigger"
-                }
             }]
         },{
             "skill_key": "Whirl Finisher Ice",
@@ -528,11 +695,6 @@
                 "skill_key": "Whirl Finisher Ice",
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Ice Trigger"
-                }
-            },{
-                "skill_key": "Chilling Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Chilling Bolts Trigger"
                 }
             }]
         },{
@@ -567,11 +729,6 @@
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Light Trigger"
                 }
-            },{
-                "skill_key": "Cleansing Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Cleansing Bolts Trigger"
-                }
             }]
         },{
             "skill_key": "Whirl Finisher Lightning",
@@ -604,11 +761,6 @@
                 "skill_key": "Whirl Finisher Lightning",
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Lightning Trigger"
-                }
-            },{
-                "skill_key": "Brutal Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Brutal Bolts Trigger"
                 }
             }]
         },{
@@ -643,11 +795,6 @@
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Poison Trigger"
                 }
-            },{
-                "skill_key": "Poison Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Poison Bolts Trigger"
-                }
             }]
         },{
             "skill_key": "Whirl Finisher Smoke",
@@ -681,11 +828,6 @@
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Smoke Trigger"
                 }
-            },{
-                "skill_key": "Blinding Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Blinding Bolts Trigger"
-                }
             }]
         },{
             "skill_key": "Whirl Finisher Water",
@@ -705,11 +847,6 @@
                 "skill_key": "Whirl Finisher Water",
                 "condition": {
                     "unique_effect_on_source": "Whirl Finisher Water Trigger"
-                }
-            },{
-                "skill_key": "Healing Bolts",
-                "condition": {
-                    "unique_effect_on_source": "Healing Bolts Trigger"
                 }
             }]
         },{
@@ -741,12 +878,6 @@
                     "not": [{
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Leeching Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Leeching Projectile Trigger"
                 }
             }]
         },{
@@ -781,11 +912,6 @@
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Ethereal Trigger"
                 }
-            },{
-                "skill_key": "Confounding Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Confounding Projectile Trigger"
-                }
             }]
         },{
             "skill_key": "Projectile Finisher Fire",
@@ -818,11 +944,6 @@
                 "skill_key": "Projectile Finisher Fire",
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Fire Trigger"
-                }
-            },{
-                "skill_key": "Burning Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Burning Projectile Trigger"
                 }
             }]
         },{
@@ -857,11 +978,6 @@
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Ice Trigger"
                 }
-            },{
-                "skill_key": "Chilling Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Chilling Projectile Trigger"
-                }
             }]
         },{
             "skill_key": "Projectile Finisher Light",
@@ -894,11 +1010,6 @@
                 "skill_key": "Projectile Finisher Light",
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Light Trigger"
-                }
-            },{
-                "skill_key": "Cleansing Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Cleansing Projectile Trigger"
                 }
             }]
         },{
@@ -933,11 +1044,6 @@
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Lightning Trigger"
                 }
-            },{
-                "skill_key": "Brutal Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Brutal Projectile Trigger"
-                }
             }]
         },{
             "skill_key": "Projectile Finisher Poison",
@@ -970,11 +1076,6 @@
                 "skill_key": "Projectile Finisher Poison",
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Poison Trigger"
-                }
-            },{
-                "skill_key": "Poison Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Poison Projectile Trigger"
                 }
             }]
         },{
@@ -1009,11 +1110,6 @@
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Smoke Trigger"
                 }
-            },{
-                "skill_key": "Blinding Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Blinding Projectile Trigger"
-                }
             }]
         },{
             "skill_key": "Projectile Finisher Water",
@@ -1033,11 +1129,6 @@
                 "skill_key": "Projectile Finisher Water",
                 "condition": {
                     "unique_effect_on_source": "Projectile Finisher Water Trigger"
-                }
-            },{
-                "skill_key": "Healing Projectile",
-                "condition": {
-                    "unique_effect_on_source": "Healing Projectile Trigger"
                 }
             }]
         },{
@@ -1069,12 +1160,6 @@
                     "not": [{
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Dark Leap",
-                "condition": {
-                    "unique_effect_on_source": "Dark Leap Trigger"
                 }
             }]
         },{
@@ -1109,11 +1194,6 @@
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Ethereal Trigger"
                 }
-            },{
-                "skill_key": "Chaos Leap",
-                "condition": {
-                    "unique_effect_on_source": "Chaos Leap Trigger"
-                }
             }]
         },{
             "skill_key": "Leap Finisher Fire",
@@ -1146,11 +1226,6 @@
                 "skill_key": "Leap Finisher Fire",
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Fire Trigger"
-                }
-            },{
-                "skill_key": "Fire Leap",
-                "condition": {
-                    "unique_effect_on_source": "Fire Leap Trigger"
                 }
             }]
         },{
@@ -1185,11 +1260,6 @@
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Ice Trigger"
                 }
-            },{
-                "skill_key": "Frost Leap",
-                "condition": {
-                    "unique_effect_on_source": "Frost Leap Trigger"
-                }
             }]
         },{
             "skill_key": "Leap Finisher Light",
@@ -1222,11 +1292,6 @@
                 "skill_key": "Leap Finisher Light",
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Light Trigger"
-                }
-            },{
-                "skill_key": "Light Leap",
-                "condition": {
-                    "unique_effect_on_source": "Light Leap Trigger"
                 }
             }]
         },{
@@ -1261,11 +1326,6 @@
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Lightning Trigger"
                 }
-            },{
-                "skill_key": "Dazing Strikes",
-                "condition": {
-                    "unique_effect_on_source": "Dazing Strikes Trigger"
-                }
             }]
         },{
             "skill_key": "Leap Finisher Poison",
@@ -1298,11 +1358,6 @@
                 "skill_key": "Leap Finisher Poison",
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Poison Trigger"
-                }
-            },{
-                "skill_key": "Weakening Leap",
-                "condition": {
-                    "unique_effect_on_source": "Weakening Leap Trigger"
                 }
             }]
         },{
@@ -1337,11 +1392,6 @@
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Smoke Trigger"
                 }
-            },{
-                "skill_key": "Stealth Leap",
-                "condition": {
-                    "unique_effect_on_source": "Stealth Leap Trigger"
-                }
             }]
         },{
             "skill_key": "Leap Finisher Water",
@@ -1361,11 +1411,6 @@
                 "skill_key": "Leap Finisher Water",
                 "condition": {
                     "unique_effect_on_source": "Leap Finisher Water Trigger"
-                }
-            },{
-                "skill_key": "Healing Leap",
-                "condition": {
-                    "unique_effect_on_source": "Healing Leap Trigger"
                 }
             }]
         },{
@@ -1397,12 +1442,6 @@
                     "not": [{
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Blinding Blast",
-                "condition": {
-                    "unique_effect_on_source": "Blinding Blast Trigger"
                 }
             }]
         },{
@@ -1437,11 +1476,6 @@
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Ethereal Trigger"
                 }
-            },{
-                "skill_key": "Chaos Blast",
-                "condition": {
-                    "unique_effect_on_source": "Chaos Blast Trigger"
-                }
             }]
         },{
             "skill_key": "Blast Finisher Fire",
@@ -1474,11 +1508,6 @@
                 "skill_key": "Blast Finisher Fire",
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Fire Trigger"
-                }
-            },{
-                "skill_key": "Mighty Blast",
-                "condition": {
-                    "unique_effect_on_source": "Mighty Blast Trigger"
                 }
             }]
         },{
@@ -1513,11 +1542,6 @@
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Ice Trigger"
                 }
-            },{
-                "skill_key": "Frost Blast",
-                "condition": {
-                    "unique_effect_on_source": "Frost Blast Trigger"
-                }
             }]
         },{
             "skill_key": "Blast Finisher Light",
@@ -1550,11 +1574,6 @@
                 "skill_key": "Blast Finisher Light",
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Light Trigger"
-                }
-            },{
-                "skill_key": "Cleansing Blast",
-                "condition": {
-                    "unique_effect_on_source": "Cleansing Blast Trigger"
                 }
             }]
         },{
@@ -1589,11 +1608,6 @@
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Lightning Trigger"
                 }
-            },{
-                "skill_key": "Swift Blast",
-                "condition": {
-                    "unique_effect_on_source": "Swift Blast Trigger"
-                }
             }]
         },{
             "skill_key": "Blast Finisher Poison",
@@ -1626,11 +1640,6 @@
                 "skill_key": "Blast Finisher Poison",
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Poison Trigger"
-                }
-            },{
-                "skill_key": "Weakening Blast",
-                "condition": {
-                    "unique_effect_on_source": "Weakening Blast Trigger"
                 }
             }]
         },{
@@ -1665,11 +1674,6 @@
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Smoke Trigger"
                 }
-            },{
-                "skill_key": "Stealth Blast",
-                "condition": {
-                    "unique_effect_on_source": "Stealth Blast Trigger"
-                }
             }]
         },{
             "skill_key": "Blast Finisher Water",
@@ -1689,11 +1693,6 @@
                 "skill_key": "Blast Finisher Water",
                 "condition": {
                     "unique_effect_on_source": "Blast Finisher Water Trigger"
-                }
-            },{
-                "skill_key": "Healing Blast",
-                "condition": {
-                    "unique_effect_on_source": "Healing Blast Trigger"
                 }
             }]
         },{
