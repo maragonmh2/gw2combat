@@ -394,7 +394,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Leeching Bolts Trigger"
+                        "unique_effect_key": "Leeching Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -427,7 +427,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Confounding Bolts Trigger"
+                        "unique_effect_key": "Confounding Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -465,7 +465,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Burning Bolts Trigger"
+                        "unique_effect_key": "Burning Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -503,7 +503,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Chilling Bolts Trigger"
+                        "unique_effect_key": "Chilling Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -541,7 +541,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Cleansing Bolts Trigger"
+                        "unique_effect_key": "Cleansing Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -579,7 +579,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Brutal Bolts Trigger"
+                        "unique_effect_key": "Brutal Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -617,7 +617,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Poison Bolts Trigger"
+                        "unique_effect_key": "Poison Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -655,7 +655,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Blinding Bolts Trigger"
+                        "unique_effect_key": "Blinding Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -693,7 +693,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Whirl Finisher Healing Bolts Trigger"
+                        "unique_effect_key": "Healing Bolts Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -722,7 +722,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Leeching Projectile Trigger"
+                        "unique_effect_key": "Leeching Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -755,7 +755,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Confounding Projectile Trigger"
+                        "unique_effect_key": "Confounding Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -793,7 +793,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Burning Projectile Trigger"
+                        "unique_effect_key": "Burning Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -831,7 +831,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Chilling Projectile Trigger"
+                        "unique_effect_key": "Chilling Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -869,7 +869,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Cleansing Projectile Trigger"
+                        "unique_effect_key": "Cleansing Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -907,7 +907,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Brutal Projectile Trigger"
+                        "unique_effect_key": "Brutal Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -945,7 +945,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Poison Projectile Trigger"
+                        "unique_effect_key": "Poison Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -983,7 +983,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Blinding Projectile Trigger"
+                        "unique_effect_key": "Blinding Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1021,7 +1021,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Projectile Finisher Healing Projectile Trigger"
+                        "unique_effect_key": "Healing Projectile Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1050,7 +1050,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Dark Leap Trigger"
+                        "unique_effect_key": "Dark Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1083,7 +1083,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Chaos Leap Trigger"
+                        "unique_effect_key": "Chaos Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1121,7 +1121,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Fire Leap Trigger"
+                        "unique_effect_key": "Fire Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1159,7 +1159,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Frost Leap Trigger"
+                        "unique_effect_key": "Frost Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1197,7 +1197,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Light Leap Trigger"
+                        "unique_effect_key": "Light Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1235,7 +1235,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Dazing Strikes Trigger"
+                        "unique_effect_key": "Dazing Strikes Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1273,7 +1273,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Weakening Leap Trigger"
+                        "unique_effect_key": "Weakening Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1311,7 +1311,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Stealth Leap Trigger"
+                        "unique_effect_key": "Stealth Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1349,7 +1349,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Healing Leap Trigger"
+                        "unique_effect_key": "Healing Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1378,7 +1378,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Blinding Blast Trigger"
+                        "unique_effect_key": "Blinding Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1411,7 +1411,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Chaos Blast Trigger"
+                        "unique_effect_key": "Chaos Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1449,7 +1449,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Mighty Blast Trigger"
+                        "unique_effect_key": "Mighty Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1487,7 +1487,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Frost Blast Trigger"
+                        "unique_effect_key": "Frost Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1525,7 +1525,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Cleansing Blast Trigger"
+                        "unique_effect_key": "Cleansing Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1563,7 +1563,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Swift Blast Trigger"
+                        "unique_effect_key": "Swift Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1601,7 +1601,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Weakening Blast Trigger"
+                        "unique_effect_key": "Weakening Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1639,7 +1639,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Stealth Blast Trigger"
+                        "unique_effect_key": "Stealth Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1677,7 +1677,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Healing Blast Trigger"
+                        "unique_effect_key": "Healing Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2059,7 +2059,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Dark Leap Trigger"
+                        "unique_effect_key": "Dark Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2070,7 +2070,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Chaos Leap Trigger"
+                        "unique_effect_key": "Chaos Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2081,7 +2081,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Fire Leap Trigger"
+                        "unique_effect_key": "Fire Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2092,7 +2092,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Frost Leap Trigger"
+                        "unique_effect_key": "Frost Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2103,7 +2103,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Light Leap Trigger"
+                        "unique_effect_key": "Light Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2114,7 +2114,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Dazing Strike Trigger"
+                        "unique_effect_key": "Dazing Strike Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2125,7 +2125,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Weakening Leap Trigger"
+                        "unique_effect_key": "Weakening Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2136,7 +2136,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Stealth Leap Trigger"
+                        "unique_effect_key": "Stealth Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2147,7 +2147,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Healing Leap Trigger"
+                        "unique_effect_key": "Healing Leap Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2515,7 +2515,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Blinding Blast Trigger"
+                        "unique_effect_key": "Blinding Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2526,7 +2526,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Chaos Blast Trigger"
+                        "unique_effect_key": "Chaos Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2537,7 +2537,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Mighty Blast Trigger"
+                        "unique_effect_key": "Mighty Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2548,7 +2548,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Frost Blast Trigger"
+                        "unique_effect_key": "Frost Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2559,7 +2559,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Cleansing Blast Trigger"
+                        "unique_effect_key": "Cleansing Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2570,7 +2570,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Swift Blast Trigger"
+                        "unique_effect_key": "Swift Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2581,7 +2581,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Weakening Blast Trigger"
+                        "unique_effect_key": "Weakening Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2592,7 +2592,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Stealth Blast Trigger"
+                        "unique_effect_key": "Stealth Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2603,7 +2603,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Healing Blast Trigger"
+                        "unique_effect_key": "Healing Blast Trigger"
                     },
                     "direction": "SELF"
                 }],
