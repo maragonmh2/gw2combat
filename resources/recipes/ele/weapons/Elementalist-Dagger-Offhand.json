@@ -53,6 +53,7 @@
                 "unique_effect_on_source": "Secondary Fire Attunement Effect"
             }]
         },
+        "tags": ["Pyromancers Puissance"],
         "executable": true,
         "weapon_type": "dagger",
         "icon": "https://render.guildwars2.com/file/CD08FDC23B56EBB19C90B909C65D9EE4D9FFF8C8/103183.png"
@@ -96,6 +97,10 @@
                 "unique_effect_on_source": "Secondary Fire Attunement Effect"
             }]
         },
+        "tags": [
+            "Pyromancers Puissance",
+            "Relic of Fireworks"
+        ],
         "executable": true,
         "weapon_type": "dagger"
     },{
@@ -198,6 +203,7 @@
                 "unique_effect_on_source": "Secondary Air Attunement Effect"
             }]
         },
+        "tags": ["Relic of Fireworks"],
         "executable": true,
         "weapon_type": "dagger",
         "icon": "https://render.guildwars2.com/file/23066340DF3C6E4F06A1B105479809E1647FF5D6/103332.png"
@@ -247,13 +253,12 @@
             }
         }],
         "skill_ticks": [{
-            "TODO": "Register blast finisher here but apply it only on strike below",
-            "pulse": true,
-            "child_skill_keys": ["Blast Finisher"]
+            "child_skill_keys": ["Blast Finisher Prepare"]
         },{
             "on_tick": 800,
             "strike": true,
             "damage_coefficient": 3,
+            "child_skill_keys": ["Blast Finisher Execute"],
             "on_strike_effect_applications": [{
                 "base_duration_ms": 8000,
                 "num_stacks": 10,
@@ -274,6 +279,7 @@
                 "unique_effect_on_source": "Secondary Earth Attunement Effect"
             }]
         },
+        "tags": ["Relic of Fireworks"],
         "executable": true,
         "weapon_type": "dagger"
     }]
