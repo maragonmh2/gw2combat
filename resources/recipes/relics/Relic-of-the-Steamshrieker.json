@@ -17,15 +17,13 @@
             "skill_key": "Relic of the Steamshrieker",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Leap Finisher",
-                "unique_effect_on_source": "Water Field Effect"
+                "only_applies_on_finished_casting_skill": "Healing Leap"
             }
         },{
             "skill_key": "Relic of the Steamshrieker",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Blast Finisher",
-                "unique_effect_on_source": "Water Field Effect"
+                "only_applies_on_finished_casting_skill": "Healing Blast"
             }
         }],
         "icon": "https://render.guildwars2.com/file/23B0F0A5BF05E05C9F527BF7EB4962C9F49C6F42/3441975.png"

@@ -1161,6 +1161,12 @@
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
                 }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Leap Finisher Dark",
+                "condition": {
+                    "unique_effect_on_source": "Leap Finisher Dark Trigger"
+                }
             }]
         },{
             "skill_key": "Leap Finisher Ethereal",
@@ -1373,19 +1379,6 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
-            },{
-                "pulse": true,
-                "on_pulse_effect_applications": [{
-                    "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Water Trigger"
-                    },
-                    "direction": "SELF"
-                }],
-                "tick_condition": {
-                    "not": [{
-                        "unique_effect_on_source": "Smoke Field Effect"
-                    }]
-                }
             }],
             "skill_triggers": [{
                 "skill_key": "Leap Finisher Smoke",
@@ -1406,6 +1399,19 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Water Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Dark Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Water Field Effect"
+                    }]
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Leap Finisher Water",
@@ -1415,7 +1421,7 @@
             }]
         },{
             "skill_key": "Leap Finisher",
-            "child_skill_keys": ["Leap Finisher Dark"],
+            "child_skill_keys": ["Leap Finisher Water"],
             "tags": ["Finisher"]
         },{
             "skill_key": "Blast Finisher Dark",
@@ -1442,6 +1448,12 @@
                     "not": [{
                         "unique_effect_on_source": "Dark Field Effect"
                     }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Blast Finisher Dark",
+                "condition": {
+                    "unique_effect_on_source": "Blast Finisher Dark Trigger"
                 }
             }]
         },{
@@ -1655,25 +1667,6 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
-            },{
-                "pulse": true,
-                "on_pulse_effect_applications": [{
-                    "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Water Trigger"
-                    },
-                    "direction": "SELF"
-                }],
-                "tick_condition": {
-                    "not": [{
-                        "unique_effect_on_source": "Smoke Field Effect"
-                    }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Blast Finisher Smoke",
-                "condition": {
-                    "unique_effect_on_source": "Blast Finisher Smoke Trigger"
-                }
             }]
         },{
             "skill_key": "Blast Finisher Water",
@@ -1688,6 +1681,19 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Water Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Blast Finisher Dark Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Water Field Effect"
+                    }]
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Blast Finisher Water",
@@ -1697,7 +1703,7 @@
             }]
         },{
             "skill_key": "Blast Finisher",
-            "child_skill_keys": ["Blast Finisher Dark"],
+            "child_skill_keys": ["Blast Finisher Water"],
             "tags": ["Finisher"]
         },{
             "skill_key": "Leap Finisher Prepare Dark",
@@ -1732,6 +1738,12 @@
                 "condition": {
                     "only_applies_on_begun_casting": true,
                     "only_applies_on_begun_casting_skill": "Leap Finisher Prepare"
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Leap Finisher Prepare Dark",
+                "condition": {
+                    "unique_effect_on_source": "Leap Finisher Prepare Dark Trigger"
                 }
             }]
         },{
@@ -1994,19 +2006,6 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
-            },{
-                "pulse": true,
-                "on_pulse_effect_applications": [{
-                    "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Prepare Water Trigger"
-                    },
-                    "direction": "SELF"
-                }],
-                "tick_condition": {
-                    "not": [{
-                        "unique_effect_on_source": "Smoke Field Effect"
-                    }]
-                }
             }],
             "effect_removals": [{
                 "unique_effect": "Leap Finisher Prepare Smoke Marker",
@@ -2035,6 +2034,19 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Water Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Prepare Dark Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Water Field Effect"
+                    }]
+                }
             }],
             "effect_removals": [{
                 "unique_effect": "Leap Finisher Prepare Water Marker",
@@ -2051,7 +2063,7 @@
             }]
         },{
             "skill_key": "Leap Finisher Prepare",
-            "child_skill_keys": ["Leap Finisher Prepare Dark"]
+            "child_skill_keys": ["Leap Finisher Prepare Water"]
         },{
             "skill_key": "Leap Finisher Execute",
             "skill_ticks": [{
@@ -2188,6 +2200,12 @@
                 "condition": {
                     "only_applies_on_begun_casting": true,
                     "only_applies_on_begun_casting_skill": "Blast Finisher Prepare"
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Blast Finisher Prepare Dark",
+                "condition": {
+                    "unique_effect_on_source": "Blast Finisher Prepare Dark Trigger"
                 }
             }]
         },{
@@ -2450,19 +2468,6 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
-            },{
-                "pulse": true,
-                "on_pulse_effect_applications": [{
-                    "unique_effect": {
-                        "unique_effect_key": "Blast Finisher Prepare Water Trigger"
-                    },
-                    "direction": "SELF"
-                }],
-                "tick_condition": {
-                    "not": [{
-                        "unique_effect_on_source": "Smoke Field Effect"
-                    }]
-                }
             }],
             "effect_removals": [{
                 "unique_effect": "Blast Finisher Prepare Smoke Marker",
@@ -2491,6 +2496,19 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Water Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Blast Finisher Prepare Water Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Water Field Effect"
+                    }]
+                }
             }],
             "effect_removals": [{
                 "unique_effect": "Blast Finisher Prepare Water Marker",
@@ -2507,7 +2525,7 @@
             }]
         },{
             "skill_key": "Blast Finisher Prepare",
-            "child_skill_keys": ["Blast Finisher Prepare Dark"]
+            "child_skill_keys": ["Blast Finisher Prepare Water"]
         },{
             "skill_key": "Blast Finisher Execute",
             "skill_ticks": [{
