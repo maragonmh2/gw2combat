@@ -15,6 +15,14 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Ring of Fire"
             }
+        },{
+            "skill_key": "Ring of Fire",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
         }],
         "strike_on_tick_list": [[280],[280]],
         "damage_coefficient": 2,
@@ -70,6 +78,14 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Fire Grab"
             }
+        },{
+            "skill_key": "Ring Grab",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "on_tick": 480,
@@ -115,6 +131,14 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Frost Aura"
             }
+        },{
+            "skill_key": "Frost Aura",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
         }],
         "skill_ticks": [{
             "pulse": true,
@@ -156,6 +180,14 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Transmute Frost"
             }
+        },{
+            "skill_key": "Transmute Frost",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Water Attunement Effect"
+            }
         }],
         "damage_coefficient": 0.5,
         "strike_on_tick_list": [[840],[840]],
@@ -192,6 +224,14 @@
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Ride the Lightning"
             }
+        },{
+            "skill_key": "Ride the Lightning",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
         }],
         "damage_coefficient": 1.5,
         "strike_on_tick_list": [[80],[80]],
@@ -219,6 +259,14 @@
                 "unique_effect_on_source": "Geomancers Training",
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Earthquake"
+            }
+        },{
+            "skill_key": "Earthquake",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
             }
         }],
         "skill_ticks": [{
@@ -250,6 +298,14 @@
                 "unique_effect_on_source": "Geomancers Training",
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Churning Earth"
+            }
+        },{
+            "skill_key": "Churning Earth",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Earth Attunement Effect"
             }
         }],
         "skill_ticks": [{
