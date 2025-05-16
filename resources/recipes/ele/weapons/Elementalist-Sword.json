@@ -1,0 +1,1113 @@
+{
+    "counters": [{
+        "counter_key": "Auto Fire Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Auto Fire Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Fire"
+            }
+        },{
+            "counter_key": "Auto Fire Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Auto Fire Refresh Effect"
+                }]
+            }
+        },{
+            "counter_key": "Auto Fire Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "threshold": {
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 3,
+                    "counter_value_subject_to_threshold": "Auto Fire Counter"
+                }
+            }
+        }]
+    },{
+        "counter_key": "Auto Water Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Auto Water Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Water"
+            }
+        },{
+            "counter_key": "Auto Water Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Auto Water Refresh Effect"
+                }]
+            }
+        },{
+            "counter_key": "Auto Water Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "threshold": {
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 3,
+                    "counter_value_subject_to_threshold": "Auto Water Counter"
+                }
+            }
+        }]
+    },{
+        "counter_key": "Auto Air Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Auto Air Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Air"
+            }
+        },{
+            "counter_key": "Auto Air Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Auto Air Refresh Effect"
+                }]
+            }
+        },{
+            "counter_key": "Auto Air Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "threshold": {
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 3,
+                    "counter_value_subject_to_threshold": "Auto Air Counter"
+                }
+            }
+        }]
+    },{
+        "counter_key": "Auto Earth Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Auto Earth Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Earth"
+            }
+        },{
+            "counter_key": "Auto Earth Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Auto Earth Refresh Effect"
+                }]
+            }
+        },{
+            "counter_key": "Auto Earth Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "threshold": {
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 3,
+                    "counter_value_subject_to_threshold": "Auto Earth Counter"
+                }
+            }
+        }]
+    }],
+    "permanent_effects": [],
+    "permanent_unique_effects": [],
+    "skills": [{
+        "skill_key": "Auto Fire",
+        "source_actor_skill_triggers": [{
+            "skill_key": "Fire Strike",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Fire",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Fire Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 0
+                }
+            }
+        },{
+            "skill_key": "Fire Swipe",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Fire",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Fire Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 1
+                }
+            }
+        },{
+            "skill_key": "Searing Slash",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Fire",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Fire Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 2
+                }
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Fire Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            },{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
+        },
+        "instant_cast_only_when_not_in_animation": true,
+        "executable": true,
+        "weapon_type": "sword",
+        "icon": "https://render.guildwars2.com/file/365C7D9672533C765C4DC819FC263D4C38AE0B1E/1770363.png"
+    },{
+        "skill_key": "Fire Strike",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 280,
+            "strike": true,
+            "damage_coefficient": 0.8,
+            "num_targets": 3
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
+        },
+        "tags": [
+            "Auto Fire",
+            "Pyromancers Puissance"
+        ],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Fire Swipe",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.9,
+            "num_targets": 3
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
+        },
+        "tags": [
+            "Auto Fire",
+            "Pyromancers Puissance"
+        ],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Searing Slash",
+        "cast_duration": [680, 680],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.6,
+            "num_targets": 3,
+            "on_strike_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 4000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 680,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
+        },
+        "tags": [
+            "Auto Fire",
+            "Pyromancers Puissance"
+        ],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Flame Uprising",
+        "cast_duration": [720, 720],
+        "cooldown": [8000, 6400],
+        "cooldown_modifiers": [{
+            "skill_key": "Flame Uprising",
+            "operation": "set",
+            "value": 1600,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Flame Uprising",
+                "unique_effect_on_source": "Pyromancers Training"
+            }
+        },{
+            "skill_key": "Flame Uprising",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "child_skill_keys": ["Leap Finisher Prepare"]
+        },{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 1.5,
+            "num_targets": 5,
+            "child_skill_keys": ["Leap Finisher Execute"],
+            "on_strike_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 4000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Field Effect"
+                },
+                "base_duration_ms": 2000,
+                "direction": "SELF",
+                "condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Persisting Flames Trait"
+                    }]
+                }
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Fire Field Effect"
+                },
+                "base_duration_ms": 4000,
+                "direction": "SELF",
+                "condition": {
+                    "unique_effect_on_source": "Persisting Flames Trait"
+                }
+            }]
+        },{
+            "on_tick": 1600,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "num_targets": 5
+        },{
+            "on_tick": 2600,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "num_targets": 5
+        },{
+            "on_tick": 3600,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Persisting Flames Trait"
+            }
+        },{
+            "on_tick": 4600,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "num_targets": 5,
+            "tick_condition": {
+                "unique_effect_on_source": "Persisting Flames Trait"
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Fire Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Fire Attunement Effect"
+            }]
+        },
+        "tags": ["Pyromancers Puissance"],
+        "weapon_type": "sword",
+        "executable": true
+    },{
+        "skill_key": "Cauterizing Strike",
+        "cast_duration": [440, 440],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Cauterizing Strike",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Cauterizing Strike",
+                "unique_effect_on_source": "Pyromancers Training"
+            }
+        },{
+            "skill_key": "Cauterizing Strike",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Fire Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "effect": "BURNING",
+                "base_duration_ms": 8000,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 440,
+            "strike": true,
+            "damage_coefficient": 2.8,
+            "num_targets": 5,
+            "tick_condition": {
+                "effect_on_target": "BURNING"
+            }
+        },{
+            "on_tick": 440,
+            "strike": true,
+            "damage_coefficient": 1.75,
+            "num_targets": 5,
+            "tick_condition": {
+                "not": [{
+                    "effect_on_target": "BURNING"
+                }]
+            }
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Fire Attunement Effect"
+        },
+        "tags": ["Pyromancers Puissance"],
+        "weapon_type": "sword",
+        "executable": true
+    },{
+        "skill_key": "Auto Water",
+        "source_actor_skill_triggers": [{
+            "skill_key": "Seiche",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Water",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Water Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 0
+                }
+            }
+        },{
+            "skill_key": "Clapotis",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Water",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Water Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 1
+                }
+            }
+        },{
+            "skill_key": "Breaking Wave",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Water",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Water Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 2
+                }
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Water Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            },{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
+        },
+        "instant_cast_only_when_not_in_animation": true,
+        "executable": true,
+        "weapon_type": "sword",
+        "icon": "https://render.guildwars2.com/file/99AE33BF5F03749CA414B033FC3D6762C3A4FE50/1770366.png"
+    },{
+        "skill_key": "Seiche",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 280,
+            "strike": true,
+            "damage_coefficient": 0.8,
+            "num_targets": 3
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Water Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Water"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Clapotis",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.9,
+            "num_targets": 3
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Water Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Water"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Breaking Wave",
+        "cast_duration": [680, 680],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.1,
+            "num_targets": 3
+        },{
+            "on_tick": 680,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Water Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Water Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Water Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Water"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Auto Air",
+        "source_actor_skill_triggers": [{
+            "skill_key": "Charged Strike",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Air",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Air Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 0
+                }
+            }
+        },{
+            "skill_key": "Polaric Slash",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Air",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Air Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 1
+                }
+            }
+        },{
+            "skill_key": "Call Lightning",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Air",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Air Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 2
+                }
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Air Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            },{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
+        },
+        "instant_cast_only_when_not_in_animation": true,
+        "executable": true,
+        "weapon_type": "sword",
+        "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
+    },{
+        "skill_key": "Charged Strike",
+        "cast_duration": [120, 120],
+        "child_skill_keys": ["Charged Strike Strike"],
+        "skill_ticks": [{
+            "child_skill_keys": ["Charged Strike Strike"],
+            "skills_to_cancel": ["Charged Strike"],
+            "tick_condition": {
+                "not": [{
+                    "unique_effect_on_source": "Call Lightning Aftercast Effect"
+                }]
+            }
+        }],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Charged Strike Strike",
+        "cast_duration": [440, 440],
+        "attribute_damage_to_skill": "Charged Strike",
+        "skill_ticks": [{
+            "on_tick": 280,
+            "strike": true,
+            "damage_coefficient": 0.9,
+            "num_targets": 3
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Air Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Air"],
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Polaric Slash",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 1.0,
+            "on_strike_effect_applications": [{
+                "effect": "SWIFTNESS",
+                "base_duration_ms": 2000,
+                "direction": "SELF"
+            }]
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Air Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Air"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Call Lightning",
+        "INFO": "Should be cancelled",
+        "cast_duration": [760, 640],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.2,
+            "num_targets": 3
+        },{
+            "on_tick": 640,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Air Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            },{
+                "unique_effect": {
+                    "unique_effect_key": "Call Lightning Aftercast Effect"
+                },
+                "base_duration_ms": 20,
+                "direction": "SELF"
+            }]
+        },{
+            "on_tick": 760,
+            "strike": true,
+            "damage_coefficient": 0.32,
+            "num_targets": 3
+        },{
+            "on_tick": 960,
+            "strike": true,
+            "damage_coefficient": 0.32,
+            "num_targets": 3
+        },{
+            "on_tick": 1160,
+            "strike": true,
+            "damage_coefficient": 0.32,
+            "num_targets": 3
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Air"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Polaric Leap",
+        "cast_duration": [440, 440],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Polaric Leap",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Polaric Leap",
+                "unique_effect_on_source": "Aeromancers Training"
+            }
+        },{
+            "skill_key": "Polaric Leap",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 280,
+            "strike": true,
+            "damage_coefficient": 0.66,
+            "child_skill_keys": ["CC", "Leap Finisher"],
+            "on_strike_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Superspeed Effect",
+                    "stacking_type": "duration",
+                    "max_duration": 10000
+                },
+                "base_duration_ms": 3000,
+                "direction": "SELF"
+            },{
+                "effect": "WEAKNESS",
+                "base_duration_ms": 3000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Air Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Air Attunement Effect"
+            }]
+        },
+        "weapon_type": "sword",
+        "executable": true
+    },{
+        "skill_key": "Quantum Strike",
+        "cast_duration": [680, 680],
+        "cooldown": [16000, 12800],
+        "cooldown_modifiers": [{
+            "skill_key": "Quantum Strike",
+            "operation": "set",
+            "value": 3200,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Quantum Strike",
+                "unique_effect_on_source": "Aeromancers Training"
+            }
+        },{
+            "skill_key": "Quantum Strike",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        }],
+        "damage_coefficient": 0.425,
+        "strike_on_tick_list": [
+            [800, 1000, 1200, 1400, 1600, 1800, 2000, 2200],
+            [800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "VULNERABILITY",
+            "base_duration_ms": 8000,
+            "direction": "OUTGOING"
+        }],
+        "skill_ticks": [{
+            "on_tick": 600,
+            "strike": true,
+            "damage_coefficient": 0.5,
+            "on_strike_effect_applications": [{
+                "effect": "VULNERABILITY",
+                "base_duration_ms": 8000,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "cast_condition": {
+            "unique_effect_on_source": "Air Attunement Effect"
+        },
+        "weapon_type": "sword",
+        "executable": true
+    },{
+        "skill_key": "Auto Earth",
+        "source_actor_skill_triggers": [{
+            "skill_key": "Crystal Slash",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Earth",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Earth Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 0
+                }
+            }
+        },{
+            "skill_key": "Crystalline Strike",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Earth",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Earth Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 1
+                }
+            }
+        },{
+            "skill_key": "Crystalline Sunder",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Auto Earth",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Earth Counter",
+                    "threshold_type": "equal",
+                    "threshold_value": 2
+                }
+            }
+        }],
+        "cast_condition": {
+            "or": [{
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Auto Earth Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 1
+                }
+            },{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "instant_cast_only_when_not_in_animation": true,
+        "executable": true,
+        "weapon_type": "sword",
+        "icon": "https://render.guildwars2.com/file/03586ED169D344CFAA513763B616C152F839C153/1770360.png"
+    },{
+        "skill_key": "Crystal Slash",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 280,
+            "strike": true,
+            "damage_coefficient": 0.8,
+            "num_targets": 3,
+            "on_strike_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 4000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Earth Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Earth"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Crystalline Strike",
+        "cast_duration": [440, 440],
+        "skill_ticks": [{
+            "on_tick": 360,
+            "strike": true,
+            "damage_coefficient": 0.9,
+            "num_targets": 3,
+            "on_strike_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 4000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 440,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Earth Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Earth"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Crystalline Sunder",
+        "cast_duration": [680, 680],
+        "skill_ticks": [{
+            "on_tick": 480,
+            "strike": true,
+            "damage_coefficient": 1.4,
+            "num_targets": 3,
+            "on_strike_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 8000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            },{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 4000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }]
+        },{
+            "on_tick": 680,
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Earth Auto Refresh Effect"
+                },
+                "base_duration_ms": 760,
+                "direction": "SELF"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "tags": ["Auto Earth"],
+        "executable": false,
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Earthen Vortex",
+        "cast_duration": [1000, 1000],
+        "cooldown": [10000, 8000],
+        "cooldown_modifiers": [{
+            "skill_key": "Earthen Vortex",
+            "operation": "set",
+            "value": 2000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Earthen Vortex",
+                "unique_effect_on_source": "Aeromancers Training"
+            }
+        },{
+            "skill_key": "Earthen Vortex",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        }],
+        "skill_ticks": [{
+            "on_tick": 720,
+            "strike": true,
+            "damage_coefficient": 1.8,
+            "num_targets": 3,
+            "child_skill_keys": ["Blast Finisher"],
+            "on_strike_effect_applications": [{
+                "effect": "CRIPPLED",
+                "base_duration_ms": 3000,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            },{
+                "effect": "BLEEDING",
+                "base_duration_ms": 8000,
+                "num_stacks": 2,
+                "num_targets": 3,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "weapon_type": "sword",
+        "executable": true
+    },{
+        "skill_key": "Rust Frenzy",
+        "INFO": "Should be cancelled",
+        "cast_duration": [1400, 1160],
+        "cooldown": [15000, 12000],
+        "cooldown_modifiers": [{
+            "skill_key": "Rust Frenzy",
+            "operation": "set",
+            "value": 3000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Rust Frenzy",
+                "unique_effect_on_source": "Aeromancers Training"
+            }
+        },{
+            "skill_key": "Rust Frenzy",
+            "operation": "reset",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
+                "unique_effect_on_source": "Air Attunement Effect"
+            }
+        }],
+        "damage_coefficient": 0.33,
+        "num_targets": 3,
+        "strike_on_tick_list": [
+            [360,360,600,640,840,840,1080,1120],
+            [360,360,600,640,840,840,1080,1120]
+        ],
+        "on_strike_effect_applications": [{
+            "effect": "BLEEDING",
+            "base_duration_ms": 4000,
+            "num_targets": 3,
+            "direction": "OUTGOING"
+        }],
+        "cast_condition": {
+            "or": [{
+                "unique_effect_on_source": "Earth Attunement Effect"
+            },{
+                "unique_effect_on_source": "Primary Earth Attunement Effect"
+            }]
+        },
+        "weapon_type": "sword",
+        "executable": true
+    }]
+}
