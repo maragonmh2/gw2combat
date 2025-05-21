@@ -192,13 +192,12 @@
             "damage_coefficient": 0.8,
             "num_targets": 3
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Fire Auto Refresh Effect"
+                    "unique_effect_key": "Auto Fire Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -211,7 +210,8 @@
         },
         "tags": [
             "Auto Fire",
-            "Pyromancers Puissance"
+            "Pyromancers Puissance", 
+            "Auto"
         ],
         "executable": false,
         "weapon_type": "sword"
@@ -224,13 +224,12 @@
             "damage_coefficient": 0.9,
             "num_targets": 3
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Fire Auto Refresh Effect"
+                    "unique_effect_key": "Auto Fire Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -243,7 +242,8 @@
         },
         "tags": [
             "Auto Fire",
-            "Pyromancers Puissance"
+            "Pyromancers Puissance", 
+            "Auto"
         ],
         "executable": false,
         "weapon_type": "sword"
@@ -261,16 +261,6 @@
                 "num_targets": 3,
                 "direction": "OUTGOING"
             }]
-        },{
-            "on_tick": 680,
-            "pulse": true,
-            "on_pulse_effect_applications": [{
-                "unique_effect": {
-                    "unique_effect_key": "Fire Auto Refresh Effect"
-                },
-                "base_duration_ms": 760,
-                "direction": "SELF"
-            }]
         }],
         "cast_condition": {
             "or": [{
@@ -281,7 +271,8 @@
         },
         "tags": [
             "Auto Fire",
-            "Pyromancers Puissance"
+            "Pyromancers Puissance", 
+            "Auto"
         ],
         "executable": false,
         "weapon_type": "sword"
@@ -413,20 +404,7 @@
             "on_tick": 440,
             "strike": true,
             "damage_coefficient": 2.8,
-            "num_targets": 5,
-            "tick_condition": {
-                "effect_on_target": "BURNING"
-            }
-        },{
-            "on_tick": 440,
-            "strike": true,
-            "damage_coefficient": 1.75,
-            "num_targets": 5,
-            "tick_condition": {
-                "not": [{
-                    "effect_on_target": "BURNING"
-                }]
-            }
+            "num_targets": 5
         }],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
@@ -496,13 +474,12 @@
             "damage_coefficient": 0.8,
             "num_targets": 3
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Water Auto Refresh Effect"
+                    "unique_effect_key": "Auto Water Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -513,7 +490,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water"],
+        "tags": ["Auto Water", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -525,13 +502,12 @@
             "damage_coefficient": 0.9,
             "num_targets": 3
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Water Auto Refresh Effect"
+                    "unique_effect_key": "Auto Water Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -542,7 +518,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water"],
+        "tags": ["Auto Water", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -553,16 +529,6 @@
             "strike": true,
             "damage_coefficient": 1.1,
             "num_targets": 3
-        },{
-            "on_tick": 680,
-            "pulse": true,
-            "on_pulse_effect_applications": [{
-                "unique_effect": {
-                    "unique_effect_key": "Water Auto Refresh Effect"
-                },
-                "base_duration_ms": 760,
-                "direction": "SELF"
-            }]
         }],
         "cast_condition": {
             "or": [{
@@ -571,7 +537,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water"],
+        "tags": ["Auto Water", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -628,21 +594,6 @@
         "weapon_type": "sword",
         "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
     },{
-        "skill_key": "Charged Strike",
-        "cast_duration": [120, 120],
-        "child_skill_keys": ["Charged Strike Strike"],
-        "skill_ticks": [{
-            "child_skill_keys": ["Charged Strike Strike"],
-            "skills_to_cancel": ["Charged Strike"],
-            "tick_condition": {
-                "not": [{
-                    "unique_effect_on_source": "Call Lightning Aftercast Effect"
-                }]
-            }
-        }],
-        "executable": false,
-        "weapon_type": "sword"
-    },{
         "skill_key": "Charged Strike Strike",
         "cast_duration": [440, 440],
         "attribute_damage_to_skill": "Charged Strike",
@@ -652,15 +603,36 @@
             "damage_coefficient": 0.9,
             "num_targets": 3
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Air Auto Refresh Effect"
+                    "unique_effect_key": "Auto Air Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
+        }],
+        "tags": ["Auto Air", "Auto"],
+        "weapon_type": "sword"
+    },{
+        "skill_key": "Call Lightning Aftercast",
+        "cast_duration": [120,120]
+    },{
+        "skill_key": "Charged Strike",
+        "cast_duration": [2, 2],
+        "source_actor_skill_triggers": [{
+            "skill_key": "Charged Strike Strike",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Charged Strike"
+            }
+        },{
+            "skill_key": "Call Lightning Aftercast",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Charged Strike",
+                "unique_effect_on_source": "Call Lightning Aftercast Effect"
+            }
         }],
         "cast_condition": {
             "or": [{
@@ -669,7 +641,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air"],
+        "executable": false,
         "weapon_type": "sword"
     },{
         "skill_key": "Polaric Slash",
@@ -684,13 +656,12 @@
                 "direction": "SELF"
             }]
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Air Auto Refresh Effect"
+                    "unique_effect_key": "Auto Air Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -701,7 +672,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air"],
+        "tags": ["Auto Air", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -717,12 +688,6 @@
             "on_tick": 640,
             "pulse": true,
             "on_pulse_effect_applications": [{
-                "unique_effect": {
-                    "unique_effect_key": "Air Auto Refresh Effect"
-                },
-                "base_duration_ms": 760,
-                "direction": "SELF"
-            },{
                 "unique_effect": {
                     "unique_effect_key": "Call Lightning Aftercast Effect"
                 },
@@ -752,7 +717,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air"],
+        "tags": ["Auto Air", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -920,13 +885,12 @@
                 "direction": "OUTGOING"
             }]
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Earth Auto Refresh Effect"
+                    "unique_effect_key": "Auto Earth Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -937,7 +901,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth"],
+        "tags": ["Auto Earth", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -955,13 +919,12 @@
                 "direction": "OUTGOING"
             }]
         },{
-            "on_tick": 440,
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Earth Auto Refresh Effect"
+                    "unique_effect_key": "Auto Earth Refresh Effect"
                 },
-                "base_duration_ms": 760,
+                "base_duration_ms": 1000,
                 "direction": "SELF"
             }]
         }],
@@ -972,7 +935,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth"],
+        "tags": ["Auto Earth", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -994,16 +957,6 @@
                 "num_targets": 3,
                 "direction": "OUTGOING"
             }]
-        },{
-            "on_tick": 680,
-            "pulse": true,
-            "on_pulse_effect_applications": [{
-                "unique_effect": {
-                    "unique_effect_key": "Earth Auto Refresh Effect"
-                },
-                "base_duration_ms": 760,
-                "direction": "SELF"
-            }]
         }],
         "cast_condition": {
             "or": [{
@@ -1012,7 +965,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth"],
+        "tags": ["Auto Earth", "Auto"],
         "executable": false,
         "weapon_type": "sword"
     },{

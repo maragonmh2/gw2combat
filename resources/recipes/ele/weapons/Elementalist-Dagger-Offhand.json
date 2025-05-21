@@ -91,20 +91,7 @@
             "on_tick": 480,
             "strike": true,
             "damage_coefficient": 3.5,
-            "num_targets": 5,
-            "tick_condition": {
-                "effect_on_target": "BURNING"
-            }
-        },{
-            "on_tick": 480,
-            "strike": true,
-            "damage_coefficient": 1.75,
-            "num_targets": 5,
-            "tick_condition": {
-                "not": [{
-                    "effect_on_target": "BURNING"
-                }]
-            }
+            "num_targets": 5
         }],
         "cast_condition": {
             "or": [{
