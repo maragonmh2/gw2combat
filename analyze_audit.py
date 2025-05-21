@@ -123,7 +123,7 @@ def main(args):
             return
 
         build_df = pd.DataFrame(build_skills)
-        build_df = build_df[build_df["executable"] == True]
+        build_df = build_df[(build_df["executable"] == True) + (build_df["tags"].apply(lambda x: True if x is not np.nan and "Auto" in x else False))]
         skills_order_df = build_df[["skill_key"]].rename(columns={"skill_key": "skill"}).reset_index(drop=True)
         for key in ["cooldown", "cast_duration"]:
             build_df[key] = build_df[key].str[-1]
