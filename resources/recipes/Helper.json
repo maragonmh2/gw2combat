@@ -7,11 +7,7 @@
             "operation": "set",
             "value": 1,
             "condition": {
-                "threshold": {
-                    "target_health_pct_subject_to_threshold": true,
-                    "threshold_type": "upper_bound_exclusive",
-                    "threshold_value": 1
-                }
+                "only_applies_on_strikes": true
             }
         }]
     }],
