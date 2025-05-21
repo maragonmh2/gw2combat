@@ -119,9 +119,9 @@
                     "unique_effect_on_source": "Light Leap Trigger"
                 }
             },{
-                "skill_key": "Dazing Strikes",
+                "skill_key": "Dazing Strike",
                 "condition": {
-                    "unique_effect_on_source": "Dazing Strikes Trigger"
+                    "unique_effect_on_source": "Dazing Strike Trigger"
                 }
             },{
                 "skill_key": "Weakening Leap",
@@ -1306,7 +1306,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Dazing Strikes Trigger"
+                        "unique_effect_key": "Dazing Strike Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1411,12 +1411,6 @@
                     "not": [{
                         "unique_effect_on_source": "Water Field Effect"
                     }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Leap Finisher Water",
-                "condition": {
-                    "unique_effect_on_source": "Leap Finisher Water Trigger"
                 }
             }]
         },{
@@ -1693,12 +1687,6 @@
                     "not": [{
                         "unique_effect_on_source": "Water Field Effect"
                     }]
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Blast Finisher Water",
-                "condition": {
-                    "unique_effect_on_source": "Blast Finisher Water Trigger"
                 }
             }]
         },{
@@ -2053,12 +2041,6 @@
                 "condition": {
                     "only_applies_on_begun_casting": true,
                     "only_applies_on_begun_casting_skill": "Leap Finisher Prepare"
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Leap Finisher Prepare Water",
-                "condition": {
-                    "unique_effect_on_source": "Leap Finisher Prepare Water Trigger"
                 }
             }]
         },{
@@ -2515,12 +2497,6 @@
                 "condition": {
                     "only_applies_on_begun_casting": true,
                     "only_applies_on_begun_casting_skill": "Blast Finisher Prepare"
-                }
-            }],
-            "skill_triggers": [{
-                "skill_key": "Blast Finisher Prepare Water",
-                "condition": {
-                    "unique_effect_on_source": "Blast Finisher Prepare Water Trigger"
                 }
             }]
         },{
