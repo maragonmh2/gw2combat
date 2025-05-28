@@ -2186,7 +2186,7 @@
                     },{
                         "from": "power",
                         "to": "power",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2200,7 +2200,7 @@
                     },{
                         "from": "precision",
                         "to": "precision",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2214,7 +2214,7 @@
                     },{
                         "from": "ferocity",
                         "to": "ferocity",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2228,7 +2228,7 @@
                     },{
                         "from": "toughness",
                         "to":  "toughness",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2242,7 +2242,7 @@
                     },{
                         "from": "vitality",
                         "to": "vitality",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2256,7 +2256,7 @@
                     },{
                         "from": "concentration",
                         "to": "concentration",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2270,7 +2270,7 @@
                     },{
                         "from": "condition_damage",
                         "to": "condition_damage",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2284,7 +2284,7 @@
                     },{
                         "from": "expertise",
                         "to": "expertise",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2298,7 +2298,7 @@
                     },{
                         "from": "healing_power",
                         "to": "healing_power",
-                        "multiplier": 0.010,
+                        "multiplier": 0.10,
                         "condition": {
                             "not": [{
                                 "unique_effect_on_source": "Empowering Empowerment"
@@ -2571,24 +2571,32 @@
         "icon": "https://render.guildwars2.com/file/1D6590FD63020A49AC1D975478E6AE5E79495447/2491530.png"
     },{
         "skill_key": "Deploy Jade Sphere",
-        "skill_ticks": [{
-            "child_skill_keys": ["Deploy Fire Jade Sphere"],
-            "tick_condition": {
+        "source_actor_skill_triggers": [{
+            "skill_key": "Deploy Fire Jade Sphere",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Deploy Jade Sphere",
                 "unique_effect_on_source": "Fire Attunement Effect"
             }
         },{
-            "child_skill_keys": ["Deploy Water Jade Sphere"],
-            "tick_condition": {
+            "skill_key": "Deploy Water Jade Sphere",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Deploy Jade Sphere",
                 "unique_effect_on_source": "Water Attunement Effect"
             }
         },{
-            "child_skill_keys": ["Deploy Air Jade Sphere"],
-            "tick_condition": {
+            "skill_key": "Deploy Air Jade Sphere",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Deploy Jade Sphere",
                 "unique_effect_on_source": "Air Attunement Effect"
             }
         },{
-            "child_skill_keys": ["Deploy Earth Jade Sphere"],
-            "tick_condition": {
+            "skill_key": "Deploy Earth Jade Sphere",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Deploy Jade Sphere",
                 "unique_effect_on_source": "Earth Attunement Effect"
             }
         }],

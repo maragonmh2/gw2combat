@@ -1284,7 +1284,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Lightning Trigger"
+                        "unique_effect_key": "Leap Finisher Poison Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1317,7 +1317,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Poison Trigger"
+                        "unique_effect_key": "Leap Finisher Dark Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1403,7 +1403,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Dark Trigger"
+                        "unique_effect_key": "Leap Finisher Lightning Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1875,7 +1875,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Prepare Lightning Trigger"
+                        "unique_effect_key": "Leap Finisher Prepare Poison Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -1916,7 +1916,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Prepare Poison Trigger"
+                        "unique_effect_key": "Leap Finisher Prepare Dark Trigger"
                     },
                     "direction": "SELF"
                 }],
@@ -2026,7 +2026,7 @@
                 "pulse": true,
                 "on_pulse_effect_applications": [{
                     "unique_effect": {
-                        "unique_effect_key": "Leap Finisher Prepare Dark Trigger"
+                        "unique_effect_key": "Leap Finisher Prepare Lightning Trigger"
                     },
                     "direction": "SELF"
                 }],

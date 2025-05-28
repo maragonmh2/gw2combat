@@ -261,7 +261,7 @@
             "strike": true,
             "damage_coefficient": 3,
             "num_targets": 5,
-            "child_skill_keys": ["Blast Finisher"]
+            "child_skill_keys": ["Blast Finisher", "CC"]
         }],
         "cast_condition": {
             "or": [{

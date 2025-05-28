@@ -19,8 +19,10 @@
                 "direction": "OUTGOING"
             }]
         }],
-        "attribute_modifiers": [{
-            "attribute": "precision",
+        "attribute_conversions": [{
+            "from": "precision",
+            "to": "precision",
+            "multiplier": 0,
             "addend": 180,
             "condition": {
                 "unique_effect_on_source": "Written in Stone",
@@ -29,7 +31,9 @@
                 }]
             }
         },{
-            "attribute": "precision",
+            "from": "precision",
+            "to": "precision",
+            "multiplier": 0,
             "addend": 180,
             "condition": {
                 "depends_on_skill_off_cooldown": "Signet of Fire"

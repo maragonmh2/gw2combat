@@ -21,8 +21,10 @@
                 "direction": "OUTGOING"
             }]
         }],
-        "attribute_modifiers": [{
-            "attribute": "toughness",
+        "attribute_conversions": [{
+            "from": "toughness",
+            "to": "toughness",
+            "multiplier": 0,
             "addend": 180,
             "condition": {
                 "unique_effect_on_source": "Written in Stone",

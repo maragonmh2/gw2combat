@@ -5,8 +5,46 @@
         "type": "fire_elemental"
     }],
     "attributes": [["power", 1560]],
+    "permanent_unique_effects": [{
+        "unique_effect_key": "Logic",
+        "skill_triggers": [{
+            "skill_key": "Fireball",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Elemental Idle",
+                "and": [{
+                    "not": [{
+                        "depends_on_skill_off_cooldown": "Flame Burst"
+                    }]
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Flame Barrage Effect"
+                    }]
+                }]
+            }
+        },{
+            "skill_key": "Flame Burst",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Elemental Idle",
+                "depends_on_skill_off_cooldown": "Flame Burst",
+                "not": [{
+                    "unique_effect_on_source": "Flame Barrage Effect"
+                }]
+            }
+        },{
+            "skill_key": "Elemental Idle",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Attack",
+                "not": [{
+                    "unique_effect_on_source": "Flame Barrage Effect"
+                }]
+            }
+        }]
+    }],
     "skills": [{
-        "skill_key": "Idle",
+        "skill_key": "Lesser Idle",
         "INFO": "This is rng and varies between ~750 and ~1500ms",
         "cast_duration": [1200, 1200]
     },{
@@ -37,15 +75,21 @@
         "weapon_type": "lesser_fire_elemental",
         "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
     },{
+        "skill_key": "Elemental Idle",
+        "INFO": "This is rng and varies between ~750 and ~1500ms",
+        "cast_duration": [750, 750]
+    },{
         "skill_key": "Fireball",
         "cast_duration": [2000, 1340],
         "damage_coefficient": 0.37,
         "strike_on_tick_list": [[680],[1080]],
+        "tags": ["Elemental Attack"],
         "weapon_type": "fire_elemental",
         "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
     },{
         "skill_key": "Flame Burst",
         "cast_duration": [3680, 2440],
+        "cooldown": [10000, 8000],
         "damage_coefficient": 0.55,
         "strike_on_tick_list": [[2520],[1680]],
         "on_strike_effect_applications": [{
@@ -61,6 +105,7 @@
             "num_targets": 5,
             "direction": "TEAM"
         }],
+        "tags": ["Elemental Attack"],
         "weapon_type": "fire_elemental",
         "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
     },{
@@ -78,6 +123,13 @@
                 "num_targets": 5,
                 "direction": "TEAM"
         }],
+        "skill_triggers": [{
+            "skill_key": "Flame Barrage Projectile",
+            "condition": {
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill": "Flame Barrage"
+            }
+        }],
         "weapon_type": "empty_handed",
         "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
     },{
@@ -86,34 +138,23 @@
         "cast_duration": [3040, 2080],
         "damage_coefficient": 1.8,
         "strike_on_tick_list": [[1520],[1000]],
+        "child_skill_keys": ["Elemental Idle"],
         "skills_to_cancel": ["Flame Burst", "Fireball", "Idle"],
-        "child_skill_keys": [
-            "Idle",
-            "Flame Burst",
-            "Idle",
-            "Fireball",
-            "Idle",
-            "Fireball",
-            "Idle",
-            "Fireball",
-            "Idle",
-            "Fireball",
-            "Idle",
-            "Fireball",
-            "Idle",
-            "Fireball"
-        ],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Flame Barrage Effect"
+                },
+                "base_duration_ms": 2500,
+                "direction": "SELF"
+            }]
+        }],
         "skill_triggers": [{
             "skill_key": "Flame Barrage",
             "condition": {
                 "depends_on_skill_off_cooldown": "Flame Barrage",
                 "unique_effect_on_source": "Flame Barrage Trigger"
-            }
-        },{
-            "skill_key": "Flame Barrage Projectile",
-            "condition": {
-                "only_applies_on_begun_casting": true,
-                "only_applies_on_begun_casting_skill": "Flame Barrage"
             }
         }],
         "weapon_type": "fire_elemental",
@@ -122,9 +163,9 @@
         "skill_key": "Lesser Fire Elemental Logic",
         "child_skill_keys": [
             "Lesser Flame Burst",
-            "Idle",
+            "Lesser Idle",
             "Lesser Fireball",
-            "Idle",
+            "Lesser Idle",
             "Lesser Fire Elemental Logic"
         ],
         "skill_triggers": [{
