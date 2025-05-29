@@ -130,7 +130,7 @@
                 "only_applies_on_begun_casting_skill": "Flame Barrage"
             }
         }],
-        "weapon_type": "empty_handed",
+        "weapon_type": "fire_elemental",
         "icon": "https://render.guildwars2.com/file/64A5054179704B60614F90964DE1FB3D39AEC972/867446.png"
     },{
         "skill_key": "Flame Barrage",
