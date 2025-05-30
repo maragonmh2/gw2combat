@@ -9,7 +9,8 @@
             "condition": {
                 "only_applies_on_strikes": true
             }
-        }]
+        }],
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
     }],
     "permanent_effects": [],
     "permanent_unique_effects": [],

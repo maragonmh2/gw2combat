@@ -12,7 +12,7 @@
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Relic of Thorns",
+                    "unique_effect_key": "Relic of Thorns Effect",
                     "refreshes_other_stacks": true,
                     "attribute_modifiers": [{
                         "attribute": "condition_damage",

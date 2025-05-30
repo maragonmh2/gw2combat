@@ -20,7 +20,7 @@
             "pulse": true,
             "on_pulse_effect_applications": [{
                 "unique_effect": {
-                    "unique_effect_key": "Relic of Fireworks",
+                    "unique_effect_key": "Relic of Fireworks Effect",
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
                         "attribute": "outgoing_strike_damage_multiplier",

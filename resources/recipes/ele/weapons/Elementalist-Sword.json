@@ -30,7 +30,8 @@
                     "counter_value_subject_to_threshold": "Auto Fire Counter"
                 }
             }
-        }]
+        }],
+        "icon": "https://render.guildwars2.com/file/365C7D9672533C765C4DC819FC263D4C38AE0B1E/1770363.png"
     },{
         "counter_key": "Auto Water Counter",
         "initial_value": 0,
@@ -62,7 +63,8 @@
                     "counter_value_subject_to_threshold": "Auto Water Counter"
                 }
             }
-        }]
+        }],
+        "icon": "https://render.guildwars2.com/file/99AE33BF5F03749CA414B033FC3D6762C3A4FE50/1770366.png"
     },{
         "counter_key": "Auto Air Counter",
         "initial_value": 0,
@@ -94,7 +96,8 @@
                     "counter_value_subject_to_threshold": "Auto Air Counter"
                 }
             }
-        }]
+        }],
+        "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
     },{
         "counter_key": "Auto Earth Counter",
         "initial_value": 0,
@@ -126,7 +129,8 @@
                     "counter_value_subject_to_threshold": "Auto Earth Counter"
                 }
             }
-        }]
+        }],
+        "icon": "https://render.guildwars2.com/file/03586ED169D344CFAA513763B616C152F839C153/1770360.png"
     }],
     "permanent_effects": [],
     "permanent_unique_effects": [],

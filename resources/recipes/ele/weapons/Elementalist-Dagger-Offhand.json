@@ -129,6 +129,7 @@
         }],
         "skill_ticks": [{
             "pulse": true,
+            "child_skill_keys": ["Aura"],
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Frost Aura Effect",
@@ -153,7 +154,8 @@
             }]
         },
         "executable": true,
-        "weapon_type": "dagger"
+        "weapon_type": "dagger",
+        "icon": "https://render.guildwars2.com/file/0D5599084DE820990E9F6D5A6853900553B205BC/103077.png"
     },{
         "skill_key": "Transmute Frost",
         "cast_duration": [360,360],

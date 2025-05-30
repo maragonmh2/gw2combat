@@ -23,7 +23,7 @@
             "damage": 4000000
         }, {
             "type": "TIME",
-            "time": 110000
+            "time": 120000
         }, {
             "type": "ROTATION",
             "actor": "player"
