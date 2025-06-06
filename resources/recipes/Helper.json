@@ -24,5 +24,8 @@
         "cast_duration": [1000, 1000],
         "executable": true,
         "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png"
+    },{
+        "skill_key": "Stop",
+        "cast_duration": [999999, 999999]
     }]
 }

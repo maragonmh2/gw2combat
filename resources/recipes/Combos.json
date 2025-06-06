@@ -1401,6 +1401,25 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Water Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Smoke Field Effect"
+                        }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Relic of the Steamshrieker"
+                        }]
+                    }]
+                }
             }],
             "skill_triggers": [{
                 "skill_key": "Leap Finisher Smoke",
@@ -1430,14 +1449,48 @@
                     "direction": "SELF"
                 }],
                 "tick_condition": {
+                    "unique_effect_on_source": "Relic of the Steamshrieker",
                     "not": [{
                         "unique_effect_on_source": "Water Field Effect"
+                    }]
+                }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Leap Finisher Water",
+                "condition": {
+                    "unique_effect_on_source": "Leap Finisher Water Trigger",
+                    "not": [{
+                        "unique_effect_on_source": "Relic of the Steamshrieker"
                     }]
                 }
             }]
         },{
             "skill_key": "Leap Finisher",
-            "child_skill_keys": ["Leap Finisher Water"],
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Water Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Relic of the Steamshrieker"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Lightning Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Relic of the Steamshrieker"
+                    }]
+                }
+            }],
             "tags": ["Finisher"]
         },{
             "skill_key": "Blast Finisher Dark",
@@ -2016,6 +2069,25 @@
                 "tick_condition": {
                     "unique_effect_on_source": "Smoke Field Effect"
                 }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Prepare Water Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "and": [{
+                        "not": [{
+                            "unique_effect_on_source": "Smoke Field Effect"
+                        }]
+                    },{
+                        "not": [{
+                            "unique_effect_on_source": "Relic of the Steamshrieker"
+                        }]
+                    }]
+                }
             }],
             "effect_removals": [{
                 "unique_effect": "Leap Finisher Prepare Smoke Marker",
@@ -2053,6 +2125,7 @@
                     "direction": "SELF"
                 }],
                 "tick_condition": {
+                    "unique_effect_on_source": "Relic of the Steamshrieker",
                     "not": [{
                         "unique_effect_on_source": "Water Field Effect"
                     }]
@@ -2064,10 +2137,43 @@
                     "only_applies_on_begun_casting": true,
                     "only_applies_on_begun_casting_skill": "Leap Finisher Prepare"
                 }
+            }],
+            "skill_triggers": [{
+                "skill_key": "Leap Finisher Prepare Water",
+                "condition": {
+                    "unique_effect_on_source": "Leap Finisher Prepare Water Trigger",
+                    "not": [{
+                        "unique_effect_on_source": "Relic of the Steamshrieker"
+                    }]
+                }
             }]
         },{
             "skill_key": "Leap Finisher Prepare",
-            "child_skill_keys": ["Leap Finisher Prepare Water"]
+            "skill_ticks": [{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Prepare Water Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "unique_effect_on_source": "Relic of the Steamshrieker"
+                }
+            },{
+                "pulse": true,
+                "on_pulse_effect_applications": [{
+                    "unique_effect": {
+                        "unique_effect_key": "Leap Finisher Prepare Lightning Trigger"
+                    },
+                    "direction": "SELF"
+                }],
+                "tick_condition": {
+                    "not": [{
+                        "unique_effect_on_source": "Relic of the Steamshrieker"
+                    }]
+                }
+            }]
         },{
             "skill_key": "Leap Finisher Execute",
             "skill_ticks": [{

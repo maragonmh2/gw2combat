@@ -79,7 +79,7 @@
                 "only_applies_on_finished_casting_skill": "Fire Grab"
             }
         },{
-            "skill_key": "Ring Grab",
+            "skill_key": "Fire Grab",
             "operation": "reset",
             "condition": {
                 "only_applies_on_finished_casting": true,

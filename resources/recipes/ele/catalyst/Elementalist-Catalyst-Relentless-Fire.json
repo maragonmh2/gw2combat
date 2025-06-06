@@ -18,6 +18,7 @@
                 {
                     "unique_effect": {
                         "unique_effect_key": "Relentless Fire Effect",
+                        "stacking_type": "duration",
                         "attribute_modifiers": [{
                             "attribute": "outgoing_strike_damage_multiplier_add_group",
                             "addend": 0.2
@@ -31,6 +32,7 @@
                 },{
                     "unique_effect": {
                         "unique_effect_key": "Relentless Fire Effect",
+                        "stacking_type": "duration",
                         "attribute_modifiers": [{
                             "attribute": "outgoing_strike_damage_multiplier_add_group",
                             "addend": 0.2

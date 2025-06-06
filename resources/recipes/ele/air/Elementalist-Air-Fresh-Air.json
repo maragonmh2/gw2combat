@@ -44,7 +44,7 @@
             "on_pulse_effect_applications": [{
                 "unique_effect": {
                     "unique_effect_key": "Fresh Air Effect",
-                    "stacking_type": "duration",
+                    "stacking_type": "replace",
                     "attribute_conversions": [{
                         "from": "ferocity",
                         "to": "ferocity",
