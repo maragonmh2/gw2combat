@@ -199,10 +199,7 @@ bool continue_combat_loop(registry_t& registry, const configuration::encounter_t
                     !registry.any_of<component::rotation_component>(entity)) {
                     continue;
                 }
-                if (registry.any_of<component::skills_ticks_tracker_component,
-                                    component::skills_actions_component,
-                                    component::finished_skills_actions_component,
-                                    component::destroy_skills_ticks_tracker_component>(entity)) {
+                if (registry.any_of<component::animation_component>(entity)) {
                     everyone_out_of_rotation = false;
                     break;
                 }
