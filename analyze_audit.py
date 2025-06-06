@@ -102,6 +102,7 @@ def main(args):
         f"Remaining Golem HP: {int(min(golem_hp_updates.values))}")
     print(f"Combat Time: {combat_time_ms / 1000.0}s")
     print(f"AFK Time: {afk_time_ms / 1000.0}s")
+    print(f"Total Damage: {total_damage_inflicted}")
     if combat_time_ms != 0:
         print(f"DPS: {(total_damage_inflicted * 1000.0 / combat_time_ms):.2f}")
 
