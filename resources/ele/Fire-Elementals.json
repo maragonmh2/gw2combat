@@ -7,7 +7,7 @@
     "attributes": [["power", 1560]],
     "permanent_unique_effects": [{
         "unique_effect_key": "Logic",
-        "skill_triggers": [{
+        "source_actor_skill_triggers": [{
             "skill_key": "Fireball",
             "condition": {
                 "only_applies_on_finished_casting": true,
@@ -16,10 +16,6 @@
                     "not": [{
                         "depends_on_skill_off_cooldown": "Flame Burst"
                     }]
-                },{
-                    "not": [{
-                        "unique_effect_on_source": "Flame Barrage Effect"
-                    }]
                 }]
             }
         },{
@@ -27,19 +23,13 @@
             "condition": {
                 "only_applies_on_finished_casting": true,
                 "only_applies_on_finished_casting_skill": "Elemental Idle",
-                "depends_on_skill_off_cooldown": "Flame Burst",
-                "not": [{
-                    "unique_effect_on_source": "Flame Barrage Effect"
-                }]
+                "depends_on_skill_off_cooldown": "Flame Burst"
             }
         },{
             "skill_key": "Elemental Idle",
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill_with_tag": "Elemental Attack",
-                "not": [{
-                    "unique_effect_on_source": "Flame Barrage Effect"
-                }]
+                "only_applies_on_finished_casting_skill_with_tag": "Elemental Attack"
             }
         }]
     }],
