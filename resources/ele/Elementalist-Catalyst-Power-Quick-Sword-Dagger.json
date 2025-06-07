@@ -1,6 +1,7 @@
 {
     "base_class": "Elementalist",
     "profession": "Catalyst",
+    "public": true,
     "weapons": [
         {
             "position": "main_hand",
@@ -75,7 +76,7 @@
         "Elementalist-Catalyst-Sphere-Specialist (Maragon.5298)",
         "Elementalist-Catalyst-Relentless-Fire (Maragon.5298)",
         "Elementalist-Catalyst-Shattering-Ice (Maragon.5298)",
-        "Elementalist-Glyph-of-Elementals (Maragon.5298)",
+        "Elementalist-Catalyst-Elemental-Celerity (Maragon.5298)",
         "Elementalist-Glyph-of-Storms (Maragon.5298)",
         "Elementalist-Sword (Maragon.5298)",
         "Elementalist-Dagger-Offhand (Maragon.5298)"

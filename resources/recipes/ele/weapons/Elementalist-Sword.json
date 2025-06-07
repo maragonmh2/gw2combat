@@ -617,7 +617,8 @@
             }]
         }],
         "tags": ["Auto Air", "Auto"],
-        "weapon_type": "sword"
+        "weapon_type": "sword",
+        "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
     },{
         "skill_key": "Call Lightning Aftercast",
         "cast_duration": [120,120]
