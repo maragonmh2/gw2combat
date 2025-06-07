@@ -190,7 +190,8 @@ void enqueue_child_skill(const actor::skill_t& skill, entity_t parent_actor, reg
 void enqueue_source_actor_child_skill(const actor::skill_t& skill,
                                       entity_t source_actor,
                                       registry_t& registry) {
-    auto& rotation = registry.get<component::rotation_component>(source_actor);
+    auto& rotation = registry.get_or_emplace<component::rotation_component>(
+        source_actor, component::rotation_component{{}, 0, 0, false, {}});
     rotation.queued_rotation.emplace_back(actor::skill_cast_t{skill, 0});
 }
 
@@ -214,8 +215,6 @@ entity_t add_effect_to_actor(actor::effect_t effect,
 
             auto& duration_component = registry.get<component::duration_component>(effect_entity);
             if (stacking_type == actor::stacking_t::STACKING_DURATION) {
-                duration_component.duration = std::min(duration_component.duration + duration,
-                                                       utils::get_max_effect_duration(effect));
                 int remaining_duration = duration_component.duration - duration_component.progress;
                 duration_component.progress = 0;
                 duration_component.duration =

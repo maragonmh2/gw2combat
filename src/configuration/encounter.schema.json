@@ -1189,7 +1189,8 @@
                     "enum": [
                         "TIME",
                         "ROTATION",
-                        "DAMAGE"
+                        "DAMAGE",
+                        "ACTIVE_SKILLS"
                     ]
                 },
                 "time": {
@@ -1214,6 +1215,9 @@
                 },
                 {
                     "required": ["type", "actor", "damage"]
+                },
+                {
+                    "required": ["type"]
                 }
             ]
         }
