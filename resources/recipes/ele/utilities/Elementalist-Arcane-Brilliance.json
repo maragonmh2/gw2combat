@@ -11,7 +11,7 @@
             "strike": true,
             "damage_coefficient": 0.5
         }],
-        "tags": ["Skill"],
+        "tags": ["Skill", "Auto Reset"],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

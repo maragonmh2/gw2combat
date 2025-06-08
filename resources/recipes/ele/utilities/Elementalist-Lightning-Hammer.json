@@ -1,5 +1,26 @@
 {
-    "counters": [],
+    "counters": [{
+        "counter_key": "Auto Lightning Hammer Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Auto Lightning Hammer Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Lightning Hammer"
+            }
+        },{
+            "counter_key": "Auto Lightning Hammer Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Reset"
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/C0F04BDA46A916545ACEB1C4214C4F214BE96810/103391.png"
+    }],
     "permanent_effects": [],
     "permanent_unique_effects": [],
     "unique_effects": {
@@ -45,7 +66,7 @@
             "on_tick": 560,
             "child_skill_keys": ["Apply Conjure Lightning Attributes"]
         }],
-        "tags": ["Skill"],
+        "tags": ["Skill", "Auto Reset"],
         "executable": true
     },{
         "skill_key": "Drop Lightning Hammer",
@@ -88,11 +109,14 @@
             "damage_coefficient": 1.0,
             "num_targets": 3
         }],
-        "tags": ["Skill", "Lightning Hammer"],
+        "tags": ["Auto Lightning Hammer", "Skill", "Lightning Hammer"],
         "cast_condition": {
-            "or": [{
-                "unique_effect_on_source": "Conjure Lightning Attributes Effect"
-            }]
+            "unique_effect_on_source": "Conjure Lightning Attributes Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Auto Lightning Hammer Counter",
+                "threshold_type": "equal",
+                "threshold_value": 0
+            }
         },
         "executable": true,
         "weapon_type": "kit_conjure"
@@ -104,9 +128,14 @@
             "damage_coefficient": 1.0,
             "num_targets": 3
         }],
-        "tags": ["Skill", "Lightning Hammer"],
+        "tags": ["Auto Lightning Hammer", "Skill", "Lightning Hammer"],
         "cast_condition": {
-            "unique_effect_on_source": "Conjure Lightning Attributes Effect"
+            "unique_effect_on_source": "Conjure Lightning Attributes Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Auto Lightning Hammer Counter",
+                "threshold_type": "equal",
+                "threshold_value": 1
+            }
         },
         "executable": true,
         "weapon_type": "kit_conjure"
@@ -125,9 +154,14 @@
                 "direction": "OUTGOING"
             }]
         }],
-        "tags": ["Skill", "Lightning Hammer"],
+        "tags": ["Auto Lightning Hammer", "Skill", "Lightning Hammer", "Auto Reset"],
         "cast_condition": {
-            "unique_effect_on_source": "Conjure Lightning Attributes Effect"
+            "unique_effect_on_source": "Conjure Lightning Attributes Effect",
+            "threshold": {
+                "counter_value_subject_to_threshold": "Auto Lightning Hammer Counter",
+                "threshold_type": "equal",
+                "threshold_value": 2
+            }
         },
         "executable": true,
         "weapon_type": "kit_conjure"
@@ -191,7 +225,7 @@
             "damage_coefficient": 0.33,
             "num_targets": 5
         }],
-        "tags": ["Skill", "Lightning Hammer"],
+        "tags": ["Skill", "Lightning Hammer", "Auto Reset"],
         "cast_condition": {
             "unique_effect_on_source": "Conjure Lightning Attributes Effect"
         },
@@ -257,7 +291,7 @@
             "damage_coefficient": 0.33,
             "num_targets": 5
         }],
-        "tags": ["Skill", "Lightning Hammer"],
+        "tags": ["Skill", "Lightning Hammer", "Auto Reset"],
         "cast_condition": {
             "unique_effect_on_source": "Conjure Lightning Attributes Effect"
         },

@@ -35,6 +35,7 @@
                 "direction": "SELF"
             }]
         }],
+        "tags": ["Skill"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },

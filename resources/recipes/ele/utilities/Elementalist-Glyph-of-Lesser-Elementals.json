@@ -22,6 +22,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
+        "tags": ["Skill", "Auto Reset"],
         "executable": true,
         "icon": "https://render.guildwars2.com/file/0DB6250806EEE1F020543290797C4AA36A90EC07/867435.png"
     },{

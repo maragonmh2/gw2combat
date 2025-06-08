@@ -19,7 +19,7 @@
                 }
             ]
         }],
-        "tags": ["Skill"],
+        "tags": ["Skill", "Auto Reset"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
