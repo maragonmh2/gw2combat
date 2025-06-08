@@ -99,6 +99,9 @@
                 "only_applies_on_begun_casting_skill": "Lightning Hammer Pickup"
             }
         }],
+        "cast_condition": {
+            "unique_effect_on_source": "Lightning Hammer on Ground Effect"
+        },
         "executable": true,
         "icon": "https://render.guildwars2.com/file/C3DA6AC980062B0A0EEA14CE51393748CFAE01CA/103369.png"
     },{
