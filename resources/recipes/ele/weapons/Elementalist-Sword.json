@@ -15,20 +15,8 @@
             "operation": "set",
             "value": 0,
             "condition": {
-                "not": [{
-                    "unique_effect_on_source": "Auto Fire Refresh Effect"
-                }]
-            }
-        },{
-            "counter_key": "Auto Fire Counter",
-            "operation": "set",
-            "value": 0,
-            "condition": {
-                "threshold": {
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 3,
-                    "counter_value_subject_to_threshold": "Auto Fire Counter"
-                }
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Reset"
             }
         }],
         "icon": "https://render.guildwars2.com/file/365C7D9672533C765C4DC819FC263D4C38AE0B1E/1770363.png"
@@ -48,20 +36,8 @@
             "operation": "set",
             "value": 0,
             "condition": {
-                "not": [{
-                    "unique_effect_on_source": "Auto Water Refresh Effect"
-                }]
-            }
-        },{
-            "counter_key": "Auto Water Counter",
-            "operation": "set",
-            "value": 0,
-            "condition": {
-                "threshold": {
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 3,
-                    "counter_value_subject_to_threshold": "Auto Water Counter"
-                }
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Reset"
             }
         }],
         "icon": "https://render.guildwars2.com/file/99AE33BF5F03749CA414B033FC3D6762C3A4FE50/1770366.png"
@@ -81,20 +57,8 @@
             "operation": "set",
             "value": 0,
             "condition": {
-                "not": [{
-                    "unique_effect_on_source": "Auto Air Refresh Effect"
-                }]
-            }
-        },{
-            "counter_key": "Auto Air Counter",
-            "operation": "set",
-            "value": 0,
-            "condition": {
-                "threshold": {
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 3,
-                    "counter_value_subject_to_threshold": "Auto Air Counter"
-                }
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Reset"
             }
         }],
         "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
@@ -114,20 +78,8 @@
             "operation": "set",
             "value": 0,
             "condition": {
-                "not": [{
-                    "unique_effect_on_source": "Auto Earth Refresh Effect"
-                }]
-            }
-        },{
-            "counter_key": "Auto Earth Counter",
-            "operation": "set",
-            "value": 0,
-            "condition": {
-                "threshold": {
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 3,
-                    "counter_value_subject_to_threshold": "Auto Earth Counter"
-                }
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Auto Reset"
             }
         }],
         "icon": "https://render.guildwars2.com/file/03586ED169D344CFAA513763B616C152F839C153/1770360.png"
@@ -135,59 +87,6 @@
     "permanent_effects": [],
     "permanent_unique_effects": [],
     "skills": [{
-        "skill_key": "Auto Fire",
-        "source_actor_skill_triggers": [{
-            "skill_key": "Fire Strike",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Fire",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Fire Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 0
-                }
-            }
-        },{
-            "skill_key": "Fire Swipe",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Fire",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Fire Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 1
-                }
-            }
-        },{
-            "skill_key": "Searing Slash",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Fire",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Fire Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 2
-                }
-            }
-        }],
-        "cast_condition": {
-            "or": [{
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Fire Counter",
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 1
-                }
-            },{
-                "unique_effect_on_source": "Fire Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Fire Attunement Effect"
-            }]
-        },
-        "instant_cast_only_when_not_in_animation": true,
-        "executable": true,
-        "weapon_type": "sword",
-        "icon": "https://render.guildwars2.com/file/365C7D9672533C765C4DC819FC263D4C38AE0B1E/1770363.png"
-    },{
         "skill_key": "Fire Strike",
         "cast_duration": [440, 440],
         "skill_ticks": [{
@@ -213,7 +112,7 @@
             }]
         },
         "tags": ["Auto Fire", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Fire Swipe",
@@ -241,7 +140,7 @@
             }]
         },
         "tags": ["Auto Fire", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Searing Slash",
@@ -265,8 +164,8 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": ["Auto Fire", "Weapon Skill"],
-        "executable": false,
+        "tags": ["Auto Fire", "Weapon Skill", "Auto Reset"],
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Flame Uprising",
@@ -358,7 +257,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -401,62 +300,9 @@
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
-    },{
-        "skill_key": "Auto Water",
-        "source_actor_skill_triggers": [{
-            "skill_key": "Seiche",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Water",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Water Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 0
-                }
-            }
-        },{
-            "skill_key": "Clapotis",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Water",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Water Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 1
-                }
-            }
-        },{
-            "skill_key": "Breaking Wave",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Water",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Water Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 2
-                }
-            }
-        }],
-        "cast_condition": {
-            "or": [{
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Water Counter",
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 1
-                }
-            },{
-                "unique_effect_on_source": "Water Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Water Attunement Effect"
-            }]
-        },
-        "instant_cast_only_when_not_in_animation": true,
-        "executable": true,
-        "weapon_type": "sword",
-        "icon": "https://render.guildwars2.com/file/99AE33BF5F03749CA414B033FC3D6762C3A4FE50/1770366.png"
     },{
         "skill_key": "Seiche",
         "cast_duration": [440, 440],
@@ -483,7 +329,7 @@
             }]
         },
         "tags": ["Auto Water", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Clapotis",
@@ -511,7 +357,7 @@
             }]
         },
         "tags": ["Auto Water", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Breaking Wave",
@@ -529,62 +375,9 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water", "Weapon Skill"],
-        "executable": false,
-        "weapon_type": "sword"
-    },{
-        "skill_key": "Auto Air",
-        "source_actor_skill_triggers": [{
-            "skill_key": "Charged Strike",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Air",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Air Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 0
-                }
-            }
-        },{
-            "skill_key": "Polaric Slash",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Air",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Air Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 1
-                }
-            }
-        },{
-            "skill_key": "Call Lightning",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Air",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Air Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 2
-                }
-            }
-        }],
-        "cast_condition": {
-            "or": [{
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Air Counter",
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 1
-                }
-            },{
-                "unique_effect_on_source": "Air Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Air Attunement Effect"
-            }]
-        },
-        "instant_cast_only_when_not_in_animation": true,
+        "tags": ["Auto Water", "Weapon Skill", "Auto Reset"],
         "executable": true,
-        "weapon_type": "sword",
-        "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
+        "weapon_type": "sword"
     },{
         "skill_key": "Charged Strike Strike",
         "cast_duration": [440, 440],
@@ -634,7 +427,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Polaric Slash",
@@ -666,7 +459,7 @@
             }]
         },
         "tags": ["Auto Air", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Call Lightning",
@@ -710,8 +503,8 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air", "Weapon Skill"],
-        "executable": false,
+        "tags": ["Auto Air", "Weapon Skill", "Auto Reset"],
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Polaric Leap",
@@ -761,7 +554,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -809,62 +602,9 @@
         "cast_condition": {
             "unique_effect_on_source": "Air Attunement Effect"
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
-    },{
-        "skill_key": "Auto Earth",
-        "source_actor_skill_triggers": [{
-            "skill_key": "Crystal Slash",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Earth",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Earth Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 0
-                }
-            }
-        },{
-            "skill_key": "Crystalline Strike",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Earth",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Earth Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 1
-                }
-            }
-        },{
-            "skill_key": "Crystalline Sunder",
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Auto Earth",
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Earth Counter",
-                    "threshold_type": "equal",
-                    "threshold_value": 2
-                }
-            }
-        }],
-        "cast_condition": {
-            "or": [{
-                "threshold": {
-                    "counter_value_subject_to_threshold": "Auto Earth Counter",
-                    "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 1
-                }
-            },{
-                "unique_effect_on_source": "Earth Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Earth Attunement Effect"
-            }]
-        },
-        "instant_cast_only_when_not_in_animation": true,
-        "executable": true,
-        "weapon_type": "sword",
-        "icon": "https://render.guildwars2.com/file/03586ED169D344CFAA513763B616C152F839C153/1770360.png"
     },{
         "skill_key": "Crystal Slash",
         "cast_duration": [440, 440],
@@ -897,7 +637,7 @@
             }]
         },
         "tags": ["Auto Earth", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Crystalline Strike",
@@ -931,7 +671,7 @@
             }]
         },
         "tags": ["Auto Earth", "Weapon Skill"],
-        "executable": false,
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Crystalline Sunder",
@@ -960,8 +700,8 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth", "Weapon Skill"],
-        "executable": false,
+        "tags": ["Auto Earth", "Weapon Skill", "Auto Reset"],
+        "executable": true,
         "weapon_type": "sword"
     },{
         "skill_key": "Earthen Vortex",
@@ -1011,7 +751,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -1056,7 +796,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Weapon Skill"],
+        "tags": ["Weapon Skill", "Auto Reset"],
         "weapon_type": "sword",
         "executable": true
     }]
