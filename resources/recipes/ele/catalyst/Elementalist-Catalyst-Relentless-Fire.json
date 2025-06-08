@@ -49,10 +49,7 @@
                 }
             ]
         }],
-        "tags": [
-            "Etching Charges",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Skill"],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

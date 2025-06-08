@@ -61,7 +61,7 @@
                 "unique_effect_on_source": "Secondary Fire Attunement Effect"
             }]
         },
-        "tags": ["Pyromancers Puissance"],
+        "tags": ["Skill"],
         "executable": true,
         "weapon_type": "dagger",
         "icon": "https://render.guildwars2.com/file/CD08FDC23B56EBB19C90B909C65D9EE4D9FFF8C8/103183.png"
@@ -100,10 +100,7 @@
                 "unique_effect_on_source": "Secondary Fire Attunement Effect"
             }]
         },
-        "tags": [
-            "Pyromancers Puissance",
-            "Relic of Fireworks"
-        ],
+        "tags": ["Skill"],
         "executable": true,
         "weapon_type": "dagger"
     },{

@@ -9,7 +9,21 @@
             "value": 1,
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "only_applies_on_finished_casting_skill_with_tag": "Skill",
+                "unique_effect_on_source": "Etching Volcano Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Volcano Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Volcano Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Weapon Skill",
                 "unique_effect_on_source": "Etching Volcano Effect",
                 "threshold": {
                     "counter_value_subject_to_threshold": "Volcano Charges",
@@ -32,14 +46,27 @@
         "counter_key": "Jökulhlaup Charges",
         "initial_value": 0,
         "max_value": 3,
-        "counter_modifiers": [
-        {
+        "counter_modifiers": [{
             "counter_key": "Jökulhlaup Charges",
             "operation": "add",
             "value": 1,
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "only_applies_on_finished_casting_skill_with_tag": "Skill",
+                "unique_effect_on_source": "Etching Jökulhlaup Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Jökulhlaup Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Jökulhlaup Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Weapon Skill",
                 "unique_effect_on_source": "Etching Jökulhlaup Effect",
                 "threshold": {
                     "counter_value_subject_to_threshold": "Jökulhlaup Charges",
@@ -68,7 +95,21 @@
             "value": 1,
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "only_applies_on_finished_casting_skill_with_tag": "Skill",
+                "unique_effect_on_source": "Etching Derecho Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Derecho Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Derecho Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Weapon Skill",
                 "unique_effect_on_source": "Etching Derecho Effect",
                 "threshold": {
                     "counter_value_subject_to_threshold": "Derecho Charges",
@@ -97,7 +138,21 @@
             "value": 1,
             "condition": {
                 "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill_with_tag": "Etching Charges",
+                "only_applies_on_finished_casting_skill_with_tag": "Skill",
+                "unique_effect_on_source": "Etching Haboob Effect",
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Haboob Charges",
+                    "threshold_type": "upper_bound_exclusive",
+                    "threshold_value": 3
+                }
+            }
+        },{
+            "counter_key": "Haboob Charges",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Weapon Skill",
                 "unique_effect_on_source": "Etching Haboob Effect",
                 "threshold": {
                     "counter_value_subject_to_threshold": "Haboob Charges",
@@ -164,11 +219,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": [
-            "Etching Charges",
-            "Harden",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Harden"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/74B333AD21E95C9D63AE0128F2DDA7CBEE75A841/3379079.png"
@@ -259,13 +310,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Etching Charges", 
-            "Seethe", 
-            "Ripple",
-            "Harden",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Fire Attunement Effect"
@@ -359,11 +404,7 @@
                 "only_applies_on_finished_casting_skill_with_tag": "Seethe"
             }
         }],
-        "tags": [
-            "Etching Charges",
-            "Ripple",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Ripple"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
@@ -447,14 +488,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Etching Charges",
-            "Seethe",
-            "Ripple",
-            "Harden",
-            "Relic of Fireworks",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden", "Relic of Fireworks"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Fire Attunement Effect"
@@ -556,10 +590,7 @@
                     "only_applies_on_begun_casting_skill": "Volcano"
                 }
         }],
-        "tags": [
-            "Ripple",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Ripple"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Fire Attunement Effect"
@@ -586,11 +617,7 @@
                 }]
             }
         }],
-        "tags": [
-            "Seethe",
-            "Ripple",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple"],
         "cast_condition": {
             "and": [{
                 "or": [{
@@ -754,7 +781,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Etching Charges", "Harden"],
+        "tags": ["Weapon Skill", "Harden"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/B756C80D01D7EAB61B7EBA231B029C7E9DBCAF54/3379080.png"
@@ -881,12 +908,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Seethe",
-            "Ripple",
-            "Harden",
-            "Etching Charges"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Water Attunement Effect"
@@ -977,9 +999,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Water Attunement Effect"
         },
-        "tags": [
-            "Etching Charges"
-        ],
+        "tags": ["Weapon Skill"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/D246C6CE0468F2484643935675010B0A963EC9D8/3379088.png"
@@ -1070,13 +1090,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Etching Charges",
-            "Seethe",
-            "Ripple", 
-            "Harden",
-            "Relic of Fireworks"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden", "Relic of Fireworks"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Water Attunement Effect"
@@ -1178,7 +1192,7 @@
                 "unique_effect_on_source": "Secondary Water Attunement Effect"
             }]
         },
-        "tags": ["Ripple"],
+        "tags": ["Weapon Skill", "Ripple"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/7B61A40CFC6F2A9DE5A5414C50E87BD9D9711E43/3379102.png"
@@ -1204,11 +1218,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Seethe",
-            "Ripple", 
-            "Harden"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "cast_condition": {
             "and": [{ 
                 "or": [{
@@ -1238,7 +1248,7 @@
             "base_duration_ms": 6000,
             "direction": "OUTGOING"
         }],
-        "tags": ["Etching Charges", "Harden"],
+        "tags": ["Weapon Skill", "Harden"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Air Attunement Effect"
@@ -1320,11 +1330,7 @@
                 }]
             }
         }],
-        "tags": [
-            "Seethe",
-            "Ripple",
-            "Etching Charges"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Air Attunement Effect"
@@ -1450,11 +1456,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Air Attunement Effect"
         },
-        "tags": [
-            "Etching Charges",
-            "Seethe",
-            "Ripple"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/0BA3490023A82B4B5FCA597C3CB965E21D3CE504/3379085.png"
@@ -1546,13 +1548,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Etching Charges",
-            "Seethe",
-            "Ripple",
-            "Harden",
-            "Relic of Fireworks"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden", "Relic of Fireworks"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Air Attunement Effect"
@@ -1654,7 +1650,7 @@
                     "only_applies_on_begun_casting_skill": "Derecho"
                 }
         }],
-        "tags": ["Ripple"],
+        "tags": ["Weapon Skill", "Ripple"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Air Attunement Effect"
@@ -1690,11 +1686,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Seethe",
-            "Ripple",
-            "Harden"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "cast_condition": {
             "and": [{
                 "or": [{
@@ -1733,7 +1725,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Etching Charges", "Harden"],
+        "tags": ["Weapon Skill", "Harden"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/19C7C57CCB3B22A11D29684F35C967A5A66D5BE0/3379078.png"
@@ -1824,12 +1816,7 @@
                 "unique_effect_on_source": "Seethe Effect"
             }
         }],
-        "tags": [
-            "Etching Charges",
-            "Seethe",
-            "Ripple",
-            "Harden"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "cast_condition": {
             "or": [{
                 "unique_effect_on_source": "Earth Attunement Effect"
@@ -1909,10 +1896,7 @@
                 }
             }]
         }],
-        "tags": [
-            "Etching Charges",
-            "Ripple"
-        ],
+        "tags": ["Weapon Skill", "Ripple"],
         "executable": true,
         "weapon_type": "spear",
         "cast_condition": {
@@ -2017,13 +2001,7 @@
                 "unique_effect_on_source": "Secondary Earth Attunement Effect"
             }]
         },
-        "tags": [
-            "Etching Charges", 
-            "Seethe",
-            "Ripple",  
-            "Harden",
-            "Relic of Fireworks"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden", "Relic of Fireworks"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/51A85B4EC564F24A10EF7D982DDA73BF1940CA01/3379090.png"
@@ -2125,7 +2103,7 @@
                 "only_applies_on_begun_casting_skill": "Haboob"
             }
         }],
-        "tags": ["Ripple"],
+        "tags": ["Weapon Skill", "Ripple"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/7C7339E9EA33F7CD05806CE20066DF0EC4673767/3379096.png"
@@ -2192,11 +2170,7 @@
                 "threshold_value": 3
             }
         },
-        "tags": [
-            "Seethe",
-            "Ripple",
-            "Harden"
-        ],
+        "tags": ["Weapon Skill", "Seethe", "Ripple", "Harden"],
         "executable": true,
         "weapon_type": "spear",
         "icon": "https://render.guildwars2.com/file/562F2D0ED67AD8453F9CA60F27DB154F2E7543FC/3379098.png"
@@ -2240,10 +2214,7 @@
                 "direction": "SELF"
             }]
         }],
-        "tags": [
-            "Dual Attack",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{
@@ -2298,10 +2269,7 @@
                 "direction": "SELF"
             }]
         }],
-        "tags": [
-            "Dual Attack",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{
@@ -2348,10 +2316,7 @@
                 "direction": "SELF"
             }]
         }],
-        "tags": [
-            "Dual Attack",
-            "Pyromancers Puissance"
-        ],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{
@@ -2389,7 +2354,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }
         }],
-        "tags": ["Dual Attack"],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{
@@ -2431,7 +2396,7 @@
         "skill_ticks": [{
             "child_skill_keys": ["Blast Finisher"]
         }],
-        "tags": ["Dual Attack"],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{
@@ -2469,7 +2434,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }
         }],
-        "tags": ["Dual Attack"],
+        "tags": ["Weapon Skill", "Dual Attack", "Ripple"],
         "cast_condition": {
             "or": [{
                 "and": [{

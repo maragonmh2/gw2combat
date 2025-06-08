@@ -216,11 +216,7 @@
                     "only_applies_on_finished_casting_skill": "Fire Attunement"
                 }
             }],
-            "tags": [
-                "Overload",
-                "Relic of Fireworks",
-                "Pyromancers Puissance"
-            ],
+            "tags": ["Overload", "Relic of Fireworks", "Skill"],
             "executable": true,
             "cast_condition": {
                 "unique_effect_on_source": "Fire Attunement Effect"
@@ -368,7 +364,7 @@
                     "only_applies_on_finished_casting_skill": "Water Attunement"
                 }
             }],
-            "tags": ["Overload"],
+            "tags": ["Overload", "Relic of Fireworks", "Skill"],
             "executable": true,
             "cast_condition": {
                 "unique_effect_on_source": "Water Attunement Effect"
@@ -594,10 +590,7 @@
                     "only_applies_on_finished_casting_skill": "Air Attunement"
                 }
             }],
-            "tags": [
-                "Overload",
-                "Relic of Fireworks"
-            ],
+            "tags": ["Overload", "Relic of Fireworks", "Skill"],
             "executable": true,
             "cast_condition": {
                 "unique_effect_on_source": "Air Attunement Effect"
@@ -788,10 +781,7 @@
                     "only_applies_on_finished_casting_skill": "Earth Attunement"
                 }
             }],
-            "tags": [
-                "Overload",
-                "Relic of Fireworks"
-            ],
+            "tags": ["Overload", "Relic of Fireworks", "Skill"],
             "executable": true,
             "cast_condition": {
                 "unique_effect_on_source": "Earth Attunement Effect"

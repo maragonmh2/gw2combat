@@ -82,10 +82,7 @@
                 "unique_effect_on_source": "Perfect Weave Effect"
             }
         }],
-        "tags": [
-            "Pyromancers Puissance",
-            "Etching Charges"
-        ],
+        "tags": ["Skill"],
         "executable": true
     },{
         "skill_key": "Weave Self Relic Timer",

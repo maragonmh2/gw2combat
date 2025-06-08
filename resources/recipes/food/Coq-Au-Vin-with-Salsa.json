@@ -31,6 +31,7 @@
         "flat_damage": 325,
         "can_critical_strike": false,
         "strike_on_tick_list": [[0], [0]],
-        "weapon_type": "empty_handed"
+        "weapon_type": "empty_handed",
+        "icon": "https://render.guildwars2.com/file/B90C503BF3B83A3AD34533D3A5DE634B1CFF1D72/219481.png"
     }]
 }

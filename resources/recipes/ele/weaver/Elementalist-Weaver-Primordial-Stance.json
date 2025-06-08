@@ -142,11 +142,7 @@
             }
         }],
         "child_skill_keys": ["Primordial Stance Ammo"],
-        "tags": [
-            "Stance",
-            "Pyromancers Puissance",
-            "Etching Charges"
-        ],
+        "tags": ["Skill", "Stance"],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

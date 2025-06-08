@@ -19,6 +19,7 @@
                 }
             ]
         }],
+        "tags": ["Skill"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
@@ -37,10 +38,7 @@
                 "direction": "TEAM"
             }]
         }],
-        "tags": [
-            "Pyromancers Puissance",
-            "Etching Charges"
-        ],
+        "tags": ["Skill"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Elemental Effect"
         },

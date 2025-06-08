@@ -32,7 +32,7 @@
                 "direction": "OUTGOING"
             }
         ],
-        "tags": ["Etching Charges"],
+        "tags": ["Skill"],
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
@@ -145,7 +145,7 @@
             "num_targets": 5,
             "direction": "OUTGOING"
         }],
-        "tags": ["Etching Charges"],
+        "tags": ["Skill"],
         "cast_condition": {
             "unique_effect_on_source": "Air Attunement Effect"
         },

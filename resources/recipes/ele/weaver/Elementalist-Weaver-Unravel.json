@@ -243,11 +243,7 @@
                 "unique_effect_on_source": "Secondary Earth Attunement Effect"
             }
         }],
-        "tags": [
-            "Stance",
-            "Pyromancers Puissance",
-            "Etching Charges"
-        ],
+        "tags": ["Skill", "Stance"],
         "executable": true
     }]
 }

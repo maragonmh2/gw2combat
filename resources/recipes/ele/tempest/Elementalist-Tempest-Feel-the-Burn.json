@@ -31,10 +31,7 @@
                 "direction": "TEAM"
             }]
         }],
-        "tags": [
-            "Pyromancers Puissance",
-            "Etching Charges"
-        ],
+        "tags": ["Skill"],
         "executable": true,
         "weapon_type": "empty_handed"
     }]

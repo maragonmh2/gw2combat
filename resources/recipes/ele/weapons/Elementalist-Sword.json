@@ -212,11 +212,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": [
-            "Auto Fire",
-            "Pyromancers Puissance", 
-            "Auto"
-        ],
+        "tags": ["Auto Fire", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -244,11 +240,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": [
-            "Auto Fire",
-            "Pyromancers Puissance", 
-            "Auto"
-        ],
+        "tags": ["Auto Fire", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -273,11 +265,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": [
-            "Auto Fire",
-            "Pyromancers Puissance", 
-            "Auto"
-        ],
+        "tags": ["Auto Fire", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -370,7 +358,7 @@
                 "unique_effect_on_source": "Primary Fire Attunement Effect"
             }]
         },
-        "tags": ["Pyromancers Puissance"],
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -413,7 +401,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Fire Attunement Effect"
         },
-        "tags": ["Pyromancers Puissance"],
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -494,7 +482,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water", "Auto"],
+        "tags": ["Auto Water", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -522,7 +510,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water", "Auto"],
+        "tags": ["Auto Water", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -541,7 +529,7 @@
                 "unique_effect_on_source": "Primary Water Attunement Effect"
             }]
         },
-        "tags": ["Auto Water", "Auto"],
+        "tags": ["Auto Water", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -616,7 +604,7 @@
                 "direction": "SELF"
             }]
         }],
-        "tags": ["Auto Air", "Auto"],
+        "tags": ["Auto Air", "Weapon Skill"],
         "weapon_type": "sword",
         "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
     },{
@@ -677,7 +665,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air", "Auto"],
+        "tags": ["Auto Air", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -722,7 +710,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
-        "tags": ["Auto Air", "Auto"],
+        "tags": ["Auto Air", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -773,6 +761,7 @@
                 "unique_effect_on_source": "Primary Air Attunement Effect"
             }]
         },
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -820,6 +809,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Air Attunement Effect"
         },
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -906,7 +896,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth", "Auto"],
+        "tags": ["Auto Earth", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -940,7 +930,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth", "Auto"],
+        "tags": ["Auto Earth", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -970,7 +960,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
-        "tags": ["Auto Earth", "Auto"],
+        "tags": ["Auto Earth", "Weapon Skill"],
         "executable": false,
         "weapon_type": "sword"
     },{
@@ -1021,6 +1011,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     },{
@@ -1065,6 +1056,7 @@
                 "unique_effect_on_source": "Primary Earth Attunement Effect"
             }]
         },
+        "tags": ["Weapon Skill"],
         "weapon_type": "sword",
         "executable": true
     }]
