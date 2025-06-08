@@ -1,0 +1,133 @@
+{
+    "counters": [{
+        "counter_key": "Relic of Bloodstone Counter",
+        "initial_value": 0,
+        "counter_modifiers": [{
+            "counter_key": "Relic of Bloodstone Counter",
+            "operation": "add",
+            "value": 1,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Bloodstone Volatility"
+            }
+        },{
+            "counter_key": "Relic of Bloodstone Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Relic of Bloodstone"
+            }
+        },{
+            "counter_key": "Relic of Bloodstone Counter",
+            "operation": "set",
+            "value": 0,
+            "condition": {
+                "not": [{
+                    "unique_effect_on_source": "Bloodstone Volatility Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
+    }],
+    "permanent_unique_effects": [],
+    "unique_effects": {
+        "Relic of Bloodstone Effect": {
+            "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
+        },
+        "Bloodstone Volatility Effect": {
+            "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
+        }
+    },
+    "skills": [{
+        "skill_key": "Bloodstone Volatility",
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Bloodstone Volatility Effect",
+                    "refreshes_other_stacks": true
+                },
+                "base_duration_ms": 8000,
+                "direction": "SELF"
+            }]
+        }],
+        "source_actor_skill_triggers": [{
+            "skill_key": "Bloodstone Volatility",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill_with_tag": "Blast Finisher",
+                "depends_on_skill_off_cooldown": "Relic of Bloodstone",
+                "or": [{
+                    "unique_effect_on_source": "Dark Field Effect"
+                },{
+                    "unique_effect_on_source": "Ethereal Field Effect"
+                },{
+                    "unique_effect_on_source": "Fire Field Effect"
+                },{
+                    "unique_effect_on_source": "Ice Field Effect"
+                },{
+                    "unique_effect_on_source": "Light Field Effect"
+                },{
+                    "unique_effect_on_source": "Lightning Field Effect"
+                },{
+                    "unique_effect_on_source": "Poison Field Effect"
+                },{
+                    "unique_effect_on_source": "Smoke Field Effect"
+                },{
+                    "unique_effect_on_source": "Water Field Effect"
+                }]
+            }
+        }],
+        "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
+    },{
+        "skill_key": "Relic of Bloodstone",
+        "cooldown": [8000, 8000],
+        "skill_ticks": [{
+            "pulse": true,
+            "on_pulse_effect_applications": [{
+                "unique_effect": {
+                    "unique_effect_key": "Relic of Bloodstone Effect",
+                    "stacking_type": "replace",
+                    "attribute_modifiers": [{
+                        "attribute": "outgoing_strike_damage_multiplier",
+                        "multiplier": 1.15
+                    }]
+                },
+                "base_duration_ms": 8000,
+                "direction": "SELF"
+            }]
+        },{
+            "on_tick": 680,
+            "strike": true,
+            "damage_coefficient": 5,
+            "num_targets": 5,
+            "on_strike_effect_applications": [{
+                "effect": "BLEEDING",
+                "base_duration_ms": 6000,
+                "num_stacks": 6,
+                "num_targets": 5,
+                "direction": "OUTGOING"
+            }]
+        }],
+        "effect_removals": [{
+            "unique_effect": "Bloodstone Volatility Effect",
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Relic of Bloodstone"
+            }
+        }],
+        "source_actor_skill_triggers": [{
+            "skill_key": "Relic of Bloodstone",
+            "condition": {
+                "threshold": {
+                    "counter_value_subject_to_threshold": "Relic of Bloodstone Counter",
+                    "threshold_type": "lower_bound_inclusive",
+                    "threshold_value": 3
+                }
+            }
+        }],
+        "weapon_type": "empty_handed",
+        "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
+    }]
+}

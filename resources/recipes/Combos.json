@@ -1491,7 +1491,7 @@
                     }]
                 }
             }],
-            "tags": ["Finisher"]
+            "tags": ["Finisher", "Leap Finisher"]
         },{
             "skill_key": "Blast Finisher Dark",
             "skill_ticks": [{
@@ -1767,7 +1767,7 @@
         },{
             "skill_key": "Blast Finisher",
             "child_skill_keys": ["Blast Finisher Water"],
-            "tags": ["Finisher"]
+            "tags": ["Finisher", "Blast Finisher"]
         },{
             "skill_key": "Leap Finisher Prepare Dark",
             "skill_ticks": [{
@@ -2276,7 +2276,7 @@
                     "unique_effect_on_source": "Leap Finisher Prepare Water Marker"
                 }
             }],
-            "tags": ["Finisher"]
+            "tags": ["Finisher", "Leap Finisher"]
         },{
             "skill_key": "Blast Finisher Prepare Dark",
             "skill_ticks": [{
@@ -2732,7 +2732,7 @@
                     "unique_effect_on_source": "Blast Finisher Prepare Water Marker"
                 }
             }],
-            "tags": ["Finisher"]
+            "tags": ["Finisher", "Blast Finisher"]
         }
     ]
 }
