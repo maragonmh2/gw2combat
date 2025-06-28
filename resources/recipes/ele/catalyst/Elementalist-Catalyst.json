@@ -2864,7 +2864,7 @@
                 "threshold_value": 100000
             }
         },
-        "tags": ["Jade Sphere"],
+        "tags": ["Jade Sphere", "Skill"],
         "weapon_type": "empty_handed",
         "executable": true,
         "icon": "https://render.guildwars2.com/file/22CA7C0F420C7F61CEBFA323DF3AADC5EF237475/2491598.png"
@@ -3129,7 +3129,7 @@
                 "threshold_value": 100000
             }
         },
-        "tags": ["Jade Sphere"],
+        "tags": ["Jade Sphere", "Skill"],
         "weapon_type": "empty_handed",
         "executable": true,
         "icon": "https://render.guildwars2.com/file/6016319AAF18417F0401800EF36C0F18E207FFD5/2491600.png"
@@ -3394,7 +3394,7 @@
                 "threshold_value": 100000
             }
         },
-        "tags": ["Jade Sphere"],
+        "tags": ["Jade Sphere", "Skill"],
         "weapon_type": "empty_handed",
         "executable": true,
         "icon": "https://render.guildwars2.com/file/07D9C76FEB07BB04B9D07A05D87C09A0A0AE0319/2491594.png"
@@ -3659,7 +3659,7 @@
                 "threshold_value": 100000
             }
         },
-        "tags": ["Jade Sphere"],
+        "tags": ["Jade Sphere", "Skill"],
         "weapon_type": "empty_handed",
         "executable": true,
         "icon": "https://render.guildwars2.com/file/97BEF22148DDA3159B4CF6DB18ECFEDE7107710B/2491596.png"

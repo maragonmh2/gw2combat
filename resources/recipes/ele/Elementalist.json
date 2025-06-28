@@ -82,7 +82,7 @@
                     "unique_effect_on_source": "Fire Attunement Effect"
                 }
             }],
-            "tags": ["Attunement", "Auto Reset"],
+            "tags": ["Attunement"],
             "executable": true,
             "cast_condition": {
                 "not": [{
@@ -142,7 +142,7 @@
                     "unique_effect_on_source": "Water Attunement Effect"
                 }
             }],
-            "tags": ["Attunement", "Auto Reset"],
+            "tags": ["Attunement"],
             "executable": true,
             "cast_condition": {
                 "not": [{
@@ -202,7 +202,7 @@
                     "unique_effect_on_source": "Air Attunement Effect"
                 }
             }],
-            "tags": ["Attunement", "Auto Reset"],
+            "tags": ["Attunement"],
             "executable": true,
             "cast_condition": {
                 "not": [{
@@ -262,7 +262,7 @@
                     "unique_effect_on_source": "Earth Attunement Effect"
                 }
             }],
-            "tags": ["Attunement", "Auto Reset"],
+            "tags": ["Attunement"],
             "executable": true,
             "cast_condition": {
                 "not": [{

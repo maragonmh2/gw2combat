@@ -84,12 +84,19 @@
                 "only_applies_on_begun_casting": true,
                 "only_applies_on_begun_casting_skill_with_tag": "Weapon Skill"
             }
+        },{
+            "skill_key": "Drop Lightning Hammer",
+            "condition": {
+                "unique_effect_on_source": "Conjure Lightning Attributes Effect",
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Fiery Greatsword"
+            }
         }]
     },{
         "skill_key": "Lightning Hammer Pickup",
         "cast_duration": [520,520],
         "skill_ticks": [{
-            "on_tick": 520,
+            "on_tick": 480,
             "child_skill_keys": ["Apply Conjure Lightning Attributes"]
         }],
         "effect_removals": [{
@@ -109,6 +116,7 @@
         "cast_duration": [480, 480],
         "skill_ticks": [{
             "on_tick": 360,
+            "strike": true,
             "damage_coefficient": 1.0,
             "num_targets": 3
         }],
@@ -128,6 +136,7 @@
         "cast_duration": [640, 640],
         "skill_ticks": [{
             "on_tick": 320,
+            "strike": true,
             "damage_coefficient": 1.0,
             "num_targets": 3
         }],
@@ -147,6 +156,7 @@
         "cast_duration": [440, 440],
         "skill_ticks": [{
             "on_tick": 320,
+            "strike": true,
             "damage_coefficient": 1.5,
             "num_targets": 5,
             "child_skill_keys": ["Blast Finisher"],

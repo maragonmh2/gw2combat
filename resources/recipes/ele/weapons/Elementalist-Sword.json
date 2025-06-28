@@ -124,12 +124,7 @@
                 "counter_value_subject_to_threshold": "Auto Fire Counter",
                 "threshold_type": "equal",
                 "threshold_value": 1
-            },
-            "or": [{
-                "unique_effect_on_source": "Fire Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Fire Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Fire", "Weapon Skill"],
         "executable": true,
@@ -154,12 +149,7 @@
                 "counter_value_subject_to_threshold": "Auto Fire Counter",
                 "threshold_type": "equal",
                 "threshold_value": 2
-            },
-            "or": [{
-                "unique_effect_on_source": "Fire Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Fire Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Fire", "Weapon Skill", "Auto Reset"],
         "executable": true,
@@ -338,12 +328,7 @@
                 "counter_value_subject_to_threshold": "Auto Water Counter",
                 "threshold_type": "equal",
                 "threshold_value": 1
-            },
-            "or": [{
-                "unique_effect_on_source": "Water Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Water Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Water", "Weapon Skill"],
         "executable": true,
@@ -362,12 +347,7 @@
                 "counter_value_subject_to_threshold": "Auto Water Counter",
                 "threshold_type": "equal",
                 "threshold_value": 2
-            },
-            "or": [{
-                "unique_effect_on_source": "Water Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Water Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Water", "Weapon Skill", "Auto Reset"],
         "executable": true,
@@ -398,7 +378,7 @@
         },
         "executable": true,
         "weapon_type": "sword",
-        "icon": "https://render.guildwars2.com/file/166E751B3C56196EC1E8B323400C5AFCEC3C0C01/1770357.png"
+        "icon": "https://render.guildwars2.com/file/69521650FA42B136CCCBA3EC01EED74C3BF3A3DA/1770355.png"
     },{
         "skill_key": "Polaric Slash",
         "cast_duration": [440, 440],
@@ -417,12 +397,7 @@
                 "counter_value_subject_to_threshold": "Auto Air Counter",
                 "threshold_type": "equal",
                 "threshold_value": 1
-            },
-            "or": [{
-                "unique_effect_on_source": "Air Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Air Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Air", "Weapon Skill"],
         "executable": true,
@@ -460,12 +435,7 @@
                 "counter_value_subject_to_threshold": "Auto Air Counter",
                 "threshold_type": "equal",
                 "threshold_value": 2
-            },
-            "or": [{
-                "unique_effect_on_source": "Air Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Air Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Air", "Weapon Skill", "Auto Reset"],
         "executable": true,
@@ -619,12 +589,7 @@
                 "counter_value_subject_to_threshold": "Auto Earth Counter",
                 "threshold_type": "equal",
                 "threshold_value": 1
-            },
-            "or": [{
-                "unique_effect_on_source": "Earth Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Earth Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Earth", "Weapon Skill"],
         "executable": true,
@@ -654,12 +619,7 @@
                 "counter_value_subject_to_threshold": "Auto Earth Counter",
                 "threshold_type": "equal",
                 "threshold_value": 2
-            },
-            "or": [{
-                "unique_effect_on_source": "Earth Attunement Effect"
-            },{
-                "unique_effect_on_source": "Primary Earth Attunement Effect"
-            }]
+            }
         },
         "tags": ["Auto Earth", "Weapon Skill", "Auto Reset"],
         "executable": true,

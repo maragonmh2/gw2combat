@@ -8,8 +8,10 @@
         "cooldown": [20000, 16000],
         "skill_ticks": [{
             "on_tick": 520,
+            "child_skill_keys": ["Blast Finisher"],
             "strike": true,
-            "damage_coefficient": 0.5
+            "damage_coefficient": 0.5,
+            "num_targets": 5
         }],
         "tags": ["Skill", "Auto Reset"],
         "executable": true,

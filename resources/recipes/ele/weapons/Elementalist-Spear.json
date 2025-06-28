@@ -556,6 +556,43 @@
                 "only_applies_on_finished_casting_skill_with_tag": "Elemental Celerity",
                 "unique_effect_on_source": "Fire Attunement Effect"
             }
+        },{
+            "skill_key": "Arcane Echo",
+            "operation": "add",
+            "value": 20000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "and": [{
+                   "unique_effect_on_source": "Arcane Echo Effect"
+                },{
+                    "unique_effect_on_source": "Pyromancers Training"
+                }] 
+            }
+        },{
+            "skill_key": "Arcane Echo",
+            "operation": "add",
+            "value": 25000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "and": [{
+                   "unique_effect_on_source": "Arcane Echo Effect"
+                },{
+                    "not": [{
+                        "unique_effect_on_source": "Pyromancers Training"
+                    }]
+                }] 
+            }
+        },{
+            "skill_key": "Etching: Volcano",
+            "operation": "set",
+            "value": 24000,
+            "condition": {
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Etching: Volcano",
+                "unique_effect_on_source": "Arcane Echo Effect"
+            }
         }],
         "pulse_on_tick_list": [
             [240, 1240, 2240, 3240, 4240, 5240, 6240, 7240],

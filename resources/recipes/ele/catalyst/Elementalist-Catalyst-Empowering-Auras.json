@@ -2,6 +2,11 @@
     "counters": [],
     "permanent_effects": [],
     "permanent_unique_effects": [],
+    "unique_effects":{
+        "Empowering Auras Effect": {
+            "icon": "https://render.guildwars2.com/file/C52EDB20EC120936089EC83C54A55A610A075652/2491522.png"
+        }
+    },
     "skills": [{
         "skill_key": "Empowering Auras",
         "skill_ticks": [{

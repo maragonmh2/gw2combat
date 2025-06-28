@@ -70,12 +70,19 @@
                 "only_applies_on_begun_casting": true,
                 "only_applies_on_begun_casting_skill_with_tag": "Weapon Skill"
             }
+        },{
+            "skill_key": "Drop Fiery Greatsword",
+            "condition": {
+                "unique_effect_on_source": "Conjure Fire Attributes Effect",
+                "only_applies_on_begun_casting": true,
+                "only_applies_on_begun_casting_skill_with_tag": "Lightning Hammer"
+            }
         }]
     },{
         "skill_key": "Fiery Greatsword Pickup",
         "cast_duration": [520,520],
         "skill_ticks": [{
-            "on_tick": 520,
+            "on_tick": 480,
             "child_skill_keys": ["Apply Fire Attributes"]
         }],
         "effect_removals": [{
@@ -180,6 +187,7 @@
         "cast_condition": {
             "unique_effect_on_source": "Conjure Fire Attributes Effect"
         },
+        "executable": true,
         "weapon_type": "kit_conjure"
     },{
         "skill_key": "Fiery Rush",

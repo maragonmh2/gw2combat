@@ -1,0 +1,1239 @@
+{
+  "skill_casts": [
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Lightning Storm",
+      "cast_time_ms": 0,
+      "skillID": "5737"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Elemental Celerity",
+      "cast_time_ms": 0,
+      "skillID": "62725"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fissure",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Undertow",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Echo",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Restorative Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fissure",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Stone Strike",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Undertow",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Firestorm",
+      "cast_time_ms": 0,
+      "skillID": "5531"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Echo",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Restorative Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fissure",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Elemental Celerity",
+      "cast_time_ms": 0,
+      "skillID": "62725"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Stone Strike",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Undertow",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Air Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5494"
+    },
+    {
+      "skill": "Lightning Storm",
+      "cast_time_ms": 0,
+      "skillID": "5737"
+    },
+    {
+      "skill": "Etching: Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fulgor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Twister",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Brilliance",
+      "cast_time_ms": 0,
+      "skillID": "21656"
+    },
+    {
+      "skill": "Deploy Air Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Derecho",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fire Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5492"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Arcane Echo",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Seethe",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Fire Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Relentless Fire",
+      "cast_time_ms": 0,
+      "skillID": "62965"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Etching: Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Meteor",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Volcano",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Flame Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Blazing Barrage",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Water Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5493"
+    },
+    {
+      "skill": "Etching: Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ice Beam",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Restorative Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Water Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Jökulhlaup",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Ripple",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earth Attunement",
+      "cast_time_ms": 0,
+      "skillID": "5495"
+    },
+    {
+      "skill": "Etching: Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Earthen Spear",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Fissure",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Deploy Earth Jade Sphere",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    },
+    {
+      "skill": "Haboob",
+      "cast_time_ms": 0,
+      "skillID": "-1"
+    }
+  ]
+}

@@ -236,7 +236,8 @@
     },{
         "skill_key": "Earthquake",
         "cast_duration": [680, 680],
-        "cooldown": [16000, 10240],
+        "cooldown": [16000, 12800],
+        "skills_to_cancel": ["Rust Frenzy"],
         "cooldown_modifiers": [{
             "skill_key": "Earthquake",
             "operation": "set",

@@ -4,14 +4,6 @@
         "initial_value": 0,
         "counter_modifiers": [{
             "counter_key": "Relic of Bloodstone Counter",
-            "operation": "add",
-            "value": 1,
-            "condition": {
-                "only_applies_on_finished_casting": true,
-                "only_applies_on_finished_casting_skill": "Bloodstone Volatility"
-            }
-        },{
-            "counter_key": "Relic of Bloodstone Counter",
             "operation": "set",
             "value": 0,
             "condition": {
@@ -20,12 +12,11 @@
             }
         },{
             "counter_key": "Relic of Bloodstone Counter",
-            "operation": "set",
-            "value": 0,
+            "operation": "add",
+            "value": 1,
             "condition": {
-                "not": [{
-                    "unique_effect_on_source": "Bloodstone Volatility Effect"
-                }]
+                "only_applies_on_finished_casting": true,
+                "only_applies_on_finished_casting_skill": "Bloodstone Volatility"
             }
         }],
         "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png"
@@ -123,7 +114,7 @@
                 "threshold": {
                     "counter_value_subject_to_threshold": "Relic of Bloodstone Counter",
                     "threshold_type": "lower_bound_inclusive",
-                    "threshold_value": 3
+                    "threshold_value": 4
                 }
             }
         }],
