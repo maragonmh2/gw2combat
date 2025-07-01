@@ -72,6 +72,7 @@ struct damage_event_t {
         POISON,
         TORMENT_STATIONARY,
         TORMENT_MOVING,
+        FULGOR,
     };
 
     event_type_t event_type = event_type_t::DAMAGE_EVENT;
@@ -127,6 +128,7 @@ NLOHMANN_JSON_SERIALIZE_ENUM(damage_event_t::damage_type_t,
                                  {damage_event_t::damage_type_t::TORMENT_STATIONARY,
                                   "torment_stationary"},
                                  {damage_event_t::damage_type_t::TORMENT_MOVING, "torment_moving"},
+                                 {damage_event_t::damage_type_t::FULGOR, "fulgor"},
                              })
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE_WITH_DEFAULT(actor_created_event_t, event_type)
 NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE_WITH_DEFAULT(damage_event_t,

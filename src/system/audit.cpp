@@ -216,6 +216,8 @@ void audit_damage(registry_t& registry) {
                                 return audit::damage_event_t::damage_type_t::CONFUSION;
                             case actor::effect_t::BINDING_BLADE:
                                 return audit::damage_event_t::damage_type_t::BINDING_BLADE;
+                            case actor::effect_t::FULGOR:
+                                return audit::damage_event_t::damage_type_t::FULGOR;                        
                             default:
                                 throw std::runtime_error("Unknown source for damage!");
                         }

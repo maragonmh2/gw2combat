@@ -892,7 +892,8 @@
                 "TORMENT",
                 "POISON",
                 "CONFUSION",
-                "BINDING_BLADE"
+                "BINDING_BLADE",
+                "FULGOR"
             ]
         },
         "unique_effect": {

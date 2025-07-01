@@ -43,6 +43,7 @@ enum class effect_t : std::uint32_t
 
     // Unique
     BINDING_BLADE,
+    FULGOR,
 };
 
 NLOHMANN_JSON_SERIALIZE_ENUM(effect_t,
@@ -79,6 +80,7 @@ NLOHMANN_JSON_SERIALIZE_ENUM(effect_t,
                                  {effect_t::CONFUSION, "CONFUSION"},
 
                                  {effect_t::BINDING_BLADE, "BINDING_BLADE"},
+                                 {effect_t::FULGOR, "FULGOR"},
                              })
 
 }  // namespace gw2combat::actor

@@ -42,6 +42,7 @@ namespace gw2combat::utils {
         case actor::effect_t::VULNERABILITY:
             return actor::stacking_t::STACKING_INTENSITY;
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
             return actor::stacking_t::REPLACE;
         case actor::effect_t::INVALID:
             throw std::runtime_error("cannot deal with invalid effects!");
@@ -65,6 +66,7 @@ namespace gw2combat::utils {
         case actor::effect_t::SWIFTNESS:
         case actor::effect_t::STABILITY:
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
         case actor::effect_t::BLINDED:
         case actor::effect_t::CHILLED:
         case actor::effect_t::CRIPPLED:
@@ -105,6 +107,7 @@ namespace gw2combat::utils {
         case actor::effect_t::SWIFTNESS:
         case actor::effect_t::STABILITY:
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
         case actor::effect_t::BLINDED:
         case actor::effect_t::CHILLED:
         case actor::effect_t::CRIPPLED:
@@ -159,6 +162,7 @@ namespace gw2combat::utils {
         case actor::effect_t::CONFUSION:
         case actor::effect_t::VULNERABILITY:
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
             return 1'000'000'000;
         case actor::effect_t::INVALID:
             throw std::runtime_error("cannot deal with invalid effects!");
@@ -258,6 +262,7 @@ namespace gw2combat::utils {
                 target_entity, actor::attribute_t::CONFUSION_DURATION_MULTIPLIER));
 
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
             return base_duration;
 
         default:
@@ -295,6 +300,7 @@ namespace gw2combat::utils {
         case actor::effect_t::WEAKNESS:
         case actor::effect_t::VULNERABILITY:
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
             return false;
         case actor::effect_t::INVALID:
             throw std::runtime_error("cannot deal with invalid effects!");
@@ -309,6 +315,7 @@ namespace gw2combat::utils {
         case actor::effect_t::POISON:
         case actor::effect_t::CONFUSION:
         case actor::effect_t::BINDING_BLADE:
+        case actor::effect_t::FULGOR:
             return true;
         case actor::effect_t::AEGIS:
         case actor::effect_t::ALACRITY:
