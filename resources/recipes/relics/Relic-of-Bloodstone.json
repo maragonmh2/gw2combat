@@ -82,7 +82,7 @@
                     "stacking_type": "replace",
                     "attribute_modifiers": [{
                         "attribute": "outgoing_strike_damage_multiplier",
-                        "multiplier": 1.15
+                        "multiplier": 1.10
                     }]
                 },
                 "base_duration_ms": 8000,
@@ -91,7 +91,7 @@
         },{
             "on_tick": 680,
             "strike": true,
-            "damage_coefficient": 5,
+            "damage_coefficient": 3,
             "num_targets": 5,
             "on_strike_effect_applications": [{
                 "effect": "BLEEDING",
