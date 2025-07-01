@@ -2,8 +2,8 @@
     "actors": [
         {
             "name": "player",
-            "build_path": "resources/ele/Elementalist-Catalyst-Power-Quick-Spear.json",
-            "rotation_path": "resources/ele/Elementalist-Catalyst-Power-Quick-Spear-Rotation.json",
+            "build_path": "resources/ele/Elementalist-Catalyst-Power-Spear.json",
+            "rotation_path": "resources/ele/Elementalist-Catalyst-Power-Spear-Rotation.json",
             "team": 1
         },{
             "name": "elementals",

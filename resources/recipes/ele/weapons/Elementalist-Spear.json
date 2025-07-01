@@ -1410,12 +1410,7 @@
             [480, 1480, 2480, 3480, 4480]
         ],
         "on_strike_effect_applications": [{
-            "unique_effect": {
-                "unique_effect_key": "Fulgor Condi",
-                "flat_damage": 200,
-                "attribute": "power",
-                "multiplier": 0.4
-            },
+            "effect": "FULGOR",
             "base_duration_ms": 1000,
             "num_targets": 5,
             "direction": "OUTGOING"
